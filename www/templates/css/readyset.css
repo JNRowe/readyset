@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.11 2003/06/23 00:41:23 jrobbins Exp $
+/* $Id: readyset.css,v 1.12 2003/06/24 16:28:12 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -160,6 +160,22 @@ dd {
 
 .tier4 {
  margin-left: 4.5em;
+}
+
+.level1 {
+ padding-left: 0;
+}
+
+.level2 {
+ padding-left: 1em;
+}
+
+.level3 {
+ padding-left: 2em;
+}
+
+.level4 {
+ padding-left: 3em;
 }
 
 .alt {
