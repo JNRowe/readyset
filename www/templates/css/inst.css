@@ -1,4 +1,4 @@
-/* $Id: inst.css,v 1.20 2004/07/09 01:33:44 jrobbins Exp $
+/* $Id: inst.css,v 1.21 2004/07/09 01:41:06 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
@@ -61,43 +61,40 @@ code, pre, textarea {
 
 .tip {
  background: #ffc;
+ background-image: url(http://www.readysetpro.com/css/tip.png);
  background-repeat: no-repeat;
  background-position: top left;
  border-right-color: #aaa;
  border-bottom-color: #aaa;
  padding-left: 36px;
  min-width: 30px; min-height: 30px;
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='tip.png',sizingMethod='scale');
+ /* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='tip.png',sizingMethod='scale'); */
 }
 
-.tip[class] {
- background-image: url(http://www.readysetpro.com/css/tip.png);
-}
 
 .todo {
  background: #ffc;
+ background-image: url(http://www.readysetpro.com/css/todo.gif);
  background-repeat: no-repeat;
  background-position: top left;
  border-right-color: #aaa;
  border-bottom-color: #aaa;
  padding-left: 36px;
  min-width: 30px; min-height: 30px;
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,src='todo.png',sizingMethod=scale);
+ /* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,src='todo.png',sizingMethod=scale); */
 }
 
-.todo[class] {
- background-image: url(http://www.readysetpro.com/css/todo.png);
-}
+
 
 #processimpact {
  background: #eee;
  border-color: #aaa;
- background-image: url(http://www.readysetpro.com/css/gears.png);
+ background-image: url(http://www.readysetpro.com/css/gears.gif);
  background-repeat: no-repeat;
  background-position: top left;
  padding-left: 36px;
  min-width: 30px; min-height: 30px;
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='gears.png',sizingMethod='scale');
+ /* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='gears.png',sizingMethod='scale'); */
 }
 
 .reusablefragment {
