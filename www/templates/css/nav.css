@@ -1,6 +1,5 @@
 body, ol, li, h2 { padding:0; margin: 0; }
 
-h2 { padding-left: 3px; background: #ccc; border-bottom: 1px solid #999; }
 
 ol#root {  padding-left: 5px; margin-top: 2px; margin-bottom: 1px; list-style: none;}
 #root ol {  padding-left: 5px; margin-top: 2px; margin-bottom: 1px; list-style: none;}
@@ -13,7 +12,7 @@ ol#root {  padding-left: 5px; margin-top: 2px; margin-bottom: 1px; list-style: n
 #root a { text-decoration: none; }
 
 
-.folder { background: url(folder-closed.gif) no-repeat; float: left; height: 14px; width: 26px; padding-right: 3px }
-.doc { background: url(file.gif) no-repeat; float: left; height: 14px; width: 12px; padding-right: 3px; margin-left: 20px;}
+.folder { background: url(/branding/images/sstree/folder-closed.gif) no-repeat; float: left; height: 14px; width: 26px; padding-right: 3px }
+.doc { background: url(/branding/images/sstree/file.gif) no-repeat; float: left; height: 14px; width: 12px; padding-right: 3px; margin-left: 20px;}
 
 
