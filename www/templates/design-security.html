@@ -137,7 +137,9 @@
     servers, other than those needed by the application itself.</li>
 
     <li>Different components in the application execute as different
-    operating system users, and only have access to particular files.</li>
+    operating system users, have only the least possible
+    privileges, and may only access the particular files needed by that
+    component.</li>
 
     <li>Operating system permissions on files and directories are set
     to prevent undesired access or modification.</li>
@@ -214,6 +216,23 @@
     <li>Sensitive data, such as credit card numbers, are processed
     but not retained in any database or file</li>
 
+    <li>The data access layer will be responsible for preventing SQL
+    injection attacks (i.e., hackers attempting to enter SQL
+    statements through application UI fields).</li>
+
+    <li>The data access layer will allow read-only connections, which
+    will be used for most requests, as well as write connections for
+    requests that update the database.</li>
+
+    <li>The HTML generation layer will be responsible for preventing
+    cross-site-scripting (XSS) attacks.</li>
+
+    <li>The application will prevent CSRF attacks.  It will do this by
+    performing updates to the database only after a POST, and checking
+    that the referring page was served by the system for every POST.
+    Browsers that do not report HTTP-Referrer will not be
+    supported.</li>
+    
    </ul>
   </dd>
 
