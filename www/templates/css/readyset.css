@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.12 2003/06/24 16:28:12 jrobbins Exp $
+/* $Id: readyset.css,v 1.13 2003/06/24 21:58:20 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -101,13 +101,8 @@ form {
 }
 
 
-ol ol {
- list-style-type: lower-alpha;
-}
-
-ol ol ol {
- list-style-type: lower-roman;
-}
+ol ol { list-style-type: lower-alpha; }
+ol ol ol { list-style-type: lower-roman; }
 
 td, th {
  padding: 2px 3px;
@@ -128,13 +123,8 @@ td, th {
 }
 
 
-.right {
- text-align: right !important;
-}
-
-.center {
- text-align: center !important;
-}
+.right { text-align: right !important; }
+.center { text-align: center !important; }
 
 .readyset .axial th {
  text-align: right;
@@ -142,45 +132,19 @@ td, th {
 }
 
 
-dd {
- margin-bottom: .67em;
-}
+dd { margin-bottom: .67em; }
 
-.tier1 {
- margin-left: 0;
-}
+.tier1 { margin-left: 0; }
+.tier2 { margin-left: 1.5em; }
+.tier3 { margin-left: 3em; }
+.tier4 { margin-left: 4.5em; }
 
-.tier2 {
- margin-left: 1.5em;
-}
+.level1 { padding-left: 0; }
+.level2 { padding-left: 1em; }
+.level3 { padding-left: 2em; }
+.level4 { padding-left: 3em; }
 
-.tier3 {
- margin-left: 3em;
-}
-
-.tier4 {
- margin-left: 4.5em;
-}
-
-.level1 {
- padding-left: 0;
-}
-
-.level2 {
- padding-left: 1em;
-}
-
-.level3 {
- padding-left: 2em;
-}
-
-.level4 {
- padding-left: 3em;
-}
-
-.alt {
- display: none;
-}
+.alt { display: none; }
 
 
 /* additions specific to ReadySET */
