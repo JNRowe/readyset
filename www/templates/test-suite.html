@@ -21,7 +21,7 @@
 
 <h2><a href="qa-plan.html">QA Plan</a> &gt; Test Suite</h2>
 
- <a name="releaseinfo"></a>
+ <div id="releaseinfo">
  <h3>Release Information</h3>
  <div class="axial">
  <table border="1" cellpadding="3" cellspacing="2">
@@ -44,9 +44,9 @@
   </tr>
  </table>
  </div>
+ </div> <!-- /releaseinfo -->
 
-
-<a name="processimpact"></a>
+<div id="processimpact">
 <p class="readonly"><b>Process impact:</b> This is a test suite for
 manual system testing.  It is just one activity in the overall <a
 href="qa-plan.html">QA plan</a>.  A test case suite is simply a table
@@ -54,6 +54,7 @@ of contents for the individual test cases.  Organizing the suite of
 test cases by priority, functional area, actor, business object, or
 release can help identify parts of the system that need additional
 test cases.</p>
+</div> <!-- /processimpact -->
 
 <div class="sticky"> 
   TODO: Before writing individual test cases, list the test cases
@@ -82,8 +83,7 @@ test cases.</p>
   feature below.
 </div>
 
-
-<a name="bybusinessobject"></a>
+<div id="bybusinessobject">
 <h3>Test Cases by Business Object and Operation</h3>
 
 <div class="sample1">
@@ -101,47 +101,47 @@ test cases.</p>
  <tr>
   <th>Student</th>
   <td>
-   <div><a href="test-cases.html#student_add_1">student_add_1</a></div>
-   <div><a href="test-cases.html#student_add_2">student_add_2</a></div>
-   <div><a href="test-cases.html#student_add_3">student_add_3</a></div>
+   <div><a href="test-cases.html#student-add-1">student-add-1</a></div>
+   <div><a href="test-cases.html#student-add-2">student-add-2</a></div>
+   <div><a href="test-cases.html#student-add-3">student-add-3</a></div>
   </td>
-  <td><a href="test-cases.html#student_list_1">student_list_1</a></td>
+  <td><a href="test-cases.html#student-list-1">student-list-1</a></td>
   <td>
-   <div><a href="test-cases.html#student_edit_1">student_edit_1</a></div>
-   <div><a href="test-cases.html#student_edit_2">student_edit_2</a></div>
+   <div><a href="test-cases.html#student-edit-1">student-edit-1</a></div>
+   <div><a href="test-cases.html#student-edit-2">student-edit-2</a></div>
   </td>
-  <td><a href="test-cases.htmlstudent_delete_1">student_delete_1</a></td>
+  <td><a href="test-cases.htmlstudent-delete-1">student-delete-1</a></td>
   <td>
-   <div><a href="test-cases.html#student_search_1">student_search_1</a></div>
-   <div><a href="test-cases.html#student_search_2">student_search_2</a></div>
+   <div><a href="test-cases.html#student-search-1">student-search-1</a></div>
+   <div><a href="test-cases.html#student-search-2">student-search-2</a></div>
   </td>
-  <td><a href="#enroll_grid">See grid below</a></td>
+  <td><a href="#enroll-grid">See grid below</a></td>
  </tr>
 
  <tr>
   <th>Course</th>
   <td>
-   <div><a href="test-cases.html#course_add_1">course_add_1</a></div>
-   <div><a href="test-cases.html#course_add_2">course_add_2</a></div>
+   <div><a href="test-cases.html#course-add-1">course-add-1</a></div>
+   <div><a href="test-cases.html#course-add-2">course-add-2</a></div>
   </td>
-  <td><a href="test-cases.html#course_list_1">course_list_1</a></td>
+  <td><a href="test-cases.html#course-list-1">course-list-1</a></td>
   <td>
-   <div><a href="test-cases.html#course_edit_1">course_edit_1</a></div>
-   <div><a href="test-cases.html#course_move_1">course_move_1</a></div>
-   <div><a href="test-cases.html#course_add_prereq_1">course_add_prereq_1</a></div>
+   <div><a href="test-cases.html#course-edit-1">course-edit-1</a></div>
+   <div><a href="test-cases.html#course-move-1">course-move-1</a></div>
+   <div><a href="test-cases.html#course-add-prereq-1">course-add-prereq-1</a></div>
   </td>
-  <td><a href="test-cases.html#course_cancel_1">course_cancel_1</a></td>
-  <td><a href="test-cases.html#course_search_1">course_search_1</a></td>
+  <td><a href="test-cases.html#course-cancel-1">course-cancel-1</a></td>
+  <td><a href="test-cases.html#course-search-1">course-search-1</a></td>
   <td>N/A</td>
  </tr>
 
  <tr>
   <th>Room</th>
   <td>
-   <div><a href="test-cases.html#room_add_1">room_add_1</a></div>
-   <div><a href="test-cases.html#room_add_2">room_add_2</a></div>
+   <div><a href="test-cases.html#room-add-1">room-add-1</a></div>
+   <div><a href="test-cases.html#room-add-2">room-add-2</a></div>
   </td>
-  <td><a href="test-cases.html#room_list_1">room_list_1</a></td>
+  <td><a href="test-cases.html#room-list-1">room-list-1</a></td>
   <td>TODO</td>
   <td>TODO</td>
   <td>TODO</td>
@@ -150,21 +150,21 @@ test cases.</p>
 
  <tr>
   <th>Instructor</th>
-  <td><a href="test-cases.html#inst_add_1">inst_add_1</a></td>
+  <td><a href="test-cases.html#inst-add-1">inst-add-1</a></td>
   <td>N/A</td>
-  <td><a href="test-cases.html#inst_edit_1">inst_edit_1</a></td>
-  <td><a href="test-cases.html#inst_delete_1">inst_delete_1</a></td>
+  <td><a href="test-cases.html#inst-edit-1">inst-edit-1</a></td>
+  <td><a href="test-cases.html#inst-delete-1">inst-delete-1</a></td>
   <td>N/A</td>
   <td>
-   <div><a href="test-cases.html#inst_eval_1">inst_eval_1</a></div>
-   <div><a href="test-cases.html#inst_eval_2">inst_eval_2</a></div>
+   <div><a href="test-cases.html#inst-eval-1">inst-eval-1</a></div>
+   <div><a href="test-cases.html#inst-eval-2">inst-eval-2</a></div>
   </td>
  </tr>
 
 </table>
 
 <div class="tier2">
-<a name="enroll_grid"/>
+<a name="enroll-grid"/>
 <h4>Test Cases for Enrolling in Courses</h4>
 <table border="1" cellpadding="3" cellspacing="2" width="100%">	
  <tr>
@@ -177,45 +177,45 @@ test cases.</p>
 	
  <tr>
   <th>In Major</th>
-  <td><a href="test-cases.html#enroll_priority_2">enroll_priority_2</a></td>
-  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
-  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td><a href="test-cases.html#enroll-priority-2">enroll-priority-2</a></td>
+  <td><a href="test-cases.html#enroll-priority-1">enroll-priority-1</a></td>
+  <td><a href="test-cases.html#enroll-priority-1">enroll-priority-1</a></td>
   <td>
-   <div><a href="test-cases.html#enroll_1">enroll_1</a></div>
-   <div><a href="test-cases.html#enroll_2">enroll_2</a></div>
-   <div><a href="test-cases.html#enroll_3">enroll_3</a></div>
+   <div><a href="test-cases.html#enroll-1">enroll-1</a></div>
+   <div><a href="test-cases.html#enroll-2">enroll-2</a></div>
+   <div><a href="test-cases.html#enroll-3">enroll-3</a></div>
   </td>
  </tr>
 
  <tr>
   <th>Non-Major</th>
-  <td><a href="test-cases.html#enroll_priority_2">enroll_priority_2</a></td>
-  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
-  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td><a href="test-cases.html#enroll-priority-2">enroll-priority-2</a></td>
+  <td><a href="test-cases.html#enroll-priority-1">enroll-priority-1</a></td>
+  <td><a href="test-cases.html#enroll-priority-1">enroll-priority-1</a></td>
   <td>
-   <div><a href="test-cases.html#enroll_1">enroll_1</a></div>
-   <div><a href="test-cases.html#enroll_2">enroll_2</a></div>
-   <div><a href="test-cases.html#enroll_3">enroll_3</a></div>
+   <div><a href="test-cases.html#enroll-1">enroll-1</a></div>
+   <div><a href="test-cases.html#enroll-2">enroll-2</a></div>
+   <div><a href="test-cases.html#enroll-3">enroll-3</a></div>
   </td>
  </tr>
 
  <tr>
   <th>Honors Course</th>
-  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
-  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td><a href="test-cases.html#enroll-priority-1">enroll-priority-1</a></td>
+  <td><a href="test-cases.html#enroll-priority-1">enroll-priority-1</a></td>
   <td>
-   <div><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></div>
+   <div><a href="test-cases.html#enroll-priority-1">enroll-priority-1</a></div>
   </td>
-  <td><a href="test-cases.html#enroll_restricted_1">enroll_restricted_1</a></td>
+  <td><a href="test-cases.html#enroll-restricted-1">enroll-restricted-1</a></td>
  </tr>
 </table>
 
 
 </div>
 </div>
+</div> <!-- /bybusinessobject -->
 
-
-<a name="bypriority"></a>
+<div id="bypriority">
 <h3>Test Cases by Feature Priority</h3>
 
 <div class="sticky">
@@ -230,17 +230,17 @@ test cases.</p>
  <li>Essential
   <ul>
    <li><a href="features.html#F-01">F-01</a>:  
-       <a href="test-cases.html#student_add_1">student_add_1</a> 
-       <a href="test-cases.html#student_add_2">student_add_2</a>
-       <a href="test-cases.html#student_add_3">student_add_3</a>
+       <a href="test-cases.html#student-add-1">student-add-1</a> 
+       <a href="test-cases.html#student-add-2">student-add-2</a>
+       <a href="test-cases.html#student-add-3">student-add-3</a>
    </li>
    <li><a href="features.html#F-02">F-02</a>:  
-       <a href="test-cases.html#enroll_1">enroll_1</a>
-       <a href="test-cases.html#enroll_2">enroll_2</a>
-       <a href="test-cases.html#enroll_3">enroll_3</a>
-       <a href="test-cases.html#enroll_priority_1">enroll_priority_1</a>
-       <a href="test-cases.html#enroll_priority_2">enroll_priority_2</a>
-       <a href="test-cases.html#enroll_restricted_1">enroll_restricted_1</a>
+       <a href="test-cases.html#enroll-1">enroll-1</a>
+       <a href="test-cases.html#enroll-2">enroll-2</a>
+       <a href="test-cases.html#enroll-3">enroll-3</a>
+       <a href="test-cases.html#enroll-priority-1">enroll-priority-1</a>
+       <a href="test-cases.html#enroll-priority-2">enroll-priority-2</a>
+       <a href="test-cases.html#enroll-restricted-1">enroll-restricted-1</a>
    </li>
   </ul>
  </li>
@@ -248,14 +248,14 @@ test cases.</p>
  <li>Expected
   <ul>
    <li><a href="features.html#F-22">F-22</a>: 
-       <a href="test-cases.html#student_search_1">student_search_1</a> 
-       <a href="test-cases.html#student_search_2">student_search_2</a> 
-       <a href="test-cases.html#course_search_1">course_search_1</a> 
+       <a href="test-cases.html#student-search-1">student-search-1</a> 
+       <a href="test-cases.html#student-search-2">student-search-2</a> 
+       <a href="test-cases.html#course-search-1">course-search-1</a> 
    </li>
    <li><a href="features.html#F-23">F-23</a>: 
-    <a href="test-cases.html#room_add_1">room_add_1</a>
-    <a href="test-cases.html#room_add_2">room_add_2</a>
-    <a href="test-cases.html#room_edit_1">room_edit_1</a> TODO
+    <a href="test-cases.html#room-add-1">room-add-1</a>
+    <a href="test-cases.html#room-add-2">room-add-2</a>
+    <a href="test-cases.html#room-edit-1">room-edit-1</a> TODO
    </li>
   </ul>
  </li>
@@ -263,17 +263,17 @@ test cases.</p>
  <li>Desired
   <ul>
    <li><a href="features.html#F-31">F-31</a>: 
-       <a href="test-cases.html#inst_eval_1">inst_eval_1</a> 
-       <a href="test-cases.html#inst_eval_2">inst_eval_2</a> 
+       <a href="test-cases.html#inst-eval-1">inst-eval-1</a> 
+       <a href="test-cases.html#inst-eval-2">inst-eval-2</a> 
    </li>
   </ul>
  </li>
 </ul>
 </div>
+</div> <!-- /bypriority -->
 
 
-
-<a name="byusecase"></a>
+<div id="byusecase">
 <h3>Test Cases by Use Case Priority</h3>
 
 <div class="sticky">
@@ -288,27 +288,27 @@ test cases.</p>
  <li>Essential
   <ul>
    <li><a href="use-cases.html#UC-01">UC-01</a>: 
-       <a href="test-cases.html#student_add_1">student_add_1</a>
-       <a href="test-cases.html#student_add_2">student_add_2</a>
+       <a href="test-cases.html#student-add-1">student-add-1</a>
+       <a href="test-cases.html#student-add-2">student-add-2</a>
    </li>
    <li><a href="use-cases.html#UC-01">UC-01</a>: 
-       <a href="test-cases.html#student_add_3">student_add_3</a>
+       <a href="test-cases.html#student-add-3">student-add-3</a>
    </li>
    <li><a href="use-cases.html#UC-02">UC-02</a>:  
-       <a href="test-cases.html#enroll_1">enroll_1</a>
+       <a href="test-cases.html#enroll-1">enroll-1</a>
    </li>
    <li><a href="use-cases.html#UC-03">UC-03</a>:  
-       <a href="test-cases.html#enroll_2">enroll_2</a>
+       <a href="test-cases.html#enroll-2">enroll-2</a>
    </li>
    <li><a href="use-cases.html#UC-04">UC-04</a>:  
-       <a href="test-cases.html#enroll_3">enroll_3</a>
+       <a href="test-cases.html#enroll-3">enroll-3</a>
    </li>
    <li><a href="use-cases.html#UC-05">UC-05</a>:  
-       <a href="test-cases.html#enroll_priority_1">enroll_priority_1</a>
-       <a href="test-cases.html#enroll_priority_2">enroll_priority_2</a>
+       <a href="test-cases.html#enroll-priority-1">enroll-priority-1</a>
+       <a href="test-cases.html#enroll-priority-2">enroll-priority-2</a>
    </li>
    <li><a href="use-cases.html#UC-06">UC-06</a>:  
-       <a href="test-cases.html#enroll_restricted_1">enroll_restricted_1</a>
+       <a href="test-cases.html#enroll-restricted-1">enroll-restricted-1</a>
    </li>
   </ul>
  </li>
@@ -316,18 +316,18 @@ test cases.</p>
  <li>Expected
   <ul>
    <li><a href="use-cases.html#UC-22">UC-22</a>: 
-       <a href="test-cases.html#student_search_1">student_search_1</a> 
-       <a href="test-cases.html#student_search_2">student_search_2</a> 
+       <a href="test-cases.html#student-search-1">student-search-1</a> 
+       <a href="test-cases.html#student-search-2">student-search-2</a> 
    </li>
    <li><a href="use-cases.html#UC-23">UC-23</a>: 
-       <a href="test-cases.html#course_search_1">course_search_1</a> 
+       <a href="test-cases.html#course-search-1">course-search-1</a> 
    </li>
    <li><a href="use-cases.html#UC-30">UC-30</a>: 
-    <a href="test-cases.html#room_add_1">room_add_1</a>
-    <a href="test-cases.html#room_add_2">room_add_2</a>
+    <a href="test-cases.html#room-add-1">room-add-1</a>
+    <a href="test-cases.html#room-add-2">room-add-2</a>
    </li>
    <li><a href="use-cases.html#UC-31">UC-31</a>: 
-    <a href="test-cases.html#room_edit_1">room_edit_1</a> TODO
+    <a href="test-cases.html#room-edit-1">room-edit-1</a> TODO
    </li>
    <li><a href="use-cases.html#UC-32">UC-32</a>: 
     TODO
@@ -341,14 +341,14 @@ test cases.</p>
  <li>Desired
   <ul>
    <li><a href="use-cases.html#UC-40">UC-40</a>: 
-       <a href="test-cases.html#inst_eval_1">inst_eval_1</a> 
-       <a href="test-cases.html#inst_eval_2">inst_eval_2</a> 
+       <a href="test-cases.html#inst-eval-1">inst-eval-1</a> 
+       <a href="test-cases.html#inst-eval-2">inst-eval-2</a> 
    </li>
   </ul>
  </li>
 </ul>
 </div>
-
+</div> <!-- /byusecase -->
 
 </div>
 

@@ -19,10 +19,9 @@
 <div class="readyset">
  <h2><a href="plan.html">Plan</a> &gt; Resource Needs</h2>
 
- <a name="projectinfo"></a>
+ <div id="projectinfo">
  <h3>Project Information</h3>
- <div class="axial">
- <table border="1" cellpadding="3" cellspacing="2">
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
   <tr>
    <th>Project:</th> 
    <td>PROJECTNAME</td>
@@ -46,15 +45,15 @@
    </td>
   </tr>
  </table>
- </div>
+ </div> <!-- /projectinfo -->
 
- <a name="processimpact"></a>
+ <div id="processimpact">
  <p class="readonly"><strong>Process impact:</strong> Based on the
  project plan and the worksheet below, this project will need the
  following resources to meet its goals.  If fewer resources are
  available, the scope of the release should be reconsidered or the
  process must be changed.</p>
-
+ </div> <!-- /processimpact -->
 
 
  <div class="sticky">
@@ -68,7 +67,7 @@
   related documents.
  </div>
 
- <a name="humanresources"></a>
+ <div id="humanresources">
  <h3>Human Resource Needs</h3>
  <table border="1" cellpadding="3" cellspacing="2" width="100%">
   <tr>
@@ -191,9 +190,11 @@
    <td></td>
   </tr>
  </table>
+ </div> <!-- /humanresources -->
 
 
- <a name="capitalneeds"></a> 
+
+ <div id="capitalneeds">
  <h3>Capital Needs</h3>
  <table border="1" cellpadding="3" cellspacing="2" width="100%">
   <tr>
@@ -309,7 +310,8 @@
    <td>Revenue sharing at 2%</td>
   </tr>
  </table>
-
+ </div> <!-- /capitalneeds -->
+ 
  <div class="tier2">
  <h4>Possible Status Values</h4>
  <ul>
@@ -323,7 +325,7 @@
  </div>
 
 
- <a name="checklist"></a> 
+ <div id="checklist">
  <h3>Resource Needs Checklist</h3>
 
  <p>The goal of this checklist is to help expose resource needs that
@@ -486,9 +488,10 @@
   the needs of this project will take priority over any other project
   that is likely to need the same resources.</dd>
 
-
  </dl>
+ </div> <!-- /checklist -->
 
+ 
  <div class="sticky">
   TODO:  Check for <a
   href="http://readyset.tigris.org/words-of-wisdom/resource-needs.html">words

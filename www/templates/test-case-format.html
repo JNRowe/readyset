@@ -20,9 +20,8 @@
 
 <h2><a href="qa-plan.html">QA Plan</a> &gt; <a href="test-suite.html">Test Suite</a> &gt; Test Case Format</h2>
 
-<div class="readonly"> 
+<div id="processimpact" class="readonly"> 
 
- <a name="processimpact"></a>
  <b>Process impact:</b> This reference page documents the format of
  test cases and gives tips on writing test cases.  You can copy and
  paste the sample test case into your test-cases.html file.  This file
@@ -36,11 +35,10 @@
  carry out the tests and find defects.
 </div>
 
-<a name="unique-test-case-id"></a>
+<div id="unique-test-case-id">
 <h3>unique-test-case-id: Test Case Title</h3>
 
-<div class="axial">
-<table border="0" cellspacing="2" cellpadding="3" width="100%">
+<table border="0" cellspacing="2" cellpadding="3" width="100%" class="axial">
  <tr>
   <th>Purpose:</th>
   <td>
@@ -102,9 +100,10 @@
 
 </table>
 </div>
+</div>
 
 
-<a name="choosingtestdata"></a>
+<div id="choosingtestdata">
 <h3>Choosing Test Data</h3>
 
 <p>In system testing, test data should cover the possible values of
@@ -207,9 +206,11 @@ be clear which test data, if any, is expected to trigger errors.</p>
  </dd>
 
 </dl>
+</div> <!-- /choosingtestdata -->
 
 
-<a name="steps"></a>
+
+<div id="steps">
 <h3>Format of test steps</h3>
 
 <p>Each step can be written very tersely using the following keywords:</p>
@@ -286,6 +287,8 @@ expected output is very clear.  A test case can have multiple verify
 steps in the middle or at the end.  Having multiple verify steps can
 be useful if you want a smaller number of long tests rather than a
 large number of short tests.</p>
+
+</div> <!-- /steps -->
 
 <div class="legal1">Company Proprietary</div>
 
