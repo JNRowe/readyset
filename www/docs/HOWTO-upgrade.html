@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "http://www.tigris.org/branding/css/tigris.css"; 
+@import "http://www.tigris.org/branding/css/inst.css"; 
+/*  ]]> */
+ </style>
+
+</script>
+ <title>How to Upgrade</title>
+</head>
+
+<body>
+<div class="app">
+ <h2>ReadySET: How to upgrade</h2>
+
+
+ <h3>Disclaimer</h3>
+
+ <p>ReadySET is still in fairly early releases that are rapidly
+ evolving.  The differences between any two early releases may be
+ quite large, making upgrading difficult.</p>
+
+ <p>As ReadySET matures (i.e., passes v1.0.0), the changes between
+ minor versions should become smaller and easier to upgrade.</p>
+
+ <p>Also, some of the ReadySET content that is most likely to change
+ and grow over time is not part of the templates at all, it is the <a
+ href="../words-of-wisdom/">words of wisdom</a> hosted on the ReadySET
+ web site.</p>
+
+
+  
+ <h3>Low-Tech Upgrade Proceedure</h3>
+
+ <p>You may simply cut and paste sections of HTML source code between
+ new ReadySET templates and files that you have been using in your
+ project.</p>
+
+ <p>While potentially tedious and somewhat error-prone, this method
+ requires no training or specific tools.  It also has the advantages
+ that it is very easy to update only as many or as few files as you
+ desire.</p>
+
+ <p>Check the release-notes.html in the new release of ReadySET for a
+ summary of changes.</p>
+
+
+ 
+ <h3>High-Tech Upgrade Proceedure</h3>
+
+ <p>For users that use CVS for their own project: you can use CVS's <a
+ href="http://cvsbook.red-bean.com/cvsbook.html#Tracking_Third-Party_Sources__Vendor_Branches_">vendor
+ branch</a> feature to help you merge the latest changes from the
+ ReadySET project into your project.</p>
+
+ <p>Let's assume that you are upgrading from ReadySET v0.8.2 to
+ v0.9.0.  Let's also assume that you consider "Tigris.org" to be the
+ vendor of ReadySET.  Note that CVS does not allow periods in tag
+ names, and we do not want ReadySET version numbers to conflict with
+ any version numbers of your projects, so we will make the names more
+ distinctive and use underscores instead: ReadySET_0_8_2,
+ ReadySET_0_9_0, Tigris_org.</p>
+
+ <p>Let's further assume that you are using a CVS server located at
+ cvs.yourcompany.com with a repository located at /cvs, your username
+ is username, and that you are using ReadySET for a project named
+ yourproject.</p>
+
+ <p>Steps:</p>
+ 
+ <ol>
+
+  <li>Unpack ReadySET v0.8.2 and add it to <strong>your</strong> CVS
+    repository on a vendor branch.
+  <pre>
+  unzip ReadySET-082.zip
+  cd ReadySET-082
+  cvs -d :pserver:username@cvs.yourcompany.com:/cvs import yourproject Tigris_org ReadySET_0_8_2
+  cd ..
+  </pre>
+  </li>
+
+  <li>Unpack ReadySET v0.9.0 and add it to <strong>your</strong> CVS
+    repository on the same vendor branch.
+  <pre>
+  unzip ReadySET-090.zip
+  cd ReadySET-090
+  cvs -d :pserver:username@cvs.yourcompany.com:/cvs import yourproject Tigris_org ReadySET_0_9_0
+  cd ..
+  </pre>
+  </li>
+
+
+  <li>Create a working copy of your project documents (if you don't
+  already have one).
+  <pre>
+   mkdir workingcopy
+   cd workingcopy
+   cvs -d :pserver:username@cvs.yourcompany.com:/cvs co yourproject
+  </pre>
+  </li>
+
+  <li>Merge the <strong>differences</strong> between the two vendor
+  versions of ReadySET into your working copy.
+  <pre>
+   cd yourproject
+   cvs update -j ReadySET_0_8_2 -j ReadySET_0_9_0
+  </pre>
+  </li>
+
+  <li>You are likely to see several messages from CVS about merging
+  files and conflicts.  The CVS output lines that begin with "C"
+  indicate conflicts.</li>
+
+  <li>Edit your working copy files to resolve all conflicts.  Browse
+  the files to make sure that they look OK.  If any files have changed
+  names, you will have to cut and paste content from the old filename
+  to the new filename, 'cvs add' the new filename, and 'cvs rm -f' the
+  old filename.</li>
+
+  <li>Commit your updated files to your repository
+  <pre>
+   cvs commit -m 'updated project documents to use newer ReadySET templates'
+  </pre>
+  </li>
+
+ </ol>
+
+  
+</div>
+
+</body>
+</html>
