@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.6 2003/06/18 17:29:20 jrobbins Exp $
+/* $Id: readyset.css,v 1.7 2003/06/18 17:37:18 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -8,6 +8,11 @@ Tigris application style.
 
 To extend or override these rules for your instance, edit inst.css
 instead of this file. */
+
+body {
+ padding: 0;
+ margin: 0;
+}
 
 table, th, td {
  border: none;
