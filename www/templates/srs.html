@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+</script>
+ <title>SRS</title>
+</head>
+
+<body>
+<div class="app">
+ <h2>Software Requirements Specification</h2>
+
+ <h3>Release Information</h3>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Project:</th> 
+   <td>PROJECTNAME</td> 
+  </tr>
+  <tr>
+   <th>Internal release number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Attached worksheets:</th> 
+   <td>
+    <div>SRS &gt; <a href="use-case-suite.html">Use case suite</a></div>
+    <div>SRS &gt; <a href="feature-set.html">Feature set</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="proposal.html">Project proposal</a></div>
+    <div><a href="user-needs.html">User needs</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+ <p class="readonly"><strong>Process impact:</strong> The SRS
+ precisely defines the software product that will be built.  Decisions
+ made in writing the SRS are based on information in the <a
+ href="proposal.html">project proposal</a> and <a
+ href="user-needs.html">user needs</a> documents.  The SRS sets
+ requirements that must be satisfied by the <a
+ href="design.html">system design</a>.  The SRS is verified and
+ validated by activities outlined in the <a href="qa-plan">QA
+ plan</a>.
+ </p>
+
+
+ <h3>Introduction</h3>
+
+ <div class="sticky">
+  TODO: Provide a brief overview of this release of the product.  You
+  can copy text from the project proposal, paste it here, and shorten it.
+ </div>
+
+ <p>PARAGRAPH</p>
+
+ <p>PARAGRAPH</p>
+
+ <p>For more information, see the project <a
+ href="proposal.html">proposal</a>.</p>
+
+
+ <h3>Use Cases</h3>
+
+ <p>ONE PARAGRAPH OVERVIEW</p>
+
+ <p>Details:</p>
+ <ul>
+  <li>Actors are described in the <a href="user-needs.html">user
+  needs</a> document.</li>
+  
+  <li>The <a href="use-case-suite.html">use case suite</a> lists all
+  use cases in an organized way.</li>
+
+ </ul> 
+
+
+ <h3>Functional Requirements</h3>
+
+ <p>ONE PARAGRAPH OVERVIEW</p>
+
+ <p>Details:</p>
+ <ul>
+  <li>The <a href="feature-set.html">feature set</a> lists all
+   features in an organized way.</li>
+ </ul>
+
+
+ <h3>Non-Functional Requirements</h3>
+
+ <div class="sticky">
+  TODO: Describe the non-functional requirements for this release.
+  Some examples are provided below.
+ </div>
+
+ <dl>
+
+  <dt>What are the usability requirements?</dt>
+
+  <dd class="sample1">
+   <p>Our main criteria for making the system usable is the difficulty
+   of performing each high-frequency use case.  Difficulty depends on
+   the number of steps, the knowledge that the user must have at each
+   step, the decisions that the user must make at each step, and the
+   mechanics of each step (e.g., typing a book title exactly is hard,
+   clicking on a title in a list is easy).</p>
+  
+   <p>The user interface should be as familiar as possible to users
+   who have used other web applications and Windows desktop
+   applications.  E.g., we will follow the UI guidelines for naming
+   menus, buttons, and dialog boxes whenever possible.
+   </p>
+
+   <p>PARAGRAPH</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>Goverment customers will demand <a
+    href="http://www.section508.gov/">section508 compliance</a></li>
+
+    <li>Support learnability with principles of <a
+    href="http://www.foruse.com/articles/instructive.htm">Instructive
+    Interaction</a></li>
+    </li>
+
+    <li>The customer wants extensive on-line help, but is not
+    demanding a printed manual.</li>
+
+   </ul>
+  </dd>
+
+
+  <dt>What are the reliability and up-time requirements?</dt>
+
+  <dd class="sample1">
+   <p>PARAGRAPH</p>
+
+   <p>PARAGRAPH</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the safety requirements?</dt>
+
+  <dd class="sample1">
+   <p>PARAGRAPH</p>
+
+   <p>PARAGRAPH</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the security requirements?</dt>
+
+  <dd class="sample1">
+   <p>Access will be controlled with usernames and passwords.</p>
+
+   <p>Only adminstrator users will have access to administrative
+   functions, average users will not.</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>Passwords must be 4-14 characters long</li>
+    <li>We will not use encrypted communications (SSL) for this website</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the performance and scalability requirements requirements?</dt>
+
+  <dd class="sample1">
+   <p>PARAGRAPH</p>
+
+   <p>PARAGRAPH</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the maintainability and upgradability requirements?</dt>
+
+  <dd class="sample1">
+   <p>Maintainability is our ability to make changes to the product
+   over time.  We need strong maintainability in order to retain our
+   early customers.  We will address this by anticipating several
+   types of change, and by carefully documenting our design and
+   implemenation.</p>
+
+   <p>Upgradability is our ability to cost-effectively deploy new
+   versions of the product to customers with minimal downtime or
+   distruption.  A key feature supporting this goal is automatic
+   download of patches and upgrade of the end-user's machine.  Also,
+   we shall use data file formats that include enough meta-data to
+   allow us to reliabily transform existing customer data during an
+   upgrade.</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the supportability and operability requirements?</dt>
+
+  <dd class="sample1">
+
+   <p>Supportability is our ability to provide cost effective
+   technical support.  Our goal is to limit our support costs to only
+   5% of annual licensing fees.  The product's automatic upgrade
+   feature will help us easily deploy defect fixes to end-users.  The
+   user guide and product website will include a troubleshooting guide
+   and checklist of information to have at hand before contacting
+   technical support.</p>
+
+   <p>Operability is our ability to host and operate the software as
+   an ASP (Application Service Provider).  The product features should
+   help us achieve our goal of 99.9% uptime (at most 43 minutes
+   downtime each month).  Key features supporting that are the ability
+   to do hot data backups, and application monitoring.</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the business lifecycle requirements?</dt>
+
+  <dd class="sample1">
+
+   <p>The business lifecycle of a product includes everything that
+   happens to that product over a period of several years, from
+   initial purchase decision, through important but infrequent use
+   cases, until product retirement.  Key lifecycle requirements are
+   listed below.</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>Customers must be able to manage the number of licenses that
+    they have and make informed decisions to purchaes more licenses
+    when needed</li>
+
+    <li>The product shall support daily operations and our year-end
+    audit</li>
+
+    <li>The customer data shall be stored in a format that is still
+    accessible even after the application has been retired</li>
+   </ul>
+  </dd>
+
+ </dl>
+
+
+
+ <h3>Environmental Requirements</h3>
+
+ <div class="sticky">
+  TODO: Describe the environmental requirements for this release.
+  Environmental requirements describe the larger system of hardware,
+  software, and data that this product must work within.  Some
+  examples are provided below.
+ </div>
+
+ <dl>
+
+  <dt>What are the system hardware requirements?</dt>
+
+  <dd class="sample1">
+   <p>PARAGRAPH</p>
+
+   <p>PARAGRAPH</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the system software requirements?</dt>
+
+  <dd class="sample1">
+   <p>PARAGRAPH</p>
+
+   <p>PARAGRAPH</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What programmatic interfaces must be provided?</dt>
+
+  <dd class="sample1">
+   <p>PARAGRAPH</p>
+
+   <p>PARAGRAPH</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>We must implement this <a href="LINK TO STANDARD">standard API</a>.</li>
+    <li>DETAIL</li>
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+
+  <dt>What are the data import and export requirements?</dt>
+
+  <dd class="sample1">
+   <p>PARAGRAPH</p>
+
+   <p>PARAGRAPH</p>
+
+   <p>Details:</p>
+
+   <ul>
+    <li>We will store all data in a standard SQL database, where it can be accessed by other programs.</li>
+
+    <li>We will store all data in an XML file, using a <a href="LINK TO STANDARD">standard DTD</a>.</li>
+
+    <li>DETAIL</li>
+
+    <li>DETAIL</li>
+   </ul>
+  </dd>
+
+ </dl>
+
+</div>
+
+
+ <div class="sticky">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/srs.html">words
+  of wisdom</a> and discuss ways to improve this template.
+ </div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</body>
+</html>

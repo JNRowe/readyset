@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+</script>
+ <title>Scalability</title>
+</head>
+
+<body>
+<div class="app">
+ <h2><a href="design.html">Design</a> &gt; Scalability</h2>
+
+ <h3>Release Information</h3>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Project:</th> 
+   <td>PROJECTNAME</td> 
+  </tr>
+  <tr>
+   <th>Internal release number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+ <h3>Overview</h3>
+
+ Briefly describe the approach to scalablity. 
+
+ Rank your scalablitliy goals for this design.
+
+ <h3>Relevant parameters</h3>
+ <table width="100%">
+  <tr>
+   <th>Parameter</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>registered_users</td>
+   <td>Number of registered users in the database.</td>
+  </tr>
+  <tr>
+   <td>concurrent_users</td>
+   <td>Number of users logged into the system at a given time.</td>
+  </tr>
+  <tr>
+   <td>map_size</td>
+   <td>Number of game squares in the playing area.  
+    E.g., a 10 x 25 map would be 250 squares.</td>
+  </tr>
+  <tr>
+   <td>game_pieces</td>
+   <td>Number of game pieces on the playing area at a given time.</td>
+  </tr>
+ </table>
+
+
+ <h3>Scalability Mechanisms</h3>
+
+
+ <h3>Performance Goals and Estimates</h3>
+ <table width="100%">
+  <tr>
+   <th>Action</th>
+   <th>Goal</th>
+   <th>Time Formula</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>login</td>
+   <td>1 second</td>
+   <td>O(Log(registered_users))</td>
+   <td>Time that it takes to look up a user by their login name in the database.</td>
+  </tr>
+  <tr>
+   <td>display_map</td>
+   <td>1/5 second</td>
+   <td>O(map_size + game_pieces)</td>
+   <td>Time that it takes to redraw the game map and all game pieces.</td>
+  </tr>
+ </table>
+
+
+ <h3>System Scalability Checklist</h3>
+
+ How well do these  mechanisms support the achivement of your goals?
+
+</div>
+
+
+ <div class="sticky">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/design-scalability.html">words
+  of wisdom</a> and discuss ways to improve this template.
+ </div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</body>
+</html>

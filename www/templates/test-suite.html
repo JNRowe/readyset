@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+</script>
+ <title>Test Suite</title>
+</head>
+
+<body>
+<div class="app">
+
+
+<h2><a href="qa-plan.html">QA Plan</a> &gt; Test Suite</h2>
+
+ <h3>Release Information</h3>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Project:</th> 
+   <td>PROJECTNAME</td> 
+  </tr>
+  <tr>
+   <th>Internal release number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="test-cases.html">Test cases</a></div>
+    <div><a href="test-case-format.html">Test case format</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+<p class="readonly"><b>Process impact:</b> This is a test suite for
+manual system testing.  It is just one activity in the overall <a
+href="qa-plan.html">QA plan</a>.  A test case suite is simply a table
+of contents for the individual test cases.  Organizing the suite of
+test cases by priority, functional area, actor, business object, or
+release can help identify parts of the system that need additional
+test cases.</p>
+
+<div class="sticky"> 
+  TODO: Before writing individual test cases, list the test cases
+  that you think you will need.  Organize them in a way that will
+  purposely leave visible blanks on this page if you are missing use
+  cases.  Choose one or more of the organizations show below.
+</div>
+
+<div class="sticky"> 
+  TIP: Refer back to your <a href="use-cases.html">use cases</a>
+  document.  Use them for ideas and make sure that you cover all of
+  them.  Remember that test cases are more precise than use cases,
+  test cases should reference specific details of your implementation,
+  and there may be several test cases for a given use case.
+</div>
+
+<div class="sticky"> 
+  TIP: The test case suite can be organized into nested lists
+  according to other coverage criteria, e.g., by actor.  Or, it can be
+  organized into tables that consider two aspects at a time, e.g.,
+  business objects vs. actor.  If a certain section of the tree or
+  table does not need test cases, explicitly mark it "N/A".
+  Otherwise, if a section needs more test cases than you have written yet,
+  mark it "TODO".  If one cell or list item contains many tests, break
+  that section out into its own table, as done for the enrollment
+  feature below.
+</div>
+
+
+<h3>Test Cases by Business Object and Operation</h3>
+
+<div class="sample1">
+<table width="100%">	
+ <tr>
+  <th>BO \ Action</th>
+  <th>add</th>
+  <th>list/browse</th>
+  <th>edit</th>
+  <th>delete</th>
+  <th>search</th>
+  <th>other</th>
+ </tr>
+	
+ <tr>
+  <th>Student</th>
+  <td>
+   <div><a href="test-cases.html#student_add_1">student_add_1</a></div>
+   <div><a href="test-cases.html#student_add_2">student_add_2</a></div>
+   <div><a href="test-cases.html#student_add_3">student_add_3</a></div>
+  </td>
+  <td><a href="test-cases.html#student_list_1">student_list_1</a></td>
+  <td>
+   <div><a href="test-cases.html#student_edit_1">student_edit_1</a></div>
+   <div><a href="test-cases.html#student_edit_2">student_edit_2</a></div>
+  </td>
+  <td><a href="test-cases.htmlstudent_delete_1">student_delete_1</a></td>
+  <td>
+   <div><a href="test-cases.html#student_search_1">student_search_1</a></div>
+   <div><a href="test-cases.html#student_search_2">student_search_2</a></div>
+  </td>
+  <td>Enrollment details below</td>
+ </tr>
+
+ <tr>
+  <th>Course</th>
+  <td>
+   <div><a href="test-cases.html#course_add_1">course_add_1</a></div>
+   <div><a href="test-cases.html#course_add_2">course_add_2</a></div>
+  </td>
+  <td><a href="test-cases.html#course_list_1">course_list_1</a></td>
+  <td>
+   <div><a href="test-cases.html#course_edit_1">course_edit_1</a></div>
+   <div><a href="test-cases.html#course_move_1">course_move_1</a></div>
+   <div><a href="test-cases.html#course_add_prereq_1">course_add_prereq_1</a></div>
+  </td>
+  <td><a href="test-cases.html#course_cancel_1">course_cancel_1</a></td>
+  <td><a href="test-cases.html#course_search_1">course_search_1</a></td>
+  <td>NA</td>
+ </tr>
+
+ <tr>
+  <th>Room</th>
+  <td>
+   <div><a href="test-cases.html#room_add_1">room_add_1</a></div>
+   <div><a href="test-cases.html#room_add_2">room_add_2</a></div>
+  </td>
+  <td><a href="test-cases.html#room_list_1">room_list_1</a></td>
+  <td>TODO</td>
+  <td>TODO</td>
+  <td>TODO</td>
+  <td>NA</td>
+ </tr>
+
+ <tr>
+  <th>Instructor</th>
+  <td><a href="test-cases.html#instructor_add_1">instructor_add_1</a></td>
+  <td>N/A</td>
+  <td><a href="test-cases.html#instructor_edit_1">instructor_edit_1</a></td>
+  <td><a href="test-cases.html#instructor_delete_1">instructor_delete_1</a></td>
+  <td>N/A</td>
+  <td>
+   <div><a href="test-cases.html#instructor_evaluate_1">instructor_evaluate_1</a></div>
+   <div><a href="test-cases.html#instructor_evaluate_2">instructor_evaluate_2</a></div>
+  </td>
+ </tr>
+
+</table>
+
+<div class="tier2">
+<h4>Test Cases for Enrolling in Courses</h4>
+<table width="100%">	
+ <tr>
+  <th>Course \ Student</th>
+  <th>New Freshman</th>
+  <th>Senior</th>
+  <th>Any Honors</th>
+  <th>Other</th>
+ </tr>
+	
+ <tr>
+  <th>In Major</th>
+  <td><a href="test-cases.html#enroll_priority_2">enroll_priority_2</a></td>
+  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td>
+   <div><a href="test-cases.html#enroll_1">enroll_1</a></div>
+   <div><a href="test-cases.html#enroll_2">enroll_2</a></div>
+   <div><a href="test-cases.html#enroll_3">enroll_3</a></div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Non-Major</th>
+  <td><a href="test-cases.html#enroll_priority_2">enroll_priority_2</a></td>
+  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td>
+   <div><a href="test-cases.html#enroll_1">enroll_1</a></div>
+   <div><a href="test-cases.html#enroll_2">enroll_2</a></div>
+   <div><a href="test-cases.html#enroll_3">enroll_3</a></div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Honors Course</th>
+  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></td>
+  <td>
+   <div><a href="test-cases.html#enroll_priority_1">enroll_priority_1</a></div>
+  </td>
+  <td><a href="test-cases.html#enroll_restricted_1">enroll_restricted_1</a></td>
+ </tr>
+</table>
+
+
+</div>
+</div>
+
+
+<h3>Test Cases by Feature Priority</h3>
+
+<div class="sticky">
+ TODO: Use this outline to make sure that high priority features are
+ adequately tested.  List features by priority, and then list the test
+ cases for each feature.  If a feature needs more test cases, note
+ that with "TODO".
+</div>
+
+<div class="sample1">
+<ul>
+ <li>Essential
+  <ul>
+   <li><a href="features.html#F-01">F-01</a>:  
+       <a href="test-cases.html#student_add_1">student_add_1</a> 
+       <a href="test-cases.html#student_add_2">student_add_2</a>
+       <a href="test-cases.html#student_add_3">student_add_3</a>
+   </li>
+   <li><a href="features.html#F-02">F-02</a>:  
+       <a href="test-cases.html#enroll_1">enroll_1</a>
+       <a href="test-cases.html#enroll_2">enroll_2</a>
+       <a href="test-cases.html#enroll_3">enroll_3</a>
+       <a href="test-cases.html#enroll_priority_1">enroll_priority_1</a>
+       <a href="test-cases.html#enroll_priority_2">enroll_priority_2</a>
+       <a href="test-cases.html#enroll_restricted_1">enroll_restricted_1</a>
+   </li>
+  </ul>
+ </li>
+
+ <li>Expected
+  <ul>
+   <li><a href="features.html#F-22">F-22</a>: 
+       <a href="test-cases.html#student_search_1">student_search_1</a> 
+       <a href="test-cases.html#student_search_2">student_search_2</a> 
+       <a href="test-cases.html#course_search_1">course_search_1</a> 
+   </li>
+   <li><a href="features.html#F-23">F-23</a>: 
+    <a href="test-cases.html#room_add_1">room_add_1</a>
+    <a href="test-cases.html#room_add_2">room_add_2</a>
+    <a href="test-cases.html#room_edit_1">room_edit_1</a> TODO
+   </li>
+  </ul>
+ </li>
+
+ <li>Desired
+  <ul>
+   <li><a href="features.html#F-31">F-31</a>: 
+       <a href="test-cases.html#instructor_evaluate_1">instructor_evaluate_1</a> 
+       <a href="test-cases.html#instructor_evaluate_2">instructor_evaluate_2</a> 
+   </li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+<h3>Test Cases by Use Case Priority</h3>
+
+<div class="sticky">
+ TODO: Use this outline to make sure that high priority use cases are
+ adequately tested.  List use cases by priority, and then list the
+ test cases for each use case.  If a use case needs more test cases,
+ note that with "TODO".
+</div>
+
+<div class="sample1">
+<ul>
+ <li>Essential
+  <ul>
+   <li><a href="use-cases.html#UC-01">UC-01</a>: 
+       <a href="test-cases.html#student_add_1">student_add_1</a>
+       <a href="test-cases.html#student_add_2">student_add_2</a>
+   </li>
+   <li><a href="use-cases.html#UC-01">UC-01</a>: 
+       <a href="test-cases.html#student_add_3">student_add_3</a>
+   </li>
+   <li><a href="use-cases.html#UC-02">UC-02</a>:  
+       <a href="test-cases.html#enroll_1">enroll_1</a>
+   </li>
+   <li><a href="use-cases.html#UC-03">UC-03</a>:  
+       <a href="test-cases.html#enroll_2">enroll_2</a>
+   </li>
+   <li><a href="use-cases.html#UC-04">UC-04</a>:  
+       <a href="test-cases.html#enroll_3">enroll_3</a>
+   </li>
+   <li><a href="use-cases.html#UC-05">UC-05</a>:  
+       <a href="test-cases.html#enroll_priority_1">enroll_priority_1</a>
+       <a href="test-cases.html#enroll_priority_2">enroll_priority_2</a>
+   </li>
+   <li><a href="use-cases.html#UC-06">UC-06</a>:  
+       <a href="test-cases.html#enroll_restricted_1">enroll_restricted_1</a>
+   </li>
+  </ul>
+ </li>
+
+ <li>Expected
+  <ul>
+   <li><a href="use-cases.html#UC-22">UC-22</a>: 
+       <a href="test-cases.html#student_search_1">student_search_1</a> 
+       <a href="test-cases.html#student_search_2">student_search_2</a> 
+   </li>
+   <li><a href="use-cases.html#UC-23">UC-23</a>: 
+       <a href="test-cases.html#course_search_1">course_search_1</a> 
+   </li>
+   <li><a href="use-cases.html#UC-30">UC-30</a>: 
+    <a href="test-cases.html#room_add_1">room_add_1</a>
+    <a href="test-cases.html#room_add_2">room_add_2</a>
+   </li>
+   <li><a href="use-cases.html#UC-31">UC-31</a>: 
+    <a href="test-cases.html#room_edit_1">room_edit_1</a> TODO
+   </li>
+   <li><a href="use-cases.html#UC-32">UC-32</a>: 
+    TODO
+   </li>
+   <li><a href="use-cases.html#UC-33">UC-33</a>: 
+    TODO
+   </li>
+  </ul>
+ </li>
+
+ <li>Desired
+  <ul>
+   <li><a href="use-cases.html#UC-40">UC-40</a>: 
+       <a href="test-cases.html#instructor_evaluate_1">instructor_evaluate_1</a> 
+       <a href="test-cases.html#instructor_evaluate_2">instructor_evaluate_2</a> 
+   </li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+
+</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</body>
+</html>

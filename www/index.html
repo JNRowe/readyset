@@ -1,96 +1,213 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
 <html>
 <head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "http://style.tigris.org/client-side-include/dev/css/tigris.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+  <link rel="stylesheet" type="text/css" href="http://style.tigris.org/client-side-include/dev/css/print.css" media="print" />
+<script src="http://style.tigris.org/client-side-include/dev/scripts/tigris.js" type="text/javascript">
+</script>
+ <title>ReadySET: Project Overview</title>
+
 </head>
+
 <body>
+ <h2>ReadySET: Project Overview</h2>
 
-<p>This is the initial web content for your project.  Please customize
-this to fit your project.  You dont need to anwser all these questions
-or follow this exact format, but we do like to see this kind of
-information before we approve projects for public viewing.
-</p>
-
-<p>Until your project is approved, only you can view it and work on
-it.
-</p>
-
-<ul>
-<li>This index.html will be used if and only if you have the "Use
-Project Home Page" option checked on the "Adminster Project" page
-(click the "Admin" tab).</li>
-
-<li>To edit this file, check out your project via CVS and edit www/index.html.
-
-<li>You can 'cvs add' and commit other files under the project's "www"
-directory and they will published to your project web site.</li>
-
-<li>Also, consider starting a thread in the "dev" mailing list to get
-thes discussion started.  A good one is an "introduction" thread where
-people post messages about themselves and their interest in the
-project.</li>
-
-<li>You can add a "Highlights:" line to the top of all web pages by adding a file www/project_highlights.html </li>
-</ul>
+ <div class="app">
 
 
-<h3>Mission</h3>
+ <h3>Mission</h3>
 
-<p>What is the goal of this project?
-</p>
+ <div align="right" 
+  style="background-color: #ffc; padding: 1em; float: right; border:
+  #cc0 3px outset; margin: 1em; text-align: left;">
+  <a href="/nonav/templates/frameset.html">Browse templates</a><br/>
+  <a href="/servlets/ProjectDocumentList">Download templates</a><br/>
+  <a href="words-of-wisdom/">Words-of-wisdom</a>
+ </div>
 
-<p>What is the scope of this project?
-</p>
+ <dl>
+  <dt>What problem does this project address?</dt>
 
-<p>For example:</p>
+  <dd>Software development projects require a lot of "paperwork" in
+  the form of requirements documents, design documents, test plans,
+  schedules, checklists, release notes, etc.  It seems that everyone
+  creates the documents from a blank page, from the documents used on
+  their last project, or from one of a handful of high-priced
+  proprietary software engineering template libraries.  For those of
+  us who start from a blank page, it can be a lot of work and it is
+  easy to forget important parts.  That is not a very reliable basis
+  for professional engineering projects.</dd>
 
-<ul>
-<li>Develop just enough functionality to scratch a particular itch</li>
-<li>Build a tool just like XYZ, but less broken</li>
-<li>Build the best XYZ-tool ever!</li>
-</ul>
+  <dt>What is the goal of this project?</dt>
+
+  <dd>ReadySET is an open source project to produce and maintain a
+  library of reusable software engineering document templates.  These
+  templates provide a ready starting point for the documents used in
+  software development projects.  Using good templates can help
+  developers work more quickly, but they also help to prompt
+  discussion and avoid oversights.</dd>
+
+ <dt>What are some key features that define the product?</dt>
+
+ <dd>
+  <ul>
+   <li>High-quality outlines, sample text, and checklists.</li>
+
+   <li>Uses simple web technologies: Pure XHTML and CSS.</li>
+
+   <li>Templates for <i>many</i> common software engineering
+   documents.</li>
+
+  </ul>
+ </dd>
+
+ <dt>What makes this product different from others?</dt>
+
+ <dd>This is an open source project that you are welcome to use for
+ free and help make better.  Existing packages of software engineering
+ templates are highly costly and biased by the authorship of only a
+ few people, by vendor-client relationships, or by the set of tools
+ offered by a particular vendor.</dd>
+
+ <dd>These templates are in pure XHTML with CSS, not a proprietary
+ file format.  That makes them easier to edit and to track changes
+ using freely available tools and version control systems.  The
+ templates are designed to always be used on the web; they use
+ hyperlinks to avoid duplicating information.</dd>
+
+ <dd>The templates are not burdened with information about individual
+ authorship or document change history.  It is assumed that
+ professional software developers will keep all project documents in
+ version control systems that provide those capabilities.</dd>
+
+ <dd>These templates are not one-size-fits-all and they do not attempt
+ to provide prescriptive guidance on the overall development process.
+ We are developing a broad library of template modules for many
+ purposes and processes.  The templates may be filled out in a
+ suggested sequence or in any sequence that fits your existing
+ process.  They may be easily customized with any text or HTML editor.</dd>
 
 
-<p>What are high-level features you are sure to build?
-</p>
-<ul>
+</dl>
 
-<li>What would you write on a billboard about your project? Users
-might only look for a few seconds.</li>
+ <h3>Scope</h3>
 
-<li>Use the issue tracker to track features and enhancement
-requests. It is not just for bugs, pre-populate it with feature
-descriptions so that potential contributors know what you would like them
-to work on.</li>
-</ul>
+<dl>
+ <dt>What is the scope of this project?</dt>
 
-<p>What are the high-level assumptions or ground rules for the project?
-</p>
+ <dd>
+  We will build templates for common software engineering documents
+  inspired by our own exprience. 
+ </dd>
 
-<p>For example:
-</p>
+ <dt>What are the high-level assumptions or ground rules for the project?</dt>
 
-<ul>
-<li> we will use programming language X on operating system Y for now.
+ <dd>
+  I assume that the user takes ultimate responsibility for the content
+  of all their actual project documents.  The templates are merely
+  starting points and low-level guidance.
+ </dd>
 
-<li>We will, or will not, consider certain functional areas like
-internationalization, high security, concurrency, etc.  The list of
-functional areas will depend on what you are trying to do.
+ <dt>What are we not going to do?</dt>
 
-<li>Try to keep this part short.
-</ul>
+ <dd>
+  This project does not attempt to provide powerful tools
+  for reorganizing the templates, mapping them to a given software
+  development process, or generating templates from a underlying
+  process model.  This project does not include any application code
+  for any tools, users simply use text editors to fill in or customize
+  the templates.
+ </dd>
+
+ <dt>Is this project part of a larger effort?</dt>
+
+ <dd>
+  Yes.  It is part of the Tigris.org mission of promoting open source
+  software engineering.  It is also the first product in a product
+  line that will provide even better support to professional software
+  developers.  For more information, see <a
+  href="http://www.readysetpro.com">ReadySET Pro</a>.
+ </dd>
+
+</dl>
 
 
-<h3>Related resources</h3>
+ <h3>Status</h3>
+<dl>
+ <dt>What is the status of this project?</dt>
+ 
+ <dd>These templates are based on templates originally used to teach
+ software engineering in a university project course.  They are now
+ being enhanced, expanded, and used more widely by professionals in
+ industry.</dd>
 
-<ul>
-<li>Link to other stuff that you know about.  It will help you
-research requirements and provide a useful resource to potential
-contributors.</li>
+ <dd>The template set is fairly complete and ready for use in real
+ projects.  You can <a
+ href="/servlets/ProjectDocumentList">download</a> recent releases.
+ We welcome your feedback.</dd>
 
-<li>Why reinvent the wheel? What is better about this wheel?  Is there
-any existing project that you can partner with or reuse?</li>
+ <dd>For the latest news, see the <a
+ href="/servlets/ProjectNewsList">Project Announcements</a>.</dd>
 
-<li>Where would you go to try to find potential contibutors?</li>
-</ul>
+
+</dl>
+
+<h3>Applicability</h3>
+
+<dl>
+ <dt>Who should use this product?</dt>
+
+ <dd>ReadySET is aimed at software engineers who wish that their
+ projects could go more smoothly and professionally.  ReadySET can be
+ used by anyone who is able to use an HTML editor or edit HTML
+ in a text editor.</dd>
+
+ <dt>How can users get started?</dt>
+
+ <dd>
+  <ol>
+   <li>Briefly <a href="/nonav/templates/frameset.html">browse all templates</a></li>
+   <li><a href="/servlets/ProjectDocumentList">Download</a> the templates and unarchive</li>
+   <li>Edit the templates to fit the needs of your project</li>
+   <li>Place the templates on a web server where all your project stakeholders can view them</li>
+   <li>Edit the templates to fill in detailed information
+    <ul>
+     <li>Use a text editor or an HTML editor.  Please see our
+         list of <a href="recommended-tools.html">recommended tools</a>.
+         (You can use Word, but that is strongly discouraged.)</li>
+     <li>Follow instructions that appead in yellow "sticky notes"</li>
+     <li>Replace text in ALL CAPS with text that describes your project</li>
+     <li>"<a href="faq.html#chipaway">Chip away</a>" text that does not apply to your project</li>
+     <li>Add text, diagrams, or links as needed</li>
+    </ul>
+   </li>
+
+   <li>Use the checklists to catch common errors and improve the
+   quality of your documents.</li>
+
+   <li>Use the words-of-wisdom pages to help improve the document or
+   deepen your understanding of relevant issues.</li>
+
+   <li>Optionally, you may change fonts and colors in
+   the file css/inst.css.</li>
+
+   <li>If you have questions or insights about a templates, please
+   read the <a href="faq.html">FAQ</a> or send an email to <a
+   href="mailto:dev&#064;readyset.tigris.org"
+   >dev&#064;readyset.tigris.org</a>.</li>
+
+  </ol>
+ </dd>
+</dl>
+
+ 
 
 </body>
 </html>
