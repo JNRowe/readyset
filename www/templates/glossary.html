@@ -54,9 +54,8 @@
  <div class="sticky">
   TIPs: 
   <ul>
-   <li>Add HTML anchors on your terms so that other documents can link
-   to the definition of specific terms.  That will also allow links to
-   other terms in the definitions.</li>
+   <li>Define HTML anchors on your terms with id="TERMNAME" so that
+   other documents can link to the definition of specific terms.</li>
 
    <li>If there is any question about the meaning of a term, note it
    here.  If someone (e.g., the customer) gave you a definition to
@@ -64,28 +63,21 @@
    hyperlink to another document or website, include a hyperlink in
    the definition.</li>
 
-   <li>If a term was used, but is no longer going to be used, you
-   should keep it in the list and mark it as "deprecated".</li>
+   <li>If a term was used in the past, but is no longer going to be
+   used, you should keep it in the list, mark it as "deprecated", and
+   link to the term or terms that replace it.  E.g., deprecated
+   standard term <a href="glossary-std.html#bug">bug</a>.</li>
 
-   <li>Just define the special terms used in this project, or ones
-   that a new team member would not know.  Don't start defining hundreds of
-   textbook terms.  You can always find these at <a
-   href="http://www.dictionary.com/">dictionary.com</a> or <a
-   href="http://www.google.com/">Google</a>.</li>
+   <li>Define only project-specific terms, or ones that a new team
+   member would not know.  Don't define standard textbook terms that
+   can be easily found elsewhere.</li>
 
-   <li>Don't waste time alphabetizing, just group terms by first
-   letter.  Users can use Control-F to "Find..." the terms when
-   needed.</li>
+   <li>This glossary can serve as simple domain model or data
+   dictionary.  You can define important data objects by describing
+   their meaning and key attributes. For example, see <a
+   href="#student">student</a> and <a href="#gpa">GPA</a>.</li>
+   
   </ul>
- </div>
-
- <div class="sticky">
-  NOTE: In this template set, there is no formal Domain Model, the
-  only representations of the problem domain is the statement of <a
-  href="user-needs.html">User Needs</a> and the terms defined here.  So,
-  if you do not create a UML analysis model, you should define objects
-  found in the problem domain and list their attributes and
-  relationships here.  For example, see <a href="#senior">senior</a>.
  </div>
 
 
@@ -97,6 +89,20 @@
 
 
 <a name="C"></a>
+
+  <dt id="class-standing">Class standing</dt>
+
+  <dd>Computed attribute of <a href="#student">student</a> based on
+  number of academic units completed.  Used to determine priority in
+  course enrollment.</dd>
+  
+  <dd>Real-world meaning of values:
+  <table>
+   <tr><th>Freshman</th><td>Less than 90 units</td></tr>
+   <tr><th>Sophmore</th><td>Between 90 and 180 units</td></tr>
+   <tr><th>Junior</th><td>Between 180 and 270 units</td></tr>
+   <tr><th>Senior</th><td>More than 270 units completed</td></tr>
+  </table></dd>
 
 <a name="D"></a>
 
@@ -114,14 +120,24 @@
   href="http://gef.tigris.org/">Graph Editing Framework</a>.  An open
   source library for editing diagrams (boxes and arrows).</dd>
 
+  <dt id="gpa">GPA</dt>
+
+  <dd class="sample1"><i>n.</i> Grade Point Average. GPA is a float
+  between 0.00 and 4.00, accurate to 2 decimal places.  Computed from
+  average of completed course grades in transcript weighted by course
+  units.  Used to determine student ranking, and to trigger Dean's
+  List and academic probation.</dd>
+  
+
 <a name="H"></a>
 
 <a name="I"></a>
 
   <dt id="ics">ICS</dt>
 
-  <dd class="sample1"><i>n.</i> Acronym for the School of Information
-  and Computer Science at UC Irvine. </dd>
+  <dd class="sample1"><i>n.</i> Acronym for the <a
+  href="http://www.ics.uci.edu/">School of Information and Computer
+  Science</a> at <a href="http://www.uci.edu/">UC Irvine</a>. </dd>
 
 <a name="J"></a>
 
@@ -146,8 +162,8 @@
   <dt id="student">Student</dt>
 
   <dd class="sample1"><i>n.</i> A person who attends a school to earn
-  a degree.  Attributes include: student_id_number, major, and
-  years_at_school.  Relationships with school and transcript.</dd>
+  a degree.  Persistent attributes include: student_id_number (primary key), GPA,
+  major, and years_at_school.</dd>
 
   <dt id="senior">Senior</dt>
 
