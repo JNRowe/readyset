@@ -244,6 +244,32 @@
   </tr>
 
   <tr>
+   <td>Static analysis</td>
+   <td>
+    <div class="sample1">Strict compiler warnings</div>
+    <div class="sample2">Automated style checking</div>
+    <div class="sample3">XML validation</div>
+    <div class="sample4">Detect common errors</div>
+   </td>
+
+   <td>We will use source code analysis tools to automatically detect 
+   errors.  Style checkers will help make all of our code
+   consistent with our coding standards.  XML validation ensures that
+   each XML document conforms to its DTD.  Lint-like tools help detect
+   common programming errors.  E.g.:
+    <a href="http://www.freebsd.org/cgi/man.cgi?query=lint">lint</a>, 
+    <a href="http://www.splint.org/">lclint/splint</a>, 
+    <a href="http://artho.com/jlint/">jlint</a>, 
+    <a href="http://sourceforge.net/projects/checkstyle/">checkstyle</a>,
+    <a href="http://sourceforge.net/projects/jcsc">Jcsc</a>,
+    <a href="http://www.logilab.org/projects/pylint">PyLint</a>,
+    <a href="http://pychecker.sourceforge.net/">PyChecker</a>,
+    <a href="http://tidy.sourceforge.net/">Tidy</a>
+   </td>
+
+  </tr>
+
+  <tr>
    <td>Buddy review</td>
    <td>
     <div class="sample1">All changes to release branches</div>
@@ -304,6 +330,65 @@
    other associated documents.</td>
   </tr>
 
+  <tr>
+   <td>Regression testing</td>
+   <td>
+    <div class="sample1">Run all unit tests before each commit</div>
+    <div class="sample2">Run all unit tests nightly</div>
+    <div class="sample3">Add new unit test when verifying fixes</div>
+   </td>
+
+   <td>We will adopt a policy of frequently re-running all automated
+  tests, including those that have previously been successful.  This
+  will help catch regressions (bugs that we thought were fixed, but
+  that appear again).</td>
+  </tr>
+
+  <tr>
+   <td>Beta testing</td>
+   <td>
+    <div class="sample1">4 current customers</div>
+    <div class="sample2">40 members of our developers network</div>
+    <div class="sample3">1000 members of the public</div>
+   </td>
+
+   <td>We will involve outsiders in a beta test, or early access,
+  program.  We will beta testers directions to focus on specific
+  features of the system.  We will actively follow up with beta
+  testers to encourage them to report issues.</td>  
+  </tr>
+
+  <tr>
+   <td>Instrumentation and monitoring</td>
+   <td>
+    <div class="sample1">Monitor our ASP servers</div>
+    <div class="sample2">Remotely monitor customer servers</div>
+   </td>
+
+   <td>As part of our SLA, we will monitor the behavior of servers to
+  automatically detect service outages or performance degradation.  We
+  have policies and proceedures in place for failure notification,
+  escalation, and correction.</td>
+
+  </tr>
+
+  <tr>
+   <td>Field failure reports</td>
+   <td>
+    <div class="sample1">Prompt users to report failures</div>
+    <div class="sample2">Automatically report failures</div>
+   </td>
+
+   <td>We want to understand each post-deployment system failure and
+   actively take steps to correct the defect.  The system has built-in
+   capabilities for gathering detailed information from each system
+   failure (e.g., error message, stack traceback, operating system
+   version).  This information will be transmitted back to us so that
+   we may analyze it and act on it.</td>
+
+  </tr>
+
+  
  </table>
 
 
