@@ -11,13 +11,13 @@
  </style>
 
 <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
- <title>Theory of Operation</title>
+ <title>Implementation Notes</title>
 </head>
 
 <body>
 <div class="app">
 <div class="readyset">
- <h2>Theory of Operation</h2>
+ <h2>Implementation Notes</h2>
 
  <h3>Product Release Information</h3>
  <div class="axial">
@@ -49,10 +49,11 @@
 
  <p class="readonly"><strong>Process impact:</strong> This document is
  a brief and fairly technical discussion of how the system works under
- ideal conditions.  It should describe key algorithms, technology
+ ideal conditions.  It is also known as a "theory of operation"
+ document.  It should describe key algorithms, technology
  dependencies, and operational issues.  Much of the content of this
  document can be drawn from design documents.  This document will be
- used by the development, QA, technical support, and operations
+ used by the QA, technical support, and operations
  groups.  The goal is to give those groups the information they need
  to understand, manage, or begin to troubleshoot the system (i.e.,
  recognize certain behavior as normal or abnormal).  If significantly
@@ -65,12 +66,12 @@
  <div class="sticky">
   TODO: Fill in information that will help other engineers understand
   this system at-a-glance.  Feel free to use relevant technical terms
-  (jargon) and name specific technology platforms.
+  and name specific technology platforms.
  </div>
  <div class="axial">
  <table border="1" cellpadding="3" cellspacing="2">
   <tr>
-   <th>Type of system</th> 
+   <th>Type of system:</th> 
    <td>
     <div class="sample1">Desktop GUI application</div>
     <div class="sample2">Unix-style command</div>
@@ -84,14 +85,14 @@
    </td> 
   </tr>
   <tr>
-   <th>Programming Language(s)</th> 
+   <th>Programming Language(s):</th> 
    <td>
-    <div>Java</div>
-    <div>Perl, Unix shell scripts</div>
+    <div class="sample1">Java</div>
+    <div class="sample2">Perl, Unix shell scripts</div>
    </td> 
   </tr>
   <tr>
-   <th>Data Storage</th> 
+   <th>Data Storage:</th> 
    <td>
     <div class="sample1">Flat files using XML</div>
     <div class="sample2">Flat files using Java properties file format</div>
@@ -100,23 +101,23 @@
    </td> 
   </tr>
   <tr>
-   <th>UI Technologies</th> 
+   <th>UI Technologies:</th> 
    <td>
     <div class="sample1">Java Swing</div>
     <div class="sample2">XHTML, CSS, JavaScript</div>
    </td> 
   </tr>
   <tr>
-   <th>Security Technologies</th> 
+   <th>Security Technologies:</th> 
    <td>
-    <div>Authentication: None needed</div>
-    <div>Authentication: Local username and password file</div>
-    <div>Authentication: LDAP</div>
-    <div>Authorization: Operating system file ownership and
+    <div class="sample1">Authentication: None needed</div>
+    <div class="sample2">Authentication: Local username and password file</div>
+    <div class="sample3">Authentication: LDAP</div>
+    <div class="sample4">Authorization: Operating system file ownership and
     read-write-execute flags</div> 
-    <div>Authorization: Access control lists</div> 
-    <div>Encryption: None needed</div> 
-    <div>Encryption: SSL</div> 
+    <div class="sample1">Authorization: Access control lists</div> 
+    <div class="sample2">Encryption: None needed</div> 
+    <div class="sample3">Encryption: SSL</div> 
    </td>
   </tr>
  </table>
@@ -124,7 +125,7 @@
 
  <h3>Runtime Environment</h3>
  <div class="sticky">
-  List and describe runtime objects that make up a running system.
+  TODO: List and describe runtime objects that make up a running system.
   These objects may be referred to by name in the sections below.
  </div>
  <div class="axial">
@@ -132,8 +133,10 @@
   <tr>
    <th>Processes:</th> 
    <td>
-    <div>Main application process</div>
-    <div>Client and server processes</div>
+    <div class="sample1">Main application process</div>
+    <div class="sample2">Client and server processes</div>
+    <div class="sample3">Cron tasks</div>
+    <div class="sample4">Operating system services or drivers</div>
    </td> 
   </tr>
   <tr>
@@ -154,6 +157,8 @@
     <div>TABLE_ONE: Each row represents a ...</div>
     <div>TABLE_TWO: Each row represents a ...</div>
     <div>TABLE_THREE: Each row represents a ...</div>
+    <div>See the <a
+  href="design-persistence.html">persistence design document</a>.</div>
    </td> 
   </tr>
 
@@ -185,7 +190,10 @@
 
     <div>PRODUCTNAME.log: Messages indicating the progress of normal
     operations and some errors.  Must be writable by Unix user
-    <tt>httpd</tt>.</div> 
+    <tt>httpd</tt>.</div>
+
+    <div>Log files are rotated nightly.  Old logs are archived in
+    ANOTHER LOCATION.</div>
    </td>
   </tr>
 
@@ -195,68 +203,93 @@
 
 
  <h3>Implementation of Specific Features</h3>
+ <div class="sticky">
+  TODO: Write short descriptions of interesting
+  or unexpected algorithms, limiting assumptions, or any other
+  implementation detail that will impact the work of other groups.
+  E.g., long-running operations that must not be interrupted.   E.g.,
+  start up or shutdown scripts that are automatically run by the
+  operating system.
+ </div>
+ 
  <ul class="sample1">
-  <li><strong>Feature name:</strong> Short description of interesting
-  or unexpected algorithm, limiting assumption, or any other
-  implementation detail that will impact the work of other groups.</li>
+  <li><strong>Feature name:</strong> 1-3 SENTENCE DESCRIPTION </li>
 
-  <li><strong>Feature name:</strong> Short description ...
+  <li><strong>Feature name:</strong> 1-3 SENTENCE DESCRIPTION </li>
+
+  <li><strong>Feature name:</strong> 1-3 SENTENCE DESCRIPTION 
    <ul>
-    <li>Details</li>
-    <li>Details</li>
-    <li>Details</li>
+    <li>DETAILS</li>
+    <li>DETAILS</li>
+    <li>DETAILS</li>
    </ul>
   </li>
 
-  <li><strong>Feature name:</strong> Short description ... The steps are:
-   <ol>
-    <li>Step one</li>
-    <li>Step two</li>
-    <li>Step three</li>
-   </ol>
+  <li><strong>Feature name:</strong> 1-3 SENTENCE DESCRIPTION 
+   <ul>
+    <li>DETAILS</li>
+    <li>DETAILS</li>
+    <li>DETAILS</li>
+   </ul>
   </li>
-
-  <li><strong>Feature name:</strong> Short description ...</li>
-
-  <li><strong>Feature name:</strong> Short description ...</li>
-
 
  </ul>
 
  <h3>Operational Procedures</h3>
+ 
+ <div class="sticky">
+   TODO: Briefly describe proceedures that should be followed by
+   operations engineers when the system is being run in an ASP production
+   environment.
+ </div>
+ 
  <div class="axial">
  <table border="1" cellpadding="3" cellspacing="2">
   <tr>
    <th>Install:</th> 
-   <td>See the <a href="install.html">Installation guide</a></td> 
+   <td class="sample1">See the <a href="install.html">Installation guide</a></td> 
   </tr>
   <tr>
    <th>Upgrade:</th> 
-   <td>See the <a href="install.html">Installation guide</a></td> 
+   <td class="sample1">See the <a href="install.html">Installation guide</a></td> 
   </tr>
   <tr>
    <th>Start Server:</th> 
-   <td>
+   <td class="sample1">
     <ol>
-     <li>Steps...</li>
+     <li>STEP</li>
+     <li>STEP</li>
+     <li>STEP</li>
     </ol>
    </td> 
   </tr>
   <tr>
    <th>Stop Server:</th> 
-   <td>
+   <td class="sample1">
     <ol>
-     <li>Steps...</li>
+     <li>STEP</li>
+     <li>STEP</li>
+     <li>STEP</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Reload Config Files:</th> 
+   <td class="sample1">
+    <ol>
+     <li>STEP</li>
+     <li>STEP</li>
+     <li>STEP</li>
     </ol>
    </td> 
   </tr>
   <tr>
    <th>Monitor Activity:</th> 
-   <td>Watch the PRODUCTNAME.log and error.log.</td> 
+   <td class="sample1">Watch the PRODUCTNAME.log and error.log.</td> 
   </tr>
   <tr>
    <th>Periodic Cleanup:</th> 
-   <td>
+   <td class="sample1">
     On rare occasion, /tmp/upload-XXXX.dat files can be left behind.
     Any such files that are more than a day old can safely be
     removed.
@@ -268,36 +301,81 @@
 
  <h3>Security</h3>
 
+ <div class="sticky">
+   TODO: Write notes on security to help operations engineers keep the
+   system secure while it is in operation. 
+ </div>
+ 
  <p>We take the following precautions to make the system secure:</p>
  
- <ul>
-  <li>One...</li>
-  <li>Two...</li>
-  <li>Three...</li>
+ <ul class="sample1">
+  <li>STEP</li>
+  <li>STEP</li>
+  <li>STEP</li>
  </ul>
 
  <p>The security of the system depends on the following external
  factors:</p>
 
- <ul>
-  <li>One...</li>
-  <li>Two...</li>
-  <li>Three...</li>
+ <ul class="sample1">
+  <li>STEP</li>
+  <li>STEP</li>
+  <li>STEP</li>
  </ul>
 
 
 
  <h3>Performance and Scalability</h3>
 
- <p>Notes on performance.</p>
+ <div class="sticky">
+   TODO:  Write notes on performance and scalability to help
+   operations engineers operate the system efficiently.
+ </div>
+ 
+ <p class="sample1">NOTES ON PERFORMANCE.</p>
 
- <p>Notes on scalability.</p>
+ <p class="sample1">NOTES ON SCALABILITY.</p>
+
+ 
+
+ <h3>Implementation Notes Checklist</h3>
+
+ <dl>
+
+  <dt>Do these implemenation notes provide enough information for
+  operations engineers?</dt>
+
+  <dd>Yes, these notes have been reviewed by the operations team and
+  requested changes have been incorporated.</dd>
+
+  <dd>No, these notes only summarize parts of a larger <a
+  href="LINK-TO-OPERTIONS-MANUAL">operations manual</a>.</dd>
+
+  <dd>No, a member of the development team is available on-call
+  whenever the operations team may need help.  This is listed in the
+  <a href="resource-needs.html">Resource Needs</a> document and in the
+  <a href="LINK-TO-ON-CALL-SCHEDULE">on-call schedule</a>.</dd>
 
 
+  <dt>Have these implemenation notes been communicated to the
+  operations and development teams and other stakeholders?</dt>
+
+  <dd>Yes, everyone has had a chance to review them.  Feedback is
+  welcome.</dd>
+
+  <dd>Yes, it has been posted to the project website.</dd>
+
+  <dd>No, some developers or operations engineers are not aware of
+  this document.  This is a risk that is noted in the <a
+  href="plan.html#risks">Risk Management</a> section of the <a
+  href="plan.html">Project Plan</a>.</dd>
+  
+ </dl>
+ 
 
  <div class="sticky">
   TODO:  Check for <a
-  href="http://readyset.tigris.org/words-of-wisdom/theory-of-operation.html">words
+  href="http://readyset.tigris.org/words-of-wisdom/implementation-notes.html">words
   of wisdom</a> and discuss ways to improve this template.
  </div>
 
