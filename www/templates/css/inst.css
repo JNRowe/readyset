@@ -1,4 +1,4 @@
-/* $Id: inst.css,v 1.21 2004/07/09 01:41:06 jrobbins Exp $
+/* $Id: inst.css,v 1.22 2004/07/09 01:52:53 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
@@ -61,7 +61,7 @@ code, pre, textarea {
 
 .tip {
  background: #ffc;
- background-image: url(http://www.readysetpro.com/css/tip.png);
+ background-image: url(http://www.readysetpro.com/css/tip.gif);
  background-repeat: no-repeat;
  background-position: top left;
  border-right-color: #aaa;
