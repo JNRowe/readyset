@@ -1,4 +1,4 @@
-/* $Id: inst.css,v 1.3 2003/06/18 17:22:47 jrobbins Exp $
+/* $Id: inst.css,v 1.4 2003/06/18 18:15:43 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
@@ -19,25 +19,25 @@ body {
  color: #000;
 }
 
-h3, h4 {
+body > .readyset h3, body > .readyset h4 {
  border: solid 2px #666;
- background: #eee;
+ background: #ccc;
  color: #000;
 }
 
-h3 {
+body > .readyset h3 {
  border-left: solid 1em #666;
 }
 
-h4 {
+body > .readyset h4 {
  border-left: solid 0.5em #666;
 }
 
-td { background: #ddd; }
+.readyset td { background: #eee !important; }
 
-.axial td { background: #fff; }
+.readyset .axial td { background: #fff !important; }
 
-th { background-color: #bbb; }
+.readyset th { background-color: #ccc; }
 
 body, th, td, input, select {
  font-family: Verdana, Helvetica, Arial, sans-serif;
