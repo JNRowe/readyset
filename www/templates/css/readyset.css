@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.10 2003/06/18 18:28:18 jrobbins Exp $
+/* $Id: readyset.css,v 1.11 2003/06/23 00:41:23 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -15,16 +15,16 @@ table, th, td {
 
 .tabs th {
  border-right: 1px solid #333;
- background-color: #ddd;
+ background-color: #ddd !important;
  color: #fff;
- border-left: 1px solid #fff;
+ border-left: 3px solid #fff;
 }
 
-.tabs td {
- background-color: #999;
+.readyset .tabs td {
+ background-color: #999 !important;
  border-bottom: 1px solid #fff;
  border-right: 1px solid #fff;
- border-left: 1px solid #fff;
+ border-left: 3px solid #fff;
 }
 
 .tabs {
