@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Términos estándar</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>Glosario de términos</h2>
+
+ <div class="tabs">
+ <table border="0" cellspacing="0" cellpadding="0"><tr>
+  <td><a href="glossary.html">Términos del Proyecto</a></td>
+  <th>Términos estándar</th>
+ </tr></table>
+ </div>
+
+ <a name="processimpact"></a>
+ <p class="readonly"><strong>Impacto del proceso:</strong> Este archivo contiene un
+ diccionario de términos estándar definidos como se utilizan durante un proyecto.
+ Los proyectos individuales no debería de haber necesidad de editar este documento.
+ Escribir las definiciones de los términos y acrónimos que se encuentran aquí ayudan a mantener
+ otros documentos más concisos y fáciles de editar.Vea <a
+ href="http://readyset.tigris.org/templates/glossary-std.html">ReadySET
+ glossary</a> para actualizaciones.
+ </p>
+
+ <div>Vaya a: 
+  <a href="#general_section">Generales</a> |  
+  <a href="#process_section">Procesos</a> |  
+  <a href="#tools_section">Herramientas de Desarrollo de Software</a> |  
+  <a href="#requirements_section">Requierimientos</a> | 
+  <a href="#design_section">Diseño</a> | 
+  <a href="#designgoals_section">Metas de Diseño</a> | 
+  <a href="#qa_section">Términos de QA</a> |
+  <a href="#qagoals_section">Objetivos de QA</a> |
+  <a href="#additional_section">Términos Adicionales</a> 
+ </div>
+
+ <a name="general_section"></a> 
+
+ <h3>Términos Generales</h3>
+
+ <dl>
+  
+  <dt><a name="chipaway"></a>Esculpiendo</dt>
+
+  <dd>El proceso de remover el texto de ejemplo de las plantillas cuando
+  el texto no aplica al proyecto actual.  Con frecuencia partes del texto de ejemplo
+  serán mantenidas o evaluadas para encajar con el proyecto actual.
+  Incluso si el texto de ejemplo no encja en el contexto del proyecto actual,
+  provee un ejemplo reutilizable de cómo redactar ese tipo de descripción.
+  El término "esculpir" viene de una vieja broma: cuando
+  a un escultor se le pregunta cómo a realizado una estatua de mármol de un caballo, él
+  contesta "Fue muy fácil, solo empecé con un enorme bloque de mármol y
+  le fui quitando todo lo que no parecía parte del caballo."</dd>
+
+
+  <dt><a name="attachedworksheet"></a>Formas adjuntas</dt>
+
+  <dd>La idea es similar al llenado de las formas de impuestos utilizando
+  formas para calcular subtotales y realizar decisiones específicas.
+  En pocas palabras, hay una jerarquía en las plantillas: están las plantillas principales
+  y las formas para temas específicos.  Hemos dividido la información
+  en varios archivos para que cada archivo se enfoque a un
+  tema, y para que cada archivo pueda ser trabajado por una persona en un
+  periodo de tiempo razonable.</dd>
+
+  <dt><a name="processimpact"></a>Impacto del Proceso</dt>
+
+  <dd>La caja de impacto del proceso explica en que parte del proceso  
+  de desarrollo de software encaja cada plantilla. Normalmente
+  esta caja incluye un breve comentario sobre quién debe crear el documento,
+  y quien debería utilizarlo. Ud. puede cambiar la caja de impacto en el proceso,
+  pero no debería ser necesario.</dd>
+
+
+  <dt><a name="checklist"></a>Listas de Pendientes</dt>
+
+  <dd>Existen dos clases de listas de pendientes:
+   <ul>
+    <li>Muchas de las plantillas cuentan con una sección con preguntas que ayudan
+    a revisar su trabajo en esa plantilla.  Normalmente las respuestas de ejemplo a las
+    preguntas le indican que acciones correctivas tomar.</li>
+
+    <li>Para juntas de revisión de diseño o código, existen ligas a las
+    guías y listas de pendientes que le ayudarán a identificar errores comunes en
+    estos artefactos.</li>
+   </ul>
+  </dd>
+
+
+  <dt><a name="stickynote"></a>Nota Adherible</dt>
+
+  <dd>La idea es similar a un post-it adherido a un documento
+  que le indica "firme aquí" o que llene ciertas partes. Existen 
+  dos clases de notas adheribles:
+  <ul>
+   <li>TAREAS: Le indica cómo llear una plantilla. Este es el mínimo que
+   necesita hacer. Uno de los principales objetivos de ReadySET
+   es ayudar a su equipo a desarrollar <i>rápidamente</i> las actividades 
+   básicas de ingeniería de software.  La notas de TAREAS facilitan esto
+   haciendo las plantillas más auto-explicatorias.</li>
+
+   <li>SUGERENCIA: Le ayuda a pensa en mejores manera de llenar la plantilla.
+   Uno de los otros principales objetivos de ReadySET es ayudar a su equipo a hacer
+   mejores decisiones que pueden hacer su proyecto más exitoso.
+   Las notas de SUGERENCIA ayudan con este objetivo.</li>
+  </ul>
+
+  Después de hacer lo que la nota asdherible dice, puede borrar la
+  nota. En el archivo HTML están marcadas como class="sticky".
+  </dd>
+
+
+ </dl>
+
+
+ <a name="process_section"></a> 
+
+ <h3>Términos de Procesos</h3>
+
+ <dl>
+
+  <dt><a name="ccb"></a>Equipo de Control de Cambios (CCB)</dt>
+  <dd>Un grupo de personas de evalúan los cambios propuestos a los requerimientos
+  del proyecto y/o al código fuente para aceptar o rechazarlos en cada
+  entrega en particular.  Los cambios propuestos son generalmente rechazados si
+  introducen muchos riesgos o pudieran disparar esfuerzo adicional (por ejemplo,
+  la necesidad de rehacer muchas más pruebas en código nuevo).  Un CCB normalmente
+  está compuesto de coordinadores y representantes de área, como
+  del grupo de QA y enlaces con clientes.</dd>
+
+  <dt><a name="featurecomplete"></a>Característica Completa</dt> <dd>
+  Una entrega se le llama "Característica Completa" cuando el equiipo de desarrollo
+  acuerda que no se le añadirán nuevas características a esta entrega.
+  Las nuevas características pueden sugerirse para nuevas entregas. Se 
+  necesita trabajar más para implementar todas las características y
+  arreglar las fallas.</dd>
+
+  <dt><a name="codecomplete"></a>Código Completo</dt>
+  <dd>Una entrega es llamada "código cmpletop" cuando el equipo de desarrollo
+  acuerda en que no se le añadirá código fuente nuevo a esta entrega.
+  Puede que aún haya cambios en el código fuente para arreglar fallas.
+  Es posible también que haya cmabios en la documentación y el los archivos de datos, y a
+  el código para escenarios de pruebas o utilerías. El código nuevo se añadirá
+  en una entrega futura.</dd>
+
+ </dl>
+
+
+
+ <a name="tools_section"></a> 
+
+ <h3>Herramientas de Desarrollo de Software</h3>
+
+ <dl>
+
+  <dt><a name="vc"></a>Sistema de Control de Versiones</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+  <dt><a name="logmessage"></a>Registro de Mensajes de Submisiones</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+  <dt><a name="issuetracker"></a>Control de versiones</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+  <dt><a name="unittestauto"></a>Automatización de Pruebas Unitarias</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+  <dt><a name="autobuild"></a>Sistema de Compilación Automatizada</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+  <dt><a name="codeanalysis"></a>Herramienta de Análisis de Código Fuente</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+  <dt><a name="stylechecker"></a>Revisor de Estilo</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+  <dt><a name="prettyprinter"></a>Formateador de Código Fuente (Pretty Printer)</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+  <dt><a name="systestauto"></a>Automatizador de Pruebas de Sistema</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+ </dl>
+
+
+
+ <a name="requirements_section"></a> 
+
+ <h3>Términos de Requerimientos</h3>
+
+ <dl>
+
+  <dt><a name="TERM1"></a>TÉRMINO 1</dt>
+  <dd>DEFINICIÓN 1</dd>
+
+ </dl>
+
+
+
+ <a name="design_section"></a> 
+
+ <h3>Términos de Diseño</h3>
+
+ <dl>
+
+  <dt><a name="TERM2"></a>TÉRMINO 2</dt>
+  <dd>DEFINICIÓN 2</dd>
+
+ </dl>
+
+ <a name="designgoals_section"></a> 
+
+ <h3>Objetivos de Diseño</h3>
+
+ <dl>
+
+  <dt><a name="dg_correctness"></a>Corrección</dt>
+  <dd>El diseño se ajusta correctamente a los requerimientos dados.</dd>
+
+  <dt><a name="dg_feasibility"></a>Viabilidad</dt>
+  <dd>Este diseño puede ser implementado y probado con las cantidades de tiempo y esfuerzo
+  planeadas.</dd>
+
+  <dt><a name="dg_understandability"></a>Comprensibilidad</dt> 
+  <dd>Los desarrolladores pueden enteder este diseño e implementarlo correctamente
+  </dd>
+
+  <dt><a name="dg_guidance"></a>Guías de Implementación por Etapas</dt> 
+  <dd>Este diseño divide la implementación en componentes o aspectos
+  que pueden corresponder a tareas de implementación razonables.</dd>
+
+  <dt><a name="dg_modularity"></a>Modularidad</dt>
+  <dd>Los objetivos estan claramente separadados para que el impacto de la mayoría de los cambios
+  del diseño puedan limitarse a solo uno o algunos módulos.</dd>
+
+  <dt><a name="dg_extensibility"></a>Extensibilidad</dt>
+  <dd>Nuevas características o componentes pueden ser añadidos después fácilmente.</dd>
+
+  <dt><a name="dg_testability"></a>Capacidad de Prueba</dt>
+  <dd> Es fácil probar los componentes de este diseño independientemente, y
+  la información está disponible para ayudar a diagnosticar fallas.</dd>
+
+  <dt><a name="dg_efficency"></a>Eficiencia</dt> 
+  <dd>El diseño permite al sistema realizar funciones con aceptables cantidad de tiempo,
+  espacio de almacenamiento, ancho de banda y otros
+  recursos.</dd>
+
+  <dt><a name="dg_easy_integration"></a>Facilidad de integración</dt>
+  <dd>Los componentes trabajarán juntos.</dd>
+
+  <dt><a name="dg_cap_match"></a>Ajuste a la Capacidad</dt>
+  <dd>La arquitectura genera componentes  en equipos que proveen los
+  recursos necesarios con un gasto toal razonable.</dd>
+
+  <dt><a name="dg_expressiveness"></a>Expresividad</dt>
+  <dd>Permite almacenamiento de todos los valores válidos y
+    relaciones</dd>
+
+  <dt><a name="dg_easy_access"></a>Facilidad de acceso</dt>
+  <dd>El código de la aplicación para accesar los datos almacenados es sencillo</dd>
+
+  <dt><a name="dg_data_reliability"></a>Confiabilidad</dt>
+  <dd>Los datos almacenados no puden ser corrompidos fácilmente por código defectuosos,
+    accesos simultáneos, o finalización inesperada de los 
+    procesos</dd>
+
+  <dt><a name="dg_data_capacity"></a>Capacidad de Datos</dt>
+  <dd>El sistema puede almacenar la cantidad de información necesaria.</dd>
+
+  <dt><a name="dg_data_security"></a>Seguridad en los Datos</dt>
+  <dd>Protección de los datos sensibles del usuario o de la empresa a los 
+    accesos no autorizados o a modificación</dd>
+
+  <dt><a name="dg_data_performance"></a>Desempeño</dt>
+  <dd>La información puede ser accesada rápidamente</dd>
+
+  <dt><a name="dg_data_interop"></a>Interoperabilidad</dt>
+  <dd>La base de datos o los archivos de datos pueden ser accesados o actualizados
+    por otras aplicaciones</dd>
+
+  <dt><a name="dg_no_intrusion"></a>Prevención a Intrusos</dt>
+  <dd>Prevenir, por ejemple, que hackers puedan abrir una terminal de comandos en
+  nuestro servidor.</dd>
+
+  <dt><a name="dg_no_abuse"></a>Prevención contra el Abuso</dt>
+  <dd>Prevenir el abuso (por ejemplo, usar nuestro sistema para enviar spam).</dd>
+
+  <dt><a name="dg_auditability"></a>Auditabilidad</dt>
+  <dd>Todos los cambios pueden ser identificados después.</dd>
+
+  <dt><a name="dg_use_understand"></a>Comprensibilidad y Capacidad de Aprendizaje</dt>
+  <dd>Se puede esperar que loos usuarios puedan entender
+    la interfaz a primera vista. Los usuarios podrán
+    encontrar información a características adicionales sin ayuda de otros usuarios o
+    documentación, y serán capaces de recapitular lo que han
+    aprendido.</dd>
+
+  <dt><a name="dg_use_efficiency"></a>Soporte a Tareas y Eficiencia</dt>
+  <dd>La interfaz del usuario encaja con las tareas del usuario realizará
+    y puede ser usada con un número razonable de clicks y teclazos.</dd>
+
+  <dt><a name="dg_use_safety"></a>Seguridad</dt>
+  <dd>Los usuarios no podrán ser capcaces de producir un
+    resultado no deseado (por ejemplo, borrar información, o enviar correos
+    incompletos).</dd>
+
+  <dt><a name="dg_use_consistency"></a>Consistencia y Familiaridad</dt>
+  <dd>Los usuarios podrán aplicar su conocimientos
+    de interfaces similares o interfaces estándar a este sistema.</dd>
+
+
+</dl>
+
+ <a name="qa_section"></a> 
+
+ <h3>Términos de QA</h3>
+
+ <dl>
+
+  <dt><a name="bug"></a>Bug</dt>
+
+  <dd><i>n.</i> <b>Desaprobado</b> desde 1991. Vea <a
+  href="#defect">Falla</a>.</dd>
+
+
+  <dt><a name="defect"></a>Falla</dt>
+
+  <dd><i>n.</i> Un elemento de la implementación de un programa que
+  produce un <a href="#failure">error</a> cuando es ejecutado, o que
+  viola los estádares de desarrollo, por ejemplo, si el programa genera un error
+  donde cuando intenta realizar una división por cero, el defecto está en
+  las expresiones matemáticas en el código fuente, o el la estructura de la lógica de control
+  que permitieron que la expresión fuera evaluada  a pesar de sus parámetros.
+  Las fallas pueden también existir en los datos iniciales, la documentación o en
+  otros artefactos de soporte.</dd>
+
+
+  <dt><a name="failure"></a>Error</dt>
+
+  <dd><i>n.</i> La diferencia observable entre la salida esperada del programa y la salida real,
+  por ejemplo, podemos ver un error cuando el programa termina abruptamente o
+  imprime un total equivocado.  No todos las fallas provocan errores,
+  algunas fallas pueden nunca ser descubiertas en las pruebas, pero
+  todas los errores son causados por alguna falla.</dd>
+
+
+</dl>
+
+
+ <a name="qagoals_section"></a> 
+
+ <h3>Metas de QA</h3>
+
+ <dl>
+
+   <dt><a name="qg_Func_Correctness"></a>Functionalidad &gt; Corrección</dt>
+
+   <dd>Corrección es el objetivo de calidad más básico.  Significa que,
+   cuando una entrada válida es dada y el sistema se encuentra en un estado válido y
+   bajo una carga razonable, el comportamiento del sistem y sus resultados serán
+   correctos.</dd>
+
+   <dt><a name="qg_Func_Robustness"></a>Functionalidad &gt; Robustez</dt>
+
+   <dd>La robustez es la habilidad del sistema para manejar elegantemente entradas
+   inválidas.  No debería ser posible para ninguna entrada del usuario abortar
+   el sistema o corromper la información, incluso si la entrada del suaurio en anormal,
+   inesperada, o maliciosa.</dd>
+
+   <dt><a name="qg_Func_Accuracy"></a>Functionalidad &gt; Exactitud</dt>
+
+   <dd>La exactitud se refiere a la precisión matemática de los cálculos
+   hechos por el sistema.  Cualquier sistema que realice cálculos numéricos debe
+   considerar la exactitud; por ejemplo, aplicaciones financieras o científicas.</dd>
+
+   <dt><a name="qg_Func_Compatibility"></a>Functionalidad &gt; Compatibilidad</dt>
+
+   <dd>Los sistemas que aseguran que siguen estádares o proclaman cierta compatibilidad con 
+   sistemas existentes deberán adherirse a los protocolos relevantes de formatos de archivos
+   y APIs.  Se encontrarán ligas a los estándares relevantes en la parte de arriba
+   de este documento.</dd>
+
+   <dt><a name="qg_Func_Factual"></a>Functionalidad &gt; Corrección Verdadera</dt>
+
+   <dd>¿Los datos en el sistema una representación del mundo real?
+   Cualquier sistema que contiene datos iniciales o recopila información acerca
+   el mundo real debería asegurarse de que los datos son verdaderos.
+   Por ejemplo, un programa de preparación de impuestos debería incluir datos correctos y
+   actualizados sobre la ley de impuestos.</dd>
+
+   <dt><a name="qg_Use_Understand"></a>Usabilidad &gt; Comprensibilidad e Legibilidad</dt>
+
+   <dd>Los usuarios necesitan entender el sistema para usarlo. La metáfora básica
+   debrá ser comprensible y apropiada para las necesidades del usuario.
+   Algunas fallas en la comprensibilidad incluyen metáforas poco claras,
+   etiquetas pobres o difíciles de ver, falta de retroalimentación para confirmar los efectos de
+   las acciones del usuario, y falta de ayuda o ayuda inadecuada en línea.</dd>
+
+   <dt><a name="qg_Use_Learnability"></a>Usabilidad &gt; Intituividad y Memorabilidad</dt>
+
+   <dd>Cada interfaz de usuario contiene algunos detalles que los usuarios necesitarán
+   aprender y recordar. Por ejemplo, Alt-A para abrir el menú "Archivo".  
+   Las reglas de la interfaz del usuario pueden hacer estos detalles más fácil de aprender y recordar.
+   Por ejemplo, la "A" está subrayada y, como regla, la primera letra es normalmente la tecla
+   de acceso rápido.</dd>
+
+   <dt><a name="qg_Use_Task"></a>Usabilidad &gt; Apoyo para Tareas</dt>
+
+   <dd>Esta es la calidad de la interacción entre las tareas que realiza el usuario y
+   la interfaz del sistema.  Los defectos de soporte en el apoyo para tareas son casos donde el sistema
+   forza al usuario a realizar pasos poco naturales para realizar una tarea o
+   donde el usuario carece de soporte para un paso difícil en una tarea.
+   Por ejemplo, ¿debería el usuario inventar un nombre de 8 caracteres para su
+   "lista de tarjetas de Navidad"? Otro ejemplo, ¿deberían los usuarios sumar ellos mismos sus deducciones de
+   impuestos?</dd>
+
+   <dt><a name="qg_Use_Efficiency"></a>Usabilidad &gt; Eficiencia</dt>
+
+   <dd>Los usuarios deberían ser cpaces de realizar tareas comunes con un esfuerzo razonable.
+   Las tareas comunes deberían ser posibles con solo uno o dos pasos.
+   La dificultad de cada paso debería ser también considerada
+   Por ejemplo, ¿el usuario tiene que recordar una clave larga o dar click en
+   un botón muy pequeño?</dd>
+
+   <dt><a name="qg_Use_Safety"></a>Usabilidad &gt; Seguridad</dt>
+
+   <dd>Las personas somos propensos a equivocarnos, pero los efectos negativos de errores
+   comunes debería se limitado.  Por ejemplo, los usuarios deberían darse cuenta que un comando dado
+   borrará su información, y debería ser consultado para confirmar acción, o
+   tener una opción para deshacer.</dd>
+
+   <dt><a name="qg_Use_Consistency"></a>Usabilidad &gt; Consistencia y Familiaridad</dt>
+
+   <dd>Los usuarios deberían de ser capaces de utilizar su experiencia previa
+   en otros sistemas similares.  Es significa que
+   los estándares para interfaces de usuario deberían ser seguidos, y 
+   las convenciones más comunes deberían ser usados cuando sea posible. Además, los elementos
+   que aparecen en varias partes de la interfaz deberían ser usados de forma consistente
+   a menos que otra convención para UI tenga prioridad.  Por ejemplo si la mayoría de los campos
+   de entrada para moneda no requieren un signo de moneda, entonces el que lo necesita
+   es un error de consistencia, a menos que que exista una oportunidad real
+   de que el usuario este trabajando con otro tipo de cambio en ese paso de la tarea.
+   </dd>
+
+   <dt><a name="qg_Use_Subjective"></a>Usabilidad &gt; Satisfacción Subjetiva</dt>
+
+   <dd>Los usuarios deberían sentirse generalmente satisfechos con la interfaz del usuario. Esta
+   calidad subjetiva se suma a las otras cualidades de la interfaz
+   así como su estética.</dd>
+
+   <dt><a name="qg_Security"></a>Securidad</dt>
+
+   <dd>El sistema debería permitir se usado solo por usuarios autorizados, y
+   restringir el uso basado en permisos. El sistema
+   no debería permitir a los usuarios saltarse las reglas de seguridad o utilizar
+   agujeros en la seguridad.  Por ejemplo, todas las entradas de los usuarios deberían ser validadas y cualquiera
+   entrada maliciosa debería ser rechazada.</dd>
+
+   <dt><a name="qg_Rely_ConsistLoad"></a>Confiabilidad &gt; Consistencia sobre carga</dt>
+
+   <dd>Todo sistema tiene límites de capacidad.  ¿Qué pasa cuando estos límites
+   son excedidos? El sistema no debería jamás perder o corromper
+   la información.</dd>
+
+   <dt><a name="qg_Rely_ConsistConcur"></a>Confiabilidad &gt; Consistencia bajo concurrencia</dt>
+
+   <dd>Los sistemas que permiten accesos simultáneos por usuarios múltiples, o
+   los que usan concurrencia internadebería estar libres de de condiciones de carrera y
+   bloqueo.</dd>
+
+   <dt><a name="qg_Rely_AvailLoad"></a>Confiabilidad &gt; Disponibilidad bajo carga</dt>
+
+   <dd>Todo sistema tiene límites de capacidad.  ¿Qué pasa cuando estos límites
+   son excedidos? El sistema debería de continuar sirviendo aquellas
+   solicitudes que es capaz de manejas.  No debería caerse o
+   detener el proceso de todas las solicitudes.</dd>
+
+   <dt><a name="qg_Rely_Longevity"></a>Confiabilidad &gt; Longevidad</dt>
+
+   <dd>El sistema debería continuar operando tanto como lo necesite.
+   No debería gradualmente terminarse los recursos disponibles. Ejemplos
+   de defectos de longevidad inluyen fugas de memoria o el agotamiento de espacio en discos con archivos
+   de registro.</dd>
+
+   <dt><a name="qg_Efficiency"></a>Eficiencia</dt>
+
+   <dd>La soperaciones del sistema deberían ejecutarse rápidamente, con 
+   un uso razonable de los recursos del equipo y de la red.  Por ejemplo, si un usuario realiza una operación,
+   esta debería ejecutarse eficientemente.</dd>
+
+   <dt><a name="qg_Scalability"></a>Escalabilidad</dt>
+
+   <dd>Escalabilidad es una cualidad general que se mantiene cuando el sistema
+   continua satisfaciendo sus requerimientos en situaciones en que sus parámetros se han incrementado.
+   Por ejemplo, un servidor de archivos debería ser escalable a un gran número de usuarios,
+   a archivos muy grandes, o a discos de muy alta capacidad.
+   Algunos objetivos específicos de escalabilidad se enumeran abajo.</dd>
+
+   <dt><a name="qg_Scalability_PerformLoad"></a>Escalabilidad &gt; Desempeño bajo carga</dt>
+
+   <dd>Este es un tipo específico de objetivo de escalabilidad involucrado con el desempeño
+   del sistema en momentos en que sus servicios son tienen muchas solicitudes
+   de muchos usuarios.</dd>
+
+
+   <dt><a name="qg_Scalability_Volume"></a>Escalabilidad &gt; Volumenes grandes de datos</dt>
+
+   <dd>ste es un tipo específico de objetivo de escalabilidad involucrado con la
+   habilidad del sistema para manejar grandes volúmenes de datos. Las operaciones
+   deberían de continuar correcta y eficientemente aunque el tamaño del volumen de datos aumente.
+   Más aún, la interfaz del usuario debería ser aún utilizable según
+   la información presentada a los usuarios incremente en longitud.</dd>
+
+   <dt><a name="qg_Operability"></a>Operabilidad</dt>
+
+   <dd>Las necesidades a largo plazo de los administradores del sistema deberían ser 
+   apoyadas confiablemente.  por ejemplo, ¿es el sistema fácil de instalar?  ¿Puede el administrador
+   recuperarse de una caída?  ¿Existen suficientes datos en el registro para diagnosticar
+   problemas en el campo?  ¿Pueden los datos del sistema ser respaldados sin bajas en el desempeño?
+   ¿Puede el sistema ser actualizado de forma práctica?</dd>
+
+   <dt><a name="qg_Maintainability_Understand"></a>Capacidad de mantenimiento &gt; Comprensibilidad</dt>
+
+   <dd>¿Sería fácil para los (futuros) desarrolladores entender cómo el sistema
+   funciona?</dd>
+
+   <dt><a name="qg_Maintainability_Evolvability"></a>Capacidad de mantenimiento &gt; Evolutividad</dt>
+
+   <dd>¿Puede el sistema ser fácilmente modificado y extendido en el futuro?</dd>
+
+   <dt><a name="qg_Maintainability_Testability"></a>Capacidad de mantenimiento &gt; Capacidad de prueba</dt>
+
+   <dd>¿Puede el sistema ser probado? ¿Los requerimientos especifican de forma
+   precisa posibles entradas y resultados deseados? ¿Puede el sistema ser
+   probado por partes? ¿Cuando se observan fallas, pueden ser rastreadas hasta las fallas en los componentes
+   específicos (depuración)?  ¿La realización de pruebas son
+   prácticas con las herramientas de prueba disponibles?</dd>
+
+
+</dl>
+
+
+<a name="additional_section"></a>
+ 
+ <h3>Términos Estándar Adicionales</h3>
+ <p>Para términos estándar adicionales, vea los siguientes sitios de referencia:</p>
+ <ul>
+  <li><a href="http://www.dictionary.com/">Dictionary.com (Diccionario.com)</a></li>
+  <li><a href="http://www.whatis.com/">Whatis.com (Quées.com)</a></li>
+  <li><a href="http://www.nist.gov/dads/">Diccionario NIST de Algoritmos y Estructuras de Datos</a></li>
+  <li><a href="http:/http://foldoc.doc.ic.ac.uk/foldoc/index.html">Diccionario gratuito en línea de computación</a></li>
+  <li><a href="http://www-3.ibm.com/ibm/terminology/goc/gocmain.htm">Glosario IBM de términos de computación</a></li>
+  <li><a href="http://www.jargon.org/">Archivos Jargon</a></li>
+ </ul>
+
+
+</div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

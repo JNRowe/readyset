@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Notas de Implementación</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>Notas de Implementación</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de Versión del Producto</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Producto:</th> 
+   <td>NOMBREDELPRODUCTO</td> 
+  </tr>
+  <tr>
+   <th>Version(es)</th> 
+   <td>
+     X.Y.Z
+     <!-- si este documento aplica a múltiples versiones, puede listarlas en líneas por separado -->
+   </td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="index.html">Resumen del Proyecto</a></div>
+    <div><a href="srs.html">Especificación de Requerimientos de Software</a></div>
+    <div><a href="release-notes.html">Notas de la versión</a></div>
+    <div><a href="faq.html">Preguntas Frecuentes / Solución de problemas</a></div>
+    <div><a href="glossary.html">Glosario de términos</a></div>
+   </td>
+  </tr>
+
+ </table>
+ </div>
+
+ <a name="processimpact"></a>
+ <p class="readonly"><strong>Impacto del proceso:</strong> Este documento es
+ una discusión técnica breve y conscisa de cómo trabaja el sistema en
+ condiciones ideales.  También se le conoce como el documento de "teoría de operación".
+ En este documento se deben describir los algoritmos principales, dependencias de tecnología,
+ y problemas operacionales. Mucho del contenido de este documento
+ puede ser obtenido de los documentos de diseño.  Este documento será
+ usado por los grupos de QA, soporte técnico y operaciones.
+ El objetivo es dar a esos grupos la información que necesitan
+ para entender, administrar o empezar a corregir el sistema (por ejemplo,
+ reconociendo ciertos comportamientos como normales o anormales).  Si es significativamente necesaria
+ más información, esta deberá organizarse en una "guía de operaciones" más grande.</p>
+
+
+ <a name="typeofimplementation"></a>
+ <h3>Tipo de Implementación</h3>
+
+ <div class="sticky">
+  TAREAS: Llene la información que ayudará a otros ingenieros a entender
+  este sistema en un vistazo.  Siéntase libre de usar información técnica relevante
+  y nombre plataformas tecnológicas específicas.
+ </div>
+
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Tipo de sistema:</th> 
+   <td>
+    <div class="sample1">Aplicación Gráfica de escritorio</div>
+    <div class="sample2">Comando tipo Unix</div>
+    <div class="sample3">Aplicación web de servidor</div>
+    <div class="sample4">Servicio web</div>
+    <div class="sample1">Applet del lado del cliente</div>
+    <div class="sample2">Aplicación incrustada</div>
+    <div class="sample3">Librería reutilizable</div>
+    <div class="sample4">Estructura de clases reutilizable</div>
+    <div class="sample1">Plug-in para navegador</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Lenguaje(s) de Programación:</th> 
+   <td>
+    <div class="sample1">Java</div>
+    <div class="sample2">Perl, scripts de shell para Unix</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Almacenamiento de Datos:</th> 
+   <td>
+    <div class="sample1">Archivos planos usando XML</div>
+    <div class="sample2">Archivos planos usando el formato de propiedades de archivo de Java</div>
+    <div class="sample3">Archivos planos usando el formato de serialización de objetos de Java</div>
+    <div class="sample4">Base de datos SQL: MySQL</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Tecnologías para UI:</th> 
+   <td>
+    <div class="sample1">Java Swing</div>
+    <div class="sample2">XHTML, CSS, JavaScript</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Tecnología para Seguridad:</th> 
+   <td>
+    <div class="sample1">Autentificación: No es necesaria</div>
+    <div class="sample2">Autentificación: Archivo local con nombre de usuario y contraseña</div>
+    <div class="sample3">Autentificación: LDAP</div>
+    <div class="sample4">Autorización: Permisos de archivos del sistema operativo y
+    banderas de lectura-escritura-ejecución</div> 
+    <div class="sample1">Autorización: Listas de control de acceso</div> 
+    <div class="sample2">Encriptación: No es necesaria</div> 
+    <div class="sample3">Encriptación: SSL</div> 
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+
+
+ <a name="runtiem"></a>
+ <h3>Ambiente de Tiempo de Ejecución</h3>
+
+ <div class="sticky">
+  TAREAS: Enumere y describa los objetos de tiempo de ejecución que permiten correr al sistema.
+  Estos objetos pueden ser referenciados por nombre en las secciones abajo.
+ </div>
+
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Procesos:</th> 
+   <td>
+    <div class="sample1">Proceso principal de la aplicación</div>
+    <div class="sample2">Procesos del cliente y el servidor</div>
+    <div class="sample3">Tareas Cron</div>
+    <div class="sample4">COntroladores o servicios del sistema operativo</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Archivos de configuración:</th> 
+   <td class="sample1">
+
+    <div>NOMBREDELPRODUCTO.conf: almacena configuración de la aplicación en
+    formato de archivo de propiedades Java.</div>
+
+    <div>Sección de httpd.conf: configura componentes del servidor web Apache
+    </div>
+
+   </td> 
+  </tr>
+  <tr>
+   <th>Tablas de la Base de Datos:</th> 
+   <td class="sample1">
+    <div>TABLA_UNO:Cada fila representa ...</div>
+    <div>TABLA_DOS: Cada fila representa ...</div>
+    <div>TABLA_TRES: Cada fila representa ...</div>
+    <div>Vea el documento de <a
+  href="design-persistence.html">diseño de persistencia</a>.</div>
+   </td> 
+  </tr>
+
+  <tr>
+   <th>Archivos de Datos:</th> 
+   <td class="sample1">
+    <div>*.ext: Archivos de sistema creados por en el usuario en su disco duro local.</div>
+
+    <div>/var/NOMBREDEPRODUCTO/upload-XXXX.dat: Archivos subidos al
+    servidor.</div>
+   </td>
+  </tr>
+
+  <tr>
+   <th>Archivos temporales:</th> 
+   <td class="sample1">
+    <div>/tmp/NOMBREDELPRODUCTO.pid: ID del proceso que está corriendo el
+    proceso del servidor.</div>
+    <div>/tmp/upload-XXXX.dat: Archivos subidos al servidor antes de
+    ser procesados.</div>
+   </td>
+  </tr>
+
+  <tr>
+   <th>Archivos de registro:</th> 
+   <td class="sample1">
+    <div>error.log: Errores serios son puestos en el registro normal de errores de Apache.
+    Debe tener permisos de escritura por un usuario <tt>httpd</tt> Unix.</div>
+
+    <div>NOMBREDELPRODUCTO.log: Mensajes que indican el progreso de operaciones
+    normales y algunos errores.  Debe tener permisos de escritura por usuario 
+    <tt>httpd</tt> Unix.</div>
+
+    <div>Los archivos de registro son rotados por las noches. Los registros antiguos son archivados en
+    OTRO LUGAR.</div>
+   </td>
+  </tr>
+
+ </table>
+ </div>
+
+
+
+ <a name="specificfeatures"></a>
+ <h3>Implementación de Características Específicas</h3>
+
+ <div class="sticky">
+  TAREAS: Escriba descripciones cortas de algoritmos interesantes
+  o inesperados, suposiciones limítrofes o cualquier otro detalle de
+  implementación que pueda impactar el trabajo de otros grupos.
+  Por ejemplo, operaciones de proceso largo que no deban ser interrumpidas. Por ejemplo,
+  inicar o cancelar scripts que son ejecutados automáticamente por el sistema
+  operativo.
+ </div>
+ 
+ <ul class="sample1">
+  <li><strong>Nombre de la característica:</strong> 1-3 DESCRIPCIÓN CORTA </li>
+
+  <li><strong>Nombre de la característica:</strong> 1-3 DESCRIPCIÓN CORTA </li>
+
+  <li><strong>Nombre de la característica:</strong> 1-3 DESCRIPCIÓN CORTA 
+   <ul>
+    <li>DETALLES</li>
+    <li>DETALLES</li>
+    <li>DETALLES</li>
+   </ul>
+  </li>
+
+  <li><strong>Nombre de la característica:</strong> 1-3 DESCRIPCIÓN CORTA 
+   <ul>
+    <li>DETALLES</li>
+    <li>DETALLES</li>
+    <li>DETALLES</li>
+   </ul>
+  </li>
+
+ </ul>
+
+
+
+
+ <a name="operationalprocedures"></a>
+ <h3>Procedimientos Operacionales</h3>
+ 
+ <div class="sticky">
+   TAREAS: Describa brevemente los procedimientos que deberían ser seguidos por
+   los ingenieros de operaciones cuando el sistema es ejecutado en un ambiente de producción
+   ASP.
+ </div>
+ 
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Instalación:</th> 
+   <td class="sample1">Vea la <a href="install.html">Guía de Instalación</a></td> 
+  </tr>
+  <tr>
+   <th>Actualización:</th> 
+   <td class="sample1">Vea la <a href="install.html">Guía de Instalación</a></td> 
+  </tr>
+  <tr>
+   <th>Iniciar el Servidor:</th> 
+   <td class="sample1">
+    <ol>
+     <li>PASO</li>
+     <li>PASO</li>
+     <li>PASO</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Detener el Servidor:</th> 
+   <td class="sample1">
+    <ol>
+     <li>PASO</li>
+     <li>PASO</li>
+     <li>PASO</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Recargar los Archivos de Configuración:</th> 
+   <td class="sample1">
+    <ol>
+     <li>PASO</li>
+     <li>PASO</li>
+     <li>PASO</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Monitoreo de la Actividad:</th> 
+   <td class="sample1">Observe NOMBREDELPRODUCTO.log y error.log.</td> 
+  </tr>
+  <tr>
+   <th>Limpieza Periódica:</th> 
+   <td class="sample1">
+    En raras ocasiones, los archivos /tmp/upload-XXXX.dat pueden acumularse.
+    Cualquiera de estos archivos con más de un día de antiguedad pueden
+    ser eliminados con seguridad.
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+
+ <a name="security"></a>
+ <h3>Securidad</h3>
+
+ <div class="sticky">
+   TAREAS: Escriba notas sobre seguridad para ayudar a los ingenieros de operaciones a mantener
+   el sistema seguro mientras se encuentre en operación. 
+ </div>
+ 
+ <p>Tuvimos las siguientes precauciones para hacer el sistema seguro:</p>
+ 
+ <ul class="sample1">
+  <li>PASO</li>
+  <li>PASO</li>
+  <li>PASO</li>
+ </ul>
+
+ <p>La seguridad del sistema depende de los siguientes factores
+ externos:</p>
+
+ <ul class="sample1">
+  <li>PASO</li>
+  <li>PASO</li>
+  <li>PASO</li>
+ </ul>
+
+
+
+ <a name="performance"></a>
+ <a name="scalability"></a>
+ <h3>Desempeño y Escalabilidad</h3>
+
+ <div class="sticky">
+   TAREAS:  Escriba notas sobre el desempeño y la escalabilidad para ayudar
+   a los ingenieros de operaciones a operar el sistema eficientemente.
+ </div>
+ 
+ <p class="sample1">NOTAS SOBRE DESEMPEÑO.</p>
+
+ <p class="sample1">NOTAS SOBRE ESCALABILIDAD.</p>
+
+ 
+
+ <a name="checklist"></a>
+ <h3>Lista de Pendientes de Implementación</h3>
+
+ <dl>
+
+  <dt>¿Estas notas de implementación proveen suficiente información para 
+  los ingenieros de operaciones?</dt>
+
+  <dd>Sí, estas notas han sido revisadas por el equipo de operaciones y
+  los cambios solicitados han sido incluídos.</dd>
+
+  <dd>No, estas notas solo resumen partes de un <a
+  href="LINK-TO-OPERTIONS-MANUAL">manual de operationes</a> más completo.</dd>
+
+  <dd>No, un miembro del equipo de desarrollo está disponible por teléfono
+  cuando el equipo de operaciones necesite apoyo. Esto se encuentra documentado en el documento
+  <a href="resource-needs.html">recursos necesarios</a> y en el
+  <a href="LINK-TO-ON-CALL-SCHEDULE">calendario de llamadas</a>.</dd>
+
+
+  <dt>¿Estas notas de implementación han sido comunicadas a los equipos
+  de operaciones y desarrollo y a otros inversionistas?</dt>
+
+  <dd>Sí, todos han tenido oportunidad de revisarlas.  Toda retroalimentación es
+  bienvenida.</dd>
+
+  <dd>Sí, han sido publicadas en el sitio web del proyecto.</dd>
+
+  <dd>No, algunos ingenieros de desarrollo o de operaciones no están conscientes de
+  este documento.  Este es un riesgo documentado en la sección <a
+  href="plan.html#risks">Administración de Riesgos</a> del <a
+  href="plan.html">Plan del Proyecto</a>.</dd>
+  
+ </dl>
+ 
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+  
+ </div>
+
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

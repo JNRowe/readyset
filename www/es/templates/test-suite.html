@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Conjunto de pruebas</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+
+<h2><a href="qa-plan.html">Plan de QA</a> &gt; Conjunto de Pruebas</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Release Information</h3>
+ <div class="axial">
+ <table border="1" cellpagregaring="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="test-cases.html">Casos de Prueba</a></div>
+    <div><a href="test-case-format.html">Formato de casos de prueba</a></div>
+    <div>LIGAS A ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+<a name="processimpact"></a>
+<p class="readonly"><b>Impacto del proceso:</b> Este es un conjunto para
+pruebas manuales de sistema.  Es solo una actividad en el <a
+href="qa-plan.html">plan de QA</a>.  Un conjunto de casos de prueba es simplemente una tabla
+de contenidos para casos de prueba individuales.  Organizando el conjunto de
+casos de prueba por prioridad, área de funcionalidad, actore, objeto de negocio o
+versión puede ayudar a identificar partes del sistem que necesitan pruebas
+adicionales.</p>
+
+<div class="sticky"> 
+  TAREAS: Antes de escribir casos de pruebas individuales, enumere los casos de pruebas
+  que piense que necesitará.  Organícelos de forma que a propósito
+  deje espacios en blanco visibles en esta página si le hacen falta casos de uso.
+  Escoja una o más de las clasificaciones que se muestran abajo.
+</div>
+
+<div class="sticky"> 
+  SUGERENCIA: Refiérase a su documento de <a href="use-cases.html">casos de uso</a>
+  Úselos para obtener ideas y asegurarse que los cubre todos
+  Recuerde que los casos de prueba son más precisos que los casos de uso,
+  los casos de prueba deberán hacer referencia a detalles específicos de su implementación
+  y puede haber varios casos de prueba para un caso de uso dado.
+</div>
+
+<div class="sticky"> 
+  SUGERENCIA: El conjunto de casos de prueba puede ser organizado en listaas anidadas
+  de acuerdo a otros criterios de cobertura, por ejemplo: por actor.  O puede
+  ser organizado en tablas que consideren dos aspectos al mismo tiempo, por ejemplo,
+  objetos de negocio contra actoresbusiness.  Si una cierta sección del árbol o
+  tabla no necesita casos de prueba, márquela explícitamente como "N/A".
+  De otra forma, si una sección necesita más casos de prueba de los que ya ha escrito,
+  márquelas como "PARA HACER" Si el elemento de una celda contiene varias tareas, rómpa
+  esa sección en una tabla, cmo se hizo la that section out into its own table, as done for the característica
+  de inscripción del ejemplo de abajo.
+</div>
+
+
+<a name="bybusinessobject"></a>
+<h3>Casos de uso por Objeto de Negocio y Operación</h3>
+
+<div class="sample1">
+<table border="1" cellpagregaring="3" cellspacing="2" width="100%">	
+ <tr>
+  <th>BO \ Acción</th>
+  <th>añadir</th>
+  <th>ver/navegar</th>
+  <th>editarar</th>
+  <th>borrar</th>
+  <th>buscar</th>
+  <th>otros</th>
+ </tr>
+	
+ <tr>
+  <th>Estudiante</th>
+  <td>
+   <div><a href="test-cases.html#estudiante_agregar_1">estudiante_agregar_1</a></div>
+   <div><a href="test-cases.html#estudiante_agregar_2">estudiante_agregar_2</a></div>
+   <div><a href="test-cases.html#estudiante_agregar_3">estudiante_agregar_3</a></div>
+  </td>
+  <td><a href="test-cases.html#estudiante_lista_1">estudiante_lista_1</a></td>
+  <td>
+   <div><a href="test-cases.html#estudiante_editar_1">estudiante_editar_1</a></div>
+   <div><a href="test-cases.html#estudiante_editar_2">estudiante_editar_2</a></div>
+  </td>
+  <td><a href="test-cases.htmlestudiante_borrar_1">estudiante_borrar_1</a></td>
+  <td>
+   <div><a href="test-cases.html#estudiante_buscar_1">estudiante_buscar_1</a></div>
+   <div><a href="test-cases.html#estudiante_buscar_2">estudiante_buscar_2</a></div>
+  </td>
+  <td><a href="#inscripcion_grid">See grid below</a></td>
+ </tr>
+
+ <tr>
+  <th>Curso</th>
+  <td>
+   <div><a href="test-cases.html#curso_agregar_1">curso_agregar_1</a></div>
+   <div><a href="test-cases.html#curso_agregar_2">curso_agregar_2</a></div>
+  </td>
+  <td><a href="test-cases.html#curso_lista_1">curso_lista_1</a></td>
+  <td>
+   <div><a href="test-cases.html#curso_editar_1">curso_editar_1</a></div>
+   <div><a href="test-cases.html#curso_mover_1">curso_mover_1</a></div>
+   <div><a href="test-cases.html#curso_agregar_prereq_1">curso_agregar_prereq_1</a></div>
+  </td>
+  <td><a href="test-cases.html#curso_cancelar_1">curso_cancelar_1</a></td>
+  <td><a href="test-cases.html#curso_buscar_1">curso_buscar_1</a></td>
+  <td>N/A</td>
+ </tr>
+
+ <tr>
+  <th>Aula</th>
+  <td>
+   <div><a href="test-cases.html#aula_agregar_1">aula_agregar_1</a></div>
+   <div><a href="test-cases.html#aula_agregar_2">aula_agregar_2</a></div>
+  </td>
+  <td><a href="test-cases.html#aula_lista_1">aula_lista_1</a></td>
+  <td>TAREAS</td>
+  <td>TAREAS</td>
+  <td>TAREAS</td>
+  <td>N/A</td>
+ </tr>
+
+ <tr>
+  <th>Instructor</th>
+  <td><a href="test-cases.html#inst_agregar_1">inst_agregar_1</a></td>
+  <td>N/A</td>
+  <td><a href="test-cases.html#inst_editar_1">inst_editar_1</a></td>
+  <td><a href="test-cases.html#inst_borrar_1">inst_borrar_1</a></td>
+  <td>N/A</td>
+  <td>
+   <div><a href="test-cases.html#inst_eval_1">inst_eval_1</a></div>
+   <div><a href="test-cases.html#inst_eval_2">inst_eval_2</a></div>
+  </td>
+ </tr>
+
+</table>
+
+<div class="tier2">
+<a name="inscripcion_grid"/>
+<h4>Casos de Prueba para Inscripción en Cursos</h4>
+<table border="1" cellpagregaring="3" cellspacing="2" width="100%">	
+ <tr>
+  <th>Curso \ Estudiante</th>
+  <th>Recién inscrito</th>
+  <th>Avanzado</th>
+  <th>Con Menciones</th>
+  <th>Otros</th>
+ </tr>
+	
+ <tr>
+  <th>Avanzado</th>
+  <td><a href="test-cases.html#inscripcion_prioridad_2">inscripcion_prioridad_2</a></td>
+  <td><a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a></td>
+  <td><a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a></td>
+  <td>
+   <div><a href="test-cases.html#inscripcion_1">inscripcion_1</a></div>
+   <div><a href="test-cases.html#inscripcion_2">inscripcion_2</a></div>
+   <div><a href="test-cases.html#inscripcion_3">inscripcion_3</a></div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>No Avanzado</th>
+  <td><a href="test-cases.html#inscripcion_prioridad_2">inscripcion_prioridad_2</a></td>
+  <td><a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a></td>
+  <td><a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a></td>
+  <td>
+   <div><a href="test-cases.html#inscripcion_1">inscripcion_1</a></div>
+   <div><a href="test-cases.html#inscripcion_2">inscripcion_2</a></div>
+   <div><a href="test-cases.html#inscripcion_3">inscripcion_3</a></div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Cursos con Menciones</th>
+  <td><a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a></td>
+  <td><a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a></td>
+  <td>
+   <div><a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a></div>
+  </td>
+  <td><a href="test-cases.html#inscripcion_restricted_1">inscripcion_restringida_1</a></td>
+ </tr>
+</table>
+
+
+</div>
+</div>
+
+
+<a name="byprioridad"></a>
+<h3>Casos de Prueba por Características de Prioridad</h3>
+
+<div class="sticky">
+ TAREAS: Utilice esta guía para asegurarse de que las características de alta prioridad
+ están probadas adecuadamente.  Enumere las características por prioridad y luego enumere 
+ los casos de prueba para cada caracte?istica. Si una característica necesita más casos de prueba, 
+ anótelo como "PARA HACER".
+</div>
+
+<div class="sample1">
+<ul>
+ <li>Esenciales
+  <ul>
+   <li><a href="features.html#F-01">C-01</a>:  
+       <a href="test-cases.html#estudiante_agregar_1">estudiante_agregar_1</a> 
+       <a href="test-cases.html#estudiante_agregar_2">estudiante_agregar_2</a>
+       <a href="test-cases.html#estudiante_agregar_3">estudiante_agregar_3</a>
+   </li>
+   <li><a href="features.html#F-02">C-02</a>:  
+       <a href="test-cases.html#inscripcion_1">inscripcion_1</a>
+       <a href="test-cases.html#inscripcion_2">inscripcion_2</a>
+       <a href="test-cases.html#inscripcion_3">inscripcion_3</a>
+       <a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a>
+       <a href="test-cases.html#inscripcion_prioridad_2">inscripcion_prioridad_2</a>
+       <a href="test-cases.html#inscripcion_restricted_1">inscripcion_restricted_1</a>
+   </li>
+  </ul>
+ </li>
+
+ <li>Esperadas
+  <ul>
+   <li><a href="features.html#F-22">C-22</a>: 
+       <a href="test-cases.html#estudiante_buscar_1">estudiante_buscar_1</a> 
+       <a href="test-cases.html#estudiante_buscar_2">estudiante_buscar_2</a> 
+       <a href="test-cases.html#curso_buscar_1">curso_buscar_1</a> 
+   </li>
+   <li><a href="features.html#F-23">C-23</a>: 
+    <a href="test-cases.html#aula_agregar_1">aula_agregar_1</a>
+    <a href="test-cases.html#aula_agregar_2">aula_agregar_2</a>
+    <a href="test-cases.html#aula_editar_1">aula_editar_1</a> PARA HACER
+   </li>
+  </ul>
+ </li>
+
+ <li>Deseadas
+  <ul>
+   <li><a href="features.html#F-31">C-31</a>: 
+       <a href="test-cases.html#inst_eval_1">inst_eval_1</a> 
+       <a href="test-cases.html#inst_eval_2">inst_eval_2</a> 
+   </li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+
+
+<a name="byusecase"></a>
+<h3>Casos de Pruebas por Prioridad de Caso de Uso</h3>
+
+<div class="sticky">
+ TAREAS: Utilice esta guía para asegurarse de que los casos de uso de alta prioridad
+ están probados adecuadamente. Enumere los casos de uso por prioridad y luego enumere
+ los casos de prueba para cada caso de uso. Si un caso de uso necesita más casos de prueba,
+ anótelos como "PARA HACER".
+</div>
+
+<div class="sample1">
+<ul>
+ <li>Esenciales
+  <ul>
+   <li><a href="use-cases.html#CU-01">CU-01</a>: 
+       <a href="test-cases.html#estudiante_agregar_1">estudiante_agregar_1</a>
+       <a href="test-cases.html#estudiante_agregar_2">estudiante_agregar_2</a>
+   </li>
+   <li><a href="use-cases.html#CU-01">CU-01</a>: 
+       <a href="test-cases.html#estudiante_agregar_3">estudiante_agregar_3</a>
+   </li>
+   <li><a href="use-cases.html#CU-02">CU-02</a>:  
+       <a href="test-cases.html#inscripcion_1">inscripcion_1</a>
+   </li>
+   <li><a href="use-cases.html#CU-03">CU-03</a>:  
+       <a href="test-cases.html#inscripcion_2">inscripcion_2</a>
+   </li>
+   <li><a href="use-cases.html#CU-04">CU-04</a>:  
+       <a href="test-cases.html#inscripcion_3">inscripcion_3</a>
+   </li>
+   <li><a href="use-cases.html#CU-05">CU-05</a>:  
+       <a href="test-cases.html#inscripcion_prioridad_1">inscripcion_prioridad_1</a>
+       <a href="test-cases.html#inscripcion_prioridad_2">inscripcion_prioridad_2</a>
+   </li>
+   <li><a href="use-cases.html#CU-06">CU-06</a>:  
+       <a href="test-cases.html#inscripcion_restricted_1">inscripcion_restricted_1</a>
+   </li>
+  </ul>
+ </li>
+
+ <li>Esperados
+  <ul>
+   <li><a href="use-cases.html#CU-22">CU-22</a>: 
+       <a href="test-cases.html#estudiante_buscar_1">estudiante_buscar_1</a> 
+       <a href="test-cases.html#estudiante_buscar_2">estudiante_buscar_2</a> 
+   </li>
+   <li><a href="use-cases.html#CU-23">CU-23</a>: 
+       <a href="test-cases.html#curso_buscar_1">curso_buscar_1</a> 
+   </li>
+   <li><a href="use-cases.html#CU-30">CU-30</a>: 
+    <a href="test-cases.html#aula_agregar_1">aula_agregar_1</a>
+    <a href="test-cases.html#aula_agregar_2">aula_agregar_2</a>
+   </li>
+   <li><a href="use-cases.html#CU-31">CU-31</a>: 
+    <a href="test-cases.html#aula_editar_1">aula_editar_1</a> PARA HACER
+   </li>
+   <li><a href="use-cases.html#CU-32">CU-32</a>: 
+    PARA HACER
+   </li>
+   <li><a href="use-cases.html#CU-33">CU-33</a>: 
+    PARA HACER
+   </li>
+  </ul>
+ </li>
+
+ <li>Deseados
+  <ul>
+   <li><a href="use-cases.html#CU-40">CU-40</a>: 
+       <a href="test-cases.html#inst_eval_1">inst_eval_1</a> 
+       <a href="test-cases.html#inst_eval_2">inst_eval_2</a> 
+   </li>
+  </ul>
+ </li>
+</ul>
+</div>
+
+
+</div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

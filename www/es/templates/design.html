@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css";
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Diseño</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>Diseño</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Formas Anexas:</th> 
+   <td>
+<!--    <div><a href="design-tech.html">Technology Selection Worksheet</a></div> -->
+    <div><a href="design-architecture.html">Forma de Arquitectura</a></div>
+    <div><a href="design-src-org.html">Forma para Organización y Compilado de Fuentes</a></div>
+<!--    <div><a href="design-reuse.html">Reuse Plan Worksheet</a></div> -->
+<!--    <div><a href="design-scalability.html">Scalability Worksheet</a></div> -->
+    <div><a href="design-ui.html">Forma para Interfz del Usuario</a></div>
+    <div><a href="design-persistence.html">Forma para Almacenamiento Persistente</a></div>
+    <div><a href="design-security.html">Forma para Seguridad</a></div>
+<!--    <div><a href="design-upgrade.html">Upgrade Mechanism Worksheet</a></div> -->
+<!--    <div><a href="design-testability.html">Design for Testability Worksheet</a></div> -->
+   </td>
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="srs.html">Especificación de Requerimientos de Software</a></div>
+    <div>SRS &gt; <a href="use-case-suite.html">Conjunto de casos de uso</a></div>
+    <div>SRS &gt; <a href="feature-set.html">Conjunto de características</a></div>
+    <div><a href="glossary.html">Glosario de términos</a></div>
+    <div>LIGAS A ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+ <a name="processimpact"></a>
+ <p class="readonly"><strong>Impacto del proceso:</strong> Este documento
+ de diseño describe un sistema que satisfacerá los requerimientos de la
+ <a href="srs.html">SRS</a>.  Las decisiones hechas creando este documento de diseño
+ están basadas en esos requerimientos y en la comprensión de las
+ tecnologías y los componentes disponibles. Una vez que el diseño se encuentre esbozado,
+ pueden empezar el trabajo en la implementación del sistema y las pruebas unitarias.
+ </p>
+
+ <div class="sticky">
+  TAREAS: Llene las secciones que se encuentran abajo.  Añada o quite elementos según necesite
+  para su proyecto.
+ </div>
+
+
+ <a name="introduction"></a>
+ <h3>Introducción</h3>
+
+ <dl>
+
+  <dt>¿Cómo está organizado este documento de diseño?</dt>
+ 
+  <dd>Esta página principal describe el diseño del sistema en términos de paquetes,
+  clases, relaciones y comportamientos.  Las diferentes formas anexas resuelven
+  aspectos específicos del diseño general del sistema, como el diseño de la interfaz del usuario
+  y el diseño de la base de datos.</dd>
+
+ 
+  <dt>¿Cuáles son los hecho más importantes que un desarrollador debería saber
+  acerca de este diseño?</dt>
+ 
+  <dd>PÁRRAFO o VIÑETAS</dd>
+
+ 
+  <dt>¿Cuáles son los objetivos priorizados de este diseño?</dt>
+ 
+  <dd class="sample1">
+  <ol>
+    <li><a class="def" href="glossary-std.html#dg_correctness">Corrección</a></li>
+    <li><a class="def" href="glossary-std.html#dg_feasibility">Viabilidad</a></li>
+    <li><a class="def" href="glossary-std.html#dg_understandability">Comprensibilidad</a> </li>
+    <li><a class="def" href="glossary-std.html#dg_guidance">Guías de Implementación por Etapas</a></li>
+    <li><a class="def" href="glossary-std.html#dg_modularity">Modularidad</a></li>
+    <li><a class="def" href="glossary-std.html#dg_extensibility">Extensibilidad</a></li>
+    <li><a class="def" href="glossary-std.html#dg_testability">Capacidad de Prueba</a></li>
+    <li><a class="def" href="glossary-std.html#dg_efficiency">Eficiencia</a></li>
+  </ol>
+
+  </dd>
+
+ </dl>
+
+
+
+ <a name="structuraldesign"></a>
+ <h3>Diseño UML Estructural</h3>
+
+ <div class="sticky">
+  TAREAS: haga una liga a un modelo de diseño y/o diagramas de diseño que describan
+  la estructura de su sistema en detalle.
+ </div>
+
+ <p class="sample1">El diseño estructural del sistema se describe en el siguiente modelo UML:
+   <a href="LINK-TO-MODEL-FILE">NOMBREDELMODELO</a>.
+ </p>
+
+ <div class="sample2">
+ <p>El diseño estructural del sistema se describe en los siguientes diagramas estructurales
+ en UML:</p>
+
+ <ul>
+  <li><a href="LINK-TO-DIAGRAM">RESUMEN DEL PAQUETE DE DIAGRAMAS</a></li>
+  <li>NOMBREDELPAQUETE
+   <ul>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+   </ul>
+  </li>
+  <li>NOMBREDELPAQUETE
+   <ul>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+   </ul>
+  </li>
+  <li>NOMBREDELPAQUETE
+   <ul>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+   </ul>
+  </li>
+ </ul>
+ </div>
+
+ <p>CUALQUIER NOTA ADICIONAL O COMENTARIOS</p>
+
+
+
+ <a name="behavioraldesign"></a>
+ <h3>Diseño UML de Comportamiento</h3>
+
+ <div class="sticky">
+  TAREAS: Haga ligas a un modelo de diseño y/o a diagramas de diseño que describan
+  en detalle el comportamiento de su sistema.
+ </div>
+
+ <p class="sample1">El deseño de comportamiento del sistema se describe en el siguiente modelo UML:
+   <a href="LINK-TO-MODEL-FILE">NOMBREDELMODELO</a>.
+ </p>
+
+ <div class="sample2">
+ <p>El diseño de comportamiento del sistema se describe en los siguiente diagramas UML
+ de comportamiento:</p>
+
+ <ul>
+  <li>Diagramas de Estado
+   <ul>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+   </ul>
+  </li>
+  <li>Diagramas de Secuencia
+   <ul>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+   </ul>
+  </li>
+  <li>Diagramas de Colaboración
+   <ul>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+    <li><a href="LINK-TO-DIAGRAM">NOMBREDELDIAGRAMA</a></li>
+   </ul>
+  </li>
+ </ul>
+ </div>
+
+ <p>CUALQUIER NOTA ADICIONAL O COMENTARIOS</p>
+
+
+
+ <a name="checklist"></a>
+ <h3>Lista de Pendientes de Diseño UML</h3>
+ 
+ <div class="sticky">
+  TAREAS: Conteste las siguientes preguntas para ayudar a evaluar su diseño.
+  Añada o elimine las preguntas según convenga a su proyecto.  Si no puede remover una respuesta
+  a una pregunta de forma positiva, puede indicar un aspecto del diseño que debería ser
+  revisado.
+ </div>
+
+ <dl>
+  <dt>Correción: ¿Cómo sabe que su diseño es correcto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Viabilidad: ¿Qué indica que este diseño puede ser implementado y probado
+  con las cantidades planeadas de esfuerzo y tiempo?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Comprensibilidad: ¿Qué hace a este diseño comprensible? </dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Guías de Implementación por Etapas: ¿El diseño sugiere tareas
+  razonables de implementación?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Modularidad: ¿Cuántas preocupaciones han sido separadas y atacadas en los distintos
+  modulos?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Extensibilidad: ¿Cómo pueden añadirse fácilmente características nuevas posteriormente?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Capacidad de Prueba: ¿Qué hace a este sistema fácil de probar?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Eficiencia: ¿El sistema consume una cantidad aceptable de tiempo, 
+  espacio de almacenamiento ancho de bando y otros recursos?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+<!--  <dd>See the <a href="design-scalability.html">scalability worksheet</a>.</dd> -->
+
+ </dl>
+
+
+
+</div>
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Persistencia</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="design.html">Diseño</a> &gt; Persistencia</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div>LIGAS A ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+
+ <a name="overview"></a>
+ <h3>Overview</h3>
+ <div class="sticky">
+  TAREAS: Responda a las preguntas que se encuentran abajo para ayudar a diseñar las características de persistencia necesarias.
+  Se muestran algunos ejemplos, añada o elimine texto según considere
+  necesario.
+ </div>
+
+ <dl>
+
+  <dt>¿Cuáles son los hechos más importantes que un desarrollador debería conocer
+  sobre almacenamiento persistente de información de este sistema?</dt>
+
+  <dd>PÁRRAFOS O VIÑETAS</dd>
+
+ 
+  <dt>¿Cuáles son los objetivos categorizados para persistencia en este sistema?</dt>
+
+  <dd>
+   <ol>
+    <li><a class="def" href="glossary-std.html#dg_expressiveness">Expresividad</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_easy_access">Facilidad de acceso</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_reliability">Confiabilidad</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_capacity">Capacidad de Datos</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_security">Seguridad en los Datos</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_performance">Desempeño</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_data_interop">Interoperabilidad</a></li>
+   </ol>
+  </dd>
+ </dl>
+
+
+
+ <a name="database"></a>
+ <h3>Base de Datos Central</h3>
+
+ <dl>
+
+  <dt>¿Cuál es la lógica en el diseño de la base de datos?</dt>
+
+  <dd class="sample1">El diseño lógico de la base de datos está descrita en este
+  <a href="LINK-TO-MODEL">modelo UML</a> o en este <a
+  href="LINK-TO-DIAGRAM">diagrama ER (entidad/relación)</a>.
+
+   <p>Las consideraciones lógicas adicionales a la base de datos son:</p>
+   <ul>
+    <li>Los estudiantes pueden repetir un curso (y obtener así dos registros para
+    el mismo curso en su boleta) si y solo si tienen una calificación
+    de "6.5" o menor, o el número del curso es 198, 199, 298 o
+    299.</li>
+
+    <li>Una calificación mayor de "10" es válida solo para entradas de boletas durante o
+    después de otoño de 1990.  Antes de esta fecha, la calificación másima posible es de
+    "10".</li>
+
+    <li>CONSIDERACIÓN LOGICA QUE NO PUEDE SER EXPRESADA EN EL DIAGRAMA</li>
+
+    <li>CONSIDERACIÓN LOGICA QUE NO PUEDE SER EXPRESADA EN EL DIAGRAMA</li>
+   </ul>
+  </dd>
+
+
+  <dt>¿Cuáles son las tablas físicas y las vistas?</dt>
+
+  <dd class="sample1">el diseño de la base de datos física se describe en
+  este <a href="LINK-TO-MODEL">modelo UML</a> o en este
+  href="LINK-TO-DIAGRAM">diagrama ER</a>.</dd>
+
+
+  <dt>¿Cómo se almacenarán los objetos de la aplicación en la base de datos?</dt>
+
+  <dd class="sample1">Utilizaremos una tabla de la base de datos para cada clase, y una fila en la
+  base de datos para cada instancia persistente de esa clase.</dd>
+
+  <dd class="sample2">Utilizaremos una <a href="LINK-TO-LIBRARY">libreria</a> para hacer nuestro
+  mapeo de objectos-relaciones.  (Por ejemplo, torque, castor, JDO, ADO,
+  hibernate)</dd>
+
+
+  <dt>¿Qué controles de acceso a la base de datos se utilizarán?</dt>
+
+  <dd class="sample1">Una cuenta de usuario de la base de datos ha sido creadapara accesar
+  las tablas necesarias de la aplicación.  El nombre del usuario y la contraseña para esta cuenta
+  se almacenna en un archivo de configuración que lee el servidor de aplicaciones.
+  La base de datos limita el acceso de ese usuario a solo las direcciones IP
+  usadas por el servidor de aplicaciones.</dd>
+
+  
+  <dt>¿Pueden otras aplicaciones acceder a la base de datos central de la aplicación
+  ?</dt>
+
+  <dd class="sample1">Sí.  La base de datos es un punto importante de interoperabilidad para nuevas
+  aplicaciones que pueden ser añadidas más tarde. La misma base de datos provee
+  soporte para controles de acceso y revisa las consideraciones de validez para que
+  una aplicación defectuosa no pueda corromper la base de datos.</dd>
+
+  <dd class="sample2">No. esta base de datos deberá ser siempre accesada por medio de esta
+  aplicación.  Todas las piezas de información relevante están disponibles
+  a través de las interfaces de la aplicación. la base de datos en sí no cuenta con
+  protección contra la corrupción de datos que pudieran causar otras
+  aplicaciones.</dd>
+
+ </dl>
+
+
+
+
+ <a name="filestorage"></a>
+ <h3>Almacenamiento de Archivos</h3>
+
+ <dl>
+  <dt>¿Qué información necesita ser almacenada en archivos?</dt>
+
+  <dd class="sample1">No se almacena nada en archivos. Todo se encuentra en la base de datos.</dd>
+
+  <dd class="sample2">El servidor almacena la mayoría de la información en la base de datos, pero los archivos anexos
+  a la lista de correo son escritos en archivos en el disco duro del servidor.</dd>
+
+  <dd class="sample3">Todos los documentos de los usuarios son almacenados en el disco duro de su computadora.
+  </dd>
+
+
+  <dt>¿Cuáles son las convesiones para la estructura de directorios y el nombrado de archivos?</dt>
+
+  <dd class="sample1">N/A</dd>
+
+  <dd class="sample2">Los archivos son almacenados en el servidor como
+  <tt>/var/data/attachments/msgNNNN-MMM.dat</tt>.</dd>
+
+  <dd class="sample3">Lo usuarios almacenan sus archivos en cualquier lugar de su computadora, con el nombre de archivo
+  y extension <tt>.TST</tt>.</dd>
+
+  
+  <dt>¿Que controles de acceso al sistema de archivos se utilizarán?</dt>
+
+  <dd class="sample1">N/A</dd>
+
+  <dd class="sample2">Los archivos para mensajes adjuntos solo podrán ser leidos y editados por
+  el proceso de archivación de la lista de correos que utiliza el usuario del sistema
+  "archdaemon".</dd>
+
+  <dd class="sample3">Los usuarios pueden utilizar cualquier permiso sobre el archivo que deseen.</dd>
+ </dl>
+
+
+
+ <a name="distributedstorage"></a>
+ <h3>Almacenamiento Distribuido</h3>
+
+ <dl>
+  <dt>¿Qué información (si existe) se guadará en los equipos del cliente?
+  ¿Por cuánto tiempo?</dt>
+
+  <dd class="sample1">Una cookie se almacenará en el equipo del usuario con propósitos de 
+  identificar una sesión del usuario.  Cuando el usuario salga del sistema o cierre su
+  navegador, la cookie es eliminada.  La mayoría de los navegadores ni siquiera
+  escribirán esta cookie en el disco.</dd>
+
+  <dd class="sample2">La cookie se almacena en el equipo del usuario y es equivalente a
+  su contraseña (pero no su contraseña REAL). Esta
+  cookie es necesaria para la caracerística de auto-login.  La cookie dura un
+  maximo de 30 días y solo puede ser usada desde la misma dirección
+  IP.</dd>
+
+  <dd class="sample3">Las preferencias de color del usuario son almacenadas en cookies en su
+  navegador.  Esta información no es delicada, así que se almacena indefinidamente.
+  </dd>
+
+  <dd class="sample4">Toda la información del usuario es almacenada en archivos en sus
+  computadoras.</dd>
+
+ </dl>
+
+
+
+
+ <a name="checklist"></a>
+ <h3>Lista de Pendientes de Mecanismos de Persistencia</h3>
+
+ <dl>
+  <dt>Expresividad: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Facilidad de acceso: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Confiabilidad: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Capacidad: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Seguridad: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Desempeño: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Interoperabilidad: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+ </dl>  
+
+</div>
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Organización de Código Fuente y Sistemas de Compilación</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="design.html">Diseño</a> &gt; Organización de Código Fuente y Sistemas de Compilación</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="http://jakarta.apache.org/tomcat/tomcat-4.1-doc/appdev/build.xml.txt">Ejemplo de build.xml para Tomcat</a></div>
+    <div><a href="http://ant.apache.org/manual/index.html">Manual de Ant para Apache</a></div>
+    <div>LIGAS A ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+
+ <a name="overview"></a>
+ <h3>Resumen</h3>
+
+ <div class="sticky">
+  TAREAS: Conteste las preguntas que se encuentran abajo para ayudar a definir la organización de su
+  código fuente y procesos de compilación. Se ha incluido texto de ejemplo.  Añada
+  o elimine texto según sea necesario. Por ejemplo, no todos los proyectos desean ser independientes de la
+  plataforma.
+ </div>
+
+ <dl>
+  <dt>¿Cuáles son los hechos más importantes que un desarrollador debería saber
+  acerca de esta organización de código fuente y el sistema de compilación?</dt>
+
+  <dd class="sample1">Esta organización sigue de forma muy libre el estándar propuesto en la documentación de Tomcat y
+  es muy similar a la organización usada en muchos proyectos open-source
+  en la Apache Software Foundation.</dd>
+
+
+  <dt>¿Cuáles son los objetivos categorizados de esta organización de código fuente y el sistema de compilación?</dt>
+
+  <dd class="sample1">
+   <ol>
+    <li>Separación de archivos por tipo</li>
+
+    <li>La separación de los archivos controlados por versión de los archivs generados en el proceso
+    de compilación</li>
+
+    <li>Compatibilidad con procesos de compilación estándar</li>
+
+    <li>Independencia de Plataforma</li>
+   </ol>
+  </dd>
+
+ </dl>
+
+
+
+ <a name="directories"></a>
+ <h3>Directorios y archivos clave en copias de trabajo para desarrollo</h3>
+
+ <div class="sticky">
+  TAREAS: Describa el propósito de cada directorio que aparece en
+  una copia de trabajo de desarrollo, incluya también cualquier archivos que son importantes para
+  la estructura general o el proceso de compilación.
+ </div>
+
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr><th>Path</th><th>VC</th><th>Descripción</th></tr>
+  <tr>
+   <td>build.xml</td>
+   <td>Sí</td>
+   <td>Archivo compilado</td>
+  </tr>
+  <tr>
+   <td>build.properties</td>
+   <td>Sí</td>
+   <td>Archivo de propiedades de compilación</td>
+  </tr>
+  <tr>
+   <td>src/</td>
+   <td>Sí</td>
+   <td>Código fuente</td>
+  </tr>
+  <tr>
+   <td>src/java/</td>
+   <td>Sí</td>
+   <td>Código fuente Java</td>
+  </tr>
+  <tr>
+   <td>src/java/[paquetes anidados]/</td>
+   <td>Sí</td>
+   <td>Código fuente Java de clases en cada paquete</td>
+  </tr>
+  <tr>
+   <td>src/java/[paquetes anidados]/test/</td>
+   <td>Sí</td>
+   <td>Código fuente de Java para pruebas unitarias de las clases en cada paquete</td>
+  </tr>
+  <tr>
+   <td>web/</td>
+   <td>Sí</td>
+   <td>Archivos HTML y JSP</td>
+  </tr>
+  <tr>
+   <td>web/css/</td>
+   <td>Sí</td>
+   <td>Archivos CSS, si existen</td>
+  </tr>
+  <tr>
+   <td>web/images/</td>
+   <td>Sí</td>
+   <td>Archivos de imágenes, si existen</td>
+  </tr>
+  <tr>
+   <td>web/WEB-INF/web.xml</td>
+   <td>Sí</td>
+   <td>Archivo de configuración de la aplicación web en Java</td>
+  </tr>
+  <tr>
+   <td>conf/</td>
+   <td>Sí</td>
+   <td>Archivos de configuración, si existen</td>
+  </tr>
+  <tr>
+   <td>data/</td>
+   <td>Sí</td>
+   <td>Datos iniciales a cargar en la base de datos y/o el sistema de archivos, si existen</td>
+  </tr>
+  <tr>
+   <td>lib/</td>
+   <td>Sí</td>
+   <td>Librerías reusadas por este proyecto, si existen</td>
+  </tr>
+  <tr>
+   <td>scripts/</td>
+   <td>Sí</td>
+   <td>Utilerías de línea de comando usadas en este proyecto, si existen</td>
+  </tr>
+  <tr>
+   <td>www/</td>
+   <td>Sí</td>
+   <td>Documentos del proyecto (por ejemplo, resumenes, plan, requerimientos y diseño)</td>
+  </tr>
+  <tr>
+   <td>build/</td>
+   <td>No</td>
+   <td>Salida al proceso de compilación</td>
+  </tr>
+  <tr>
+   <td>build/WEB-INF/classes/</td>
+   <td>No</td>
+   <td>Salida al código compilado por el proceso de compilación</td>
+  </tr>
+  <tr>
+   <td>dist/docs/api/</td>
+   <td>No</td>
+   <td>Documentación de la API producida por el proceso de compilación</td>
+  </tr>
+  <tr>
+   <td>dist/NOMBREDELPROYECTO-VERSION.war</td>
+   <td>No</td>
+   <td>Archivo web de clases distribuible y archivos de configuración generados por el proceso de compilación</td>
+  </tr>
+ </table>
+
+
+
+ <a name="targets"></a>
+ <h3>Compilaciones de trabajo</h3>
+
+ <div class="sticky">
+  TAREAS: Describa las compilaciones de trabajo que los desarrolladores utilizarán diariamente
+  en su trabajo.  Los ejemplos abajo deberán servir para la mayoría de los proyectos.
+ </div>
+
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr><th>Destino</th><th>Descripción</th></tr>
+  <tr>
+   <td nowrap="nowrap">compile = default</td>
+   <td>Compila el código fuente en Java y crea archivos .class
+       en el directorio "build".</td>
+  </tr>
+
+  <tr>
+   <td>dist</td>
+   <td>Empaca el sistema para distribución/entrega a servidores o a 
+       usuarios finales. Específicamente, crea archivos. war de
+       clases compiladas y archivos de configuración.</td>
+  </tr>
+
+  <tr>
+   <td>install</td>
+   <td>Coloca el código ejecutable en un lugar donde puede ser ejecutado.
+       Especificamente, copia los archivos .war en el directorio webapps de Tomcat
+       para utilizarlo. Deberá reiniciar Tomcat para usarlo o usar
+       la liga de "refrescar" en el Administrador de Tomcat.</td>
+  </tr>
+
+  <tr>
+   <td>javadoc</td>
+   <td>Genera documentación API de Java en "build/docs/api/".</td>
+  </tr>
+
+  <tr>
+   <td>clean</td>
+   <td>Borra los archivos generados por comandos previos de compilación.
+       Los archivos bajo control de versión no son tocados.</td>
+  </tr>
+ </table>
+
+
+
+ <a name="options"></a>
+ <h3>Opciones de Configuración para Compilación</h3>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr><th>Propiedad</th><th>Descripción</th></tr>
+
+  <tr>
+   <td>app.nombre</td>
+
+   <td>El nombre de esta aplicación. Se recomienda usar una palabra corta, usada
+       en el nombre los archivos de los paquetes a generar.  Específicamente el archivo .war,
+       y será usado para accesar la aplicación en
+       http://localhost:8080/APP.NOMBRE/</td>
+  </tr>
+
+  <tr>
+   <td>app.version</td>
+   <td>Número de versión de esta entrega.  Usada en el nombre de los archivos de paquetes
+       generados, específicamente el archivo .war.</td>
+  </tr>
+
+  <tr>
+   <td>webapps.path</td>
+   <td>Path a los directorios "webapps" de Tomcat.  Por defecto apunta a
+       <tt>C:\Program Files\Apache Group\Tomcat 4.1\webapps\</tt></td>
+  </tr>
+
+ </table>
+
+ <p>Estas propiedades del sistema de compilación pueden ser modificadas editando
+ el archivo build.properies.</p>
+
+
+
+ <a name="checklist"></a>
+ <h3>Lista de Pendientes de la Organización de Código Fuente y Sistemas de Compilación</h3>
+
+ <dl>
+  <dt>Separación de archivos por tipo: ¿Los archivos están separados por tipo?</dt>
+
+  <dd class="sample1">Sí.  Excepto los archivos de aplicación JSP y HTML que están en el mismo
+  directorio, lo cual es conveniente porque algunas veces cambiamos un archivo HTML
+  en uno JSP.</dd>
+
+
+  <dt>Separación de archivos controlados por versión y los que no llevan control:
+  ¿A qué punto se ha realizado esto?</dt>
+
+  <dd class="sample1">Ha sido terminada.  Todo está bajo control de versión
+  excepto el directorio "build". Ningún paso en el proceso de compilación
+  debería crear o modificar ningún archivo en cualquier otro directorio.
+
+
+  <dt>Compatibilidad con procesos de compilación estándar: ¿Hasta qué punto se ha realizado esto?
+  </dt>
+
+  <dd class="sample1">Bien hasta el momento.  Podemos usar los archivos build.xml que son muy cercanos
+  a los ejemplos que vienen con Ant.  Una diferencia es que mantenemos
+  nuestra documentación técnica bajo "www" en lugar de usar
+  "docs".  También hemos evitado el uso de tareas personalizadas en Ant.</dd>
+
+  <dt>Independencia de Plataforma: ¿Hasta qué punto se ha realizado esto?</dt>
+
+  <dd class="sample1">Estamos usanddo Ant, el cual es en si mismo independiente de la plataforma.  Los
+  nombres de los archivos y directorios deberían servir en cualquier plataforma
+  debido a que no se utiliza diferenciación de mayúsculas. Asumimos que
+  la utilidad de los scripts en el directorio "scripts" soportan todas las plataformas necesarias
+  y no hemos creado directorios para versiones diferentes de estos archivos
+  para plataformas específicas.</dd>
+
+ </dl>
+
+</div>
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

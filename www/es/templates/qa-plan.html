@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Plan de QA (Aseguramiento de la Calidad)</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+ <h2>Plan de QA (Aseguramiento de la Calidad)</h2>
+
+ <div class="sticky">
+  TAREAS: Actualice este archivo para cada entrega, llenando las respuestas que se le piden a continuación.
+  En los casos en que ya existan múltiples respuestas, elimine las que no apliquen.
+ </div>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la entrega</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Projecto:</th> 
+   <td>NOMBREDELPROYECTO</td>
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td>
+  </tr>
+  <tr>
+   <th>Audiencia de la Entrega:</th> 
+   <td>
+    <div>Disponibilidad general de la entrega</div>
+    <div>Entrega para clientes específicos: CLIENTE(S)</div>
+    <div>Entrega para desarrolladores (Uso interno únicamente)</div>
+    <div>Entrega preliminar (Acceso externo controlado)</div>
+   </td>
+  </tr>
+  <tr>
+   <th>Formas Anexas:</th> 
+   <td>
+    <div>Plan de QA &gt; <a href="test-suite.html">Caso de la prueba del sistema</a></div>
+    <div>Plan de QA &gt; <a href="review-meeting-notes.html">Revisión de notas de juntas</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="index.html">Resumen del Proyecto</a></div>
+    <div><a href="srs.html">Especificación de Requerimientos de Software</a></div>
+    <div><a href="design.html">Diseño</a></div>
+    <div><a href="plan.html">Plan del Proyecto</a></div>
+    <div><a href="sdm.html">Metodología de Desarrollo de Software</a></div>
+    <div>LIGAS A OTROS ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+ <a name="processimpact"></a>
+ <p class="readonly"><strong>Impacto del Proceso:</strong> Este documento
+ especifica los objetivos de calidad, selecciona estrategias para asegurar que las
+ metas se han logrado, y detalla un plan de acción para llevar a cabo las
+ estrategias.</p>
+
+
+ <a name="introduction"></a>
+ <h3>Introducción</h3>
+ <dl>
+  <dt>¿Por qué es necesario un plan de QA?</dt> 
+
+  <dd>"Calidad" se refieren a todas las cosas buenas que nos gustaría
+  ver en nuestro producto.  Nosotros construimos un producto de calidad y 
+  aseguramos su calidad manteniendo calidad en mente todo el tiempo y
+  realizando las actividades seleccionadas abajo.  Las pruebas son una
+  actividad de QA, pero no es la mejor ni la única, otras actividades de QA
+  incluyen el uso de guías de estilo y listas de pendientes, minutas en reuniones, uso
+  de herramientas de análisis y cuidadosas mediciones y estimados de la calidad.  
+  Es necesario un plan para seleccionar y coordinar todas las actividades de QA.</dd>
+
+
+  <dt>¿Qué lecciones de QA hemos aprendido de entregas anteriores?</dt>
+
+  <dd class="sample1">Ninguna.  Esta es la primera entrega.</dd>
+ 
+  <dd class="sample2">
+   <ul>
+    <li>Diferentes navegadores interpretan la misma página HTML de forma diferente, por lo que
+    debemos probar cada versión en cada los navegador soportado.</li>
+
+    <li>En anteriores entregas, los clientes encontraron que los signos de puntuación (por ejemplo, 
+    comillas y otros símbolos similares) fueron capturados y procesados adecuadamente,
+    pero no fueron impresos de forma correcta.  A partir de ahora, debemos probar
+    la validación y la salida de caracteres especiales.</li>
+
+    <li>Bloques de datos muy grandes pueden algunas veces causar que que nuestro sistema falle si el espacio
+    usado para datos temporales se agota.  Nuestros planes de pruebas deberán incluir 
+    más pruebas con volúmenes grandes de datos.</li>
+   </ul>
+  </dd>
+ 
+
+  <dt>¿cuál es el alcance de este plan de QA?</dt> 
+ 
+  <dd class="sample1">Todos los componentes y aspectos de el sistema deberán ser
+  evaluados en esta entrega.
+  </dd>
+ 
+  <dd class="sample2">Existen muchos objetivos de calidad y enfoques para
+  lograrlos.  Debido a que estamos limitados por el tiempo y los recursos asigandos
+  para esta entrega, nos concentraremos en los siguientes componentes y aspectos:
+  <ul>
+   <li>COMPONENTE-1</li>
+   <li>COMPONENTE-2</li>
+   <li>COMPONENTE-3</li>
+   <li>CARACTERISTICA-1</li>
+   <li>CARACTERISTICA-2</li>
+  </ul>
+  </dd> 
+
+  <div class="sticky">
+   TAREAS: Resuma su plan en unas cuantas oraciones.  El texto de abajo es solo un
+   ejemplo
+  </div>
+ 
+  <dt>¿Cuál es el resumen para este plan?</dt> 
+ 
+  <dd class="sample1">En esta entrega continuaremos usando
+  prácticas de desarrollo que apoyen todos nuestros objetivos de calidad, pero
+  nos concentraremos en la correcta funcionalidad y robustez. Lograremos esto
+  realizando las siguientes actividades:
+ 
+  <ul>
+   <li>usando sentencias if para probar sentencias de precondicionamiento y decisión lógica</li>
+   <li>conduciendo revisiones frecuentes</li>
+   <li>realizando pruebas de regresión de unidades automáticas con JUnit</li>
+   <li>llevando a cabo pruebas manuales estructuradas del sistema</li>
+   <li>manteniendo todas las cuestiones relacionadas al día en el sistema de control de cambios</li>
+  </ul>
+  </dd>
+ </dl>
+
+
+
+ <a name="goals"></a>
+ <h3>Objetivos de Calidad para esta Entrega</h3>
+ <div class="sticky">
+  TAREAS: Añada o edite los objetivos para ajustarlos a su proyecto.  Agrúpelos por prioridades
+  de acuerdo a los lineamientos de su proyecto para esta entrega en particulas.
+ </div>
+
+ <ul>
+  <li>Esenciales
+   <ul>
+    <li><a class="def" href="glossary-std.html#qg_Func_Correctness">Funcionalidad &gt; Corrección</a></li>
+    <li><a class="def" href="glossary-std.html#qg_Func_Robustness">Funcionalidad &gt; Robustez</a></li>
+   </ul>
+  </li>
+  <li>Esperadas
+  <ul>
+   <li><a class="def" href="glossary-std.html#qg_Func_Accuracy">Funcionalidad &gt; Exactitud</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Func_Compatibility">Funcionalidad &gt; Compatibilidad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Func_Factual">Funcionalidad &gt; Correción medible</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Understand">Usabilidad &gt; Comprensibilidad y Legibilidad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Learnability">Usabilidad &gt; Intituividad y Memorabilidad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Task">Usabilidad &gt; Apoyo para tareas</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Efficiency">Usabilidad &gt; Eficiencia</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Safety">Usabilidad &gt; Seguridad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Consistency">Usabilidad &gt; Consistencia y Familiaridad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Subjective">Usabilidad &gt; Satisfacción Subjectiva</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Security">Securidad</a></li>
+  </ul>
+  </li>
+  <li>Deseadas
+  <ul>
+   <li><a class="def" href="glossary-std.html#qg_Rely_ConsistLoad">Confiabilidad &gt; Consistencia en carga</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Rely_ConsistConcur">Confiabilidad &gt; Consistencia bajo concurrencia</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Rely_AvailLoad">Confiabilidad &gt; Disponibilidad bajo carga</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Rely_Longevity">Confiabilidad &gt; Longevidad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Efficiency">Eficiencia</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Scalability">Escalabilidad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Scale_PerformLoad">Escalabilidad &gt; Desempeño bajo carga</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Scale_Volume">Escalabilidad &gt; Grandes volúmenes de datos</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Operability">Operabilidad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Maint_Understand">Capacidad de mantenimiento &gt; Comprensibilidad</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Maint_Evolvability">Capacidad de mantenimiento &gt; Capacidad de evolución</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Maint_Testability">Capacidad de mantenimiento &gt; Capacidad de prueba</a></li>
+  </ul>
+  </li>
+ </ul>
+
+
+
+
+ <a name="strategy"></a>
+ <h3>Estrategia de QA</h3>
+
+ <div class="sticky">
+  TAREAS: Considere los objetivos enlistados abajo y elimine aquellos que no
+  son aplicables para su proyecto.  Edite y añada nuevas actividades si es
+  necesario. Para cada actividad especifique la covertura o la frecuencia que 
+  planea alcanzar.  Si no tiene pensado realizar una actividad, escriba "N/A" (No Aplica).
+ </div>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr>
+   <th>Actividad</th>
+   <th>Cobertura o Frecuencia</th>
+   <th>Descripción</th>
+  </tr>
+
+  <tr>
+   <td>Precondiciones</td>
+   <td>
+    <div class="sample1">Todos los métodos públicos</div>
+    <div class="sample2">Todos los métodos públicos en NOMBRE-DEL-COMPONENTE</div>
+    <div class="sample3">Todos los métodos públicos quer modifiquen datos</div>
+   </td>
+
+   <td>usaremos sentencias if en el inicio de los métodos públicos para
+   validar cada valor de los argumentos.  Esto ayuda a documentar supuestos
+   y a a detectar valores inválidos antes de que puedan ocasionar errores.</td>
+  </tr>
+
+  <tr>
+   <td>Aserciones</td>
+   <td>
+    <div class="sample1">Todos los métodos privados</div>
+    <div class="sample2">Todos los métodos privados en NOMBRE-DEL-COMPONENTE</div>
+    <div class="sample3">Todos los métodos privados que modifiquen datos</div>
+   </td>
+
+   <td>Las aserciones serán usadas para validar todos los argumentos para de los métodos privados.
+   Debido a que estos métodos son llamados únicamente por nuestros otros métodos,
+   los argumentos pasados a ellos deberán ser siempre válidos, a menos que
+   nuestro código sea deficiente.  Las aserciones serán utilizadas también para provbar clases invariantes y
+   algunas postconditiones.</td>
+  </tr>
+
+  <tr>
+   <td>Análisis estático</td>
+   <td>
+    <div class="sample1">Advertencias estrictas del compilador</div>
+    <div class="sample2">REvisión automática de estilo</div>
+    <div class="sample3">Validación de XML</div>
+    <div class="sample4">Detección de errores comunes</div>
+   </td>
+
+   <td>Utilizaremos herramientas de análisis de código fuente parta detectar errores automáticamente.
+   Los validadores de estilo ayudarán a hacer nuestro código
+   consistente con nuestros estándares de programación.  La validación de XML asegura que
+   cada documento XML está bien formado respecto a su DTD.  Herramientas como Lint ayudan a detectar
+   errores comunes de programación, por ejemplo
+    <a href="http://www.freebsd.org/cgi/man.cgi?query=lint">lint</a>, 
+    <a href="http://www.splint.org/">lclint/splint</a>, 
+    <a href="http://artho.com/jlint/">jlint</a>, 
+    <a href="http://sourceforge.net/projects/checkstyle/">checkstyle</a>,
+    <a href="http://sourceforge.net/projects/jcsc">Jcsc</a>,
+    <a href="http://www.logilab.org/projects/pylint">PyLint</a>,
+    <a href="http://pychecker.sourceforge.net/">PyChecker</a>,
+    <a href="http://tidy.sourceforge.net/">Tidy</a>
+   </td>
+
+  </tr>
+
+  <tr>
+   <td>Revisión de Compañeros</td>
+   <td>
+    <div class="sample1">Todos los cambios a las ramas de desarrollo</div>
+    <div class="sample2">Todos los cambios a NOMBRE-DEL-COMPONENTE</div>
+    <div class="sample3">Todos los cambios</div>
+   </td>
+
+   <td>Cualquier cambio debe ser hecho para codificarse en una rama de desarrollo,
+   (por ejemplo, para preparar una entrega de mantenimiento) el cambio será
+   evaluado por otro desarrollador antes de ser enviado. El objetivo es
+   asegurar que los cambios no introduzcan nuevos defectos.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Juntas de evaluación</td>
+   <td>
+    <div class="sample1">Semanales</div>
+    <div class="sample2">Antes de cada entrega</div>
+    <div class="sample3">Por cada archivo fuente</div>
+   </td>
+
+   <td>Tendremos reuniones de evaluación donde los desarrolladores
+   realizarán revisiones formales de código seleccionado o documentos.
+   Decidimos invertir una cantidad de tiempo fija y peuqeña e intentar 
+   maximizar los resultados revisando la documentación cuidadosamente.  En
+   el proceso de revisión usaremos y mantendremos listas de pendientes.
+   </td>
+  </tr>
+
+  <tr>
+   <td>Pruebas por unidades</td>
+   <td>
+    <div class="sample1">100% de los métodos públicos, y 75% de las sentencias</div>
+    <div class="sample2">100% de los métodos públicos</div>
+    <div class="sample3">75% de las sentencias</div>
+   </td>
+
+   <td>Desarrollaremos u mantendremos una unidad de pruebas usando la arquitectura de JUnit.
+   Consideraremos las condiciones límites para cada argumento
+   y probaremos ambos extremos para cada límite.  Las pruebas deben de ser ejecutadas
+   y superadas antes de cada submisión, y también deberán ser corridas por el
+   equipo de prubas. Cada método público deberá tener al menos una prueba, y
+   el conjunto general de pruebas deberá utilizar al menos el 75% de tdoas las sentencias ejecutables
+   en el sistema.</td>
+  </tr>
+
+  <tr>
+   <td>Pruebas al Sistema</td>
+   <td>
+    <div class="sample1">100% de los campos y pantallas de la interfaz del usuario</div>
+    <div class="sample2">100% de los requerimientos especificados</div>
+   </td>
+
+   <td>El equipo de QA deberá generar y mantener un conjunto detallado de documentos
+   de pruebas manuales para probar el sistema completo a través de la interfaz del usuario.
+   Este plan será suficientemente detallado para que una persona pueda
+   realizar repetidamente las pruebas desde la documentación de prueba y
+   otros documentos asociados.</td>
+  </tr>
+
+  <tr>
+   <td>Pruebas de regresión</td>
+   <td>
+    <div class="sample1">Correr todas las pruebas unitarias antes de cada submisión</div>
+    <div class="sample2">Correr todas las pruebas unitarias por la nocheR</div>
+    <div class="sample3">Añadir nuevas pruebas unitarias cuando se añadan correcciones</div>
+   </td>
+
+   <td>Adoptaremos una política de volver a correr todas las pruebas
+  automatizadas, incluyendo aquellas que ya han sido previamento superadas. Esto
+  ayudará a detectar regresiones (bugs que se pensaba ya reparados, pero
+  que podrían aparecer otra vez).</td>
+  </tr>
+
+  <tr>
+   <td>Pruebas del Beta</td>
+   <td>
+    <div class="sample1">4 clientes actuales</div>
+    <div class="sample2">40 miembros de nuestra red de desarrolladores</div>
+    <div class="sample3">1000 miembros del público</div>
+   </td>
+
+   <td>Involucraremos personas externas en una prueba del beta, o un programa de
+  acceso previo.  Instruiremos a los beta testers para que se enfoquen en características
+  específicas del sistema.  Trbajaremos de cerca con los beta
+  testers para motivarlos a reportar problemas en el sistema.</td>  
+  </tr>
+
+  <tr>
+   <td>Instrumentación y monitoreo</td>
+   <td>
+    <div class="sample1">Supervisión de nuestros servidores de ASP</div>
+    <div class="sample2">Supervisar remotamente servidores del cliente</div>
+   </td>
+
+   <td>Como parte de nuestro SLA, supervisaremos el desempeño de nuestros servidores para 
+  detectar de forma automática interrupciones en el servicio o degradación del rendimiento.
+  Tenemos políticas y procedimientos listos para notificación de fallas,
+  escalamiento, y corrección.</td>
+
+  </tr>
+
+  <tr>
+   <td>Reportes de fallas de campo</td>
+   <td>
+    <div class="sample1">Solicitar a los usuarios a reportar fallas</div>
+    <div class="sample2">Reportar fallas de forma automática</div>
+   </td>
+
+   <td>Deseamos entender cada falla del sistema una vez liberado y
+   tomar acciones concretas para corregir el error.  El sistema incluye
+   características para recopilar información detallada para cada error del sistema
+   (por ejemplo, mensajes de error, rastreo hacia atrás, versión del OS).
+   Esta información será transmitida de vuelta a nosotros para poner
+   analizarla y hacer algo al respecto.</td>
+
+  </tr>
+
+  
+ </table>
+
+
+
+ <a name="evaluation"></a>
+ <h3>Evaluación Estratégica de QA</h3>
+ <div class="sticky">
+  TAREAS: Usar la siguiente para evaluar que tan bien su estrategia de QA
+  asegurará sus objetivos de QA.
+ </div>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%" class="sample1">
+  <tr>
+   <th>Objetivo</th>
+   <th>Precondiciones</th>
+   <th>Aserciones</th>
+   <th>Revisión de Compañeros</th>
+   <th>Juntas de evaluación</th>
+   <th>Pruebas por unidades</th>
+   <th>Pruebas al Sistema</th>
+   <th>Asguramiento total</th>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Functionalidad</td>
+   <td>Media</td>
+   <td>Media</td>
+   <td>Media</td>
+   <td>Alta</td>
+   <td>Alta</td>
+   <td>Alta</td>
+   <td>Fuerte</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">&nbsp;&nbsp; Consistencia</td>
+   <td>Alta</td>
+   <td>Alta</td>
+   <td>Alta</td>
+   <td>Alta</td>
+   <td>Alta</td>
+   <td>Media</td>
+   <td>Fuerte</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">&nbsp;&nbsp; Robustez</td>
+   <td>Alta</td>
+   <td>Alta</td>
+   <td>Media</td>
+   <td>Media</td>
+   <td>Alta</td>
+   <td>Media</td>
+   <td>Fuerte</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usabilidad</td>
+   <td>Ninguna</td>
+   <td>Ninguna</td>
+   <td>Ninguna</td>
+   <td>Alta</td>
+   <td>Ninguna</td>
+   <td>Media</td>
+   <td>Fuerte</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Securidad</td>
+   <td>Media</td>
+   <td>Ninguna</td>
+   <td>Media</td>
+   <td>Alta</td>
+   <td>Ninguna</td>
+   <td>Media</td>
+   <td>Fuerte</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Confiabilidad</td>
+   <td>Ninguna</td>
+   <td>Media</td>
+   <td>Baja</td>
+   <td>Media</td>
+   <td>Media</td>
+   <td>Media</td>
+   <td>Débil</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Eficiencia</td>
+   <td>Ninguna</td>
+   <td>Ninguna</td>
+   <td>Baja</td>
+   <td>Media</td>
+   <td>Ninguna</td>
+   <td>Baja</td>
+   <td>Riesgosa</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Escalabilidad</td>
+   <td>Ninguna</td>
+   <td>Ninguna</td>
+   <td>Baja</td>
+   <td>Media</td>
+   <td>Baja</td>
+   <td>Baja</td>
+   <td>Riesgosa</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Operabilidad</td>
+   <td>Ninguna</td>
+   <td>Ninguna</td>
+   <td>Ninguna</td>
+   <td>Baja</td>
+   <td>Ninguna</td>
+   <td>Baja</td>
+   <td>Riesgosa</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Capacidad de Manteniento</td>
+   <td>Media</td>
+   <td>Baja</td>
+   <td>Media</td>
+   <td>Alta</td>
+   <td>Baja</td>
+   <td>Ninguna</td>
+   <td>Débil</td>
+  </tr>
+
+ </table>
+
+ <p>Los valores en las cenldas de arriba son estimados subjetivos de
+ la efectividad de cada actividad.  esta tabla ayuda a identificar objetivos de calidad
+ que no están siendo asgurados adecuadamente.</p>
+
+ <div class="tier2">
+ <h4>Valores de las celdas de evaluación:</h4>
+ <ul>
+  <li>Alta: Esta actividad da un alto aseguramiento de que el objetivo se ha cumplido en desarrollo.</li>
+  <li>Media: Esta actividad da un aseguramiento medio de que el el objetivo se ha cumplido en desarrollo.</li>
+  <li>Baja: Esta actividad da solo un poco de aseguramiento de que el objetivo se ha cumplido en desarrollo.</li>
+  <li>Ninguna: Este objetivo no resuelve el objetivo.</li>
+ </ul>
+
+ <h4>Valores generales de aseguramiento:</h4>
+ <ul>
+  <li>Fuerte: El grupo de las actividades asegura que el objetivo se ha cumplido en desarrollo..</li>
+  <li>Débil: TEl grupo de las actividades asegura de forma limitada que el objetivo se ha cumplido en desarrollo..</li>
+  <li>Riesgosa: Existe poco o ningún aseguramiento de que este opbjetivo se ha cumplido.</li>
+ </ul>
+
+ <p>Nota: Como regla empírica, se necesita al menos dos actividades "Altas"
+ y una "Mediana" para dar una calificación global de "Fuerte". De la misma forma,
+ se necesitan al menos dos "Medios" y una "Baja" para poder calificar como "Débil".
+ </p>
+ </div>
+
+
+
+ <a name="planofaction"></a>
+ <h3>Plan de Acción</h3>
+ <div class="sticky">
+  TAREAS: Ajustar esta plan para adptarlo a su proyecto.
+ </div>
+ <div class="sticky">
+  TAREAS: Una vez que el plan está delineado, se deben asignar tareas a
+  personas y darles seguimiento para que sean realizadas.
+ </div>
+
+ <ol class="sample1">
+  <li>Precondiciones y Aserciones
+   <ul>
+    <li>Refine los documentos de requerimientos donde las preconditiones aún no están determinadas</li>
+
+    <li>Cree funciones de validación para ser utilizadas por las preconditions y las aserciones según sea necesario</li>
+
+    <li>Escriba preconditiones y asertiones en código</li>
+   </ul>
+  </li>
+
+
+  <li>Juntas de revisión
+   <ul>
+    <li>Asigne reviones por compañeeros cada vez que se considere un cambio a una rama de la entrega</li>
+    <li>Seleccione un documento riesgoso o una sección de código para las juntas semanales de revisión </li>
+    <li>Cada semana identifique a los evaluadores y programe juntas de revisión</li>
+    <li>Los evaluadores deberán estudiar el material de forma indivual por 2 horas</li>
+    <li>Los evaluadores deberán reunirse para revisar el material por 2 horas</li>
+    <li>Incluya <a href="review-meeting-notes.html">notas de las
+    juntas de revisión</a> en el repositorio y dé seguimiento a a cualquier problemas identificado en
+    las juntas de revisión</li>
+   </ul>
+  </li>
+
+  <li>Pruebas por unidades
+   <ul>
+    <li>Diseñe una infraestructura para la fácil ejecución de pruebas de JUnit (este es solo un
+    objetivo para Ant)</li>
+
+    <li>Cree unidades de prueba para cada clase cuando la clase sea creada</li>
+
+    <li>Ejecute pruebas para las unidades antes de incoroporarlas al repositorio.  Todas las pruebas deben ser pasadas
+    antes de que el desarrollador pueda incorporar algo al repositorio, o abra nuevos reportes para
+    las pruebas falladas.  Estas "pruebas de humo" serñan ejecutadas en el ambiente de desarrollo normal
+    de cada desarrollador.</li>
+
+    <li>Ejecute pruebas por unidades competas para cada candidato a entrega para
+    detectar regresiones. Estas pruebas de regresiones serán ejecutadas en un equipo
+    dedicado de QA.</li>
+
+    <li>Actualice las pruebas para unidades cada vez que los requerimientos cambien</li>
+   </ul>
+  </li>
+
+  <li>Pruebas al sistema
+   <ul>
+    <li>Diseñe y especifique un manual detallado del <a
+    href="test-suite.html">conjunto de pruebas</a>.</li>
+
+    <li>Revise el conjunto de pruebas al sisyema para asegurarse de que cada pantalla de la interfaz del usuario
+    o elemento es cubierto</li>
+
+    <li>Ejecute pruebas completas al sistema en cada cadidato a entrega.
+    Estas pruebas al sistema serán ejecutadas en un equipo
+    dedicado de QA.</li>
+
+    <li>Actualice las pruebas al sistema cada vez que los requerimientos cambien</li>
+   </ul>
+  </li>
+
+  <li>Administración de QA
+   <ul>
+    <li>Actualice este plan de pruebas cada vez que los requerimientos cambien</li>
+
+    <li>Docuemnte los resultados de las pruebas y comuníquelos a equipo de
+    de desarrollo completo</li>
+
+    <li>Estime los defectos remanentes (aún no detectados) bañandose en los datos
+    actuales de control de cambios, tasas de error, y métricas en el tamaño del código y
+    el impacto de los cambios.</li>
+
+    <li>Mantenga todos los reportes de errores actu alizados en una base de datos de control de cambios.  El
+   sistema de control de cambios está disponible para todos los miembros del proyecto <a
+   href="LINK-TO-ISSUE-TRACKER">aquí</a>.  El significado de estados de un problema,
+   prioridades y otros atributos están definidos en el <a
+   href="sdm.html#issuetracking">SDM</a>.</li>
+   
+   </ul>
+  </li>
+
+ </ol>
+
+
+ <a name="checklist"></a>
+ <h3>Lista de Pendientes del Plan de QA</h3>
+
+ <dl>
+
+  <dt>¿Las actividades seleccionadas de la estrategia de QA provee suficiente
+  asegurmiento de que el proyecto alcaanzará sus objetivos de calidad?</dt>
+
+  <dd>Sí, si todas las actividades son ejecutadas según lo planeado, estamos
+  seguros de que los objetivos de calidad serán satisfechos. Por supuesto, 
+  ajustaremos este plan según sea necesario.</dd>
+
+  <dd>No, este plan deja abiertos varis riesgos de calidad que han sido
+  documentados en la sección de <a href="plan.html#risks">Manejo de Riesgos</a>
+  del <a href="plan.html">Plan del Proyecto</a>.</dd>
+
+  
+
+  <dt>¿Han sido ubicado los recursos humanos para llevar a cabo las actividades de QA?</dt>
+
+  <dd>Sí, los recursos humanos han sido ubicados.  Se encuentran enlistados en
+  el documento de <a href="resource-needs.html">Recursos Necesarios para el Proyecto</a>.</dd>
+
+  <dd>No, los recursos humanos no han sido ubicados.  Se encuentras enlistados como
+  "pendientes" en el documento de <a href="resource-needs.html">Recursos Necesarios para el Proyecto</a>.</dd>
+
+  
+
+  <dt>¿Han sido los recursos de equipo y software ubicados de la forma que necesita
+  QA para sus actividades?</dt>
+
+  <dd>Sí, el equipo de QA utilizará aquipos de escritorio y servidores que 
+  ya se encuentran asignados a ellos.</dd>
+
+  <dd>Sí, se ha montado un laboratorio para QA.  Los recursos necesarios de equipo y software
+  se encuentran enlistados en el documento de <a href="resource-needs.html">Recursos Necesarios para el Proyecto
+  </a>.</dd>
+
+  <dd>No, las necesidades de equipo y software se enlistan como pendientes
+  en el docuemento de <a href="resource-needs.html">Recursos Necesarios para el Proyecto</a>.</dd>
+
+  
+
+  <dt>¿Este plan de QA sido enviado al equipo de desarrollo y al resto
+  de los integrantes del equipo?</dt>
+
+  <dd>Sí, todo el equpo esta consiente de nuestros objetivos priorizados de calidad para esta
+  entrega y entienden cómo su trabajo ayudará a alcanzar estos objetivos.
+  Todas las sugerencias son bienvenidas.</dd>
+
+  <dd>Sí, este documento esta siendo publicado en el sitio web del proyecto.
+  Todas las sugerencias son bienvenidas.</dd>
+
+  <dd>No, algunos desarrolladores aún no están conscientes de los objetivos de calidad y
+  las actividades de QA planeadas para esta entrega.  Este s un riesgo que se 
+  encuentra anotado en la sección de <a href="plan.html#risks">Manejo de Riesgos</a>
+  del <a href="plan.html">Plan del Proyecto</a>.</dd>
+
+  
+
+ </dl>
+ 
+ 
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+  
+ </div>
+
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+
+.drawtheline { border-bottom: solid 1px black; margin-bottom: 1em; }
+
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Conjunto de Características</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+
+<h2><a href="srs.html">SRS</a> &gt; Conjunto de Características</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="proposal.html">Propuesta de proyecto</a></div>
+    <div><a href="user-needs.html">Requerimientos del Usuario</a></div>
+    <div><a href="srs.html">Especificación de Requerimientos de Software</a></div>
+    <div><a href="use-case-suite.html">Conjunto de casos de uso</a></div>
+    <div><a href="features.html">Características</a></div>
+    <div><a href="feature-format.html">Formato de características</a></div>
+    <div><a href="LINK-TO-DIAGRAM">DIagrama de caso de uso</a></div>
+    <div>LIGAS A OTROS ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+
+<a name="processimpact"></a><p class="readonly"><b>Impacto del proceso:</b> Un conjunto de características es simplemente una
+tabla de contenidos para las descripciones individuales de las características. Como en un conjunto de pruebas,
+organizar el conjunto de características por prioridad, área de funcionalidad, 
+actor, objeto de negocio o entrega puede ayudar a identificar de forma temprana características faltantes, adicionales
+o mal documentadas.</p>
+
+<div class="sticky"> TAREAS: Antes de escribir las descripciones de la características individuales,
+  enumere las características que piense que podría necesitar.
+  Organízelos de forma que a propósito queden espacios
+  en balnco visibles en esta página, y pueden aparecer características adicionales que no
+  caben en otra parte.  Vea el <a href="feature-format.html#checklist">formato
+  de características</a> para mas sugerencias para definir características y conjuntos de características
+</div>
+
+<div class="sticky"> 
+ SUGERENCIA: Refiérase a las historias de usuarios en su documento de <a
+  href="user-needs.html">requerimientos del usuario</a> y al <a
+ href="use-case-suite.html">conjunto de casos de uso</a>.  Úselos para sacar ideas
+  y asegurarse de que los cubre a todos.
+</div>
+
+
+
+<a name="bypriority"></a>
+<h3>Características por Entrega y Prioridad</h3>
+
+<div class="sticky"> 
+ TAREAS: Seleccione un subconjunto de características que pueda ser implementado
+ para una entrega dada.  Cuando las características se enumeran en orden de prioridad, escoger las
+ características a implementar en una entrega se convierte simplemente en cuestión de
+ "dibujar una línea": las característcias abajo de la línea deberán esperar para uan entrega
+ posterior.  Asegúrese de también considerar el esfuerzo estimado y el riesgo.
+</div>
+
+
+<ul>
+ <li class="drawtheline">Versión 1.0
+ <ul>
+ <li>Esenciales
+  <ul>
+   <li><a href="features.html#C-00">C-00</a> Configuración del sitio</li>
+   <li><a href="features.html#C-01">C-01</a> Registro de usuarios</li>
+   <li><a href="features.html#C-21">C-21</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-31">C-31</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+
+ <li>Esperadas
+  <ul>
+   <li><a href="features.html#C-02">C-02</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-03">C-03</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-20">C-20</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+ </ul>
+ </li>
+
+ <li class="drawtheline">Versión 1.1
+ <ul>
+ <li>Esperadas
+  <ul>
+   <li><a href="features.html#C-22">C-22</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-23">C-23</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-33">C-33</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+
+ <li>Deseadas
+  <ul>
+   <li><a href="features.html#C-10">C-10</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-11">C-11</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-12">C-12</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+ </ul>
+ </li>
+
+ <li>Versiones posteriores
+ <ul>
+ <li>Opcionales
+  <ul>
+   <li><a href="features.html#C-30">C-30</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-32">C-32</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+ </ul>
+ </li>
+
+</ul>
+
+
+
+
+<a name="byrisk"></a>
+<h3>Características por Versión y Riesgo</h3>
+
+<ul>
+ <li class="drawtheline">Versión 1.0
+ <ul>
+   <li><a href="features.html#C-00">C-00</a> Segura : Configuración del sitio</li>
+   <li><a href="features.html#C-01">C-01</a> Segura : Registro de usuarios</li>
+   <li><a href="features.html#C-21">C-21</a> Segura : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-31">C-31</a> 1-Riesgosa : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-02">C-02</a> 1-Riesgosa : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-03">C-03</a> 2-Riesgosas : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-20">C-20</a> 2-Riesgosas : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li>Total de factores únicos de riesgo: 4</li>
+ </ul>
+ </li>
+
+ <li class="drawtheline">Versión 1.1
+ <ul>
+   <li><a href="features.html#C-22">C-22</a> Segura : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-23">C-23</a> Segura : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-33">C-33</a> Segura : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-10">C-10</a> 2-Riesgosas : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-11">C-11</a> 2-Riesgosas : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-12">C-12</a> 3-Riesgosas : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li>Total de factores únicos de riesgo: 5</li>
+ </ul>
+ </li>
+
+ <li>Versiones posteriores
+ <ul>
+   <li><a href="features.html#C-30">C-30</a> Segura : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-32">C-32</a> 2-Riesgosas : NOMBRE DE LA CARACTERÍSTICA</li>
+   <li>Total de factores únicos de riesgo: 2</li>
+ </ul>
+ </li>
+
+</ul>
+
+
+
+<a name="byfunction"></a>
+<h3>Características por Área de Funcionalidad</h3>
+
+<ul>
+ <li>ÁREA DE FUNCIONALIDAD UNO
+  <ul>
+   <li><a href="features.html#C-00">C-00</a> Site configuration</li>
+   <li><a href="features.html#C-01">C-01</a> User registration</li>
+   <li><a href="features.html#C-02">C-02</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-03">C-03</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+
+ <li>ÁREA DE FUNCIONALIDAD DOS
+  <ul>
+   <li><a href="features.html#C-10">C-10</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-11">C-11</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-12">C-12</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-13">C-13</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+
+ <li>ÁREA DE FUNCIONALIDAD TRES
+  <ul>
+   <li><a href="features.html#C-20">C-20</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-21">C-21</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-22">C-22</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-23">C-23</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+
+ <li>ÁREA DE FUNCIONALIDAD CUATRO
+  <ul>
+  <li>N/A: Estas características son completamente automaticas e internas, los usuarios nunca interactuan con ellas</li>
+  </ul>
+ </li>
+
+ <li>ÁREA DE FUNCIONALIDAD CINCO
+  <ul>
+   <li>PARA HACER: faltan de escribir casos de uso</li>
+  </ul>
+ </li>
+
+ <li>Otras áreas de funcionalidad
+  <ul>
+   <li><a href="features.html#C-30">C-30</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-31">C-31</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-32">C-32</a> NOMBRE DE LA CARACTERÍSTICA</li>
+   <li><a href="features.html#C-33">C-33</a> NOMBRE DE LA CARACTERÍSTICA</li>
+  </ul>
+ </li>
+
+</ul>
+
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>
