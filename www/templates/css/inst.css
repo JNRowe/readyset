@@ -1,4 +1,4 @@
-/* $Id: inst.css,v 1.2 2003/06/18 17:05:33 jrobbins Exp $
+/* $Id: inst.css,v 1.3 2003/06/18 17:22:47 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
@@ -12,6 +12,11 @@ example.
 .footnote {
   /* To hide footnotes, change "block" to "none". */
    display: block;
+}
+
+body {
+ background: #fff;
+ color: #000;
 }
 
 h3, h4 {
@@ -34,13 +39,12 @@ td { background: #ddd; }
 
 th { background-color: #bbb; }
 
-/* font and text properties, exclusive of link indication, alignment, text-indent */
 body, th, td, input, select {
-	font-family: Verdana, Helvetica, Arial, sans-serif;
+ font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 
 code, pre, textarea {
-	font-family: 'Andale Mono', Courier, monospace;
+ font-family: 'Andale Mono', Courier, monospace;
 }
 
 
@@ -48,30 +52,30 @@ code, pre, textarea {
  background: #ffc;
  border-right-color: #aaa;
  border-bottom-color: #aaa;
- }
+}
 
 .readonly {
  background: #eee;
  border-color: #aaa;
- }
+}
 
 .reusablefragment {
  background: #eee;
  border: 2px dashed;
- }
+}
 
 .sample1 {
  border-right: 4px double #500;
- }
+}
 
 .sample2 {
  border-right: 4px double #050;
- }
+}
 
 .sample3 {
  border-right: 4px double #005;
- }
+}
 
 .sample4 {
  border-right: 4px double #505;
- }
+}
