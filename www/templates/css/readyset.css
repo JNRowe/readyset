@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.5 2003/06/18 17:22:47 jrobbins Exp $
+/* $Id: readyset.css,v 1.6 2003/06/18 17:29:20 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -8,9 +8,6 @@ Tigris application style.
 
 To extend or override these rules for your instance, edit inst.css
 instead of this file. */
-
-/* colors, backgrounds, borders, link indication */
-
 
 table, th, td {
  border: none;
@@ -91,8 +88,12 @@ p, ul, ol, dl {
 }
 
 h3, h4 {
+ padding: 3px;
+ padding-left: 5px;
+ margin-right: 2px;
+ margin-left: 2px;
  margin-bottom: 0;
- padding: 0;
+ clear: both;
 }
 
 form {
@@ -106,13 +107,6 @@ ol ol {
 
 ol ol ol {
  list-style-type: lower-roman;
-}
-
-h3, h4 {
- padding: 3px;
- padding-left: 5px;
- margin-right: 2px;
- margin-left: 2px;
 }
 
 td, th {
@@ -173,9 +167,6 @@ dd {
  display: none;
 }
 
-h3, h4 {
- clear: both;
-}
 
 /* additions specific to ReadySET */
 
