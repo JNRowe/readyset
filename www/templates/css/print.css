@@ -1,3 +1,10 @@
+/* $Id: print.css,v 1.2 2003/06/24 22:48:57 jrobbins Exp $
+
+This file contains CSS sytle rules that make the document look more
+presentable when printed.  E.g., one cannot follow hyperlinks to
+definitions on a printed page, so the dashed underlines are removed.
+
+*/
 
 h3, h4 {
  font-size: x-small;
@@ -17,4 +24,9 @@ table {
 
 .sticky, .footnote {
  display: none;
+}
+
+a.def { 
+ text-decoration: none; 
+ border-bottom: none; 
 }

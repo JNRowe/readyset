@@ -152,284 +152,50 @@
 
  <h3>Quality Goals for this Release</h3>
  <div class="sticky">
-  TODO: Add or edit goals to fit your project.  If a goal cannot
-  logically apply to your project, do not remove it, instead write
-  "N/A" for its Priority.
+  TODO: Add or edit goals to fit your project.  Group them by priorities
+  that make sense for your project on this particular release.
  </div>
 
- <div class="sticky">
-  TODO: Set the priorities that make sense for your project on this
-  particular release.
- </div>
+ <ul>
+  <li>Essential
+   <ul>
+    <li><a class="def" href="glossary-std.html#qg_Func_Correctness">Functionality &gt; Correctness</a></li>
+    <li><a class="def" href="glossary-std.html#qg_Func_Robustness">Functionality &gt; Robustness</a></li>
+   </ul>
+  </li>
+  <li>Expected
+  <ul>
+   <li><a class="def" href="glossary-std.html#qg_Func_Accuracy">Functionality &gt; Accuracy</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Func_Compatibility">Functionality &gt; Compatibility</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Func_Factual">Functionality &gt; Factual correctness</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Understand">Usability &gt; Understandability and Readability</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Learnability">Usability &gt; Learnability and Memorability</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Task">Usability &gt; Task support</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Efficiency">Usability &gt; Efficiency</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Safety">Usability &gt; Safety</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Consistency">Usability &gt; Consistency and Familiarity</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Use_Subjective">Usability &gt; Subjective satisfaction</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Security">Security</a></li>
+  </ul>
+  </li>
+  <li>Optional
+  <ul>
+   <li><a class="def" href="glossary-std.html#qg_Rely_ConsistLoad">Reliability &gt; Consistency under load</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Rely_ConsistConcur">Reliability &gt; Consistency under concurrency</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Rely_AvailLoad">Reliability &gt; Availability under load</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Rely_Longevity">Reliability &gt; Longevity</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Efficiency">Efficiency</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Scalability">Scalability</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Scale_PerformLoad">Scalability &gt; Performance under load</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Scale_Volume">Scalability &gt; Large data volume</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Operability">Operability</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Maint_Understand">Maintainability &gt; Understandability</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Maint_Evolvability">Maintainability &gt; Evolvability</a></li>
+   <li><a class="def" href="glossary-std.html#qg_Maint_Testability">Maintainability &gt; Testability</a></li>
+  </ul>
+  </li>
+ </ul>
 
- <table>
-  <tr>
-   <th>Quality Name</th>
-   <th>Priority</th>
-   <th>Description</th>
-  </tr>
- 
-  <tr>
-   <td nowrap="nowrap">Functionality &gt; Correctness</td>
-   <td class="sample1">High</td>
-
-   <td>Correctness is the most basic quality goal.  It means that,
-   when valid inputs are given and the system is in a valid state and
-   under reasonable load, the system's behavior and results will be
-   correct.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Functionality &gt; Robustness</td>
-   <td class="sample1">High</td>
-
-   <td>Robustness is the system's ability to gracefully handle invalid
-   inputs.  It should never be possible for any user input to crash
-   the system or corrupt data, even if that user input is abnormal,
-   unexpected, or malicious.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Functionality &gt; Accuracy</td>
-   <td class="sample1">Medium</td>
-
-   <td>Accuracy refers to the mathematical precision of calculations
-   done by the system.  Any system that does numeric calculations must
-   consider accuracy, e.g., financial or scientific applications.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Functionality &gt; Compatibility</td>
-   <td class="sample1">Medium</td>
-
-   <td>Systems that claim to follow standards or claim compatibility
-   with existing systems must adhere to the relevant file formats,
-   protocols, and APIs.  The relevant standards are linked at the top
-   of this document.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Functionality &gt; Factual correctness</td>
-   <td class="sample1">Medium</td>
-
-   <td>Is the data in the system a true representation of the real
-   world?  Any system that contains initial data or gathers data about
-   the real world should be sure that the data is factually correct.
-   E.g., a tax preparation program should embody correct and
-   up-to-date facts about tax law.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Usability &gt; Understandability and Readability</td>
-   <td class="sample1">Medium</td>
-
-   <td>Users need to understand the system to use it.  The basic
-   metaphor should be understandable and appropriate to user tasks.
-   Some defects in understandability include unclear metaphors, poor
-   or hard-to-see labels, lack of feedback to confirm the effects of
-   user actions, and missing or inadequate on-line help.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Usability &gt; Learnability and Memorability</td>
-   <td class="sample1">Medium</td>
-
-   <td>Every user interface contains some details that users will need
-   to learn and remember.  E.g., Alt-F to open the "File" menu.  UI
-   cues and rules can make these details easier to learn and remember.
-   E.g., the "F" is underlined and, as a rule, the first letter is
-   usually the accelerator key.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Usability &gt; Task support</td>
-   <td class="sample1">Medium</td>
-
-   <td>This is the quality of match between user tasks and the
-   system's UI.  Task support defects are cases where the system
-   forces the user to take unnatural steps to accomplish a task or
-   where the user is given no support for a difficult step in a task.
-   E.g., must the user invent an 8-character filename for their
-   "Christmas card list"? E.g., must users total their own tax
-   deductions?</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Usability &gt; Efficiency</td>
-   <td class="sample1">Medium</td>
-
-   <td>Users should be able to accomplish common tasks with reasonable
-   effort.  Common tasks should be possible with only one or two
-   steps.  The difficulty of each step should also be considered.
-   E.g., does the user have to remember a long code number or click on
-   a very small button?</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Usability &gt; Safety</td>
-   <td class="sample1">Medium</td>
-
-   <td>Humans are error-prone, but the negative effects of common
-   errors should be limited.  E.g., users should realize that a given
-   command will delete data, and be asked to confirm their intent or
-   have the option to undo.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Usability &gt; Consistency and Familiarity</td>
-   <td class="sample1">Medium</td>
-
-   <td>Users should be able to apply their past
-   experience from other similar systems.  This means
-   that user interface standards should be followed, and common
-   conventions should be used whenever possible.  Also, UI elements
-   that appear in several parts of the UI should be used consistently,
-   unless another UI quality takes priority.  E.g., if most currency
-   entry fields do not require a dollar-sign, then one that does
-   demand it is a consistency defect, unless there is a real chance
-   that the user is dealing with another currency on that step in
-   his/her task.
-   </td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Usability &gt; Subjective satisfaction</td>
-   <td class="sample1">Medium</td>
-
-   <td>Users should feel generally satisfied with the UI.  This is a
-   subjective quality that sums up the other user interface qualities
-   as well as aesthetics.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Security</td>
-   <td class="sample1">Medium</td>
-
-   <td>The system should allow usage only by authorized users, and
-   restrict usage based on permissions.  The system
-   should not allow users to side-step security rule or exploit
-   security holes.  E.g., all user input should be validated and any
-   malicious input should be rejected.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Reliability &gt; Consistency under load</td>
-   <td class="sample1">Low</td>
-
-   <td>Every system has some capacity limits.  What happens when those
-   limits are exceeded? The system should never lose or corrupt
-   data.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Reliability &gt; Consistency under concurrency</td>
-   <td class="sample1">Low</td>
-
-   <td>Systems that allow concurrent access by multiple users, or that
-   use concurrency internally, should be free of race conditions and
-   deadlock.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Reliability &gt; Availability under load</td>
-   <td class="sample1">Low</td>
-
-   <td>Every system has some capacity limits.  What happens when those
-   limits are exceeded? The system should continue to service those
-   requests that it is capable of handling.  It should not crash or
-   stop processing all requests.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Reliability &gt; Longevity</td>
-   <td class="sample1">Low</td>
-
-   <td>The system should continue to operate as long as it is needed.
-   It should not gradually use up a limited resource.  Example
-   longevity defects include memory leaks or filling the disk with log
-   files.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Efficiency</td>
-   <td class="sample1">Low</td>
-
-   <td>The system's operations should execute quickly, with reasonable
-   use of machine and network resources.  E.g., if one user does one
-   operation, it should execute efficiently.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Scalability</td>
-   <td class="sample1">Low</td>
-
-   <td>Scalability is a general quality that holds when the system
-   continues to satisfy its requirements when various usage parameters
-   are increased.  E.g., a file server might be scalable to a high
-   number of users, or to very large files or very high capacity
-   disks.  Several specific scalability goals are listed below.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Scalability &gt; Performance under load</td>
-   <td class="sample1">Low</td>
-
-   <td>This is a specific type of scalability goal dealing with the
-   performance of the system at times when it is servicing many
-   requests from many users.</td>
-
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Scalability &gt; Large data volume</td>
-   <td class="sample1">Low</td>
-
-   <td>This is a specific type of scalability goal dealing with the
-   ability for the system to handle large data sets.  Operations
-   should continue to be correct and efficient as data set size
-   increases.  Furthermore, the user interface should still be usable
-   as the data presented to users increases in length.</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Operability</td>
-   <td class="sample1">Low</td>
-
-   <td>The long-term needs of system administrators should be reliably
-   supported.  E.g., is the system easy to install? Can the
-   administrator recover from a crash?  Is there sufficient log output
-   to diagnose problems in the field?  Can the system's data be backed
-   up without downtime? Can the system be upgraded practically?</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Maintainability &gt; Understandability</td>
-   <td class="sample1">Low</td>
-
-   <td>Will it be easy for (future) developers to understand how the system
-   works?</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Maintainability &gt; Evolvability</td>
-   <td class="sample1">Low</td>
-
-   <td>Can the system easily be modified and extended over time?</td>
-  </tr>
-
-  <tr>
-   <td nowrap="nowrap">Maintainability &gt; Testability</td>
-   <td class="sample1">Low</td>
-
-   <td>Can the system easily be tested?  Do the requirements precisely
-   specify possible inputs and the desired results?  Can the system be
-   tested in parts?  When failures are observed, can they be traced
-   back to defects in specific components (i.e., debugging)?  Is
-   testing practical with the available testing tools?</td>
-  </tr>
-
-
- </table>
 
 
 
