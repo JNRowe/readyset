@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Standard terms</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>Glossary</h2>
+
+ <div class="tabs">
+ <table border="0" cellspacing="0" cellpadding="0"><tr>
+  <td><a href="glossary.html">Project terms</a></td>
+  <th>Standard terms</th>
+ </tr></table>
+ </div>
+
+ <p class="readonly"><strong>Process impact:</strong> This file as a
+ dictionary of standard terms defined as they are used across
+ projects.  Individual projects should not need to edit this file.
+ Writing out the definitions of terms and acronyms here helps keep
+ other documents more concise and easy to edit.  Check the <a
+ href="http://readyset.tigris.org/templates/glossary-std.html">ReadySET
+ glossary</a> for updates.
+ </p>
+
+ <div>Jump to: 
+  <a href="#general_section">General</a> |  
+  <a href="#requirements_section">Requirements</a> | 
+  <a href="#design_section">Design</a> | 
+  <a href="#designgoals_section">Design goals</a> | 
+  <a href="#qa_section">QA terms</a> |
+  <a href="#qagoals_section">QA goals</a> |
+  <a href="#additional_section">Additional terms</a> 
+ </div>
+
+ <a name="general_section"></a> 
+
+ <h3>General Terms</h3>
+
+ <dl>
+
+  <dt>TERM</dt>
+  <dd>DEFINITION</dd>
+
+ </dl>
+
+
+ <a name="requirements_section"></a> 
+
+ <h3>Requirements Terms</h3>
+
+ <dl>
+
+  <dt>TERM</dt>
+  <dd>DEFINITION</dd>
+
+ </dl>
+
+
+
+ <a name="design_section"></a> 
+
+ <h3>Design Terms</h3>
+
+ <dl>
+
+  <dt>TERM</dt>
+  <dd>DEFINITION</dd>
+
+ </dl>
+
+ <a name="designgoals_section"></a> 
+
+ <h3>Design Goals</h3>
+
+ <dl>
+
+  <a name="dg_correctness"></a>
+  <dt>Correctness</dt>
+  <dd>This design correctly matches the given requirements.</dd>
+
+  <a name="dg_feasibility"></a>
+  <dt>Feasibility</dt>
+  <dd>This design can be implemented and tested with the planned
+  amount of time and effort.</dd>
+
+  <a name="dg_understandability"></a>
+  <dt>Understandability</dt> 
+  <dd>Developers can understand this design and correctly implement
+  it. </dd>
+
+  <a name="dg_guidance"></a>
+  <dt>Implementation phase guidance</dt> 
+  <dd>This design divides the implementation into components or
+  aspects that can correspond to reasonable implementation tasks.</dd>
+
+  <a name="dg_modularity"></a>
+  <dt>Modularity</dt>
+  <dd>Concerns are clearly separated so that the impact of most design
+  changes would be limited to only one or a few modules.</dd>
+
+  <a name="dg_extensibility"></a>
+  <dt>Extensibility</dt>
+  <dd>New features or components can be easily added later.</dd>
+
+  <a name="dg_testability"></a>
+  <dt>Testability</dt>
+  <dd> It is easy to test components of this design independently, and
+  information is available to help diagnose defects.</dd>
+
+  <a name="dg_efficency"></a>
+  <dt>Efficiency</dt> 
+  <dd>The design enables the system to perform functions with an
+  acceptable amount of time, storage space, bandwidth, and other
+  resources.</dd>
+
+  <a name="dg_easy_integration"></a>
+  <dt>Ease of integration</dt>
+  <dd>The components will work together.</dd>
+
+  <a name="dg_cap_match"></a>
+  <dt>Capacity matching</dt>
+  <dd>The architecture deploys components onto machines that provide
+  needed resources with reasonable total expense.</dd>
+
+  <a name="dg_expressiveness"></a>
+  <dt>Expressiveness</dt>
+  <dd>It allows for storage of all valid values and
+    relationships</dd>
+
+  <a name="dg_easy_access"></a>
+  <dt>Ease of access</dt>
+  <dd>Application code to access stored data is simple</dd>
+
+  <a name="dg_data_reliability"></a>
+  <dt>Reliability</dt>
+  <dd>Stored data cannot easily be corrupted by
+    defective code, concurrent access, or unexpected process
+    termination</dd>
+
+  <a name="dg_data_capacity"></a>
+  <dt>Data capacity</dt>
+  <dd>The system can store the amount of data needed.</dd>
+
+  <a name="dg_data_security"></a>
+  <dt>Data security</dt>
+  <dd>Protection of sensitive user and corporate data from
+    unauthorized access or modification</dd>
+
+  <a name="dg_data_performance"></a>
+  <dt>Performance</dt>
+  <dd>Data can be accessed quickly</dd>
+
+  <a name="dg_data_interop"></a>
+  <dt>Interoperability</dt>
+  <dd>The database or data files can be accessed and updated by
+    other applications</dd>
+
+  <a name="dg_no_intrusion"></a>
+  <dt>Intrusion prevention</dt>
+  <dd>Prevent, e.g., hackers opening a command shell on our
+  server.</dd>
+
+  <a name="dg_no_abuse"></a>
+  <dt>Abuse prevention</dt>
+  <dd>Prevention of abuse (e.g., using our system to send spam).</dd>
+
+  <a name="dg_auditability"></a>
+  <dt>Auditability</dt>
+  <dd>All changes can be accounted for later.</dd>
+
+  <a name="dg_use_understand"></a>
+  <dt>Understandability and learnability</dt>
+  <dd>Users can reasonably be
+    expected to understand the UI at first sight.  Users will be able
+    to discover additional features without aid from other users or
+    documentation, and they will be able to recall what they have
+    learned.</dd>
+
+  <a name="dg_use_efficiency"></a>
+  <dt>Task support and efficiency</dt>
+  <dd>The UI is well matched to the
+    users' tasks and it can be used with a reasonable number of clicks
+    and keystrokes.</dd>
+
+  <a name="dg_use_safety"></a>
+  <dt>Safety</dt>
+  <dd>Users are not likely to accidentally produce an
+    undesired result (e.g., delete data, or send a half-finished
+    email).</dd>
+
+  <a name="dg_use_consistency"></a>
+  <dt>Consistency and familiarity</dt>
+  <dd>Users can apply their knowledge
+    of similar UI's or UI standards to this system.</dd>
+
+
+</dl>
+
+ <a name="qa_section"></a> 
+
+ <h3>QA Terms</h3>
+
+ <dl>
+
+  <a name="bug"></a>
+  <dt>Bug</dt>
+
+  <dd><i>n.</i> <b>Deprecated</b> since 1991. See <a
+  href="#defect">defect</a>.</dd>
+
+
+  <a name="defect"></a>
+  <dt>Defect</dt>
+
+  <dd><i>n.</i> A element of the implementation of a program which
+  produces a <a href="#failure">failure</a> when executed, or which
+  violated development standards.  E.g., if a program has a failure
+  where it raises a divide-by-zero exception, the defect is in the
+  mathematical expressions in the source code, or the logical control
+  structures that caused that expression to be evaluated given that
+  input.  Defects can also exist in initial data, documentation, or
+  other supporting artifacts.</dd>
+
+
+  <a name="failure"></a>
+  <dt>Failure</dt>
+
+  <dd><i>n.</i> The observable difference between expected program
+  output and actual output.  E.g., we see a failure when the program
+  crashes or prints the wrong total.  Not every defect causes a
+  failure, some defects may never be detected in testing.  But, every
+  failure is caused by some defect.</dd>
+
+
+</dl>
+
+
+ <a name="qagoals_section"></a> 
+
+ <h3>QA Goals</h3>
+
+ <dl>
+
+   <a name="qg_Func_Correctness"></a>
+   <dt>Functionality &gt; Correctness</dt>
+
+   <dd>Correctness is the most basic quality goal.  It means that,
+   when valid inputs are given and the system is in a valid state and
+   under reasonable load, the system's behavior and results will be
+   correct.</dd>
+
+   <a name="qg_Func_Robustness"></a>
+   <dt>Functionality &gt; Robustness</dt>
+
+   <dd>Robustness is the system's ability to gracefully handle invalid
+   inputs.  It should never be possible for any user input to crash
+   the system or corrupt data, even if that user input is abnormal,
+   unexpected, or malicious.</dd>
+
+   <a name="qg_Func_Accuracy"></a>
+   <dt>Functionality &gt; Accuracy</dt>
+
+   <dd>Accuracy refers to the mathematical precision of calculations
+   done by the system.  Any system that does numeric calculations must
+   consider accuracy, e.g., financial or scientific applications.</dd>
+
+   <a name="qg_Func_Compatibility"></a>
+   <dt>Functionality &gt; Compatibility</dt>
+
+   <dd>Systems that claim to follow standards or claim compatibility
+   with existing systems must adhere to the relevant file formats,
+   protocols, and APIs.  The relevant standards are linked at the top
+   of this document.</dd>
+
+   <a name="qg_Func_Factual"></a>
+   <dt>Functionality &gt; Factual correctness</dt>
+
+   <dd>Is the data in the system a true representation of the real
+   world?  Any system that contains initial data or gathers data about
+   the real world should be sure that the data is factually correct.
+   E.g., a tax preparation program should embody correct and
+   up-to-date facts about tax law.</dd>
+
+   <a name="qg_Use_Understand"></a>
+   <dt>Usability &gt; Understandability and Readability</dt>
+
+   <dd>Users need to understand the system to use it.  The basic
+   metaphor should be understandable and appropriate to user tasks.
+   Some defects in understandability include unclear metaphors, poor
+   or hard-to-see labels, lack of feedback to confirm the effects of
+   user actions, and missing or inadequate on-line help.</dd>
+
+   <a name="qg_Use_Learnability"></a>
+   <dt>Usability &gt; Learnability and Memorability</dt>
+
+   <dd>Every user interface contains some details that users will need
+   to learn and remember.  E.g., Alt-F to open the "File" menu.  UI
+   cues and rules can make these details easier to learn and remember.
+   E.g., the "F" is underlined and, as a rule, the first letter is
+   usually the accelerator key.</dd>
+
+   <a name="qg_Use_Task"></a>
+   <dt>Usability &gt; Task support</dt>
+
+   <dd>This is the quality of match between user tasks and the
+   system's UI.  Task support defects are cases where the system
+   forces the user to take unnatural steps to accomplish a task or
+   where the user is given no support for a difficult step in a task.
+   E.g., must the user invent an 8-character filename for their
+   "Christmas card list"? E.g., must users total their own tax
+   deductions?</dd>
+
+   <a name="qg_Use_Efficiency"></a>
+   <dt>Usability &gt; Efficiency</dt>
+
+   <dd>Users should be able to accomplish common tasks with reasonable
+   effort.  Common tasks should be possible with only one or two
+   steps.  The difficulty of each step should also be considered.
+   E.g., does the user have to remember a long code number or click on
+   a very small button?</dd>
+
+   <a name="qg_Use_Safety"></a>
+   <dt>Usability &gt; Safety</dt>
+
+   <dd>Humans are error-prone, but the negative effects of common
+   errors should be limited.  E.g., users should realize that a given
+   command will delete data, and be asked to confirm their intent or
+   have the option to undo.</dd>
+
+   <a name="qg_Use_Consistency"></a>
+   <dt>Usability &gt; Consistency and Familiarity</dt>
+
+   <dd>Users should be able to apply their past
+   experience from other similar systems.  This means
+   that user interface standards should be followed, and common
+   conventions should be used whenever possible.  Also, UI elements
+   that appear in several parts of the UI should be used consistently,
+   unless another UI quality takes priority.  E.g., if most currency
+   entry fields do not require a dollar-sign, then one that does
+   demand it is a consistency defect, unless there is a real chance
+   that the user is dealing with another currency on that step in
+   his/her task.
+   </dd>
+
+   <a name="qg_Use_Subjective"></a>
+   <dt>Usability &gt; Subjective satisfaction</dt>
+
+   <dd>Users should feel generally satisfied with the UI.  This is a
+   subjective quality that sums up the other user interface qualities
+   as well as aesthetics.</dd>
+
+   <a name="qg_Security"></a>
+   <dt>Security</dt>
+
+   <dd>The system should allow usage only by authorized users, and
+   restrict usage based on permissions.  The system
+   should not allow users to side-step security rule or exploit
+   security holes.  E.g., all user input should be validated and any
+   malicious input should be rejected.</dd>
+
+   <a name="qg_Rely_ConsistLoad"></a>
+   <dt>Reliability &gt; Consistency under load</dt>
+
+   <dd>Every system has some capacity limits.  What happens when those
+   limits are exceeded? The system should never lose or corrupt
+   data.</dd>
+
+   <a name="qg_Rely_ConsistConcur"></a>
+   <dt>Reliability &gt; Consistency under concurrency</dt>
+
+   <dd>Systems that allow concurrent access by multiple users, or that
+   use concurrency internally, should be free of race conditions and
+   deadlock.</dd>
+
+   <a name="qg_Rely_AvailLoad"></a>
+   <dt>Reliability &gt; Availability under load</dt>
+
+   <dd>Every system has some capacity limits.  What happens when those
+   limits are exceeded? The system should continue to service those
+   requests that it is capable of handling.  It should not crash or
+   stop processing all requests.</dd>
+
+   <a name="qg_Rely_Longevity"></a>
+   <dt>Reliability &gt; Longevity</dt>
+
+   <dd>The system should continue to operate as long as it is needed.
+   It should not gradually use up a limited resource.  Example
+   longevity defects include memory leaks or filling the disk with log
+   files.</dd>
+
+   <a name="qg_Efficiency"></a>
+   <dt>Efficiency</dt>
+
+   <dd>The system's operations should execute quickly, with reasonable
+   use of machine and network resources.  E.g., if one user does one
+   operation, it should execute efficiently.</dd>
+
+   <a name="qg_Scalability"></a>
+   <dt>Scalability</dt>
+
+   <dd>Scalability is a general quality that holds when the system
+   continues to satisfy its requirements when various usage parameters
+   are increased.  E.g., a file server might be scalable to a high
+   number of users, or to very large files or very high capacity
+   disks.  Several specific scalability goals are listed below.</dd>
+
+   <a name="qg_Scalability_PerformLoad"></a>
+   <dt>Scalability &gt; Performance under load</dt>
+
+   <dd>This is a specific type of scalability goal dealing with the
+   performance of the system at times when it is servicing many
+   requests from many users.</dd>
+
+
+   <a name="qg_Scalability_Volume"></a>
+   <dt>Scalability &gt; Large data volume</dt>
+
+   <dd>This is a specific type of scalability goal dealing with the
+   ability for the system to handle large data sets.  Operations
+   should continue to be correct and efficient as data set size
+   increases.  Furthermore, the user interface should still be usable
+   as the data presented to users increases in length.</dd>
+
+   <a name="qg_Operability"></a>
+   <dt>Operability</dt>
+
+   <dd>The long-term needs of system administrators should be reliably
+   supported.  E.g., is the system easy to install? Can the
+   administrator recover from a crash?  Is there sufficient log output
+   to diagnose problems in the field?  Can the system's data be backed
+   up without downtime? Can the system be upgraded practically?</dd>
+
+   <a name="qg_Maintainability_Understand"></a>
+   <dt>Maintainability &gt; Understandability</dt>
+
+   <dd>Will it be easy for (future) developers to understand how the system
+   works?</dd>
+
+   <a name="qg_Maintainability_Evolvability"></a>
+   <dt>Maintainability &gt; Evolvability</dt>
+
+   <dd>Can the system easily be modified and extended over time?</dd>
+
+   <a name="qg_Maintainability_Testability"></a>
+   <dt>Maintainability &gt; Testability</dt>
+
+   <dd>Can the system easily be tested?  Do the requirements precisely
+   specify possible inputs and the desired results?  Can the system be
+   tested in parts?  When failures are observed, can they be traced
+   back to defects in specific components (i.e., debugging)?  Is
+   testing practical with the available testing tools?</dd>
+
+
+</dl>
+
+
+<a name="additional_section"></a>
+ 
+ <h3>Additional Standard Terms</h3>
+ <p>For addtional standard terms, see the following reference sites:</p>
+ <ul>
+  <li><a href="http://www.dictionary.com/">Dictionary.com</a></li>
+  <li><a href="http://www.whatis.com/">Whatis.com</a></li>
+  <li><a href="http://www.nist.gov/dads/">NIST Dictionary of Algorithms and Data Structures</a></li>
+  <li><a href="http:/http://foldoc.doc.ic.ac.uk/foldoc/index.html">Free on-line dictionary of computing</a></li>
+  <li><a href="http://www-3.ibm.com/ibm/terminology/goc/gocmain.htm">IBM's glossary of computing terms</a></li>
+  <li><a href="http://www.jargon.org/">Jargon File</a></li>
+ </ul>
+
+
+</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</div>
+</body>
+</html>
