@@ -1,4 +1,4 @@
-/* $Id: inst.css,v 1.9 2003/06/18 19:19:49 jrobbins Exp $
+/* $Id: inst.css,v 1.10 2003/06/22 23:38:34 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
@@ -21,17 +21,16 @@ body {
 
 h3, h4 {
  background-image: none;
- border: solid 2px #666;
  background: #ccc;
  color: #000;
 }
 
 h3 {
- border-left: solid 1em #666;
+ border-left: solid 1.2em #666;
 }
 
 h4 {
- border-left: solid 0.5em #666;
+ border-left: solid 0.7em #666;
 }
 
 #bodycol h3, #bodycol h4 { border: 0; }
