@@ -1,13 +1,13 @@
 function toggle(elm) {
  var newDisplay = "none";
- elm.style.background = 'url(css/folder-closed.gif)';
+ elm.style.background = 'url(/branding/images/sstree/folder-closed.gif)';
 
  var e = elm.nextSibling; 
  while (e != null) {
   if (e.tagName == "OL") {
    if (e.style.display == "none") {
     newDisplay = "block";
-    elm.style.background = 'url(css/folder-open.gif)';
+    elm.style.background = 'url(/branding/images/sstree/folder-open.gif)';
    }
    break;
   }
