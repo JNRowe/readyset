@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.18 2004/03/02 18:50:27 jrobbins Exp $
+/* $Id: readyset.css,v 1.19 2004/07/08 20:34:12 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -216,3 +216,7 @@ tr ul { margin-left: 0px; padding-left: 2em; }
 .linklist a { display: block; }
 
 .sub { padding-left: 1em;  }
+
+:target {
+  border: 2px solid red; 
+}
