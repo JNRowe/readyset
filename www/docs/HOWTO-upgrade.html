@@ -31,8 +31,8 @@
 
  <p>Also, some of the ReadySET content that is most likely to change
  and grow over time is not part of the templates at all, it is the <a
- href="../words-of-wisdom/">words of wisdom</a> hosted on the ReadySET
- web site.</p>
+ href="http://readyset.tigris.org/words-of-wisdom/">words of
+ wisdom</a> hosted on the ReadySET web site.</p>
 
 
   
@@ -60,12 +60,12 @@
  ReadySET project into your project.</p>
 
  <p>Let's assume that you are upgrading from ReadySET v0.8.2 to
- v0.9.0.  Let's also assume that you consider "Tigris.org" to be the
+ v0.9.1.  Let's also assume that you consider "Tigris.org" to be the
  vendor of ReadySET.  Note that CVS does not allow periods in tag
  names, and we do not want ReadySET version numbers to conflict with
  any version numbers of your projects, so we will make the names more
  distinctive and use underscores instead: ReadySET_0_8_2,
- ReadySET_0_9_0, Tigris_org.</p>
+ ReadySET_0_9_1, Tigris_org.</p>
 
  <p>Let's further assume that you are using a CVS server located at
  cvs.yourcompany.com with a repository located at /cvs, your username
@@ -86,12 +86,12 @@
   </pre>
   </li>
 
-  <li>Unpack ReadySET v0.9.0 and add it to <strong>your</strong> CVS
+  <li>Unpack ReadySET v0.9.1 and add it to <strong>your</strong> CVS
     repository on the same vendor branch.
   <pre>
-  unzip ReadySET-090.zip
-  cd ReadySET-090/templates
-  cvs -d :pserver:username@cvs.yourcompany.com:/cvs import -m 'importing ReadySET v0.9.0' yourproject Tigris_org ReadySET_0_9_0
+  unzip ReadySET-091.zip
+  cd ReadySET-091/templates
+  cvs -d :pserver:username@cvs.yourcompany.com:/cvs import -m 'importing ReadySET v0.9.1' yourproject Tigris_org ReadySET_0_9_1
   cd ..
   </pre>
   </li>
@@ -110,7 +110,7 @@
   versions of ReadySET into your working copy.
   <pre>
    cd yourproject
-   cvs update -j ReadySET_0_8_2 -j ReadySET_0_9_0
+   cvs update -j ReadySET_0_8_2 -j ReadySET_0_9_1
   </pre>
   </li>
 
