@@ -42,6 +42,110 @@
 
  </dl>
 
+<div id="choosingtestdata">
+<h3>Choosing Test Data</h3>
+
+<p>In system testing, test data should cover the possible values of
+each parameter based on the the requirements. Since testing
+<em>every</em> value is impractical, a few values should be chosen
+from each equivalence class. An equivalence class is a set of values
+that should all be treated the same.</p>
+
+<p>Ideally, test cases that check error conditions are written
+separately from the functional test cases and should have steps to
+verify the error messages and logs. Realistically, if error test cases
+are not yet written, it is OK for testers to check for error
+conditions when performing normal functional test cases.  It should
+be clear which test data, if any, is expected to trigger errors.</p>
+
+<p>Example equivalence classes:</p>
+
+<dl>
+ <dt>Strings</dt>
+ <dd>
+  <ul>
+   <li>empty string</li>
+   <li>String consisting solely of white space</li>
+   <li>String with leading or trailing white space</li>
+   <li>syntactically legal: short and long values</li>
+   <li>syntactically legal: semantically legal and illegal values</li>
+   <li>syntactically illegal value: illegal characters or combinations</li>
+   <li>Make sure to test special characters such as #, &quot;, ', &amp;, and &lt;</li>
+   <li>Make sure to test "Foreign" characters typed on international keyboards</li>
+  </ul>
+ </dd>
+
+ <dt>Numbers</dt>
+ <dd>
+  <ul>
+   <li>empty string, if possible</li>
+   <li>0</li>
+   <li>in range positive, small and large</li>
+   <li>in range negative, small and large</li>
+   <li>out of range positive</li>
+   <li>out of range negative</li>
+   <li>with leading zeros</li>
+   <li>syntactically invalid (e.g., includes letters)</li>
+  </ul>
+ </dd>
+
+ <dt>Identifiers</dt>
+ <dd>
+  <ul>
+   <li>empty string</li>
+   <li>syntactically legal value</li>
+   <li>syntactically legal: reference to existing ID, invalid reference</li>
+   <li>syntactically illegal value</li>
+  </ul>
+ </dd>
+
+ <dt>Radio buttons</dt>
+ <dd>
+  <ul>
+   <li>one item checked</li>
+   <li>nothing checked, if possible</li>
+  </ul>
+ </dd>
+
+ <dt>Checkboxes</dt>
+ <dd>
+  <ul>
+   <li>checked</li>
+   <li>unchecked</li>
+  </ul>
+ </dd>
+
+ <dt>Drop down menus</dt>
+ <dd>
+  <ul>
+   <li>select each item in turn</li>
+  </ul>
+ </dd>
+
+ <dt>Scrolling Lists</dt>
+ <dd>
+  <ul>
+   <li>select no item, if possible</li>
+   <li>select each item in turn</li>
+   <li>select combinations of items, if possible</li>
+   <li>select all items, if possible</li>
+  </ul>
+ </dd>
+
+ <dt>File upload</dt>
+ <dd>
+  <ul>
+   <li>blank</li>
+   <li>0 byte file</li>
+   <li>long file</li>
+   <li>short file name</li>
+   <li>long file name</li>
+   <li>syntactically illegal file name, if possible (e.g., &quot;File With Spaces.tar.gz&quot;)</li>
+  </ul>
+ </dd>
+
+</dl>
+</div> <!-- /choosingtestdata -->
 
 
  <h3>Further Reading</h3>
