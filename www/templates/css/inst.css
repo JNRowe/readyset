@@ -1,10 +1,13 @@
-/* $Id: inst.css,v 1.12 2003/06/24 22:48:57 jrobbins Exp $
+/* $Id: inst.css,v 1.13 2004/01/31 20:29:13 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
 colors. You are responsible for maintaining your own set of (optional)
 deltas from readyset.css defaults; this file is intended as an
 example.
+
+To make "Company Proprietary" appear on every page footer, uncomment the
+line "display: block !important;" in the legal1 style.
 
 */
 
@@ -74,4 +77,11 @@ code, pre, textarea {
 a.def { 
  text-decoration: none; 
  border-bottom: dashed 1px blue; 
+}
+
+.legal1 {
+/* display: block !important; */
+ background: #eee;
+ border-color: #aaa;
+
 }
