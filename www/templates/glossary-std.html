@@ -370,25 +370,39 @@
   href="#defect">defect</a>.</dd>
 
 
+  <dt id="error">Error</dt>
+  
+  <dd><i>v.</i> A mistaken thought in the developer's mind.  Often
+  caused by miscommunication or bad assumptions.  Errors can create <a
+  href="#defect">defects</a>.  E.g., a developer might erroneously
+  think that the square root of -4 is -2.</dd>
+
+  
   <dt id="defect">Defect</dt>
 
-  <dd><i>n.</i> A element of the implementation of a program which
-  produces a <a href="#failure">failure</a> when executed, or which
-  violated development standards.  E.g., if a program has a failure
-  where it raises a divide-by-zero exception, the defect is in the
-  mathematical expressions in the source code, or the logical control
-  structures that caused that expression to be evaluated given that
-  input.  Defects can also exist in initial data, documentation, or
-  other supporting artifacts.</dd>
+  <dd><i>n.</i> The result of the developer's <a
+  href="#error">error</a> embodied in the product source code, initial
+  data, or documents.  E.g., a square root function which allows
+  negative numbers as arguments is defective.  Defects can be removed
+  by changing the source code, initial data, or document.</dd>
+
+
+  <dt id="fault">Fault</dt>
+
+  <dd><i>n.</i> The execution of defective code.  E.g., if a certain
+  input is provided to defective code, it may cause an exception, or
+  go into an infinite loop, or store an incorect value in an internal
+  variable.  A fault is not normally visible to users, only the <a
+  href="#failure">failure</a> is visible.</dd>
 
 
   <dt id="failure">Failure</dt>
 
-  <dd><i>n.</i> The observable difference between expected program
-  output and actual output.  E.g., we see a failure when the program
-  crashes or prints the wrong total.  Not every defect causes a
-  failure, some defects may never be detected in testing.  But, every
-  failure is caused by some defect.</dd>
+  <dd><i>n.</i> The user-visible result of a <a
+  href="#fault">fault</a>. E.g., an error message or an incorrect
+  result.  This is evidence that can be reported in a defect report.
+  Developers use failure evidence during debugging to eventually find
+  and remove <a href="#defect">defects</a>.</dd>
 
  </dl>
  </div> <!-- /qa_section -->
