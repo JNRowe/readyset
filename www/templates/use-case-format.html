@@ -206,11 +206,15 @@ cases.</p>
  <li>Each use case should show the user succeeding at a goal.  Any
  type of failure or error should be handled as an alternative.</li>
 
- <li>If one use case has too many extensions, split it into two
- use cases.</li>
+ <li>If one use case has too many steps or extensions, split it into
+ two use cases.  Use the "perform" notation to refer to shared steps.</li>
+
+ <li>If it is not already clear from context, you may want to number
+ the steps of an extension to indicate the point in the main use case
+ steps where the extension starts.</li>
 
  <li>The actor, frequency, and use case name should fit into this
- sentence, both logically and grammatically: "A ACTOR will FREQ want
+ sentence, both logically and grammatically: "An ACTOR will FREQ want
  to USE-CASE-NAME."
  </li>
 
@@ -218,7 +222,14 @@ cases.</p>
  showing too much detail (or the task will be really hard to
  perform).</li>
 
- <li>At each step:
+ <li>Evaluate the usefulness and usability of your system by
+ evaluating the use cases before going further with design or
+ implementation.  See the <a
+ href="http://readyset.tigris.org/words-of-wisdom/use-case-format.html">words
+ of wisdom</a> for links to evaluation techniques.</li>
+
+ <li>One good evaluation technique is the cognitive walkthrough.  At
+ each step think of a confident answer to these questions:
   <ul>
    <li>Would the user realize that they should do that step?</li>
    <li>Would the user recognize the proper button to press?</li>
