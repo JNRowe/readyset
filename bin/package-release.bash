@@ -22,6 +22,7 @@ mkdir  -p /tmp/readysetbuild
 mv tmp-export /tmp/readysetbuild/$topdir
 cd /tmp/readysetbuild
 rm -rf $topdir/words-of-wisdom
+rm -rf $topdir/es
 perl -p -i -e 's|/branding/images/sstree/||' $topdir/templates/css/*.css 
 perl -p -i -e 's|/branding/images/sstree|css|' $topdir/templates/js/*.js
 perl -p -i -e 's|/nonav/||' $topdir/*.html
