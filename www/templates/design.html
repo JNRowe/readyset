@@ -19,10 +19,9 @@
 <div class="readyset">
  <h2>Design</h2>
 
- <a name="releaseinfo"></a>
+ <div id="releaseinfo">
  <h3>Release Information</h3>
- <div class="axial">
- <table border="1" cellpadding="3" cellspacing="2">
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
   <tr>
    <th>Project:</th> 
    <td>PROJECTNAME</td> 
@@ -34,16 +33,12 @@
   <tr>
    <th>Attached Worksheets:</th> 
    <td>
-<!--    <div><a href="design-tech.html">Technology Selection Worksheet</a></div> -->
     <div><a href="design-architecture.html">Architecture Worksheet</a></div>
     <div><a href="design-src-org.html">Source Organization and Build Worksheet</a></div>
-<!--    <div><a href="design-reuse.html">Reuse Plan Worksheet</a></div> -->
 <!--    <div><a href="design-scalability.html">Scalability Worksheet</a></div> -->
     <div><a href="design-ui.html">User Interface Worksheet</a></div>
     <div><a href="design-persistence.html">Persistent Storage Worksheet</a></div>
     <div><a href="design-security.html">Security Worksheet</a></div>
-<!--    <div><a href="design-upgrade.html">Upgrade Mechanism Worksheet</a></div> -->
-<!--    <div><a href="design-testability.html">Design for Testability Worksheet</a></div> -->
    </td>
   </tr>
   <tr>
@@ -58,17 +53,17 @@
    </td>
   </tr>
  </table>
- </div>
+ </div> <!-- /releaseinfo -->
 
- <a name="processimpact"></a>
+ <div id="processimpact">
  <p class="readonly"><strong>Process impact:</strong> This design
  document describes a system that will satisfy the requirements of the
  <a href="srs.html">SRS</a>.  Decisions made in creating this design
  document are based on those requirements and an understanding of
  available technologies and components. Once the design has been
  drafted, work on the system implementation and unit testing may
- begin.
- </p>
+ begin. </p>
+ </div> <!-- /processimpact -->
 
  <div class="sticky">
   TODO: Fill in the sections below.  Add ore remove items as needed
@@ -76,7 +71,7 @@
  </div>
 
 
- <a name="introduction"></a>
+ <div id="introduction">
  <h3>Introduction</h3>
 
  <dl>
@@ -112,10 +107,11 @@
   </dd>
 
  </dl>
+ </div> <!-- /introduction -->
 
 
 
- <a name="structuraldesign"></a>
+ <div id="structuraldesign">
  <h3>UML Structural Design</h3>
 
  <div class="sticky">
@@ -154,9 +150,10 @@
 
  <p>ANY ADDITIONAL NOTES OR COMMENTS</p>
 
+ </div> <!-- /structuraldesign -->
 
 
- <a name="behavioraldesign"></a>
+ <div id="behavioraldesign">
  <h3>UML Behavioral Design</h3>
 
  <div class="sticky">
@@ -199,9 +196,10 @@
 
  <p>ANY ADDITIONAL NOTES OR COMMENTS</p>
 
+ </div> <!-- /behavioraldesign -->
 
 
- <a name="checklist"></a>
+ <div id="checklist">
  <h3>UML Design Checklist</h3>
  
  <div class="sticky">
@@ -259,6 +257,7 @@
 
  </dl>
 
+ </div> <!-- /checklist -->
 
 
 </div>
