@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.9 2003/06/18 18:15:43 jrobbins Exp $
+/* $Id: readyset.css,v 1.10 2003/06/18 18:28:18 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -88,7 +88,6 @@ p, ul, ol, dl {
 }
 
 .readyset h3, .readyset h4 {
- background-image: none !important;
  padding: 3px;
  padding-left: 5px;
  margin-right: 2px;
