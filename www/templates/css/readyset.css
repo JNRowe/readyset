@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.4 2003/06/18 17:17:54 jrobbins Exp $
+/* $Id: readyset.css,v 1.5 2003/06/18 17:22:47 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -10,80 +10,75 @@ To extend or override these rules for your instance, edit inst.css
 instead of this file. */
 
 /* colors, backgrounds, borders, link indication */
-body {
-	background: #fff;
-	color: #000;
-	padding: 1em;
-}
 
 
 table, th, td {
-	border: none;
+ border: none;
 }
 
 .tabs th {
-	border-right: 1px solid #333;
-	background-color: #ddd;
-	color: #fff;
-	border-left: 1px solid #fff;
+ border-right: 1px solid #333;
+ background-color: #ddd;
+ color: #fff;
+ border-left: 1px solid #fff;
 }
 
 .tabs td {
-	background-color: #999;
-	border-bottom: 1px solid #fff;
-	border-right: 1px solid #fff;
-	border-left: 1px solid #fff;
+ background-color: #999;
+ border-bottom: 1px solid #fff;
+ border-right: 1px solid #fff;
+ border-left: 1px solid #fff;
 }
 
 .tabs {
-	border-bottom: 6px #ddd solid;
+ border-bottom: 6px #ddd solid;
 }
 
 .tabs th, .tabs th a:link, .tabs th a:visited {
-	color: #555;
+ color: #555;
 }
 
 .tabs td, .tabs td a:link, .tabs td a:visited {
-	color: #fff;
+ color: #fff;
 }
 
 .tabs a {
-	text-decoration: none;
+ text-decoration: none;
 }
 
 .axial th {
-	background-color: #ddd;
-	color: black;
+ background-color: #ddd;
+ color: black;
 }
 
 
 body .grid td {
-	border-top: 1px solid #ccc;
-	border-left: 1px solid #ccc;
-	background-color: transparent;
+ border-top: 1px solid #ccc;
+ border-left: 1px solid #ccc;
+ background-color: transparent;
 }
 
 
 body, textarea, pre, code {
-	font-size: x-small;
-	voice-family: "\"}\"";
-	voice-family: inherit;
-	font-size: small;
+ font-size: x-small;
+ voice-family: "\"}\"";
+ voice-family: inherit;
+ font-size: small;
 }
 
 small, div.tabs th, div.tabs td, input, select {
-	font-size: xx-small;
-	voice-family: "\"}\"";
-	voice-family: inherit;
-	font-size: x-small;
+ font-size: xx-small;
+ voice-family: "\"}\"";
+ voice-family: inherit;
+ font-size: x-small;
 }
 
 .tabs td, .tabs th, dt {
-	font-weight: bold;
+ font-weight: bold;
 }
 
 table {
-	font-size: 1em;
+ font-size: 1em;
 }
 
 
@@ -91,95 +86,95 @@ table {
 list types, text-indent */
 
 p, ul, ol, dl {
-	margin-top: .67em;
-	margin-bottom: .67em;
+ margin-top: .67em;
+ margin-bottom: .67em;
 }
 
 h3, h4 {
-	margin-bottom: 0;
-	padding: 0;
+ margin-bottom: 0;
+ padding: 0;
 }
 
 form {
-	margin: 0;
+ margin: 0;
 }
 
 
 ol ol {
-	list-style-type: lower-alpha;
+ list-style-type: lower-alpha;
 }
 
 ol ol ol {
-	list-style-type: lower-roman;
+ list-style-type: lower-roman;
 }
 
 h3, h4 {
-	padding: 3px;
-	padding-left: 5px;
-	margin-right: 2px;
-	margin-left: 2px;
+ padding: 3px;
+ padding-left: 5px;
+ margin-right: 2px;
+ margin-left: 2px;
 }
 
 td, th {
-	padding: 2px 3px;
-	text-align: left;
-	vertical-align: top;
+ padding: 2px 3px;
+ text-align: left;
+ vertical-align: top;
 }
 
 
 .tabs {
-	margin-top: .67em;
-	margin-right: 2px;
-	margin-left: 2px;
-	padding-left: 8px;
+ margin-top: .67em;
+ margin-right: 2px;
+ margin-left: 2px;
+ padding-left: 8px;
 }
 
 .tabs td, .tabs th {
-	padding: 3px 9px;
+ padding: 3px 9px;
 }
 
 
 .right {
-	text-align: right !important;
+ text-align: right !important;
 }
 
 .center {
-	text-align: center !important;
+ text-align: center !important;
 }
 
 .axial th {
-	text-align: right;
-        white-space: nowrap;
-        width: 160px !important; /* force it to be just big enough for labels */
+ text-align: right;
+ white-space: nowrap;
+ width: 160px !important; /* force it to be just big enough for labels */
 }
 
 
 dd {
-	margin-bottom: .67em;
+ margin-bottom: .67em;
 }
 
 .tier1 {
-	margin-left: 0;
+ margin-left: 0;
 }
 
 .tier2 {
-	margin-left: 1.5em;
+ margin-left: 1.5em;
 }
 
 .tier3 {
-	margin-left: 3em;
+ margin-left: 3em;
 }
 
 .tier4 {
-	margin-left: 4.5em;
+ margin-left: 4.5em;
 }
 
 .alt {
-	display: none;
+ display: none;
 }
 
 h3, h4 {
-	clear: both;
+ clear: both;
 }
 
 /* additions specific to ReadySET */
@@ -193,12 +188,12 @@ tr ul { margin-left: 0px; padding-left: 2em; }
  margin-bottom: 3px;
  border-right: 1px solid;
  border-bottom: 1px solid;
- }
+}
 
 .readonly {
  border: 1px solid;
  padding: 3px;
- }
+}
 
 .footnote {
    width: 80%;
@@ -212,10 +207,10 @@ tr ul { margin-left: 0px; padding-left: 2em; }
  padding: 6px;
  margin-top: 3em;
  margin-bottom: 3em;
- }
+}
 
 .sample1, .sample2, .sample3, .sample4 {
  padding-right: 2px;
  margin-bottom: 4px;
- }
+}
 
