@@ -324,7 +324,7 @@
   </tr>
 
   <tr>
-   <td>System testing</td>
+   <td>Manual system testing</td>
    <td>
     <div class="sample1">100% of UI screens and fields</div>
     <div class="sample2">100% of specified requirements</div>
@@ -338,6 +338,18 @@
   </tr>
 
   <tr>
+   <td>Automated system testing</td>
+   <td>
+    <div class="sample1">100% of UI screens and fields</div>
+    <div class="sample2">100% of specified requirements</div>
+   </td>
+
+   <td>The QA team will use a system test automation tool to author
+   and maintain a suite of test scripts to test the entire system
+   through the user interface.</td>
+  </tr>
+
+  <tr>
    <td>Regression testing</td>
    <td>
     <div class="sample1">Run all unit tests before each commit</div>
@@ -346,9 +358,28 @@
    </td>
 
    <td>We will adopt a policy of frequently re-running all automated
-  tests, including those that have previously been successful.  This
-  will help catch regressions (bugs that we thought were fixed, but
-  that appear again).</td>
+   tests, including those that have previously been successful.  This
+   will help catch regressions (bugs that we thought were fixed, but
+   that appear again).</td>
+  </tr>
+
+  <tr>
+   <td>Load, stress, and capacity testing</td>
+   <td>
+    <div class="sample1">Simple load testing</div>
+    <div class="sample2">Detailed analysis of each scalability parameter</div>
+   </td>
+
+   <td>We use a load testing tool and/or custom scripts to simulate
+   heavy usage of the system.  Load will be defined by scalability
+   parameters such as number of concurrent users, number of
+   transactions per second, or number/size of data items
+   stored/processed. We will verify that the system can handle loads
+   within its capacity without crashing, producing incorrect results,
+   mixing up results for distinct users, or corrupting the data.  We
+   will verify that when capacity limits are exceeded, the system
+   safely rejects, ignores, or defers requests that it cannot
+   handle.</td>
   </tr>
 
   <tr>
@@ -415,7 +446,7 @@
    <th>Buddy review</th>
    <th>Review meeting</th>
    <th>Unit testing</th>
-   <th>System testing</th>
+   <th>Manual system testing</th>
    <th>Overall assurance</th>
   </tr>
 
