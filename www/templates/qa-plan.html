@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+</script>
+ <title>QA Plan</title>
+</head>
+
+<body>
+<div class="app">
+
+ <h2>QA Plan</h2>
+
+ <div class="sticky">
+  TODO: For each release, update this file by filling in answers to
+  the questions.  In cases where multiple answers are already written,
+  delete those answers that do not apply.
+ </div>
+
+ <h3>Release Information</h3>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Project:</th> 
+   <td>PROJECTNAME</td> 
+  </tr>
+  <tr>
+   <th>Internal release number:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Release audience:</th> 
+   <td>
+    <div class="sample1">General availability release</div>
+    <div class="sample2">Customer-specific release: CUSTOMER(S)</div>
+    <div class="sample3">Developer release (Internal usage only)</div>
+    <div class="sample4">Early access release (Controlled external access)</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Attached Worksheets:</th> 
+   <td>
+    <div>QA Plan &gt; <a href="test-suite.html">System test case suite</a></div>
+    <div>QA Plan &gt; <a href="review-meeting-notes.html">Review meeting notes</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="index.html">Project overview</a></div>
+    <div><a href="srs.html">Software Requirements Specification</a></div>
+    <div><a href="design.html">Design</a></div>
+    <div><a href="plan.html">Project plan</a></div>
+    <div><a href="sdm.html">Software development methodology</a></div>
+    <div>LINKS TO RELEVANT STANDARDS</div>
+    <div>LINKS TO OTHER DOCUMENTS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+ <p class="readonly"><strong>Process impact:</strong> This document
+ specifies quality goals, selects strategies for assuring that those
+ goals have been met, and details a plan of action to carry out those
+ strategies.</p>
+
+ <h3>Introduction</h3>
+ <dl>
+  <dt>Why is this QA plan needed?</dt> 
+
+  <dd>"Quality" refers to all the good things that we
+  would like to see in our product.  We build a quality product and
+  assure its quality by keeping quality in mind all the time and
+  performing the selected activities below.  Testing is one QA
+  activity, but it is not the best or only one, other QA activities
+  include the use of style guides and checklists, review meetings, use
+  of analysis tools, and careful quality measurements and estimates.  
+  A plan is needed to select and coordinate all the QA activities.</dd>
+
+
+  <dt>What QA lessons were learned in previous releases?</dt>
+
+  <dd class="sample1">None yet.  This is the first release.</dd>
+ 
+  <dd class="sample2">
+   <ul>
+    <li>Different browsers render the same HTML page differently, so
+    we must test each version of each supported browser.</li>
+
+    <li>In a previous release, customers found that punctuation (e.g.,
+    quotation marks and less-than signs) were entered and processed
+    properly, but not displayed properly.  From now on, we must test
+    both validation and display of special characters.</li>
+
+    <li>Large datasets can sometimes make our system fail if the space
+    used for temporary data is used up.  Our test plans should include
+    more data volume tests.</li>
+   </ul>
+  </dd>
+ 
+
+  <dt>What is the scope of this QA plan?</dt> 
+ 
+  <dd class="sample1">All components and aspects of the system will be
+  evaluated in this release.
+  </dd>
+ 
+  <dd class="sample2">There are many quality goals and approaches to
+  assuring them.  Since we have limited time and resources for this
+  release, we will focus on the following components and aspects:
+  <ul>
+   <li>COMPONENT-1</li>
+   <li>COMPONENT-2</li>
+   <li>COMPONENT-3</li>
+   <li>FEATURE-1</li>
+   <li>FEATURE-2</li>
+  </ul>
+  </dd> 
+
+  <div class="sticky">
+   TODO: Sum up the plan in a few sentences.  The text below is just a
+   sample.
+  </div>
+ 
+  <dt>What is the summary of this plan?</dt> 
+ 
+  <dd class="sample1">In this release we will continue to use
+  development practices that support all of our quality goals, but we
+  will focus on functional correctness and robustness.  We will do that
+  with the following major activities:
+ 
+  <ul>
+   <li>using if-statements to test preconditions and assert statements
+       to test invariants and postconditions</li>
+   <li>frequent reviews</li>
+   <li>automated unit and regression testing with JUnit</li>
+   <li>structured manual system testing</li>
+  </ul>
+  </dd>
+ </dl>
+
+
+
+ <h3>Quality Goals for this Release</h3>
+ <div class="sticky">
+  TODO: Add or edit goals to fit your project.  If a goal cannot
+  logically apply to your project, do not remove it, instead write
+  "N/A" for its Priority.
+ </div>
+
+ <div class="sticky">
+  TODO: Set the priorities that make sense for your project on this
+  particular release.
+ </div>
+
+ <table>
+  <tr>
+   <th>Quality Name</th>
+   <th>Priority</th>
+   <th>Description</th>
+  </tr>
+ 
+  <tr>
+   <td nowrap="nowrap">Functionality &gt; Correctness</td>
+   <td class="sample1">High</td>
+
+   <td>Correctness is the most basic quality goal.  It means that,
+   when valid inputs are given and the system is in a valid state and
+   under reasonable load, the system's behavior and results will be
+   correct.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Functionality &gt; Robustness</td>
+   <td class="sample1">High</td>
+
+   <td>Robustness is the system's ability to gracefully handle invalid
+   inputs.  It should never be possible for any user input to crash
+   the system or corrupt data, even if that user input is abnormal,
+   unexpected, or malicious.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Functionality &gt; Accuracy</td>
+   <td class="sample1">Medium</td>
+
+   <td>Accuracy refers to the mathematical precision of calculations
+   done by the system.  Any system that does numeric calculations must
+   consider accuracy, e.g., financial or scientific applications.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Functionality &gt; Compatibility</td>
+   <td class="sample1">Medium</td>
+
+   <td>Systems that claim to follow standards or claim compatibility
+   with existing systems must adhere to the relevant file formats,
+   protocols, and APIs.  The relevant standards are linked at the top
+   of this document.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Functionality &gt; Factual correctness</td>
+   <td class="sample1">Medium</td>
+
+   <td>Is the data in the system a true representation of the real
+   world?  Any system that contains initial data or gathers data about
+   the real world should be sure that the data is factually correct.
+   E.g., a tax preparation program should embody correct and
+   up-to-date facts about tax law.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usability &gt; Understandability and Readability</td>
+   <td class="sample1">Medium</td>
+
+   <td>Users need to understand the system to use it.  The basic
+   metaphor should be understandable and appropriate to user tasks.
+   Some defects in understandability include unclear metaphors, poor
+   or hard-to-see labels, lack of feedback to confirm the effects of
+   user actions, and missing or inadequate on-line help.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usability &gt; Learnability and Memorability</td>
+   <td class="sample1">Medium</td>
+
+   <td>Every user interface contains some details that users will need
+   to learn and remember.  E.g., Alt-F to open the "File" menu.  UI
+   cues and rules can make these details easier to learn and remember.
+   E.g., the "F" is underlined and, as a rule, the first letter is
+   usually the accelerator key.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usability &gt; Task support</td>
+   <td class="sample1">Medium</td>
+
+   <td>This is the quality of match between user tasks and the
+   system's UI.  Task support defects are cases where the system
+   forces the user to take unnatural steps to accomplish a task or
+   where the user is given no support for a difficult step in a task.
+   E.g., must the user invent an 8-character filename for their
+   "Christmas card list"? E.g., must users total their own tax
+   deductions?</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usability &gt; Efficiency</td>
+   <td class="sample1">Medium</td>
+
+   <td>Users should be able to accomplish common tasks with reasonable
+   effort.  Common tasks should be possible with only one or two
+   steps.  The difficulty of each step should also be considered.
+   E.g., does the user have to remember a long code number or click on
+   a very small button?</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usability &gt; Safety</td>
+   <td class="sample1">Medium</td>
+
+   <td>Humans are error-prone, but the negative effects of common
+   errors should be limited.  E.g., users should realize that a given
+   command will delete data, and be asked to confirm their intent or
+   have the option to undo.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usability &gt; Consistency and Familiarity</td>
+   <td class="sample1">Medium</td>
+
+   <td>Users should be able to apply their past
+   experience from other similar systems.  This means
+   that user interface standards should be followed, and common
+   conventions should be used whenever possible.  Also, UI elements
+   that appear in several parts of the UI should be used consistently,
+   unless another UI quality takes priority.  E.g., if most currency
+   entry fields do not require a dollar-sign, then one that does
+   demand it is a consistency defect, unless there is a real chance
+   that the user is dealing with another currency on that step in
+   his/her task.
+   </td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usability &gt; Subjective satisfaction</td>
+   <td class="sample1">Medium</td>
+
+   <td>Users should feel generally satisfied with the UI.  This is a
+   subjective quality that sums up the other user interface qualities
+   as well as aesthetics.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Security</td>
+   <td class="sample1">Medium</td>
+
+   <td>The system should allow usage only by authorized users, and
+   restrict usage based on permissions.  The system
+   should not allow users to side-step security rule or exploit
+   security holes.  E.g., all user input should be validated and any
+   malicious input should be rejected.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Reliability &gt; Consistency under load</td>
+   <td class="sample1">Low</td>
+
+   <td>Every system has some capacity limits.  What happens when those
+   limits are exceeded? The system should never lose or corrupt
+   data.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Reliability &gt; Consistency under concurrency</td>
+   <td class="sample1">Low</td>
+
+   <td>Systems that allow concurrent access by multiple users, or that
+   use concurrency internally, should be free of race conditions and
+   deadlock.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Reliability &gt; Availability under load</td>
+   <td class="sample1">Low</td>
+
+   <td>Every system has some capacity limits.  What happens when those
+   limits are exceeded? The system should continue to service those
+   requests that it is capable of handling.  It should not crash or
+   stop processing all requests.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Reliability &gt; Longevity</td>
+   <td class="sample1">Low</td>
+
+   <td>The system should continue to operate as long as it is needed.
+   It should not gradually use up a limited resource.  Example
+   longevity defects include memory leaks or filling the disk with log
+   files.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Efficiency</td>
+   <td class="sample1">Low</td>
+
+   <td>The system's operations should execute quickly, with reasonable
+   use of machine and network resources.  E.g., if one user does one
+   operation, it should execute efficiently.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Scalability</td>
+   <td class="sample1">Low</td>
+
+   <td>Scalability is a general quality that holds when the system
+   continues to satisfy its requirements when various usage parameters
+   are increased.  E.g., a file server might be scalable to a high
+   number of users, or to very large files or very high capacity
+   disks.  Several specific scalability goals are listed below.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Scalability &gt; Performance under load</td>
+   <td class="sample1">Low</td>
+
+   <td>This is a specific type of scalability goal dealing with the
+   performance of the system at times when it is servicing many
+   requests from many users.</td>
+
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Scalability &gt; Large data volume</td>
+   <td class="sample1">Low</td>
+
+   <td>This is a specific type of scalability goal dealing with the
+   ability for the system to handle large data sets.  Operations
+   should continue to be correct and efficient as data set size
+   increases.  Furthermore, the user interface should still be usable
+   as the data presented to users increases in length.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Operability</td>
+   <td class="sample1">Low</td>
+
+   <td>The long-term needs of system administrators should be reliably
+   supported.  E.g., is the system easy to install? Can the
+   administrator recover from a crash?  Is there sufficient log output
+   to diagnose problems in the field?  Can the system's data be backed
+   up without downtime? Can the system be upgraded practically?</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Maintainability &gt; Understandability</td>
+   <td class="sample1">Low</td>
+
+   <td>Will it be easy for (future) developers to understand how the system
+   works?</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Maintainability &gt; Evolvability</td>
+   <td class="sample1">Low</td>
+
+   <td>Can the system easily be modified and extended over time?</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Maintainability &gt; Testability</td>
+   <td class="sample1">Low</td>
+
+   <td>Can the system easily be tested?  Do the requirements precisely
+   specify possible inputs and the desired results?  Can the system be
+   tested in parts?  When failures are observed, can they be traced
+   back to defects in specific components (i.e., debugging)?  Is
+   testing practical with the available testing tools?</td>
+  </tr>
+
+
+ </table>
+
+
+
+ <h3>QA Strategy</h3>
+
+ <div class="sticky">
+  TODO: Consider the activities listed below and delete those that are
+  not applicable to your project.  Edit and add new activities if
+  needed.  For each activity, specify the coverage or frequency that
+  you plan to achieve.  If you do not plan to perform an activity, write "N/A".
+ </div>
+
+ <table width="100%">
+  <tr>
+   <th>Activity</th>
+   <th>Coverage or Frequency</th>
+   <th>Description</th>
+  </tr>
+
+  <tr>
+   <td>Preconditions</td>
+   <td>
+    <div class="sample1">Every public method</div>
+    <div class="sample2">Every public method in COMPONENT-NAME</div>
+    <div class="sample3">All public methods that modify data</div>
+   </td>
+
+   <td>We will use if-statements at the beginning of public methods to
+   validate each argument value.  This helps to document assumptions
+   and catch invalid values before they can cause faults.</td>
+  </tr>
+
+  <tr>
+   <td>Assertions</td>
+   <td>
+    <div class="sample1">Every private method</div>
+    <div class="sample2">Every private method in COMPONENT-NAME</div>
+    <div class="sample3">All private methods that modify data</div>
+   </td>
+
+   <td>Assertions will be used to validate all arguments to private
+   methods.  Since these methods are only called from our other
+   methods, arguments passed to them should always be valid, unless
+   our code is defective.  Assertions will also be used to test class
+   invariants and some postconditions.</td>
+  </tr>
+
+  <tr>
+   <td>Buddy review</td>
+   <td>
+    <div class="sample1">All changes to release branches</div>
+    <div class="sample2">All changes to COMPONENT-NAME</div>
+    <div class="sample3">All changes</div>
+   </td>
+
+   <td>Whenever changes must be made to code on a release branch
+   (e.g., to prepare a maintenance release) the change will be
+   reviewed by another developer before it is committed.  The goal is
+   to make sure that fixes do not introduce new defects.</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Review meetings</td>
+   <td>
+    <div class="sample1">Weekly</div>
+    <div class="sample2">Once before release</div>
+    <div class="sample3">Every source file</div>
+   </td>
+
+   <td>We will hold review meetings where developers will
+   perform formal inspections of selected code or documents.  We
+   choose to spend a small, predetermined amount of time and try to
+   maximize the results by selecting review documents carefully.  In
+   the review process we will use and maintain a variety of
+   checklists.</td>
+  </tr>
+
+  <tr>
+   <td>Unit testing</td>
+   <td>
+    <div class="sample1">100% of public methods, and 75% of statements</div>
+    <div class="sample2">100% of public methods</div>
+    <div class="sample3">75% of statements</div>
+   </td>
+
+   <td>We will develop and maintain a unit test suite using the JUnit
+   framework.  We will consider the boundary conditions for each
+   argument and test both sides of each boundary.  Tests must be run
+   and passed before each commit, and they will also be run by the
+   testing team. Each public method will have at least one test.  And,
+   the overall test suite will exercise at least 75% of all executable
+   statements in the system.</td>
+  </tr>
+
+  <tr>
+   <td>System testing</td>
+   <td>
+    <div class="sample1">100% of UI screens and fields</div>
+    <div class="sample2">100% of specified requirements</div>
+   </td>
+
+   <td>The QA team will author and maintain a detailed written suite
+   of manual tests to test the entire system through the user
+   interface.  This plan will be detailed enough that a person could
+   repeatably carry out the tests from the test suite document and
+   other associated documents.</td>
+  </tr>
+
+ </table>
+
+
+
+ <h3>QA Strategy Evaluation</h3>
+
+ <table width="100%" class="sample1">
+  <tr>
+   <th>Goal</th>
+   <th>Preconditions</th>
+   <th>Assertions</th>
+   <th>Buddy review</th>
+   <th>Review meeting</th>
+   <th>Unit testing</th>
+   <th>System testing</th>
+   <th>Overall assurance</th>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Functionality</td>
+   <td>Medium</td>
+   <td>Medium</td>
+   <td>Medium</td>
+   <td>High</td>
+   <td>High</td>
+   <td>High</td>
+   <td>Strong</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">&nbsp;&nbsp; Correctness</td>
+   <td>High</td>
+   <td>High</td>
+   <td>Medium</td>
+   <td>Medium</td>
+   <td>High</td>
+   <td>Medium</td>
+   <td>Strong</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">&nbsp;&nbsp; Robustness</td>
+   <td>High</td>
+   <td>High</td>
+   <td>Medium</td>
+   <td>Medium</td>
+   <td>High</td>
+   <td>Medium</td>
+   <td>Strong</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Usability</td>
+   <td>None</td>
+   <td>None</td>
+   <td>None</td>
+   <td>High</td>
+   <td>None</td>
+   <td>Medium</td>
+   <td>Strong</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Security</td>
+   <td>Medium</td>
+   <td>None</td>
+   <td>Medium</td>
+   <td>High</td>
+   <td>None</td>
+   <td>Medium</td>
+   <td>Strong</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Reliability</td>
+   <td>None</td>
+   <td>Medium</td>
+   <td>Low</td>
+   <td>Medium</td>
+   <td>Medium</td>
+   <td>Medium</td>
+   <td>Weak</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Efficiency</td>
+   <td>None</td>
+   <td>None</td>
+   <td>Low</td>
+   <td>Medium</td>
+   <td>None</td>
+   <td>Low</td>
+   <td>At-Risk</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Scalability</td>
+   <td>None</td>
+   <td>None</td>
+   <td>Low</td>
+   <td>Medium</td>
+   <td>Low</td>
+   <td>Low</td>
+   <td>At-Risk</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Operability</td>
+   <td>None</td>
+   <td>None</td>
+   <td>None</td>
+   <td>Low</td>
+   <td>None</td>
+   <td>Low</td>
+   <td>At-Risk</td>
+  </tr>
+
+  <tr>
+   <td nowrap="nowrap">Maintainability</td>
+   <td>Medium</td>
+   <td>Low</td>
+   <td>Medium</td>
+   <td>High</td>
+   <td>Low</td>
+   <td>None</td>
+   <td>Weak</td>
+  </tr>
+
+ </table>
+
+ <p>Cell values in the table above are subjective estimates of the
+ effectiveness of each activity.  This table helps to identify quality
+ goals that are not being adequately assured.</p>
+
+ <div class="tier2">
+ <h4>Evaluation cell values:</h4>
+ <ul>
+  <li>High: This activity gives a strong assurance that the goal has been met in development.</li>
+  <li>Medium: This activity gives a medium assurance that the goal has been met in development.</li>
+  <li>Low: This activity gives only a little assurance that the goal has been met in development.</li>
+  <li>None: This activity does not address the goal.</li>
+ </ul>
+
+ <h4>Overall assurance values:</h4>
+ <ul>
+  <li>Strong: The set of activities together provide strong assurance that the goal has been met in development.</li>
+  <li>Weak: The activities together provide limited assurance that the goal has been met in development.</li>
+  <li>At-Risk: There is little or no assurance that this goal has been met.</li>
+ </ul>
+
+ <p>Note: As a rule of thumb, it takes at least two "high" activities
+ and one "medium" to give a "strong" overall rating.  Likewise, it
+ takes at least two "medium" and one "low" activities to rate a "weak"
+ overall rating.</p>
+ </div>
+
+
+ <h3>Plan of Action</h3>
+ <div class="sticky">
+  The following information should feed into the overall project <a
+  href="plan.html">plan</a>.  Resources needed to carry out this plan
+  should be documented in the overall project <a
+  href="resource-needs.html">resource needs</a>.  Be sure to specify
+  machines needed for a dedicated testing environment, if needed.
+ </div>
+ <div class="sticky">
+  TODO: Adjust this plan to fit your project.
+ </div>
+ <div class="sticky">
+  TODO: Once the plan is outlined, tasks should be assigned to
+  individuals and tracked to completion.
+ </div>
+
+ <ol class="sample1">
+  <li>Preconditions and Assertions
+   <ul>
+    <li>Refine requirements document whenever preconditions are not already determined</li>
+
+    <li>Create validation functions for use by preconditions and assertions, as needed</li>
+
+    <li>Write preconditions and assertions in code</li>
+   </ul>
+  </li>
+
+
+  <li>Review meetings
+   <ul>
+    <li>Assign buddy reviewers whenever a change to a release branch is considered</li>
+    <li>Select an at-risk document or section of code for weekly review meetings</li>
+    <li>Each week, identify reviewers and schedule review meetings</li>
+    <li>Reviewers study the material individually for 2 hours</li>
+    <li>Reviewers meet to inspect the material for 2 hours</li>
+    <li>Place <a href="review-meeting-notes.html">review meeting
+    notes</a> in the repository and track any issues identified in
+    review meetings</li>
+   </ul>
+  </li>
+
+  <li>Unit tests
+   <ul>
+    <li>Set up infrastructure for easy execution of JUnit tests (this is just
+    an Ant target)</li>
+
+    <li>Create unit tests for each class when the class is created</li>
+
+    <li>Execute unit tests before each commit.  All tests must pass
+    before developer can commit, otherwise open new issue(s) for
+    failed tests.  These "smoke tests" will be executed in each
+    developer's normal development environment.</li>
+
+    <li>Execute unit tests completely on each release candidate to
+    check for regressions. These regression tests will be executed on
+    a dedicated QA machine.</li>
+
+    <li>Update unit tests whenever requirements change</li>
+   </ul>
+  </li>
+
+  <li>System tests
+   <ul>
+    <li>Design and specify a detailed manual <a
+    href="test-suite.html">test suite</a>.</li>
+
+    <li>Review the system test suite to make sure that every UI screen
+    and element is covered</li>
+
+    <li>Execute system tests completely on each release candidate.
+    These system tests will be carried out on a dedicated QA
+    machine.</li>
+
+    <li>Update system tests whenever requirements change</li>
+   </ul>
+  </li>
+
+  <li>QA Management
+   <ul>
+    <li>Update this test plan whenever requirements change</li>
+
+    <li>Document test results and communicate them to the entire
+    development team</li>
+
+    <li>Estimate remaining (not yet detected) defects based on current
+    issue tracking data, defect rates, and metrics on code size and
+    the impact of changes.</li>
+   </ul>
+  </li>
+
+ </ol>
+
+ <div class="sticky">
+  TODO: Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/qa-plan.html">words
+  of wisdom</a> and discuss ways to improve this template.
+ </div>
+
+</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</body>
+</html>

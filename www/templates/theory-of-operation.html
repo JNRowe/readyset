@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+</script>
+ <title>Theory of Operation</title>
+</head>
+
+<body>
+<div class="app">
+ <h2>Theory of Operation</h2>
+
+ <h3>Product Release Information</h3>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Product:</th> 
+   <td>PRODUCTNAME</td> 
+  </tr>
+  <tr>
+   <th>Release(s)</th> 
+   <td>
+     X.Y.Z
+     <!-- if this document applies to multiple versions, you can list them one-per-line -->
+   </td> 
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="index.html">Project overview</a></div>
+    <div><a href="srs.html">Software Requirements Specification</a></div>
+    <div><a href="release-notes.html">Release notes</a></div>
+    <div><a href="faq.html">FAQ</a></div>
+    <div><a href="glossary.html">Glossary</a></div>
+   </td>
+  </tr>
+
+ </table>
+ </div>
+
+ <p class="readonly"><strong>Process impact:</strong> This document is
+ a brief and fairly technical discussion of how the system works under
+ ideal conditions.  It should describe key algorithms, technology
+ dependencies, and operational issues.  Much of the content of this
+ document can be drawn from design documents.  This document will be
+ used by the development, QA, technical support, and operations
+ groups.  The goal is to give those groups the information they need
+ to understand, manage, or begin to troubleshoot the system (i.e.,
+ recognize certain behavior as normal or abnormal).  If significantly
+ more information is needed, it should be organized into a larger
+ "operations guide".</p>
+
+
+
+ <h3>Type of Implementation</h3>
+ <div class="sticky">
+  TODO: Fill in information that will help other engineers understand
+  this system at-a-glance.  Feel free to use relevant technical terms
+  (jargon) and name specific technology platforms.
+ </div>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Type of system</th> 
+   <td>
+    <div class="sample1">Desktop GUI application</div>
+    <div class="sample2">Unix-style command</div>
+    <div class="sample3">Server-side web application</div>
+    <div class="sample4">Web service</div>
+    <div class="sample1">Client-side applet</div>
+    <div class="sample2">Embedded application</div>
+    <div class="sample3">Reusable library</div>
+    <div class="sample4">Reusable class framework</div>
+    <div class="sample1">Browser Plug-in</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Programming Language(s)</th> 
+   <td>
+    <div>Java</div>
+    <div>Perl, Unix shell scripts</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Data Storage</th> 
+   <td>
+    <div class="sample1">Flat files using XML</div>
+    <div class="sample2">Flat files using Java properties file format</div>
+    <div class="sample3">Flat files using Java object serialization format</div>
+    <div class="sample4">SQL database: MySQL</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>UI Technologies</th> 
+   <td>
+    <div class="sample1">Java Swing</div>
+    <div class="sample2">XHTML, CSS, JavaScript</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Security Technologies</th> 
+   <td>
+    <div>Authentication: None needed</div>
+    <div>Authentication: Local username and password file</div>
+    <div>Authentication: LDAP</div>
+    <div>Authorization: Operating system file ownership and
+    read-write-execute flags</div> 
+    <div>Authorization: Access control lists</div> 
+    <div>Encryption: None needed</div> 
+    <div>Encryption: SSL</div> 
+   </td>
+  </tr>
+ </table>
+ </div>
+
+ <h3>Runtime Environment</h3>
+ <div class="sticky">
+  List and describe runtime objects that make up a running system.
+  These objects may be referred to by name in the sections below.
+ </div>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Processes:</th> 
+   <td>
+    <div>Main application process</div>
+    <div>Client and server processes</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Configuration Files:</th> 
+   <td class="sample1">
+
+    <div>PRODUCTNAME.conf: stores application configuration in Java
+    properties file format.</div>
+
+    <div>Section of httpd.conf: configures components of the Apache
+    webserver</div>
+
+   </td> 
+  </tr>
+  <tr>
+   <th>Database Tables:</th> 
+   <td class="sample1">
+    <div>TABLE_ONE: Each row represents a ...</div>
+    <div>TABLE_TWO: Each row represents a ...</div>
+    <div>TABLE_THREE: Each row represents a ...</div>
+   </td> 
+  </tr>
+
+  <tr>
+   <th>Data files:</th> 
+   <td class="sample1">
+    <div>*.ext: Data files saved by the user on their local hard disk.</div>
+
+    <div>/var/PRODUCTNAME/upload-XXXX.dat: Files uploaded to the
+    server.</div>
+   </td>
+  </tr>
+
+  <tr>
+   <th>Temporary files:</th> 
+   <td class="sample1">
+    <div>/tmp/PRODUCTNAME.pid: Process ID of the currently running
+    server process.</div>
+    <div>/tmp/upload-XXXX.dat: Files uploaded to the server before
+    they are processed.</div>
+   </td>
+  </tr>
+
+  <tr>
+   <th>Log files:</th> 
+   <td class="sample1">
+    <div>error.log: Serious errors are put in the normal Apache error
+    log.  Must be writable by Unix user <tt>httpd</tt>.</div>
+
+    <div>PRODUCTNAME.log: Messages indicating the progress of normal
+    operations and some errors.  Must be writable by Unix user
+    <tt>httpd</tt>.</div> 
+   </td>
+  </tr>
+
+ </table>
+ </div>
+
+
+
+ <h3>Implementation of Specific Features</h3>
+ <ul class="sample1">
+  <li><strong>Feature name:</strong> Short description of interesting
+  or unexpected algorithm, limiting assumption, or any other
+  implementation detail that will impact the work of other groups.</li>
+
+  <li><strong>Feature name:</strong> Short description ...
+   <ul>
+    <li>Details</li>
+    <li>Details</li>
+    <li>Details</li>
+   </ul>
+  </li>
+
+  <li><strong>Feature name:</strong> Short description ... The steps are:
+   <ol>
+    <li>Step one</li>
+    <li>Step two</li>
+    <li>Step three</li>
+   </ol>
+  </li>
+
+  <li><strong>Feature name:</strong> Short description ...</li>
+
+  <li><strong>Feature name:</strong> Short description ...</li>
+
+
+ </ul>
+
+ <h3>Operational Procedures</h3>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Install:</th> 
+   <td>See the <a href="install.html">Installation guide</a></td> 
+  </tr>
+  <tr>
+   <th>Upgrade:</th> 
+   <td>See the <a href="install.html">Installation guide</a></td> 
+  </tr>
+  <tr>
+   <th>Start Server:</th> 
+   <td>
+    <ol>
+     <li>Steps...</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Stop Server:</th> 
+   <td>
+    <ol>
+     <li>Steps...</li>
+    </ol>
+   </td> 
+  </tr>
+  <tr>
+   <th>Monitor Activity:</th> 
+   <td>Watch the PRODUCTNAME.log and error.log.</td> 
+  </tr>
+  <tr>
+   <th>Periodic Cleanup:</th> 
+   <td>
+    On rare occasion, /tmp/upload-XXXX.dat files can be left behind.
+    Any such files that are more than a day old can safely be
+    removed.
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+ <h3>Security</h3>
+
+ <p>We take the following precautions to make the system secure:</p>
+ 
+ <ul>
+  <li>One...</li>
+  <li>Two...</li>
+  <li>Three...</li>
+ </ul>
+
+ <p>The security of the system depends on the following external
+ factors:</p>
+
+ <ul>
+  <li>One...</li>
+  <li>Two...</li>
+  <li>Three...</li>
+ </ul>
+
+
+
+ <h3>Performance and Scalability</h3>
+
+ <p>Notes on performance.</p>
+
+ <p>Notes on scalability.</p>
+
+
+
+ <p></p>
+ <div class="sticky">
+  Tip on filling in this template.
+ </div>
+
+
+ <div class="sticky">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/theory-of-operation.html">words
+  of wisdom</a> and discuss ways to improve this template.
+ </div>
+
+</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+</script>
+ <title>Feature Format</title>
+</head>
+
+<body>
+<div class="app">
+
+
+<h2><a href="srs.html">SRS</a> &gt; <a href="feature-set.html">Feature Set</a> &gt; Feature Description Format</h2>
+
+<p class="readonly"> <b>Process impact:</b> This reference page
+documents the format of feature descriptions and gives tips on writing
+them.  You can copy and paste the sample feature descriptions into
+your features.html file.  This file itself should not be edited to
+hold specific features.</p>
+
+
+<a name="F-00"></a> 
+<h3>F-00: FEATURE NAME</h3>
+<div class="axial">
+<table>
+ <tr>
+  <th>Priority:</th>
+  <td>Essential Expected Desired Optional </td>
+ </tr>
+ <tr>
+  <th>Effort:</th>
+  <td>Months Weeks Days Hours</td>
+ </tr>
+ <tr>
+  <th>Risk:</th>
+  <td>Dangerous 3-Risk 2-Risk 1-Risk Safe</td>
+ </tr>
+ <tr>
+  <th>Feature area(s):</th>
+  <td>WORD, WORD, WORD</td>
+ </tr>
+ <tr>
+  <th>Use case(s):</th>
+  <td><a href="use-cases.html#UC-01">UC-01</a></td>
+ </tr>
+ <tr>
+  <th>Description:</th>
+  <td>
+   1-4 PARAGRAPHS.  USE BULLETS OR TABLES TO ORGANIZE INFORMATION.
+   LINK TO WORKSHEETS OR ADDITIONAL INFORMATION.
+   
+   Precise Details:
+   <ul>
+    <li>LOGICAL CONSTRAINT</li>
+    <li>LOGICAL CONSTRAINT</li>
+   </ul>
+
+  </td>
+ </tr>
+ <tr>
+  <th>Notes and Questions:</th>
+  <td>
+   <ul>
+    <li>NOTE</li>
+    <li>NOTE</li>
+    <li>QUESTION</li>
+    <li>QUESTION</li>
+   </ul>
+  </td>
+ </tr>
+</table>
+
+
+<h3>Feature Attribute Values</h3>
+
+<ul>
+ <li>Priority
+  <ul>
+
+   <li>Essential: The system could not or would never be used without
+   this feature.  It would be much harder to test, document, or
+   package the product without this feature.</li>
+
+   <li>Expected: Key stakeholders strongly desire and expect this
+   feature.  It may have been promised to them in a certain release.
+   It's absence would substantially reduce the success of the
+   project.</li>
+
+   <li>Desired: Stakeholders desire this feature.  It's absence would
+   reduce the success of the project.</li>
+
+   <li>Optional: This feature would be nice to have.  Adding it could
+   have some advantage, but delaying it would not have a big effect on
+   the success of the project.</li>
+  </ul>
+ </li>
+
+ <li>Effort
+  <ul>
+   <li>Months: A very large feature that is too big to estimate and
+   should be broken in to smaller, better-defined features.</li>
+
+   <li>Weeks: A large feature that will take 40 to 160 hours to add.</li>
+
+   <li>Days: An average or easy feature that would take less than 40 hours to add.</li>
+
+   <li>Hours: A very easy feature that would take less than 8 hours to add</li>
+
+   <li>Note that "adding" a feature means doing all of it's design,
+   implementation, technical documentation, user documentation, and
+   testing.  Even the easiest feature takes hours to add.</li>
+
+  </ul>
+ </li>
+
+ <li>Risk
+  <ul>
+   <li>Dangerous: Implementing this feature successfully would require
+   overcoming risk factors that are more than three or unknown in
+   number. It should be broken down into parts, better specified, or
+   risk factors should be eliminated prior to implementation.</li>
+
+   <li>3-Risks: Implementing this feature would require three risk
+   factors to be overcome.  Any single release should contain at most
+   a few such high-risk features, and contingency plans should be
+   considered. You should be able to list the risks.</li>
+
+   <li>2-Risks: Implementing this feature would require two risk
+   factors to be overcome. This is normal for challenging
+   features. You should be able to list the risks.</li>
+
+   <li>1-Risk: Implementing this feature as specified would require
+   one risk factor to be overcome.  This is normal for many features.
+   You should be able to describe the risk.</li>
+
+   <li>Safe: Implementing this feature as specified is just a matter
+   of time and effort, there is no real risk of failure.</li>
+
+   <li>A "risk factor" is a task or fact that is currently in doubt,
+   but that must turn out well in order for the feature to be
+   successfully implemented.  See tips on managing risk below. </li>
+  </ul>
+ </li>
+
+</ul>
+
+
+<a name="checklist"></a>
+<h3>Tips on Specifying Features</h3>
+
+<ul>
+ <li>Textual Descriptions... </li>
+
+ <li>Constraints...</li>
+
+ <li>Schema... </li>
+
+ <li>Algebraic specifications... </li>
+
+ <li>Tiny mockups...</li>
+
+ <li>Pseudo code... </li>
+
+ <li>State-based specifications...</li>
+
+ <li>Decision trees and tables...</li>
+
+ <li>Flow charts and UML activity diagrams...</li>
+
+</ul>
+
+
+<h3>Tips on Managing Feature Risk</h3>
+
+<ul>
+
+ <li>If you have features that are high priority, high effort, and
+ high risk, you should go back to the drawing board to change what you
+ are trying to do, break those features down into more manageable
+ parts, or add more time or resources.</li>
+
+ <li>High risk means more effort, because effort must be put into
+ assessment and mitigation of risk factors up front.  Some of the risk
+ factors will not turn out in your favor, so you will need to put in
+ additional effort for rework and re-planning.</li>
+
+ <li>Many risks arise from missing information.  The simplest way to
+ address these is to ask someone who knows or look it up.  E.g., does a
+ particular software component work with internationalized character
+ sets?</li>
+
+ <li>Many computer science issues of algorithms and data structure
+ capacity and performance can be worked out mathematically.  Although
+ these do not give precise performance measures, they can determine
+ the difference between a useful approach and a hopeless approach.
+ E.g., we are storing catalog item descriptions in a flat file, the
+ time it takes to update that file grows linearly with the number of
+ catalog items, which will be hopelessly slow in practice.  E.g., our
+ Java applet will be about 260KB in size, how long will that take to
+ download over a 56Kbps modem?</li>
+
+ <li>A feasibility study is often an exercise in building a small
+ prototype to demonstrate and test some risky aspect of the system.
+ For example, do the web browsers that we want to support properly
+ handle the CSS or JavaScript feature that plan to use?  E.g., can the
+ database work reliably when it's files are stored on a different file
+ server?</li>
+
+</ul>
+
+
+
+
+
+
+</div>
+
+  <div class="sticky">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/feature-format.html">words
+  of wisdom</a> and discuss ways to improve this template.
+  </div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+</script>
+ <title>User Needs</title>
+</head>
+
+<body>
+<div class="app">
+
+ <h2>User Needs</h2>
+
+ <h3>Project Information</h3>
+ <div class="axial">
+ <table>
+  <tr>
+   <th>Project:</th> 
+   <td>PROJECTNAME</td>
+  </tr>
+  <tr>
+   <th>Attached worksheets:</th> 
+   <td>
+    <div>User Needs &gt; <a href="interview-notes.html">Interview Notes</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Related Documents:</th> 
+   <td>
+    <div><a href="proposal.html">Project Proposal</a> &gt; <a href="target-and-benefits.html">Target Audience and Benefits</a></div>
+    <div><a href="srs.html">Software Requirements Specification</a></div>
+    <div><a href="glossary.html">Glossary</a></div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+ <p class="readonly"><strong>Process impact:</strong> The statement of
+ user needs documents and explains the actual desires of stakeholders
+ in roughly their own words.  What they <i>desire</i> is never exactly
+ what the product <i>provides</i>.  Documenting user needs here,
+ independently from the <a href="srs.html">SRS</a>, helps to keep the
+ SRS precise and makes the tasks of verification and validation more
+ effective.  This document is <em>not</em> an informal draft of the
+ SRS, it is different document with a complementary purpose.
+ </p>
+
+
+ <h3>Agreed Goals</h3>
+
+ <div class="sticky">
+  TODO: Has there been a clear statement of the overall goal of this
+  project that the stakeholders agree to?  If so, paste it here or add
+  a hyperlink.  If not, you should summarize your understanding of the
+  project goals into a brief statement and try to get the stakeholders
+  to agree to it.  The text below gives three alternative examples,
+  select one, or write your own.
+ </div>
+
+ <p>We were given an <a href="#">initial project description</a> that
+ is agreed to by all stakeholders.</p>
+
+ <p>After several interviews and brainstorming sessions, we have <a
+ href="#">revised project description</a> that has been agreed to by
+ all stakeholders.</p>
+
+ <p>There are still a few different (but overlapping) visions of what
+ this project needs to achieve.  When a single joint vision is agreed
+ to, it will be hyper-linked from here.</p>
+
+
+
+
+ <h3>Environment</h3>
+
+ <div class="sticky">
+  TODO: Briefly describe various aspects of the environment where the
+  software will be used.  Describe the environment as it <i>is</i> or
+  <i>will be</i>, not what you would wish it to become.  The text
+  below gives a few examples.
+ </div>
+
+ <dl>
+
+  <dt>What is the system's business environment?</dt>
+
+  <dd>Each real estate agent works with a set of potential buyers and
+  sellers.  Real estate agents do not share customer data with other
+  agents, because they do not want to share commissions.  Information
+  on specific available homes changes daily, and this tool must help
+  them keep up.</dd>
+
+  <dd>Game players may visit several free web sites to find
+  information about teams or "clans".  There is usually more
+  information available than they would choose to read, the challenge
+  is in having the most fun with the least effort.  This website must
+  be familiar to players who have used other sites, but it must also be
+  better.</dd>
+
+
+  <dt>What is the system's physical environment?</dt>
+
+  <dd>This system is a web server that will run on a machine in a
+  co-located data center with 24x7 monitoring, UPS, air-conditioning,
+  etc.  Users of this system are typically at their offices.</dd>
+
+  <dd>This application runs on hand-held devices that will often be
+  used while the user is walking from one section of the warehouse to
+  another.  Lighting is good in that environment, but there are many
+  noises and distractions.</dd>
+
+
+  <dt>What is the system's technology environment (hardware and software)?</dt>
+
+  <dd>60% of game players have machines with P-II or equivalent
+  processors, while 30% have P-I machines, and 10% have less powerful
+  machines.  While many users have 17-inch monitors, 15-inch monitors
+  or laptops with 1024x768 resolution are also common.</dd>
+
+  <dd>65% of game players are using Windows 98 or Me. 30% are using
+  NT, 2000, or XP. The remaining 5% use Mac OS X, Mac OS 9, or
+  Linux.</dd>
+
+
+ </dl>
+
+
+ <h3>Stakeholders / Actors</h3>
+
+ <div class="sticky">
+  TODO: List and describe the stakeholders for this product.  These
+  can be named individuals or roles that people play.  For each
+  stakeholder, list/rank their key needs.  Consider the expected
+  technical expertise of the stakeholders and how often they are
+  likely to use the system, as well as key strengths, weaknesses,
+  preferences, or other characteristics.
+ </div>
+
+ <div class="sticky"> TIP: Use HTML anchors so that other documents
+ (like use-cases) can link to specific stakeholders.
+ </div>
+
+ <div class="sticky"> TIP: To get information on types of users, you
+ can talk to actual users.  You may also want to talk to user
+ surrogates (people who work with users), such as domain experts,
+ technical trainers, technical support staff, technical writers,
+ supervisors of users, and your own sales and marketing department.
+ You can find clues in manuals and marketing materials for competing
+ products.
+ </div>
+
+ <dl>
+  <a name="all"></a>
+  <dt>All</dt>
+
+  <dd>All stakeholders share the follow key needs:  
+   <ol>
+    <li>Security against abuses by other site visitors</li>
+    <li>Convenient access to the site any time over the Internet</li>
+   </ol>
+  </dd>
+
+
+  <a name="player"></a>
+  <dt>Player</dt>
+
+  <dd>Players want to have fun.  That means a sense of discovery,
+  challenge, satisfaction, and community.  Some players who become
+  involved in clans will spend a few hours a week, while others will
+  spend over 20 hours a week.  So, they need new content posted often
+  to keep them interested.  Players involved in clans are often power
+  users and have high expectations for the functionality and quality
+  of the site, but they may not have much knowledge of computer
+  science.
+
+   <p>Key needs:</p>
+   <ol>
+    <li>Easily find information about clans</li>
+    <li>Keep in touch with members of his/her own clan</li>
+    <li>Understand the date and time of tournament play</li>
+    <li>Easily report cheaters</li>
+   </ol>
+  </dd>
+
+  <a name="STAKEHOLDER1"></a>
+  <dt>STAKEHOLDER1</dt>
+
+  <dd>PARAGRAPH</dd>
+
+  <a name="STAKEHOLDER1"></a>
+  <dt>STAKEHOLDER2</dt>
+
+  <dd>PARAGRAPH</dd>
+
+  <a name="STAKEHOLDER1"></a>
+  <dt>STAKEHOLDER3</dt>
+
+  <dd>PARAGRAPH</dd>
+ </dl>
+
+ <h3>Notes from Interviews and Brainstorming</h3>
+
+ <div class="sticky">
+  TODO: Keep a log of your requirements gathering.  Paste in notes
+  from any face-to-face or telephone conversations with stakeholders
+  or from brainstorming sessions with members of the development team.
+  If the communication took place via email, link to it in the archive
+  or paste it here.
+ </div>
+
+ <dl>
+  <dt>DATE, INTERVIEWEE</dt>
+
+  <dd><a href="interview-notes.html">interview with INTERVIEWEE</a></dd>
+
+  <dt>DATE, INTERVIEWEE</dt>
+
+  <dd>NOTES FROM INTERVIEW...(pasted here)</dd>
+
+  <dt>DATE, INTERVIEWEE</dt>
+
+  <dd>NOTES FROM INTERVIEW...(pasted here)</dd>
+
+  <dt>DATE, PARTICIPANTS</dt>
+
+  <dd>NOTES FROM BRAINSTORMING SESSION...(pasted here)</dd>
+
+  <dt>DATE, PARTICIPANTS</dt>
+
+  <dd><a href="LINK TO ARCHIVE">email from INTERVIEWEE</a></dd>
+
+ </dl>
+
+
+ <h3>User Stories</h3>
+
+ <div class="sticky">
+  TODO: Write brief user stories to explain how various actors would
+  interact with the system (directly and indirectly) to accomplish a
+  real-world goal.  User stories are <em>not</em> use cases: user
+  stories are brief (3-5 sentences) paragraphs that describe one
+  specific scenario in concrete terms.  In this description of user
+  needs, do not make assumptions about details of the system, instead
+  focus on the users.
+ </div>
+
+ <div class="sticky">
+  TIP: Note the source of each user story.
+ </div>
+
+
+ <dl>
+  <a name="invited-to-join"></a>
+  <dt>invited-to-join</dt>
+
+  <dd>John has gotten pretty good at SuperShooter by playing on public
+  servers about 8 hours a week for the last 3 weeks.  John has chatted
+  with Bob about strategies and they have enjoyed some duels.  Bob is
+  a member of the RedDawn clan. That clan plays a tournament on a
+  private server Friday nights.  Bob invites John to visit the RedDawn
+  website and join.  (Source: <a
+  href="interview-notes.html">INTERVIEWEE</a>)</dd>
+
+
+  <a name="finding-the-tournament"></a>
+  <dt>finding-the-tournament</dt>
+
+  <dd>Bob is visiting his friend.  He tries to use his friend's
+  computer to log onto the RedDawn SuperShooter tournament.  But, he
+  does not remember the exact name of the server.  So, he visits the
+  RedDawn clan website to find that information.  (Source:
+  PERSONNAME)</dd>
+
+  <a name="STORYNAME1"></a>
+  <dt>STORYNAME1</dt>
+
+  <dd>PARAGRAPH</dd>
+
+  <a name="STORYNAME2"></a>
+  <dt>STORYNAME2</dt>
+
+  <dd>PARAGRAPH</dd>
+
+
+  <a name="STORYNAME3"></a>
+  <dt>STORYNAME3</dt>
+
+  <dd>PARAGRAPH</dd>
+ </dl>
+
+
+
+ <h3>Performance and Capacity Needs</h3>
+
+ <div class="sticky">
+  TODO: Briefly list the stakeholders' desired values for various
+  aspects of the system capacity.  If you have a good idea about
+  averages or rates of increase, note that as well.
+ </div>
+
+ <p>By the end of the first year of service, we should expect:</p>
+
+ <ul>
+  <li>50,000 user records in the clan website account database (rate:
+  50-500 new registrations each day)</li>
+
+  <li>1000 users browsing the web site any given time</li>
+  <li>1000 gaming clans</li>
+  <li>1000 members of a single clan (average: 8)</li>
+  <li>4 MB max disk space for each clan (average: 0.5 MB)</li>
+  <li>100 game vendors posting advertisements on the site</li>
+  <li>1000 actual advertisements in the database</li>
+ </ul>
+
+
+
+</div>
+
+ <p></p>
+
+ <div class="sticky">
+  TODO:  Check for <a
+  href="http://readyset.tigris.org/words-of-wisdom/user-needs.html">words
+  of wisdom</a> and discuss ways to improve this template.
+ </div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  All rights reserved. <a href="readyset-license.html">License terms</a>.
+ Retain this copyright statement whenever this file is used as a
+ template.
+</div>
+
+</body>
+</html>
