@@ -4,7 +4,7 @@ function toggle(elm) {
 
  var e = elm.nextSibling; 
  while (e != null) {
-  if (e.tagName == "OL") {
+  if (e.tagName == "OL" || e.tagName == "ol") {
    if (e.style.display == "none") {
     newDisplay = "block";
     elm.style.background = 'url(/branding/images/sstree/folder-open.gif)';
@@ -15,7 +15,7 @@ function toggle(elm) {
  }
 
  while (e != null) {
-  if (e.tagName == "OL") e.style.display = newDisplay;
+  if (e.tagName == "OL" || e.tagName == "ol") e.style.display = newDisplay;
   e = e.nextSibling;
  }
 
