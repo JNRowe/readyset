@@ -1,4 +1,4 @@
-/* $Id: inst.css,v 1.13 2004/01/31 20:29:13 jrobbins Exp $
+/* $Id: inst.css,v 1.14 2004/03/02 18:05:35 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
@@ -57,6 +57,30 @@ code, pre, textarea {
  background: #ffc;
  border-right-color: #aaa;
  border-bottom-color: #aaa;
+}
+
+.tip {
+ background: #ffc;
+ background-image: url(http://www.readysetpro.com/css/tip.png);
+ background-repeat: no-repeat;
+ background-position: top left;
+ border-right-color: #aaa;
+ border-bottom-color: #aaa;
+ padding-left: 36px;
+ min-width: 30px; min-height: 30px;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.readysetpro.com/css/tip.png',sizingMethod='scale');
+}
+
+.todo {
+ background: #ffc;
+ background-image: url(http://www.readysetpro.com/css/todo.png);
+ background-repeat: no-repeat;
+ background-position: top left;
+ border-right-color: #aaa;
+ border-bottom-color: #aaa;
+ padding-left: 36px;
+ min-width: 30px; min-height: 30px;
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.readysetpro.com/css/todo.png',sizingMethod='scale');
 }
 
 .readonly {
