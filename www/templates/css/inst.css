@@ -1,4 +1,4 @@
-/* $Id: inst.css,v 1.8 2003/06/18 18:48:15 jrobbins Exp $
+/* $Id: inst.css,v 1.9 2003/06/18 19:19:49 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
@@ -34,7 +34,7 @@ h4 {
  border-left: solid 0.5em #666;
 }
 
-#bodycol h3, h4 { border: 0; }
+#bodycol h3, #bodycol h4 { border: 0; }
 
 .readyset td { background: #eee !important; }
 
