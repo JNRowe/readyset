@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Casos de Uso</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+<h2><a href="qa-plan.html">Plan de QA</a> &gt; <a href="test-suite.html">Conjunto de Pruebas</a> &gt; Casos de Prueba</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="test-case-format.html">Formato de caso de prueba de sistema</a></div>
+    <div>LIGAS A ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+<div class="sample1">
+<a name="login_1"></a>
+<h3>login_1: Inicio normal de sesión de usuario</h3>
+<div class="axial">
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   Probar que los usuarios pueden inicar sesión con el nombre de usuario apropiado o cuenta de email
+   y su contraseña.
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   <div>El usuario no ha iniciado sesión todavía.</div>
+   <div>El usuario testuser existe, y la cuenta es válida.</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   <div>usernameOrEmail = {testuser, bogususer, testuser@nospam.com, test@user@nospam.com, vacío}</div> 
+   <div>password = {válida, inválida, vacío}</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   <ol>
+    <li>visitar LoginPage</li>
+    <li>teclear usernameOrEmail</li>
+    <li>teclear password</li>
+    <li>hacer click en Entrar</li>
+    <li>ver: la página de los términos de uso</li>
+    <li>hacer click hasta el fondo de la página</li>
+    <li>hacer en click Aceptar</li>
+    <li>ver: PersonalPage</li>
+    <li>verificar el mensaje de bienvenida si el inicio de sesión es correcto</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>Se asume que el usuario no ha aceptado aún los términos de uso..</li>
+    <li>¿Esto funciona sin las cookies del navegador?</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+</div>
+
+
+<div class="sample1">
+<a name="login_2"></a>
+<h3>login_2: Inicio de sesión bloqueado</h3>
+<div class="axial">
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   Probar que unusuario que ha sido bloqueado por un moderador no pueda
+   iniciar sesión. Deberán ver un mensaje indicando que han sido bloqueados.
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   <div>El usuario no ha iniciado sesión todavía.</div>
+   <div>El usuario testuser2 existe y ha sido bloqueado</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   <div>usernameOrEmail = {testuser2, testuser2@nospam.com}</div> 
+   <div>password = {válida}</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   <ol>
+    <li>visitar LoginPage</li>
+    <li>teclear usernameOrEmail</li>
+    <li>teclear password</li>
+    <li>hacer click en Entrar</li>
+    <li>ver: LoginPage</li>
+    <li>verificar que el mensaje de advertencia sea el mensaje de bloqueo de sesión</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>¿Esto funciona sin las cookies del navegador?</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+</div>
+
+
+<a name="unique-test-case-id1"></a>
+<h3>caso-único-de-prueba-id1: Título de Caso de Prueba</h3>
+
+<div class="axial">
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   <div>VAR = {VALORES}</div> 
+   <div>VAR = {VALORES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   <ol>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>verificar ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>NOTA</li>
+    <li>PREGUNTA</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<a name="unique-test-case-id2"></a>
+<h3>caso-único-de-prueba-id2: Título de Caso de Prueba</h3>
+
+<div class="axial">
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   <div>VAR = {VALORES}</div> 
+   <div>VAR = {VALORES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   <ol>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>verificar ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>NOTA</li>
+    <li>PREGUNTA</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<a name="unique-test-case-id3"></a>
+<h3>caso-único-de-prueba-id3: Título de Caso de Prueba</h3>
+
+<div class="axial">
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   <div>VAR = {VALORES}</div> 
+   <div>VAR = {VALORES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   <ol>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>verificar ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>NOTA</li>
+    <li>PREGUNTA</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<a name="unique-test-case-id4"></a>
+<h3>caso-único-de-prueba-id4: Título de Caso de Prueba</h3>
+
+<div class="axial">
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   <div>VAR = {VALORES}</div> 
+   <div>VAR = {VALORES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   <ol>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>verificar ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>NOTA</li>
+    <li>PREGUNTA</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<a name="unique-test-case-id5"></a>
+<h3>caso-único-de-prueba-id5: Título de Caso de Prueba</h3>
+
+<div class="axial">
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   <div>VAR = {VALORES}</div> 
+   <div>VAR = {VALORES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   <ol>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>verificar ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>NOTA</li>
+    <li>PREGUNTA</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+
+<a name="unique-test-case-id6"></a>
+<h3>caso-único-de-prueba-id6: Título de Caso de Prueba</h3>
+
+<div class="axial">
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   ORACIONES
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   <div>VAR = {VALORES}</div> 
+   <div>VAR = {VALORES}</div> 
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   <ol>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>PASO</li>
+    <li>verificar ...</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>NOTA</li>
+    <li>PREGUNTA</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

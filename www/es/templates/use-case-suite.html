@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Conjunto de Casos de Uso</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+
+<h2><a href="srs.html">SRS</a> &gt; Conjunto de Casos de Uso</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="proposal.html">Propuesta de proyecto</a></div>
+    <div><a href="user-needs.html">Requerimientos del Usuario</a></div>
+    <div>SRS &gt; <a href="feature-set.html">Conjunto de Características</a></div>
+    <div><a href="use-case-format.html">Formato de caso de uso</a></div>
+    <div><a href="LINK-TO-DIAGRAM">Diagrama de caso de uso</a></div>
+    <div>LIGAS A OTROS ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+
+<a name="processimpact"></a>
+<p class="readonly"><b>Impacto del proceso:</b> Un conjunto de casoas de uso es simplemente
+una tabla de contenido para los casos de uso indiviuales.  Como en un conjunto de pruebas,
+organizar el conjunto de casos de uso por prioridad, área de funcionalidad,
+actor, objeto de negocio o entrega puede ayudar a identificar las partes del
+sistema que necesitan casos de uso adicionales.</p>
+
+<div class="sticky"> 
+  TAREAS: Antes de escribir los casos de uso individuales, enumere los casos de uso
+  que piense que podría necesitar- Organízelos de forma que a propósito
+  queden espacios en blanco visibles en esta página si le hacen falta casos de
+  uso.  Por ejemplo, vea "Escalabilidad y disponibilidad". Escoja uno o más de las
+  estructuras mostradas abajo.
+</div>
+
+<div class="sticky"> 
+  SUGERENCIA: Refiérase a las historias de usuarios en su documento de <a
+  href="user-needs.html">requerimientos del usuario</a>.  Úselos para sacar ideas
+  y asegurarse de que los cubre todos. Recuerde que los casos de uso
+  son más precisos que las historias de los usuarios, y puede haber varios
+  casos de uso en una historia dada.
+</div>
+
+<div class="sticky"> 
+  SUGERENCIA: El conjunto de casos de uso puede ser organizado como listas anidadas
+  de acuerdo a criterio de cobertura, por ejemplo, un actor.  O puede
+  ser organizada en tablas que consideren dos aspectos al mismo tiempo,
+  por ejemplo, objetos de negocio vs. actores.  Si una determinada sección del árbol de tablas
+  no necesita casos de uso, márquela explícitamente con "N/A".
+  De otra forma, márquela como "PARA HACER".
+</div>
+
+
+
+
+<a name="byfunction"></a>
+<h3>Casos de Uso por Área Funcional</h3>
+
+<ul>
+ <li>Administración de cuentas de usuarios
+  <ul>
+   <li><a href="use-cases.html#CU-00">CU-00</a> Configurar el sitio</li>
+   <li><a href="use-cases.html#CU-01">CU-01</a> Registrar un nuevo usuario</li>
+   <li><a href="use-cases.html#CU-02">CU-02</a> Solicitar una contraseña nueva</li>
+   <li><a href="use-cases.html#CU-03">CU-03</a> Editar el perfil del usuario</li>
+   <li><a href="use-cases.html#CU-04">CU-04</a> Ver el perfil del usuario</li>
+  </ul>
+ </li>
+
+ <li>Manejo de Curso
+  <ul>
+   <li><a href="use-cases.html#CU-10">CU-10</a> Crear un Curso</li>
+   <li><a href="use-cases.html#CU-11">CU-11</a> Ver la descripción del catálogo</li>
+   <li><a href="use-cases.html#CU-31">CU-31</a> Asignar un aula al curso</li>
+  </ul>
+ </li>
+
+ <li>Inscripción al Curso
+  <ul>
+   <li><a href="use-cases.html#CU-20">CU-20</a> Inscripción al curso</li>
+   <li><a href="use-cases.html#CU-21">CU-21</a> Abandonar el curso</li>
+  </ul>
+ </li>
+
+
+ <li>Escalabilidad y disponibilidad
+  <ul>
+   <li>N/A: Estas características son completamente automaticas e internas,
+   los usuarios nunca interactuan con ellas</li>
+  </ul>
+ </li>
+
+ <li>Administración de las Instalaciones
+  <ul>
+   <li><a href="use-cases.html#CU-30">CU-30</a> Ver la descripción de un aula</li>
+   <li><a href="use-cases.html#CU-31">CU-31</a> Asignar curso a un aula</li>
+  </ul>
+ </li>
+
+ <li>_Calificación y transcripciones
+  <ul>
+   <li>PARA HACER: faltan de escribir casos de uso</li>
+  </ul>
+ </li>
+
+ <li>ÁREA FUNCIONAL SIETE
+  <ul>
+   <li><a href="use-cases.html#CU-70">CU-70</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-71">CU-71</a> NOMBRE DEL CASO DE USO</li>
+  </ul>
+ </li>
+
+ <li>ÁREA FUNCIONAL OCHO
+  <ul>
+   <li><a href="use-cases.html#CU-80">CU-80</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-81">CU-81</a> NOMBRE DEL CASO DE USO</li>
+  </ul>
+ </li>
+
+ <li>ÁREA FUNCIONAL NUEVE
+  <ul>
+   <li><a href="use-cases.html#CU-90">CU-90</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-91">CU-91</a> NOMBRE DEL CASO DE USO</li>
+  </ul>
+ </li>
+
+</ul>
+
+
+
+<a name="bystakeholder"></a>
+<h3>Casos de Uso del Inversionsta</h3>
+
+<p>Esta información se muestra en el <a href="LINK-TO-DIAGRAM">diagrama de caso
+de uso</a>, pero se muestra aquí como una lista o tabla para poder detectar
+los casos de uso que hagan falta.</p>
+
+
+<ul>
+ <li>All Inversionistas
+  <ul>
+   <li><a href="use-cases.html#CU-11">CU-11</a> Ver descripción del catálogo</li>
+   <li><a href="use-cases.html#CU-30">CU-30</a> Ver la descripción del aula</li>
+  </ul>
+ </li>
+
+ <li>Estudiantes
+  <ul>
+   <li><a href="use-cases.html#CU-01">CU-01</a> Registrar como nuevo un nuevo usuario</li>
+   <li><a href="use-cases.html#CU-02">CU-02</a> Solicitar nueva contraseña</li>
+   <li><a href="use-cases.html#CU-03">CU-03</a> Editar el perfil del usuario</li>
+   <li><a href="use-cases.html#CU-20">CU-20</a> Inscribirse a un curso</li>
+   <li><a href="use-cases.html#CU-21">CU-21</a> Abandonar el curso</li>
+  </ul>
+ </li>
+
+ <li>Instructores
+  <ul>
+   <li><a href="use-cases.html#CU-04">CU-04</a> Ver el perfil del usuario</li>
+  </ul>
+ </li>
+
+ <li>Administradores
+  <ul>
+   <li><a href="use-cases.html#CU-00">CU-00</a> Configurar el sitio</li>
+   <li><a href="use-cases.html#CU-10">CU-10</a> Crear un curso</li>
+   <li><a href="use-cases.html#CU-31">CU-31</a> Asignar curso a un aula</li>
+  </ul>
+ </li>
+
+ <li>Ejecutivos
+  <ul>
+   <li>N/A: este inversionista nunca interactua directamente con el sistema</li>
+  </ul>
+ </li>
+
+ <li>Vendedores
+  <ul>
+   <li>PARA HACER: faltan de escribir casos de uso</li>
+  </ul>
+ </li>
+
+ <li>INVERSIONISTA
+  <ul>
+   <li><a href="use-cases.html#CU-70">CU-70</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-71">CU-71</a> NOMBRE DEL CASO DE USO</li>
+  </ul>
+ </li>
+
+ <li>INVERSIONISTA
+  <ul>
+   <li><a href="use-cases.html#CU-80">CU-80</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-81">CU-81</a> NOMBRE DEL CASO DE USO</li>
+  </ul>
+ </li>
+
+ <li>INVERSIONISTA
+  <ul>
+   <li><a href="use-cases.html#CU-90">CU-90</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-91">CU-91</a> NOMBRE DEL CASO DE USO</li>
+  </ul>
+ </li>
+
+
+</ul>
+
+
+<a name="bypriority"></a>
+<h3>Casos de Uso por Prioridad</h3>
+
+<ul>
+ <li>Esenciales
+  <ul>
+   <li><a href="use-cases.html#CU-00">CU-00</a> Configurar el sitio</li>
+   <li><a href="use-cases.html#CU-01">CU-01</a> Registrar un nuevo usuario</li>
+   <li><a href="use-cases.html#CU-10">CU-10</a> Crear un curso</li>
+   <li><a href="use-cases.html#CU-11">CU-11</a> Ver la descripción del catálogo</li>
+   <li><a href="use-cases.html#CU-20">CU-20</a> Inscribirse en un curso</li>
+   <li><a href="use-cases.html#CU-21">CU-21</a> abandonar el curso</li>
+   <li><a href="use-cases.html#CU-30">CU-30</a> Asignar curso a un aula</li>
+   <li><a href="use-cases.html#CU-31">CU-31</a> Asignar curso a un aula</li>
+
+  </ul>
+ </li>
+
+ <li>Esperadas
+  <ul>
+   <li><a href="use-cases.html#CU-02">CU-02</a> Solicitar nueva contraseña</li>
+   <li><a href="use-cases.html#CU-03">CU-03</a> Editar el perfil del usuario</li>
+   <li><a href="use-cases.html#CU-04">CU-04</a> Ver el perfil del usuario</li>
+   <li><a href="use-cases.html#CU-70">CU-70</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-71">CU-71</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-80">CU-80</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-81">CU-81</a> NOMBRE DEL CASO DE USO</li>
+  </ul>
+ </li>
+
+ <li>Deseados
+  <ul>
+   <li>N/A: No hay casos de uso con Prioridad = Deseados</li>
+  </ul>
+ </li>
+
+ <li>Opcionales
+  <ul>
+   <li><a href="use-cases.html#CU-30">CU-30</a> Ver la descripción del aula</li>
+   <li><a href="use-cases.html#CU-90">CU-90</a> NOMBRE DEL CASO DE USO</li>
+   <li><a href="use-cases.html#CU-91">CU-91</a> NOMBRE DEL CASO DE USO</li>
+  </ul>
+ </li>
+
+</ul>
+
+
+<a name="bybusinessobject"></a>
+<h3>Casos de Uso por Objeto de Negocio y Actores</h3>
+
+<table border="1" cellpadding="3" cellspacing="2">
+ <tr>
+  <th>OB \ Actor</th>
+  <th>Todos</th>
+  <th>Estudiante</th>
+  <th>Instructor</th>
+  <th>Administrador</th>
+ </tr>
+	
+ <tr>
+  <th>Registro de estudiante</th>
+  <td>
+   N/A
+  </td>
+  <td>
+   <div><a href="use-cases.html#CU-01">Registrar un nuevo usuario</a></div>
+   <div><a href="use-cases.html#CU-02">Solicitar una contraseña nueva</a></div>
+   <div><a href="use-cases.html#CU-03">Editar el perfil del usuario</a></div>
+  </td>
+  <td><div><a href="use-cases.html#CU-04">Ver el perfil del usuario</a></div>
+  </td>
+  <td>
+   N/A
+  </td>
+ </tr>
+
+ <tr>
+  <th>Curso</th>
+  <td>
+   <div><a href="use-cases.html#CU-11">Ver la descripción del catálogo</a></div>
+  </td>
+  <td>
+   <div><a href="use-cases.html#CU-20">Inscripción al curso</a></div>
+   <div><a href="use-cases.html#CU-21">Abandonar el curso</a></div>
+  </td>
+  <td>TODO</td>
+  <td>
+   <div><a href="use-cases.html#CU-10">Crear un Curso</a></div>
+   <div><a href="use-cases.html#CU-31">Asignar un aula</a></div>
+  </td>
+ </tr>
+
+
+ <tr>
+  <th>Room</th>
+  <td>
+   <div><a href="use-cases.html#CU-30">Ver la descripción del aula</a></div>
+  </td>
+  <td>
+   N/A
+  </td>
+  <td>
+   N/A
+  </td>
+  <td>
+     <div><a href="use-cases.html#CU-31">Asignar un aula</a></div>
+  </td>
+ </tr>
+
+
+
+</table>
+
+
+</div>
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

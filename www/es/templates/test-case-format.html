@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Formato de Casos de Prueba</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+<h2><a href="qa-plan.html">Plan de QA</a> &gt; <a href="test-suite.html">Conjunto de Pruebas</a> &gt; Formato de Caso de Pruebas</h2>
+
+<div class="readonly"> 
+
+ <a name="processimpact"></a>
+ <b>Impacto del proceso:</b> Esta página de referencia documenta el formato de
+ los casos de prueba y da sugerencias para escribir los casos de prueba. Ud. puede copiar y
+ pegar el caso de prueba de ejemplo en su archivo test-cases.html.  Este archivo
+ no debería ser editado para casos de prueba específicos.
+
+ <p>Este formato de caso de prueba es adecuado para casos de pruebas manuales de sistema.
+ </p>
+
+ Los casos de prueba deberían de ser escritos con el detalle suficiente para que
+ un nuevo miembro del equipo pueda empezar rápidamente a ejecutar pruebas y a
+ encontrar defectos.
+</div>
+
+<a name="unique-test-case-id"></a>
+<h3>caso-de-prueba-único: Título de Casos de Prueba</h3>
+
+<div class="axial">
+<table border="0" cellspacing="2" cellpadding="3" width="100%">
+ <tr>
+  <th>Propósito:</th>
+  <td>
+   Una o dos oraciones cortas sobre el aspecto del sistema que está siendo
+   probado. Si esto toma mucho tiempo, rompa el caso de prueba o ponga más información
+   en las descripciones de las carcterísticas.
+  </td>
+ </tr>
+
+ <tr>
+  <th>Prerequisitos:</th>
+  <td>
+   Suposiciones que deben cumplirse antes de que correr el caso de prueba. Por ejemplo,
+   &quot;registrado&quot;, &quot;inicio de sesión como invitado permitido&quot;, &quot;el usuario
+   testuser existe&quot;.
+  </td>
+ </tr>
+
+ <tr>
+  <th>Datos de Prueba:</th>
+  <td>
+   Lista de variables y sus posibles valores usados en el caso de prueba.
+   Ud. puede enlistar valores espcíficos o describir rangos de valores. El caso de prueba
+   deberá ser ejecutado una vez por cada <em>combinación</em> de
+   valores.  Estos valores se escriben notación de asignación, uno por
+   línea. Por ejemplo:
+   <div>loginID = {loginID válido, loginID inválido, email válido, email inválido , vacío}</div> 
+   <div>password = {válido, inválido, vacío}</div>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Pasos:</th>
+  <td>
+   Pasos a ejecutar la prueba. Vea las reglas de formateo para pasos abajo.
+   <ol>
+    <li>visitar LoginPage</li>
+    <li>teclear usernameOrEmail</li>
+    <li>teclear password</li>
+    <li>hacer click en Entrar</li>
+    <li>ver: la página de los términos de uso</li>
+    <li>hacer click hasta el fondo de la página</li>
+    <li>hacer en click Aceptar</li>
+    <li>ver: PersonalPage</li>
+    <li>verificar el mensaje de bienvenida si el inicio de sesión es correcto</li>
+   </ol>
+  </td>
+ </tr>
+
+ <tr>
+  <th>Notas y Preguntas:</th>
+  <td>
+   <ul>
+    <li>NOTA</li>
+    <li>PREGUNTA</li>
+   </ul>
+  </td>
+ </tr>
+
+</table>
+</div>
+
+
+<a name="choosingtestdata"></a>
+<h3>Escogiendo los Datos de Prueba</h3>
+
+<p>En la spruebas de sistema, los datos de prueba deberá cubrir los posibles valores de
+cada parámetro basado en los requerimientos. Debido a que probar
+<em>cada uno</em> de los valores es impráctico, se deberán de escoger unos cuantos valores
+de cada clase de equivalencia. Una clase de equivalencia es un conjunto de valores
+que deberán ser tratados igual.</p>
+
+<p>Idealmente, los casos de prueba que evalúan condiciones de error son escritos
+de forma separada del los casos de prueba funcionales y deberán incluir pasos para
+verificar los mensajes de error y los registros. En la realidad, los casos de prueba para errores
+no se han escrito aún, es correcto que los evaluadores revisen las condiciones de error
+cuando estén realizando casos de prueba de funcionamiento normal. Debería estar claro
+que datos de prueba, si existen, se espera que disparen errores.
+
+<p>Ejemplos de clases de equivalencia:</p>
+
+<dl>
+ <dt>Cadenas</dt>
+ <dd>
+  <ul>
+   <li>cadena vacía</li>
+   <li>cadena consistnete de únicamente un espacio vacío</li>
+   <li>cadena que empieza o termina en un espacio en blanco</li>
+   <li>sintácticamente correcta: valores cortos y largos</li>
+   <li>sintácticamente correcta: valores semánticamente válidos e inválidos</li>
+   <li>valor sintácticamente incorrecto: caracteres o combinaciones ilegales</li>
+   <li>asegúrese de probar caracteres especiales como #, &quot;, ', &amp;, y &lt;</li>
+   <li>asegúrese de probar caracteres "extranjeros" escritos desde teclados internacionales</li>
+  </ul>
+ </dd>
+
+ <dt>Números</dt>
+ <dd>
+  <ul>
+   <li>cadena vacía, si es posible</li>
+   <li>0</li>
+   <li>pequeños y largos en rangos positivos</li>
+   <li>pequeños y largos en rangos negativos</li>
+   <li>fuera del rango de positivos</li>
+   <li>fuera del rango de negativos</li>
+   <li>que comiencen con ceros</li>
+   <li>sintácticamente inválidos (por ejemplo, que incluya letras)</li>
+  </ul>
+ </dd>
+
+ <dt>Identificadores</dt>
+ <dd>
+  <ul>
+   <li>cadena vacía</li>
+   <li>valor sintácticamente correcto</li>
+   <li>sintácticamente correcto: refrencia a un ID existente, referencia inválida</li>
+   <li>valor sintácticamente incorrecto</li>
+  </ul>
+ </dd>
+
+ <dt>Botones de opción (radio)</dt>
+ <dd>
+  <ul>
+   <li>un objeto seleccionado</li>
+   <li>nada seleccionado, si es posible</li>
+  </ul>
+ </dd>
+
+ <dt>Botones de opción múltiple</dt>
+ <dd>
+  <ul>
+   <li>seleccionados</li>
+   <li>sin seleccionar</li>
+  </ul>
+ </dd>
+
+ <dt>Menus de pestaña</dt>
+ <dd>
+  <ul>
+   <li>seleccione un elemento en cada turno</li>
+  </ul>
+ </dd>
+
+ <dt>Listas con Scroll</dt>
+ <dd>
+  <ul>
+   <li>no seleccione ningún elemento, si es posible</li>
+   <li>seleccione un elemento en cada turno</li>
+   <li>seleccione combinaciones de elementos, si es posible</li>
+   <li>seleccione todos los elementos, si es posible</li>
+  </ul>
+ </dd>
+
+ <dt>Subir archivos</dt>
+ <dd>
+  <ul>
+   <li>en blanco</li>
+   <li>archivo de 0 byte</li>
+   <li>archivos grandes</li>
+   <li>archivo con nombre corto</li>
+   <li>archivo con nombre grande</li>
+   <li>nombre de archivo sintácticamente incorrecto, si es posible (por ejemplo, &quot;Nombre Con Espacios.tar.gz&quot;)</li>
+  </ul>
+ </dd>
+
+</dl>
+
+
+<a name="steps"></a>
+<h3>Formato de los pasos de las pruebas</h3>
+
+<p>Cada paso puede ser escrito de forma muy conscisa utilizando las siguientes frases:</p>
+
+<dl>
+ <dt>login [como ROL-O-USUARIO]</dt>
+
+ <dd>Registrese en el sistema con un nombre de usuario dado o un usuario de un tipo
+ dado. Usualmente se menciona de forma específica cuando el caso de prueba depende de
+ los permisos de un rol en particular o un involucra un flujo de trabajo entre diferentes
+ usuarios.</dd>
+
+ <dt>visitar LUGAR</dt>
+
+ <dd>Visitar una página o pantalla. Para aplicaciones web, LUGAR puede ser
+ una hiperliga. El lugar deberá ser un punto de inicio bien definido (Por ejemplo,
+ la pantalla de inicio de sesión), navegar a través de páginas específicas debería ser parte
+ de la prueba.</dd>
+
+ <dt>introduzca NOMBRE-DEL-CAMPO [como VALOR] [en LUGAR-DE-LA-PANTALLA]</dt>
+
+ <dd>llene un campo determinado de una forma.  VALOR puede ser un valor literal o el nombre
+ de una variable definida en la sección "Datos de Prueba". El
+ NOMBRE-DEL-CAMPO en si puede ser un nombre de variable cuando el campo de la UI para ese
+ valor este libre de contexto. Por ejemplo, "introduzca password". </dd>
+
+ <dt>introduzca CAMPOS</dt>
+
+ <dd>Llene todos los campos de una forma cuando sus valores esten libres de 
+ contexto o cuando los valores específicos no son importantes en el caso de
+ prueba.</dd>
+
+ <dt>haga click &quot;LIGA-ETIQUETA&quot; [en LUGAR-DE-LA-PANTALLA]</dt>
+
+ <dd>Siga una liga etiqeutada o presione un botón. El lugar de la pantalla puede ser
+ un nombre predefinido del panel o una frase. Los nombres predefinidos del panel
+ están basados en los nombres de las clases de la GUI, nombres de la plantilla maestra o títulos de
+ cajas en la página.</dd>
+
+ <dt>haga click NOMBRE-DEL-BOTÓN [en LUGAR-DE-LA-PANTALLA]</dt>
+
+ <dd>Presione un botón dado. Este paso deberá siempre estar seguido por
+ un paso &quot;ver&quot; para evaluar los resultados.</dd>
+
+ <dt>ver: PANTALLA-O-PÁGINA</dt>
+
+ <dd>La persona que ejecute las pruebas deberá ver la pantalla nombrada en la GUI o la página web.  La
+ correción general de la página deberá ser comprobable basado en la descripción de
+ sus características.</dd>
+
+ <dt>verificar CONDICIÓN</dt>
+
+ <dd>La persona que ejecuta las pruebas deberá revisar que la condición ha sido satistefecha.
+ A este tipo de pasos por lo general les sigue un paso &quot;ver:&quot; al final del caso
+ de prueba.</dd>
+
+ <dt>verificar CONTENIDO [es VALOR]</dt>
+
+ <dd>La persona que ejecuta las pruebas deberá ver el contenido nombrado en la página actual,
+ los valores correctos deberán estar libres de datos de prueba, o deberá tenerlos 
+ explícitamente. A este tipo de pasos por lo general les sigue un paso &quot;ver:&quot; al final del caso
+ de prueba.</dd>
+
+ <dt>realice NOMBRE-DEL-CASO-DE-PRUEBA</dt>
+
+ <dd>Este paso es como una llamada a subrutina.  La persona que realiza las pruebas deberá realizar todos los
+ pasos del caso de prueba nombrado y después continuar en el siguiente paso del
+ caso de prueba.</dd>
+</dl>
+
+
+<p>Cada caso de prueba debe incluir un paso de verificación al final para que
+la salida esperada sea muy clara.  Un caso de prueba puede tener muchos pasos de
+verificación en la mitad o al final.  Teniendo muchos pasos de verificación puede
+ser útil si desea un menor de número de pruebas largas en lugar de
+un número de grande de pruebas cortas.</p>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</div>
+</body>
+</html>

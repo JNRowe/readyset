@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "/branding/css/tigris.css"; 
+@import "/branding/css/inst.css"; 
+@import "css/nav.css";
+/*  ]]> */
+ </style>
+
+<script src="js/super-simple-tree.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+
+ <title>Plantilla de Navegación de ReadySET</title>
+</head>
+
+<body onload="collapseAll(); openBookMark();">
+
+
+ <h2><a href="http://readyset.tigris.org/" target="_top">ReadySET</a></h2>
+
+ <ol id="root">
+  <li class="panel"><a id="default" href="#default" class="folder" onclick="toggle(this)"></a>Por Actividad
+   <ol>
+    <li><a id="planning" href="#default.planning" class="folder"  onclick="toggle(this)"></a>Planeación del Proyecto
+     <ol>
+      <li><a href="index.html" target="objects" class="doc"></a><a href="index.html" target="objects">Resumen</a></li>
+      <li><a href="proposal.html" target="objects" class="doc"></a><a href="proposal.html" target="objects">Propuesta</a>
+        <ul>
+      <li><a href="target-and-benefits.html" target="objects"></a><a href="target-and-benefits.html" target="objects">Público y beneficios</a></li>
+        </ul>
+      </li>
+      <li><a href="plan.html" target="objects" class="doc"></a><a href="plan.html" target="objects">Plan de proyecto</a>
+       <ul>
+        <li><a href="resource-needs.html" target="objects">Recursos necesarios</a></li>
+       </ul>
+      </li>
+      <li><a href="legal.html" target="objects" class="doc"></a><a href="legal.html" target="objects">Cuestiones Legales</a></li>
+      <li><a href="qa-plan.html" target="objects" class="doc"></a><a href="qa-plan.html" target="objects">Plan de QA (Aseguramiento de la Calidad)</a></li>
+     </ol>
+    </li>
+    <li><a id="req" href="#default.req" class="folder"  onclick="toggle(this)"></a>Requerimientos y Especificaciones
+     <ol>
+      <li><a href="user-needs.html" target="objects" class="doc"></a><a href="user-needs.html" target="objects">Requerimientos del usuario</a>
+       <ul>
+        <li><a href="interview-notes.html" target="objects">Notas de entrevistas</a></li>
+       </ul>
+      </li>
+      <li><a href="srs.html" target="objects" class="doc"></a><a href="srs.html" target="objects">Especificación de Requerimientos de Software</a>
+       <ul>
+        <li><a href="use-case-suite.html" target="objects">Conjunto de casos de uso</a></li>
+        <li><a href="feature-set.html" target="objects">Conjunto de características</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="design" href="#default.design" class="folder"  onclick="toggle(this)"></a>Arquituctura y Diseño
+     <ol>
+      <li><a href="design.html" target="objects" class="doc"></a><a href="design.html" target="objects">Diseño</a>
+       <ul>
+        <li><a href="design-architecture.html" target="objects">Forma para arquitectura</a></li>
+        <li><a href="design-src-org.html" target="objects">Archivos fuente y compilados</a></li>
+        <li><a href="design-ui.html" target="objects">Forma para interfaz del usuario</a></li>
+        <li><a href="design-persistence.html" target="objects">Forma para persistencia</a></li>
+        <li><a href="design-security.html" target="objects">Forma para securidad</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="impl" href="#default.impl" class="folder"  onclick="toggle(this)"></a>Implementación y Pruebas
+     <ol>
+      <li><a href="userguide.html" target="objects" class="doc"></a><a href="userguide.html" target="objects">Guía del Usuario</a></li>
+      <li><a href="test-suite.html" target="objects" class="doc"></a><a href="test-suite.html" target="objects">Conjuto de Pruebas</a>
+       <ul>
+        <li><a href="test-case-format.html" target="objects">Formato de caso de prueba</a></li>
+        <li><a href="test-cases.html" target="objects">Casos de prueba</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="deploy" href="#default.deploy" class="folder"  onclick="toggle(this)"></a>Entrega e Instalación
+     <ol>
+      <li><a href="release-checklist.html" target="objects" class="doc"></a><a href="release-checklist.html" target="objects">Lista de pendientes de la entrega</a></li>
+      <li><a href="install.html" target="objects" class="doc"></a><a href="install.html" target="objects">Guía de Instalación / Guía de Inicio Rápido</a></li>
+      <li><a href="release-notes.html" target="objects" class="doc"></a><a href="release-notes.html" target="objects">Notas de la versión</a></li>
+      <li><a href="demo-script.html" target="objects" class="doc"></a><a href="demo-script.html" target="objects">Texto para presentaciones</a></li>
+     </ol>
+    </li>
+    <li><a id="ops" href="#default.ops" class="folder"  onclick="toggle(this)"></a>Operaciones y Soporte
+     <ol>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">Preguntas Frecuentes / Solución de problemas</a></li>
+      <li><a href="implementation-notes.html" target="objects"
+   class="doc"></a><a href="implementation-notes.html"
+   target="objects">Notas de implementación</a></li>
+     </ol>
+    </li>
+    <li><a id="continuous" href="#default.continuous" class="folder"  onclick="toggle(this)"></a>Continuidad o Final
+     <ol>
+      <li><a href="glossary.html" target="objects" class="doc"></a><a href="glossary.html" target="objects">Glosario de términos</a></li>
+      <li><a href="status-report.html" target="objects" class="doc"></a><a href="status-report.html" target="objects">Reporte de estado</a></li>
+      <li><a href="review-meeting-notes.html" target="objects" class="doc"></a><a href="review-meeting-notes.html" target="objects">Notas de las juntas de revisión</a></li>
+      <li><a href="postmortem.html" target="objects" class="doc"></a><a href="postmortem.html" target="objects">Report Postmortem</a></li>
+      <li><a href="postmortem-quest.txt" target="objects" class="doc"></a><a href="postmortem-quest.txt" target="objects">Cuestionario Postmortem</a></li>
+      <li><a href="sdm.html" target="objects" class="doc"></a><a href="sdm.html" target="objects">Metolología de desarrollo de software</a></li>
+     </ol>
+    </li>
+ 
+   </ol>
+  </li>
+ 
+<!--
+  <li class="panel"><a id="stake" href="#stake" class="folder"  onclick="toggle(this)"></a>By Stakeholder
+   <ol>
+    <li><a id="everyone" href="#stake.everyone" class="folder"  onclick="toggle(this)"></a>For Everyone
+     <ol>
+      <li><a href="glossary.html" target="objects" class="doc"></a><a href="glossary.html" target="objects">Glossary</a></li>
+      <li><a href="index.html" target="objects" class="doc"></a><a href="index.html" target="objects">Propuesta</a></li>
+      <li><a href="release-checklist.html" target="objects" class="doc"></a><a href="release-checklist.html" target="objects">Release checklist</a></li>
+      <li><a href="user-needs.html" target="objects" class="doc"></a><a href="user-needs.html" target="objects">User needs</a>
+       <ul>
+        <li><a href="interview-notes.html" target="objects">Notas de entrevistas</a></li>
+       </ul>
+      </li>
+      <li><a href="srs.html" target="objects" class="doc"></a><a href="srs.html" target="objects">Software Requirements Specification</a>
+       <ul>
+        <li><a href="use-case-suite.html" target="objects">Use case suite</a></li>
+        <li><a href="feature-set.html" target="objects">Feature set</a></li>
+       </ul>
+      </li>
+      <li><a href="plan.html" target="objects" class="doc"></a><a href="plan.html" target="objects">Project plan</a></li>
+      <li><a href="sdm.html" target="objects" class="doc"></a><a href="sdm.html" target="objects">Software development methodology</a></li>
+     </ol>
+    </li>
+    <li><a id="management" href="#stake.management" class="folder"  onclick="toggle(this)"></a>For Management
+     <ol>
+      <li><a href="status-report.html" target="objects" class="doc"></a><a href="status-report.html" target="objects">Status report</a></li>
+      <li><a href="proposal.html" target="objects" class="doc"></a><a href="proposal.html" target="objects">Proposal</a></li>
+      <li><a href="resource-needs.html" target="objects" class="doc"></a><a href="resource-needs.html" target="objects">Resource needs</a></li>
+      <li><a href="postmortem.html" target="objects" class="doc"></a><a href="postmortem.html" target="objects">Postmortem report</a></li>
+     </ol>
+    </li>
+    <li><a id="dev" href="#stake.dev" class="folder"  onclick="toggle(this)"></a>For Developers
+     <ol>
+      <li><a href="design.html" target="objects" class="doc"></a><a href="design.html" target="objects">Design</a>
+       <ul>
+        <li><a href="design-architecture.html" target="objects">Architecture worksheet</a></li>
+        <li><a href="design-src-org.html" target="objects">Source and build</a></li>
+        <li><a href="design-ui.html" target="objects">User interface worksheet</a></li>
+        <li><a href="design-persistence.html" target="objects">Persistence worksheet</a></li>
+        <li><a href="design-security.html" target="objects">Security worksheet</a></li>
+       </ul>
+      </li>
+      <li><a href="review-meeting-notes.html" target="objects" class="doc"></a><a href="review-meeting-notes.html" target="objects">Review meeting notes</a></li>
+     </ol>
+    </li>
+    <li><a id="qa" href="#stake.qa" class="folder"  onclick="toggle(this)"></a>For QA
+     <ol>
+      <li><a href="qa-plan.html" target="objects" class="doc"></a><a href="qa-plan.html" target="objects">QA Plan</a></li>
+      <li><a href="test-suite.html" target="objects" class="doc"></a><a href="test-suite.html" target="objects">Test suite</a>
+       <ul>
+        <li><a href="test-case-format.html" target="objects">Test case format</a></li>
+        <li><a href="test-cases.html" target="objects">Test cases</a></li>
+       </ul>
+     </ol>
+    </li>
+    <li><a id="support" href="#stake.support" class="folder"  onclick="toggle(this)"></a>For Tech Support and Operations
+     <ol>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">FAQ / Troubleshooting</a></li>
+      <li><a href="implementation-notes.html" target="objects" class="doc"></a><a href="implementation-notes.html" target="objects">Implementation notes</a></li>
+     </ol>
+    </li>
+    <li><a id="users" href="#stake.users" class="folder"  onclick="toggle(this)"></a>For End Users
+     <ol>
+      <li><a href="install.html" target="objects" class="doc"></a><a href="install.html" target="objects">Installation / Quick start guide</a></li>
+      <li><a href="userguide.html" target="objects" class="doc"></a><a href="userguide.html" target="objects">User guide</a></li>
+      <li><a href="release-notes.html" target="objects" class="doc"></a><a href="release-notes.html" target="objects">Release notes</a></li>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">FAQ</a></li>
+     </ol>
+    </li>
+    <li><a id="sales" href="#stake.sales" class="folder"  onclick="toggle(this)"></a>For Sales and Marketing
+     <ol>
+      <li><a href="demo-script.html" target="objects" class="doc"></a><a href="demo-script.html" target="objects">Demo script</a></li>
+      <li><a href="target-and-benefits.html" target="objects" class="doc"></a><a href="target-and-benefits.html" target="objects">Target and benefits</a></li>
+     </ol>
+    </li>
+    <li><a id="legal" href="#stake.legal" class="folder"  onclick="toggle(this)"></a>For Legal
+     <ol>
+      <li><a href="legal.html" target="objects" class="doc"></a><a href="legal.html" target="objects">Legal issues</a></li>
+     </ol>
+    </li>
+   </ol>
+  </li>
+-->
+
+  <li  class="panel"><a id="week" href="#week" class="folder" onclick="toggle(this)"></a>Por Secuencia Sugerida
+   <ol>
+    <li><a id="two" href="#week.two" class="folder"  onclick="toggle(this)"></a>Paso 1
+     <ol>
+      <li><a href="index.html" target="objects" class="doc"></a><a href="index.html" target="objects">Resumen</a></li>
+      <li><a href="proposal.html" target="objects" class="doc"></a><a href="proposal.html" target="objects">Propuesta</a>
+       <ul>
+      <li><a href="target-and-benefits.html" target="objects"></a><a href="target-and-benefits.html" target="objects">Público y beneficios</a></li>
+        </ul>
+       </li>
+      <li><a href="plan.html" target="objects" class="doc"></a><a href="plan.html" target="objects">Plan de proyecto</a>
+       <ul>
+        <li><a href="resource-needs.html" target="objects">Recursos necesarios</a></li>
+       </ul>
+      </li>
+      <li><a href="legal.html" target="objects" class="doc"></a><a href="legal.html" target="objects">Cuestiones Legales</a></li>
+      <li><a href="glossary.html" target="objects" class="doc"></a><a href="glossary.html" target="objects">Glosario de términos</a></li>
+     </ol>
+    </li>
+    <li><a id="three" href="#week.three" class="folder"  onclick="toggle(this)"></a>Paso 2
+     <ol>
+      <li><a href="user-needs.html" target="objects" class="doc"></a><a href="user-needs.html" target="objects">Requerimientos del usuario</a>
+       <ul>
+        <li><a href="interview-notes.html" target="objects">Notas de entrevistas</a></li>
+       </ul>
+      </li>
+      <li><a href="srs.html" target="objects" class="doc"></a><a href="srs.html" target="objects">Especificación de Requerimientos de Software</a>
+       <ul>
+        <li><a href="use-case-suite.html" target="objects">Conjunto de casos de uso</a></li>
+        <li><a href="feature-set.html" target="objects">Conjunto de características</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="five" href="#week.five" class="folder"  onclick="toggle(this)"></a>Paso 3
+     <ol>
+      <li><a href="design.html" target="objects" class="doc"></a><a href="design.html" target="objects">Diseño</a>
+       <ul>
+        <li><a href="design-architecture.html" target="objects">Forma para arquitectura</a></li>
+        <li><a href="design-src-org.html" target="objects">Archivos fuente y compilados</a></li>
+        <li><a href="design-ui.html" target="objects">Forma para interfaz del usuario</a></li>
+        <li><a href="design-persistence.html" target="objects">Forma para persistencia</a></li>
+        <li><a href="design-security.html" target="objects">Forma para seguridad</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="seven" href="#week.seven" class="folder"  onclick="toggle(this)"></a>Paso 4
+     <ol>
+      <li><a href="qa-plan.html" target="objects" class="doc"></a><a href="qa-plan.html" target="objects">Plan de QA (Aseguramiento de la Calidad)</a></li>
+      <li><a href="test-suite.html" target="objects" class="doc"></a><a href="test-suite.html" target="objects">Conjunto de pruebas</a>
+       <ul>
+        <li><a href="test-case-format.html" target="objects">Formato de caso de prueba</a></li>
+        <li><a href="test-cases.html" target="objects">Casos de prueba</a></li>
+       </ul>
+      </li>
+     </ol>
+    </li>
+    <li><a id="eight" href="#week.eight" class="folder"  onclick="toggle(this)"></a>Paso 5
+     <ol>
+      <li><a href="review-meeting-notes.html" target="objects" class="doc"></a><a href="review-meeting-notes.html" target="objects">Notas de las juntas de revisión</a></li>
+     </ol>
+    </li>
+    <li><a id="nine" href="#week.nine" class="folder"  onclick="toggle(this)"></a>Paso 6
+     <ol>
+      <li><a href="release-checklist.html" target="objects" class="doc"></a><a href="release-checklist.html" target="objects">Lista de pendientes de la entrega</a></li>
+     </ol>
+    </li>
+    <li><a id="ten" href="#week.ten" class="folder"  onclick="toggle(this)"></a>Paso 7
+     <ol>
+      <li><a href="install.html" target="objects" class="doc"></a><a href="install.html" target="objects">Guía de Instalación / Guía de Inicio Rápido</a></li>
+      <li><a href="release-notes.html" target="objects" class="doc"></a><a href="release-notes.html" target="objects">Notas de la versión</a></li>
+      <li><a href="userguide.html" target="objects" class="doc"></a><a href="userguide.html" target="objects">Guía del Usuario</a></li>
+      <li><a href="demo-script.html" target="objects" class="doc"></a><a href="demo-script.html" target="objects">Texto para presentaciones</a></li>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">Preguntas Frecuentes / Solución de problemas</a></li>
+      <li><a href="implementation-notes.html" target="objects" class="doc"></a><a href="implementation-notes.html" target="objects">Notas de implementación</a></li>
+     </ol>
+    </li>
+    <li><a id="finals" href="#week.ten" class="folder"  onclick="toggle(this)"></a>Paso 8
+     <ol>
+      <li><a href="postmortem-quest.txt" target="objects" class="doc"></a><a href="postmortem-quest.txt" target="objects">Cuestionario Postmortem</a></li>
+     </ol>
+    </li>
+    <li><a id="most" href="#week.most" class="folder"  onclick="toggle(this)"></a>Cada semana
+     <ol>
+      <li><a href="status-report.html" target="objects" class="doc"></a><a href="status-report.html" target="objects">Reporte de estado</a></li>
+     </ol>
+    </li>
+ 
+   </ol>
+  </li>
+
+
+  <li  class="panel"><a id="all" href="#all" class="folder" onclick="toggle(this)"></a>Todas las Plantillas
+   <ol>
+      <li><a href="all-in-one.html" target="objects" class="doc"></a><a href="all-in-one.html" target="objects">Todo-en-Uno</a></li>
+      <li><a href="index.html" target="objects" class="doc"></a><a href="index.html" target="objects">Resumen</a></li>
+      <li><a href="proposal.html" target="objects" class="doc"></a><a href="proposal.html" target="objects">Propuesta</a>
+       <ul>
+      <li><a href="target-and-benefits.html" target="objects"></a><a href="target-and-benefits.html" target="objects">Público y beneficios</a></li>
+       </ul>
+      </li>
+      <li><a href="plan.html" target="objects" class="doc"></a><a href="plan.html" target="objects">Plan de proyecto</a>
+       <ul>
+      <li><a href="resource-needs.html" target="objects"></a><a href="resource-needs.html" target="objects">Recursos necesarios</a></li>
+       </ul>
+      </li>
+      <li><a href="qa-plan.html" target="objects" class="doc"></a><a href="qa-plan.html" target="objects">Plan de QA (Aseguramiento de la Calidad)</a>
+       <ul>
+        <li><a href="test-suite.html" target="objects"></a><a href="test-suite.html" target="objects">Conjuto de Pruebas</a>
+         <ul>
+          <li><a href="test-case-format.html" target="objects">Formato de caso de prueba</a></li>
+          <li><a href="test-cases.html" target="objects">Casos de prueba</a></li>
+         </ul>
+        </li>
+        <li><a href="review-meeting-notes.html" target="objects"></a><a href="review-meeting-notes.html" target="objects">Notas de las juntas de revisión</a></li>
+       </ul>
+      </li>
+      <li><a href="legal.html" target="objects" class="doc"></a><a href="legal.html" target="objects"># Cuestiones Legales</a></li>
+      <li><a href="user-needs.html" target="objects" class="doc"></a><a href="user-needs.html" target="objects">Requerimientos del usuario</a>
+       <ul>
+        <li><a href="interview-notes.html" target="objects">Notas de entrevistas</a></li>
+       </ul>
+      </li>
+      <li><a href="srs.html" target="objects" class="doc"></a><a href="srs.html" target="objects">Especificación de requerimientos de software</a>
+       <ul>
+        <li><a href="use-case-suite.html" target="objects">Conjunto de casos de uso</a></li>
+        <li><a href="feature-set.html" target="objects">Conjunto de características</a></li>
+       </ul>
+      </li>
+      <li><a href="glossary.html" target="objects" class="doc"></a><a href="glossary.html" target="objects">Glosario de términos</a></li>
+      <li><a href="design.html" target="objects" class="doc"></a><a href="design.html" target="objects">Diseño</a>
+       <ul>
+        <li><a href="design-architecture.html" target="objects">Forma para arquitectura</a></li>
+        <li><a href="design-src-org.html" target="objects">Archivos fuente y compilados/a></li>
+        <li><a href="design-ui.html" target="objects">Forma para interfaz del usuario</a></li>
+        <li><a href="design-persistence.html" target="objects">Forma para persistencia</a></li>
+        <li><a href="design-security.html" target="objects">Forma para securidad</a></li>
+       </ul>
+      </li>
+      <li><a href="userguide.html" target="objects" class="doc"></a><a href="userguide.html" target="objects">Guía del Usuario</a></li>
+      <li><a href="release-checklist.html" target="objects" class="doc"></a><a href="release-checklist.html" target="objects">Lista de pendientes de la entrega</a></li>
+      <li><a href="install.html" target="objects" class="doc"></a><a href="install.html" target="objects">Guía de Instalación / Guía de Inicio Rápido</a></li>
+      <li><a href="release-notes.html" target="objects" class="doc"></a><a href="release-notes.html" target="objects">Notas de la versión</a></li>
+      <li><a href="demo-script.html" target="objects" class="doc"></a><a href="demo-script.html" target="objects">Texto para presentaciones</a></li>
+      <li><a href="faq.html" target="objects" class="doc"></a><a href="faq.html" target="objects">Preguntas Frecuentes / Solución de problemas</a></li>
+      <li><a href="implementation-notes.html" target="objects" class="doc"></a><a href="implementation-notes.html" target="objects">Notas de implementación</a></li>
+      <li><a href="status-report.html" target="objects" class="doc"></a><a href="status-report.html" target="objects">Reporte de estado</a></li>
+      <li><a href="postmortem.html" target="objects" class="doc"></a><a href="postmortem.html" target="objects">Reporte Postmortem</a></li>
+      <li><a href="postmortem-quest.txt" target="objects" class="doc"></a><a href="postmortem-quest.txt" target="objects">Questionario Postmortem</a></li>
+      <li><a href="sdm.html" target="objects" class="doc"></a><a href="sdm.html" target="objects">Metolología de desarrollo de software</a></li>
+      <li><a href="markup-examples.html" target="objects" class="doc"></a><a href="markup-examples.html" target="objects">Ejemplos de Etiquetado</a></li>
+   </ol>
+  </li>
+</ol>
+
+
+<p>Cómo bajar estas plantillas:</p>
+
+<ul style="padding-left: 15px;">
+ <li><a href="/servlets/ProjectDocumentList" target="_top">baje el archivo con las plantillas</a></li>
+<!--
+<li>Use CVS para <a href="http://readyset.tigris.org/servlets/ProjectSource" target="_top">revisar</a> el proyecto "readyset"</li>
+-->
+</ul>
+
+
+</body>
+</html>

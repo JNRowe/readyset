@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Interfaz del usuario</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="design.html">Diseño</a> &gt; Interfaz del Usuario</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div>LIGAS A ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+ <a name="overview"></a>
+ <h3>Overview</h3>
+ <div class="sticky">
+  TAREAS: Responda las pregunta abajo para ayudar a diseñar la interfaz
+  del usuario de su sistema. Se proveen algunos ejemplos abajo.
+  Añada o elimine texto según necesite.
+ </div>
+
+ <dl>
+
+  <dt>¿Cuáles on los hechos más importantes que un desarrollador debería saber
+  sobre la interfaz del usuario de este sistema?</dt>
+
+  <dd>PÁRRAFO O VIÑETAS</dd>
+
+ 
+  <dt>¿Cuáles son los objetivos clasificados  para la interfaz de este sistema?</dt>
+
+  <dd>
+   <ol>
+    <li><a class="def" href="glossary-std.html#dg_use_understand">Comprensibilidad y Capacidad de Aprendizaje</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_use_efficiency">Soporte de Tareas y Eficiencia</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_use_safety">Seguridad</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_use_consistency">Consistencia y familiaridad</a></li>
+   </ol>
+  </dd>
+ </dl>
+
+
+
+ <a name="metaphors"></a>
+ <h3>Metáforas, Ejemplares y Estándares</h3>
+
+ <dl>
+  <dt>¿Cuál es la metáfora central del deseño de esta UI?</dt>
+
+  <dd>PÁRRAFO</dd>
+
+
+  <dt>¿Qué sistemas específicos tiene interfaces de usuario similares a UI que Ud.
+  quiere construir? ¿Qué aspectos específicos son similares?</dt>
+
+  <dd>
+   <ul class="sample1">
+    <li><a href="http://www.amazon.com">amazon.com</a>: Nuestro sitio de e-commerce
+    tendrá tiendas y departamentos y capcidad de búsqueda como este sitio.</li>
+
+    <li><a
+    href="http://www.microsoft.com/office/using/default.asp">Microsoft
+    Office</a>: Utilizaremos barra de herramientas configurables de la misma forma que las utiliza Office
+    2000.</li>
+
+    <li><a href="LINK-TO-SYSTEM">UI EXISTENTE</a>: DESCRIPCIÓN</li>
+   </ul>
+  </dd>
+
+
+  <dt>¿Qué estándares de diseño para UI, guías y estilos está siguiendo?</dt>
+
+  <dd>
+   <ul class="sample1">
+    <li><a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnwue/html/welcome.asp">Guías de Microsoft para UI</a></li>
+    <li><a href="http://java.sun.com/products/jlf/ed1/guidelines.html">Guías de Java para UI</a></li>
+    <li><a href="http://developer.apple.com/techpubs/macosx/Essentials/AquaHIGuidelines/AHIGHIGs/index.html">Guías de Mac para UI</a></li>
+    <li><a href="http://www.w3.org/TR/WCAG10/">Guías de accesabilidad de W3C</a></li>
+   </ul>
+  </dd>
+
+ </dl>
+
+
+
+
+ <a name="taskmodels"></a>
+ <h3>Modelos de Tareas</h3>
+
+ <dl>
+  <dt>¿Qué tipo de usuarios utilizarán este sistema?</dt>
+
+  <dd>Vea el documento de <a href="user-needs.html">requerimientos del usuario</a>.</dd>
+
+
+  <dt>¿Qué tipos de tareas realizarán los usuarios?</dt>
+
+  <dd>Vea el <a href="use-case-suite.html">conjunto de casos de uso</a>.</dd>
+
+ </dl>
+
+
+
+
+ <a name="content"></a>
+ <h3>Modelo de Contenido / Contexto de Interacción</h3>
+
+ <div class="sticky">
+  TAREAS: Enliste los contextos de interacción.  Cada contexto de interacción is un
+  "lugar" donde los usuarios ven información y donde seleccionan comandos u
+  opciones. En una interfaz gráfica del usuario, un contexto de interacción
+  será eventualmente implementado como una ventana o un cuadro de diálogo.  En otras aplicaciones,
+  un contexto de interacción puede ser implementado como, por ejemplo, una
+  página web, un menú de voz o un panel de control físico.
+ </div>
+
+ <div class="sticky">
+  SUGERENCIA: Cada contexto de interacción es un mod exclusivo: el usuari puede usar
+  solo un cotexto de interacción a la vez. Todos los componentes dentro de un contexto
+  son visibles y utilizables al mismo tiempo. Por ejemplo, si una ventana
+  tiene tres pestañas, esos son los tres contextos de interacción porque solo una
+  pestaña puede ser usada a la vez.
+ </div>
+
+ <div class="sticky">
+  TAREAS: Para cada contexto de interacción enumere los componentes abstractos
+  dentro de ese contexto.  Cada componente es una pieza de información, o una
+  facilidad de la interfaz del usuario.  En una GUI, cada componente abastracto eventualmente se convertirá
+  en una característica particular, pero la selección de características específicas 
+  viene después. Escoja los componentes abstractos que
+  correspondan al paso 2 en el <a
+  href="http://www.ics.uci.edu/~jrobbins/htmlproto/index.html">ejemplo de 
+  prototipos HTML</a>.
+ </div>
+
+ <div class="sticky">
+  SUGERENCIA: La mayoría de ñps casos de uso de alta frecuencia deberían ser llevados a cabo solo en un
+  contexto de interacción.  Un caso de uso que requiera tres contextos de interacción
+  puede ser difícil de utilizar. De cualquier forma, los contexto de interacción con
+  demasiados componentes pueden ser difíciles de utilizar también.
+ </div>
+
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr>
+   <th><div>Contexto de Interacción</div><div>--Componentes Abstractos de la UI</div></th>
+   <th>Propósito</th>
+   <th>Contenidos / Prioridades / Comportamientos</th>
+  </tr>
+
+  <tr>
+   <td><a href="LINK-TO-MOCKUP">Diálogo de Inicio de Sesión</a></td>
+   <td>Verifica que el usuario actual es realmente la persona que dice ser.</td>
+   <td></td>
+  </tr>
+
+  <tr>
+   <td>--Pregunta</td>
+   
+   <td>Le indica al usuario qu este diálogo es para iniciar sesión.</td>
+
+   <td>"Por favor inicie su sesión".</td>
+  </tr>
+
+  <tr>
+   <td>--Área de Mensaje</td>
+   
+   <td>Le da al usuario información sobre el proceso de inicio de sesión.</td>
+
+   <td>Inicialmente en blanco. Cambia a "Verificando el nombre de usuario y la contraseña"
+   cuando el usuario presiona "Entrar".  Cambia a "Nombre de usuario o contraseña inválidos,
+   por favor inténtelo de nuevo", si el inicio de sesión falla..</td>
+  </tr>
+
+  <tr>
+   <td>--Nombre de usuario</td>
+   
+   <td>Identica la cuenta del usuario que el usuario actual está intentando accesar.</td>
+
+   <td>El nombre de cuenta del usuario. Regex: <tt>[-_a-z0-9]{1-16}</tt>.
+   La aplicación no debería de hacer nada que ayude a los usuarios a adivinar los
+   nombres de usuario.  Por ejemplo, no debería de haber un caja de opciones que muestre a los usuarios que
+   han entrado recientemente, y no debería de ofrecer auto-completado.</td>
+  </tr>
+
+  <tr>
+   <td>--Contraseña</td> 
+
+   <td>Verica que el usuario actual conoce una contraseña secreta que solo
+   el verdadero usuario de esa cuenta debería conocer.</td>
+
+   <td>La contraseña deberá tneer de 4 a 16 caracteres.  No mostrar la contraseña
+   en la pantalla.  La aplicación no deberá hacer nada que pueda ayudar a
+   los usuarios a adivinar las contraseñas.</td>
+  </tr>
+
+  <tr>
+   <td>--Inicio de sesión</td> 
+
+   <td>Permitir al usuario a indicar que han terminado de ingresar
+   su nombre de usuario y su contraseña.</td>
+
+   <td>"Inicio de sesión" solo se activa cuando el nombre de usuario != "". Si el nombre del usuario o su
+   contraseña son incorrectos, espere unos segundos y entonces borre todos los campos.
+   </td>
+  </tr>
+
+  <tr>
+   <td>--Pérdida de Contraseña</td> 
+
+   <td>Permita al usuario a iniciar un prceoso de generar una nueva contraseña para
+   un nombre de usuario dado.</td>
+
+   <td>"¿Olvidó su contraseña? Dé click aquí."  Solo válido cuando el nombre del usuario != "".</td>
+  </tr>
+
+  <tr>
+   <td><a href="LINK-TO-MOCKUP">NOMBRE-DE-LA-PÁGINA</a></td>
+   <td>PROPÓSITO</td>
+   <td></td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td><a href="LINK-TO-MOCKUP">>NOMBRE-DE-LA-PÁGINA</a></td>
+   <td>PROPÓSITO</td>
+   <td></td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td><a href="LINK-TO-MOCKUP">NOMBRE-DE-LA-VENTANA-PRINCIPAL</a></td>
+   <td>PROPÓSITO</td>
+   <td></td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td><a href="LINK-TO-MOCKUP">NOMBRE-DE-DIÁLOGO</a></td>
+   <td>PROPÓSITO</td>
+   <td></td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td><a href="LINK-TO-MOCKUP">NOMBRE-DE-DIÁLOGO</a></td>
+   <td>PROPÓSITO</td>
+   <td></td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+  <tr>
+   <td>--RESUMEN-DE-NOMBRE-DE-COMPONENTE</td>
+   <td>PROPÓSITO</td>
+   <td>CONTENIDO</td>
+  </tr>
+
+
+ </table>
+
+
+ 
+
+ <a name="constraints"></a>
+ <h3>Consideraciones Técnicas / Contextualización Operacional</h3>
+
+ <dl>
+  <dt>¿Cuáles son sus supuestos acerca de los dispositivos de salida?</dt>
+
+  <dd class="sample1">Asumimos que el usuario cuenta con un monitor de 17" o más grande con
+  resolución de 1024x768 pixeles que puede mostrar miles de colores(16 bit o
+  más).  Asumimos que cuenta con equipo básico para repdrducir audio y que puede reproducir archivos de audio simple.</dd>
+
+  <dd class="sample2">Tenemos muy pocas suposiciones sobre los monitores de los usuarios o sus
+  navegadores web, excepto que son capaces de ver una página web de alguna forma.
+  No utilizaremos ninguna cracterística que involucre audio.</dd>
+
+  <dd class="sample3">Este sistema necesita un monitor con 320x200 pixeles, que despliegue 16 colores y
+  que tenga bocina de sistema.</dd>
+
+
+  <dt>¿Cuáles son sus supuestos sobre los dispositivos de entrada que se usarán?</dt>
+
+  <dd class="sample2">Asumimos que el usuario solo cuenta con un teclado y un
+  ratón estándar.</dd>
+
+  <dd class="sample3">Este sistema tiene un teclado con los dígitos del 0 al 9, las teclas "OK", "Cancel",
+  y cuatro botones de menú junto al lado derecho del monitor.</dd>
+
+
+  <dt>¿Cuáles son sus supuestos sobre la cantidad de tiempo que lso usuarios
+  invertirán en sus tareas?</dt>
+
+  <dd class="sample1">Se espera que los casos de uso UC-02 y UC-04 tomen unos cuantos minutos cada uno.
+  El caso de uso UC-00 debería tomar menos de 5 segundos cada uno.  Todos los demás
+  casos de uso deberían tomar menos de 30 segundos cada uno.</dd>
+
+
+  <dt>¿Qué administradores de ventanas, librerías de UIu otras tecnologías de UI
+  utlizará?</dt>
+
+  <dd class="sample1">Java Swing Standard sin librerías adicionales.</dd>
+
+  <dd class="sample2">HTML simple y CSS con imágenes GIF simples.</dd>
+ </dl>
+
+
+
+
+ <a name="checklist"></a>
+ <h3>Lista de Pendientes de la Interfaz del Usuario</h3>
+
+ <div class="sticky">
+   TAREAS: Responda las siguientes preguntas para yudar a evaluar el sieño.
+   Puede añadir o eliminar preguntas según convengan a su proyecto.
+ </div>
+
+ <div class="tier2">
+ <h4>Comprensibilidad y Capacidad de Aprendizaje</h4>
+ <dl>
+  <dt>¿Hay etiquetas o íconos
+  que puedan ser malinterpretados?</dt>
+
+  <dd>1-3 ORACIONES</dd>
+
+
+  <dt>¿Son el estado y el lugar en que se encuentra el usuario claramente
+  visibles? Por ejemplo, un contador de pasos en el asistente (paso 2 de 5), o modo de edición contra modo de visualización.</dt>
+
+  <dd>1-3 ORACIONES</dd>
+
+
+  <dt>¿Las opciones avanzadas están claramente 
+  separadas de las opciones más comúnmente usadas?</dt>
+
+  <dd>1-3 ORACIONES</dd>
+
+
+  <dt>¿Hay opciones o comandos invisibles?
+  Por ejemplo, presionando la tecla de control mientras abre una caja de diálogo
+  para ver opciones avanzadas.</dt>
+
+  <dd>1-3 ORACIONES</dd>
+
+  </dl>
+
+
+  <h4>Soporte a Tareas y Eficiencia</h4>
+  <dl>
+
+  <dt>¿Cuáles casos de uso forzan al suaurio a trabajar
+  en más de dos contextos de interacción?</dt>
+
+  <dd>1-3 ORACIONES</dd>
+
+
+  <dt>¿Cuáles casos de uso forzan al usuario a realizar
+  pasos lentos o difíciles en la UI? Por ejemplo, teclear un número de código largo
+  como un ISBN, u operaciones de arrastre largo con el ratón.</dt>
+
+  <dd>1-3 ORACIONES</dd>
+  </dl>
+
+  
+  <h4>Seguridad</h4>
+  <dl>
+  <dt>¿Existen acciones peligrosas o irreversibles que puedan
+  ser hechas en un solo paso?</dt>
+
+  <dd>1-3 ORACIONES</dd>
+  </dl>
+
+
+  <h4>Consistencia y Familiaridad</h4>
+  <dl>
+  <dt>¿Los elementos de la UI en su sistema funcionan
+  de la misma forma que lo hacen en sistemas existentes que haya identificado?</dt>
+
+  <dd>1-3 ORACIONES</dd>
+
+
+  <dt>¿Todos los elementos en su sistema que se ven igual
+  funcionan de la misma forma?</dt>
+
+  <dd>1-3 ORACIONES</dd>
+
+
+  <dt>¿Todos los elementos comparten consistentemente características visuales
+  como fuentes o combinaciones de colores? ¿Hay alguna razón
+  por que la que puedan diferir?</dt>
+
+  <dd>1-3 ORACIONES</dd>
+
+
+  <dt>¿Las etiquetas son consistentes en el sistema?
+  Por ejemplo, usar "adelante/atrás" en algunos contextos
+  y "siguiente/anterior" en otros.</dt>
+
+  <dd>1-3 ORACIONES</dd>
+ </dl>
+ </div>
+
+</div>
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

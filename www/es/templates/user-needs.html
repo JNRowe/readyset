@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Requerimientos del usuario</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+
+ <h2>Requerimientos del usuario</h2>
+
+ <a name="projectinfo"></a>
+ <h3>Información del Proyecto</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Projecto:</th> 
+   <td>NOMBRE DEL PROYECTO</td>
+  </tr>
+  <tr>
+   <th>Formas Anexas:</th> 
+   <td>
+    <div>Requerimientos del usuario &gt; <a href="interview-notes.html">Notas de la entrevista</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="proposal.html">Propuesta del Proyecto</a> &gt; <a href="target-and-benefits.html">Público Objetivo y Beneficios</a></div>
+    <div><a href="srs.html">Especificación de Requerimientos de Software</a></div>
+    <div><a href="glossary.html">Glosario de Términos</a></div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+ <a name="processimpact"></a>
+ <p class="readonly"><strong>Impacto del proceso:</strong> Establece
+ los documentos con las necesidades del usuario y explica los deseos actuales de los inversionistas
+ de forma breve en sus propias palabras.  Qué es lo que <i>desean</i> nunca es exactamente los que
+ el producto <i>provee</i>.  Documentando las necesidades del usuario aquí,
+ independientemente de la <a href="srs.html">SRS</a>, ayuda a mantener el
+ SRS preciso y hace que las tareas de verificación y validación sean más
+ efectivas.  Este documento <em>no</em> es un borrador informal del
+ SRS, es un documento diferente con un propósito complementario.
+ </p>
+
+ <a name="agreedgoals"></a>
+ <h3>Objetivos Acordados</h3>
+
+ <div class="sticky">
+  TAREAS: ¿Hay una definición clara del objetivo global de este
+  proyecto con el que los inversionistas estén de acuerdo?  Si es así, incluyalo aquí o añáda
+  una hiperliga.  Si no, debería resumir lo que entiende de los
+  objetivos del proyecto en sentencias breves e intentar que los inversionistas
+  estén de acuerdo con ellas.  El texto que sigue incluye tres ejemplos alternativos,
+  seleccione uno, o escriba el suyo propio.
+ </div>
+
+ <p class="sample1">Se nos asignó un <a href="LINK">description inicial del proyecto
+ </a> con la que están de acuerdo los inversionistas.</p>
+
+ <p class="sample2">DEspués de varias entrevistas y lluvias de ideas,
+ hemos <a href="LINK">revisado la descripción del proyecto</a> con la que
+ están de acuerdo los inversionistas.</p>
+
+ <p class="sample3">Aún existen diferencias de visión (pero relacionadas)
+ de qué es lo que este proyecto debe lograr. Cuando se llegue a unificar las
+ visiones, se pondrá una liga aquí.</p>
+
+
+
+
+ <a name="environment"></a>
+ <h3>Ambiente</h3>
+
+ <div class="sticky">
+  TAREAS: DEscriba brevemente varios aspectos del ambiente donde el
+  software será usado.  Describa el ambiente como <i>es</i> o
+  <i>será</i>, no como desearía que fuera. El texto a continuación
+  muestra algunos ejemplos.
+ </div>
+
+ <dl>
+
+  <dt>¿Cuál es el ambiente de negocios del sistema?</dt>
+
+  <dd class="sample1">Cada agente de bienes raíces trabaja con un conjunto de
+  compradores y vendedores potenciales.  Los agentes de bienes raíces no comparten
+  información de clientes con otros agentes, porque no quieren compoartir sus
+  comisiones.  La información específica de inmuebles disponibles cambia todos los días,
+  y esta herramienta debe ayudarlos a estar actualizados.</dd>
+
+  <dd class="sample2">Los jugadores pueden visitar varios sitios web gratuitos para
+  encontrar información sobre equipo o "clanes".  Existe más
+  información disponible de la que quisieran leer, el reto
+  se encuentra en divertirse lo más posible con el menor esfuerzo. Este sitio debe
+  de ser familiar a los jugadores que han usado otros sitios, pero también debe
+  ser mejor.</dd>
+
+
+  <dt>¿Cuál es el ambiente físico del sistema?</dt>
+
+  <dd class="sample1">Este sistema es un servidor web que correrá en un
+  equipo ubicado en un centro de datos con supervisión de 24x7, UPS,
+  aire acondicionado, etc.  Los usuarios de este sistema se encuentran normalmente
+  en sus oficinas.</dd>
+
+  <dd class="sample2">Esta aplicación corre en dispositivos móbiles que
+  normalmente son usados mientras sus usuarios caminan de una sección del
+  almacén a otra. La iluminación es buena en ese ambiente, pero
+  hay demasiado ruido y distracciones.</dd>
+
+
+  <dt>¿Cuál es el ambiente tecnológico del sistema (hardware y software)?</dt>
+
+  <dd class="sample1">60% de los jugadores cuentan con equipos con P-II o
+  procesadores equivalentes, mientras que 30% tiene equipos con P-I y 10% tienen
+  equipos menos poderosos.  Mientras que muchos usuarios cuentan con monitores de 17",
+  los monitores de 15" o las laptops con resoluciones de 1024x768 son muy
+  comunes.</dd>
+
+  <dd class="sample2">65% de los jugadores utilizan Windows 98 o
+  Me. 30% utilizan NT, 2000, o XP. El restante 5% usa Mac OS X,
+  Mac OS 9, o Linux.</dd>
+
+
+ </dl>
+
+
+ <a name="actors"></a>
+ <h3>Inversionistas / Actores</h3>
+
+ <div class="sticky">
+  TAREAS: Enumere y describa a los inversionistas de este producto. Estos
+  pueden ser nombrados como individuos o por sus roles. Para cada
+  inversionista, mencione/califique sus necesidades primarias.  Considere el conocimiento
+  técnico esperado de los inversionistas y que tan seguido ellos utilirían
+  el sistema, así como cualidades importantes, debilidades,
+  preferencias, u otras características.  Utilice un signo de mayor-qué para
+  indicar herencia entre diferentes tipos de actores.
+ </div>
+
+ <div class="sticky"> SUGERENCIA: Para obtener información sobre tipos de usuarios, deberá
+ conversar con los usuarios actuales. Tal vez desee hablar con los subordinados del usuario
+ (pesonas que trabajan con usuarios), como expertos del dominio,
+ capacitadores técnicos, personal de soporte técnico, escritores técnicos,
+ supervisores de usuarios, y su propio departamente de ventas y mercadotecnia.
+ Puede encontrar pistas en manuales y materiales de mercadotecnia de productos
+ de la competencia.
+ </div>
+
+ <dl class="sample1">
+  <dt><a name="todos"></a>Todos</dt>
+
+  <dd>Todos los inversionistas comparten las siguientes necesidades básicas:  
+   <ol>
+    <li>Seguridad contra abusos de los visitantes de otros sitios.</li>
+    <li>Acceso adecuado al sitio en cualquier momento a través de Internet</li>
+   </ol>
+  </dd>
+
+
+  <dt><a name="jugador"></a>Jugador</dt>
+
+  <dd>Los jugadores quieren divertirse.  Esto significa un sentimiento de descubrimiento, 
+  reto, satisfacción y comunidad.  Algunos de los jugadores que se han
+  involucrado en clanes invierten pocas horas a la semana, mientras otros 
+  invertirán cerca de 20 horas a la semana.  Así, ellos necesitan contenido nuevo publicando con frecuencia
+  para mantenerlos interesados.  Los jugadores involucrados en clanes son por lo general usuarios experimentados
+  y tienen altas expectativas de la funcionalidad y la calidad del sitio,
+  pero pueden no tener muchos conocimientos de computación.
+  science.
+
+   <p>Necesidades principales:</p>
+   <ol>
+    <li>Encontrar fácilmente información sobre los clanes</li>
+    <li>Estar en contacto con los miembros de su propio clan</li>
+    <li>Entender la fecha y la hora de un torneo de juegos</li>
+    <li>Reportar fácilmente trucos</li>
+   </ol>
+  </dd>
+
+
+  <dt><a name="advplayer"></a>Jugador &gt; Jugador avanzado</dt>
+
+  <dd>Los jugadores avanzados buscan más retos para continuar el sentimiento de
+  descubrimiento.  Tienden a jugar más de 20  horas a la semanas. Han visto
+  más los detalles del juego y ahora necesitan ver el "panorama completo".
+
+   <p>Necesidades principales:</p>
+   <ol>
+    <li>Ver métricas que comparen múltiples clanes</li>
+    <li>Entender las relaciones entre los clanes</li>
+    <li>Entender la programación general de torneos</li>
+   </ol>
+  </dd>
+
+
+  <dt><a name="INVERSIONISTA1"></a>INVERSIONISTA1</dt>
+
+  <dd>PÁRRAFO</dd>
+
+
+  <dt><a name="INVERSIONISTA2"></a>INVERSIONISTA2</dt>
+
+  <dd>PÁRRAFO</dd>
+
+
+  <dt><a name="INVERSIONISTA3"></a>INVERSIONISTA3</dt>
+
+  <dd>PÁRRAFO</dd>
+ </dl>
+
+ 
+ <a name="notes"></a>
+ <h3>Notas de Entrevistas y Lluvias de Ideas</h3>
+
+ <div class="sticky">
+  TAREAS: Mantenga un registro de su recolección de requerimientos. Pegue
+  las notas cualquier entrevista en vivo o por teléfono con los inversionistas
+  o de las sesiones de lluvia de ideas con los miembros del equipo de desarrollo.
+  Si la comunicación se llevo a cabo por medios electrónicos, incluyalos aquí.
+ </div>
+
+ <dl class="sample1">
+  <dt>FECHA, ENTREVISTADO</dt>
+
+  <dd><a href="interview-notes.html">entrevista con ENTREVISTADO</a></dd>
+
+  <dt>FECHA, ENTREVISTADO</dt>
+
+  <dd>NOTAS DE LA ENTREVISTA...(insértelas aquí...)</dd>
+
+  <dt>FECHA, ENTREVISTADO</dt>
+
+  <dd>NOTAS DE LA ENTREVISTA...(insértelas aquí...)</dd>
+
+  <dt>FECHA, PARTICIPANTES</dt>
+
+  <dd>NOTAS DE SESIONES DE LLUVIA DE IDEAS...(insértelas aquí...)</dd>
+
+  <dt>DATE, PARTICIPANTES</dt>
+
+  <dd><a href="LIGA-A-ARCHIVO">email de ENTREVISTADO</a></dd>
+
+ </dl>
+
+
+ <a name="userstories"></a>
+ <h3>Historias de Usuarios</h3>
+
+ <div class="sticky">
+  TAREAS: Escriba historias cortas de los usuarios explicando cómo varios actores podrían
+  interactuar con el sistema (directa e indirectamente) para lograr un
+  objetivo real.  Las historias de los usuarios <em>no</em> son casos de uso: sus historias
+  deben ser breves (3-5 oraciones) párrafos que describan un
+  escenario espeífico en términos concretos.  En esta descripción de las necesidades de usuario
+  no haga suposiciones sobre los detalles del sistema, concéntrese en
+  los usuarios.
+ </div>
+
+ <div class="sticky">
+  SUGERENCIA: Anote la fuente de cada historia.
+ </div>
+
+
+ <dl class="sample1">
+  
+  <dt><a name="invited-to-join"></a>Invitación-a-participar</dt>
+
+  <dd>Juan ha logrado ser muy bueno en SuperShooter
+  jugando en servidores públicos cerca de 8 horas a la semana durante las últimas 3 semanas.
+  Juan ha chateado con Miguel sobre estrategias y han disfrutado algunos
+  duelos.  Mmiguel es miembro del clan RedDawn. Este clan participa en un
+  torneo en un servidor privado los viernes por la noche. Miguel invitó a Juan a
+  visitat el sitio web de RedDawn para unírseles.  (fuente: <a
+  href="interview-notes.html">ENTREVISTADO</a>)</dd>
+
+
+
+  <dt><a name="finding-the-tournament"></a>encontrando-el-torneo</dt>
+
+  <dd>Miguel está visitando a un amigo suyo. Intenta utilizar la computadora de su
+  amigo para entrar al torneo SuperShooter de RedDawn, pero
+  no recuerda el nombre exacto del servidor, así que
+  visita el sitio web de RedDawn para encontrar esa información.  (Fuente:
+  NOMBREDELAPERSONA)</dd>
+
+  
+  <dt><a name="STORYNAME1"></a>NOMBREDELAHISTORIA1</dt>
+
+  <dd>PÁRRAFO</dd>
+
+  
+  <dt><a name="STORYNAME2"></a>NOMBREDELAHISTORIA2</dt>
+
+  <dd>PÁRRAFO</dd>
+
+  
+  <dt><a name="STORYNAME3"></a>NOMBREDELAHISTORIA3</dt>
+
+  <dd>PÁRRAFO</dd>
+ </dl>
+
+
+
+ <a name="capacity"></a>
+ <h3>Necesidades de Rendimiento Capacidad</h3>
+
+ <div class="sticky">
+  TAREAS: Enlisye brevemente las características deseadas por los inversionistas para algunos
+  aspectos de la capacidad del sistema.  Si tiene una buena idea sobre
+  los porcentajes o tasas de incremento, anótelas también.
+ </div>
+
+ <p>Para el final de primer año de servicio, debemos esperar:</p>
+
+ <ul class="sample1">
+  <li>50,000 usuarios registrados en la base de datos de cuentas de sitios de clanes (tasa:
+  50-500 nuevos registros cada día)</li>
+
+  <li>1000 usuarios navegando el sitio web en cualquier momento</li>
+  <li>1000 clanes de jugadores</li>
+  <li>1000 miembros de un solo clan (promedio: 8)</li>
+  <li>4 MB máximo de espacio en disco para cada clan (promedio: 0.5 MB)</li>
+  <li>100 distribuidores de juegos publicando sus anuncios el sitio</li>
+  <li>1000 anunciantes en la base de datos</li>
+ </ul>
+
+
+
+</div>
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

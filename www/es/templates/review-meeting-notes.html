@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Notas de las Juntas de Revisión</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="qa-plan.html">Plan de QA</a> &gt; Notas de las Juntas de Revisión</h2>
+
+ <a name="meetinginfo"></a>
+ <h3>Información de las Juntas de Revisión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Producto:</th> 
+   <td>NOMBREDELPRODUCTO</td> 
+  </tr>
+  <tr>
+   <th>Número de Versión: :</th> 
+   <td>
+     X.Y.Z
+   </td> 
+  </tr>
+  <tr>
+   <th>Lugar de la Junta:</th> 
+   <td>
+     LUGAR, EDIFICIO, SALA/CUARTO/AULA
+   </td> 
+  </tr>
+  <tr>
+   <th>Fecha y Hora de la Junta:</th> 
+   <td>
+     DIA/MES/AÑO  HH:MM
+   </td> 
+  </tr>
+  <tr>
+   <th>Participantes:</th> 
+   <td>
+    <div>NOMBREDELAPERSONA</div>
+    <div>NOMBREDELAPERSONA</div>
+    <div>NOMBREDELAPERSONA</div>
+    <div>NOMBREDELAPERSONA</div>
+   </td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="review-meeting-checklists.html">Lista de Pendientes de las Juntas de Revisión</a></div>
+   </td> 
+  </tr>
+ </table>
+ </div>
+
+
+ <a name="documents"></a>
+ <h3>Documentos y Código Revisados en esta Junta</h3>
+
+ <ul class="sample1">
+    <li><a href="/requirements.html#functional">Sección de lista de características de requerimientos</a></li>
+    <li><a href="/requirements.html#multiuser">Sección de requerimientos de usuarios múltiples</a></li>
+    <li><a href="/source/browse/PROJECTNAME/src/Hello.java">Hello.java</a></li>
+    <li><a href="/source/browse/PROJECTNAME/src/HelloStream.java">HelloStream.java</a></li>
+    <li><a href="/source/browse/PROJECTNAME/src/HelloPanel.java">HelloPanel.java</a></li>
+ </ul>
+
+
+
+ <a name="meetingminutes"></a>
+ <h3>Minutas de la Junta</h3>
+
+ <div class="sticky">
+  TAREAS: Llene la información a continuación y escriba un resumen breve de lo sucedido en la junta.
+  El texto siguiente es solo un ejemplo.
+ </div>
+
+ <div class="sample1">
+ <p>Empezamos a tiempo con 3 miembros y los otros miembros del equipo llegaron 
+ poco después.</p>
+
+ <p>En la primera hora de la reunión de revisión, repasamos las cuestiones nuevas que
+ el equipo presentó indvidualmente. La matoría de estas cuestiones generó 
+ preguntas sobre la capacidad del manejo de errores de Hello.java, pero
+ también hubo dudas sobre la robustez de los requerimientos para usuarios múltiples y
+ la UI.</p>
+
+ <p>En la segunda hora, leímos todos los métodos de
+ HelloStream.java.  Todos los miembros del equipo acordaron en que entendieron cada
+ método y que era correcto antes de seguir con el siguiente 
+ método. Surgieron preguntas sobre la consistencia entre los constructores en
+ esa clase y otras clases.  La lista de pendienters fue útil para
+ identificar el hecho de que necesitamos implementear hash() y equals().
+ Todas las dudas se incluyen en el sistema de control de cambios y se marcaron con
+ la palabra "revisar".</p>
+ 
+ <p>A pesar de que se encontraron algunos problemas, no sentimos que Hello.java
+ y HelloStream.java necesiten ser revisados de nuevo. HelloPanel no fue
+ revisado y aún necesita ser evaluado.</p>
+ </div>
+
+
+
+ <a name="actionitems"></a>
+ <h3>Elementos de Acción</h3>
+
+ <p>Todos los defectos y tareas identificados en esta junta están siendo seguidos
+ en el sistema de control de cambios.</p> <!-- Si empieza a escribir algún otro
+ elemento de acción, ¿por qué no incluirlo en el sistema de control de cambios también?  -->
+
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

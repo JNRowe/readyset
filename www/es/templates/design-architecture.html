@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Arquitectura</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="design.html">Diseño</a> &gt; Arquitectura</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div><a href="srs.html">Especificación de Requerimientos de Software</a></div>
+<!--    <div><a href="design-scalability.html">Scalability Worksheet</a></div> -->
+    <div><a href="design-security.html">Forma para Seguridad</a></div>
+    <div><a href="glossary.html">Glosario de términos</a></div>
+    <div>LIGAS A ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+ <div class="sticky">
+  TAREAS: Responda a las preguntas que se encuentran abajo para ayudarlo a definir la arquitectura
+  de su sistema.  Se incluyen textos de ejemplo.
+ </div>
+
+
+
+
+ <a name="overview"></a>
+ <h3>Resumen</h3>
+
+ <dl>
+  <dt>¿Cuáles son los hechos más importantes que un desarrollador debería saber
+  acerca de esta arquitectura de sistema?</dt>
+
+  <dd>PÁRRAFO o VIÑETAS</dd>
+
+
+  <dt>¿Que estilo de arquitectura de software está siendo usado?</dt>
+
+  <dd class="sample1">Aplicación de escritorio para proceso simple (con módulos de extensión de plug-ins).</dd>
+
+  <dd class="sample2">Cliente-servidor con clientes delgados y servidor personalizados.</dd>
+
+  <dd class="sample3">Aplicación Web de 2-puertos: servidor web/servidor de aplicaciones, base de datos.</dd>
+
+  <dd class="sample4">Aplicación Web de 3-puertos: servidor web/servidor de aplicaciones, base de datos.</dd>
+
+  <dd class="sample1">Servicio web simple: servidor de aplicaciones, base de datos.</dd>
+
+  <dd class="sample2">Servicios de Red o Web.</dd>
+
+  <dd class="sample3">Cliente-a-cliente sin servidor central.</dd>
+
+  <dd class="sample4">Con tuberías y filtros.</dd>
+
+  <dd class="sample1">Malla de computadoras / servidores distribuidos.</dd>
+
+
+  <dt>¿Cuáles son los objetivos clasificados de esta arquitectura?</dt>
+
+  <dd>
+   <ol>
+    <li><a class="def" href="glossary-std.html#dg_easy_integration">Facilidad de integración</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_extensibility">Extensibilidad</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_cap_match">Ajuste a la capacidad</a></li>
+
+   </ol>
+  </dd>
+
+ </dl>
+
+
+
+
+ <a name="components"></a>
+ <h3>Componentes</h3>
+
+ <dl>
+  <dt>¿Cuáles son los componentes de este sistema?</dt>
+
+  <dd class="sample1">Los componentes de este sistema estan definidos claramente en este <a
+  href="LINK-TO-MODEL">Diagrama UML con Diagrama de Componentes</a>.</dd>
+
+  <dd class="sample2">
+   Los componentes de este sistema se encuentran listados abajo por tipo:
+   <ul>
+    <li>Presentación/Componentes de la UI
+     <ul>
+      <li><a href="design-components.html#C-00">C-00: NOMBREDELCOMPONENTE</a></li>
+     </ul>
+    </li>
+    <li>Componentes de Lógica de la Aplicación
+     <ul>
+      <li><a href="design-components.html#C-10">C-10: NOMBREDELCOMPONENTE</a></li>
+     </ul>
+    </li>
+    <li>Componentes de Almacenamiento de Datos
+     <ul>
+      <li><a href="design-components.html#C-20">C-20: NOMBREDELCOMPONENTE</a></li>
+     </ul>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+
+
+
+ <a name="deployment"></a>
+ <h3>Entrega</h3>
+
+ <dl>
+  <dt>¿Cómo serán entregados los componentes a los procesos o los equipos?</dt>
+
+  <dd class="sample1">La entrega de componentes a los procesos y a los equipos se encuentra claramente definida en
+  este <a href="LINK-TO-MODEL">Modelo UML con Diagrama de Entrega</a>.</dd>
+
+  <dd class="sample2">
+   La entrega de componentes a los procesos y los equipos se encuentra claramente definida a continuación:
+   <ul>
+
+    <li>Servidor todo-en-uno
+     <ul>
+      <li>Proceso Tomcat
+       <ul>
+        <li><a href="design-components.html#C-00">C-00: Servidor Web</a></li>
+        <li><a href="design-components.html#C-10">C-10: aplicación de NOMBREDELPROYECTO</a></li>
+       </ul>
+      </li>
+      <li>Proceso de la base de datos
+       <ul>
+        <li><a href="design-components.html#C-30">C-20: NOMBREDELCOMPONENTE</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </dd>
+
+  <dd class="sample3">
+   La entrega de componentes a los procesos y los equipos se encuentra claramente definida a continuación:
+   <ul>
+
+    <li>Servidores principales de balance de carge
+     <ul>
+      <li><a href="design-components.html#C-00">C-01: NOMBREDELCOMPONENTE</a></li>
+     </ul>
+    </li>
+    <li>Servidor secundario de procesos
+     <ul>
+      <li>Proceso JVM
+       <ul>
+        <li><a href="design-components.html#C-00">C-00: NOMBREDELCOMPONENTE</a></li>
+        <li><a href="design-components.html#C-10">C-10: NOMBREDELCOMPONENTE</a></li>
+        <li><a href="design-components.html#C-11">C-11: PLUG-IN NOMBREDELCOMPONENTE</a></li>
+        <li><a href="design-components.html#C-12">C-12: PLUG-IN NOMBREDELCOMPONENTE</a></li>
+       </ul>
+      </li>
+      <li>Proceso de la base de datos
+       <ul>
+        <li><a href="design-components.html#C-30">C-20: NOMBREDELCOMPONENTE</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+
+   </ul>
+  </dd>
+
+
+  <dt>¿Qué aspectos/recursos de su ambiente se encuentran compartidos?</dt>
+
+  <dd class="sample1">Todo se encuentra en un solo servidor de forma que todos los recursos de los equipos se encuentran compartidos 
+  por todos los componentes.</dd>
+
+  <dd class="sample2">Todas los equipos comparten el mismo ancho de banda hacia Internet. Todos los
+  equipos accesan el mismo servidor de archivos. Así que, si un componente hace uso de los recursos 
+  intensivamente, los otros componentes tendrán que esperar.</dd>
+
+
+  <dt>¿Cómo son manejadas las respuestas en los servidores redundantes o de 
+  balance de carga?</dt>
+
+  <dd class="sample1">No estamos haciendo ninguna clase de balance de carga o redundancia
+  en caso de fallas.</dd>
+
+  <dd class="sample2">El balance de la carga es manejado en los servidores frontales por un
+  dispositivo de balance de carga del que podemos pocas suposiciones.
+  De cualquier forma, una vez que se ha establecido una sesión de usuario, el mismo srvidor frontal
+  se utilizará para todas las solicitudes durante esa sesión.</dd>
+
+
+  <dt>¿Qué alternativas de configuraciones de entrega son posibles?</dt>
+
+  <dd class="sample1">Solo hay una forma de entrega posible.</dd>
+
+  <dd class="sample2">La base de datos podría ser movida a un equipo diferente con un
+  cambio relativamente sencillo a un archivo de configuración.  De otra forma no se puede cambiar nada
+  respecto a la entrega.</dd>
+
+  <dd class="sample3">Tenemos la habilidad de mover el proceso de la base de datos a un equipo
+  separado.  Tenemos la habilidad de añadir más servidores frontales.
+  La lógica de la aplicación que corre en el servidor de aplicaciones no puede se dividida
+  o balanceada.</dd>
+
+ </dl>
+
+
+
+
+ <a name="integration"></a>
+ <h3>Integración</h3>
+
+ <dl>
+
+  <dt>¿Cómo serán integrados los componentes?  Específicamente, ¿cómo se
+  communicarán?</dt>
+
+  <dd class="sample1">Todo nuestro código utiliza llamadas directas a procedimiento. La base de datos es
+  accesada con un controlador.</dd>
+
+  <dd class="sample2">Los componentes dentro del mismo proceso usan llamdas directas a procedimientos o
+  eventos Java estándar.  Los plug-ins son accesados también por medio de una  API de
+  llamadas directas a procedimientos y eventos estándar.  La comunicación con la
+  base de datos utiliza un controlador JDBC.  La comunicación entre los servidores frontales y los de
+  procesos utlliza XML-RPC.</dd>
+
+
+  <dt>¿Qué mecanismos arquitecturales se utilizan para facilitar futuras
+  extensiones o modificaciones?</dt>
+
+  <dd class="sample1">Podriamos cambiar la base de datos cambiando los controladores. De otra forma
+  las extensiones y las modificacione solo pueden ser hechas a nivel de
+  diseño.</dd>
+
+  <dd class="sample2">Nuevos componentes frontales podrían ser añadidos mientras accesen
+  hacia atrás de la misma forma. Nuevos componentes de plug-in pueden ser
+  cargados dinámicamente, mientras satisfagan la API de plug-ins.
+  De otra manera, no será posible añadir o cambiar componentes,
+  debido a que esta arquitectura utiliza dependencias directas entre sus
+  componentes en lugar de invocación implícita.  Las extensiones y
+  modificationes pueden ser hechas a nivel de diseño, pero añadir estos cambios
+  requiere recompilación y tiempo fuera de línea.</dd>
+ </dl>
+
+
+
+ <a name="scenarios"></a>
+ <h3>Escenarios de Arquitectura</h3>
+
+ <div class="sticky">
+  TAREAS: Provea escenarios de arquitectura que muestren como los objetos
+  se comunicarán mediante componentes, procesos y equipos. Concéntrese en
+  escenarios donde la arquitectura misma este cambiando, por ejemplo, inicio del
+  sistema, apagado, mientras se añaden o actualizan componentes, en balance de carga o en 
+  caída.
+ </div>
+
+ <p>La siguiente secuencia de diagramas brinda descripciones paso a paso de
+ cómo los componentes se comunican en algunos escenarios importantes de
+ uso:</p>
+
+ <ul>
+  <li><a href="LINK-TO-DIAGRAM">Inicio de sistema</a></li>
+  <li><a href="LINK-TO-DIAGRAM">Apagado de sistema</a></li>
+  <li><a href="LINK-TO-DIAGRAM">NOMBRE DEL ESCENARIO</a></li>
+ </ul>
+
+
+
+ <a name="checklist"></a>
+ <h3>Lista de pendientes de arquitectura</h3>
+
+ <div class="sticky">
+  TAREAS: Evalue su arquitectura respecto a cada uno de sus objetivos.
+ </div>
+
+ <dl>
+  <dt>Facilite la integración: ¿se han previsto mecanismos para cada
+  tipo necesario de integración?</dt>
+
+  <dd class="sample1">Sí. En este sistema, todos los componentes están diseñados para
+  trabajar juntos. Y los componentes reusados son integrados con interfaces
+  simples.</dd>
+
+
+  <dt>Extensibilidad: ¿Qué tipos de componentes pueden ser añadidos después y
+  cómo?</dt>
+
+  <dd>Véase arriba.</dd>
+
+
+  <dt>Ajuste a la Capacidad: ¿Cómo esta arquitectura se ha 
+  ajustado las necesidades de recursos de los componentes a los equipos?</dt>
+
+  <dd class="sample1">La base de datos puede estar en un equipo con discos RAID y una fuente de poder
+  intercambiable, mientras los componentes frontales pueden estar
+  en euqipos más baratos que pueden fallar individualmente sin causar
+  caídas al sistema.  Los servidores frontales y el servidor de aplicaciones
+  utlizan intensivamente el poder de procesamiento, por lo que serán montados en diferentes equipos.
+  La base de datos hace uso intensivo del disco, por lo que puede ser instalada en el mismo
+  equipo que el servidor de aplicaciones con solo una moderada competencia por
+  recursos.</dd>
+ </dl>
+
+</div>
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

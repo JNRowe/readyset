@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Seguridad</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2><a href="design.html">Diseño</a> &gt; Seguridad</h2>
+
+ <a name="releaseinfo"></a>
+ <h3>Información de la versión</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Proyecto:</th> 
+   <td>NOMBREDELPROYECTO</td> 
+  </tr>
+  <tr>
+   <th>Número Interno de Versión:</th> 
+   <td>X.Y.Z</td> 
+  </tr>
+  <tr>
+   <th>Documentos Relacionados:</th> 
+   <td>
+    <div>LIGAS A ESTÁNDARES RELEVANTES</div>
+    <div>LIGAS A OTROS DOCUMENTOS</div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+
+
+ <a name="overview"></a>
+ <h3>Resumen</h3>
+
+ <div class="sticky">
+  TAREAS: Responda a las preguntas que se encuentran abajo para yudar a diseñar las características de seguridad que necesita.
+  Se incluyen ejemplos. Añada o elimine texto según considere  necesario
+ </div>
+
+ <dl>
+
+  <dt>¿Cuáles son los hechos más importantes que un desarrollador debería conocer
+  sobre la seguridad de este sistema?</dt>
+
+  <dd>PÁRRAFO O VIÑETAS</dd>
+
+ 
+  <dt>¿Cuáles son los objetivos categorizados de seguridad para este sistema?</dt>
+
+  <dd>
+   <ol>
+    <li><a class="def" href="glossary-std.html#dg_data_security">Seguridad de los datos</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_no_intrusion">Prenvención de intrusos</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_no_abuse">Prevención de abusos</a></li>
+
+    <li><a class="def" href="glossary-std.html#dg_auditability">Auditabilidad</a></li>
+   </ol>
+  </dd>
+
+ </dl>
+
+
+ <a name="mechanisms"></a>
+ <h3>Mecanismos de Seguridad</h3>
+
+ <dl>
+  <dt>¿Qué mecanismos físicos de seguridad se utilizarán?</dt>
+
+  <dd class="sample1">
+   <ul>
+    <li>Los servidores estarán aislados en un cuarto con cerradura electrónica cuya clave
+    solo conocerán los administradores.</li>
+
+    <li>Los servidores se encontrarán bajo llave en sus estantes.</li>
+
+    <li>EL gabinete del servidor tiene un cable de seguridad que evita que el gabinete
+    sea abierto (asi un disco duro con información delicada no
+    puede ser extraído).</li>
+
+    <li>Las cintas de respaldo están guardadas en un gabinete con llave en un cuarto cerrado.</li>
+   </ul>
+  </dd>
+
+
+  <dt>¿Qué mecanismos de seguridad de red se utilizarán?</dt>
+
+  <dd class="sample1">
+   <ul>
+    <li>Un firewall limita el acceso a puertos de red específicos
+    (por ejemplo, el puerto 80 para acceso al servidor web).</li>
+
+    <li>Programas de firewall limita el acceso a puertos de red específicos
+    (por ejemplo, el puerto 80 para acceso al servidor web).</li>
+
+    <li>Solo los equipos frontales son accesibles en
+    Internet. Otros equipos en el cluster se cmuncian utilizando únicamente la
+    red LAN privada.</li>
+
+    <li>Los usuarios pueden conectarse al servidor desde rangos específicos de
+    direcciones IP (por ejemplo, computadoras personales en la red del
+    campus universitario).</li>
+
+    <li>Usuarios específicos (por ejemplo, administradores) pueden conectarse únicamente desde
+    rangos específicos de direcciones IP.</li>
+
+    <li>Toda la comunicación de red se realiza en una red privada virtual
+    (VPN) que está encriptada y no es accesible a personas externas.</li>
+
+    <li>Toda la comunicación de red se realzia en una LAN que
+    tiene conexiones a Internet.</li>
+   </ul>
+  </dd>
+
+
+  <dt>¿Qué seguridad para el sistema operativo se utilizará?</dt>
+
+  <dd class="sample1">
+   <ul>
+    <li>Las cuentas de usuario del sistema operativo jamás se crearán en
+    los servidores, excepto las que necesite la aplicación en si.</li>
+
+    <li>Los diferentes componentes en la aplicación se ejecutan como cuentas de usuario diferentes
+    del sistema operativo, y solo tienen acceso a ciertos archivos.</li>
+
+    <li>Los permisos del sistema operativo en los archivos y directorios se fijan
+    para prevenir accesos indeseados o modificaciones.</li>
+
+    <li>Se utilizará software para detección de intrusos en el servidor para
+    detectar cualquier modificación hecha por hackers.</li>
+
+    <li>Los administratores supervisarán las listas de correo de seguridad en busca
+    de notas sobre agujeros de seguridad en cualquiera de los componentes que usamos y por
+    parches de seguridad y se aplicarán rápidamente las actualizaciones.</li>
+
+    <li>La información en discos y cintas de resplado es almacenada usando un sistema
+    de archivos en clave para que la información esté protegida si el medio físico en si
+    es robado o accesado de alguna otra forma.</li>
+   </ul>
+  </dd>
+
+  
+  <dt>¿Qué mecanismos de seguridad se utilizarán en la aplicación?</dt>
+
+  <dd class="sample1">
+   <ul>
+    <li>El valor de los datos se evaluará antes de ser procesado</li>
+
+    <li>Los nombres de usuarios y contraseñas que se requieren para acceso</li>
+
+    <li>Las contraseñas se almacenan encriptadas</li>
+
+    <li>Verificación de cuenta de correo del usuario</li>
+
+    <li>Se revisará la calidad de las contraseñas</li>
+
+    <li>Los usuarios deben certificar los archivos en su equipo cliente
+    antes de que puedan conectarse al servidor</li>
+
+    <li>Los usuarios deben tener dispositivos de seguridad física (e.g., hasp, dongle,
+    smartcard, or lector de huella digital)</li>
+
+    <li>Los usuarios tiene roles asignados que definen sus permisos. Estos roles son:
+     <ul>
+      <li>Invitado: Visitante al sitio que no ha iniciado sesión, sin permisos para cambiar nada</li>
+      <li>Invitado: Visitante al sitio que no ha iniciado sesión, puede publicar mensajes de forma anónima</li>
+      <li>Usuario Registrado: usuario que ha iniciado sesión, tiene permisos para X, Y y Z</li>
+      <li>Administrador: Permisos para cambiar cualquier cosa, incluso en lugar de otros usuarios normales.</li>
+     </ul>
+    </li>
+
+    <li>Cada acción (despliegue o cambio de información) necesita que el
+    usuario tenga un rol con los permisos apropiados</li> 
+
+    <li>Cuentas en peligro o usadas para abusos puede ser deshabilitadas rápidamente por los administradores.</li>
+
+    <li>Los administradores pueden evaluar los permisos de los usuarios</li>
+
+    <li>Los administradores pueden auditar todos los accesos y cambios</li>
+
+    <li>Todas las comunicaciones con el usuario están encriptadas (por ejemplo, usando SSL)</li>
+
+    <li>Algunas comunicaciones con el usuario (por ejemplo, el nombre del usuario y
+    la contraseña) están encriptadas (por ejemplo, usando SSL)</li>
+
+    <li>Las sesiones están atadas a un dirección IP particular para
+    que no sea posible utilizar cookies robadas.</li>
+
+    <li>Cookies de sesión son cadenas aleatorias grandes que no pueden ser
+    adivinadas.</li>
+
+    <li>Las sesión tienen tiempo de expiración para que las terminales innatendidas no puedan
+    se utilizadas para abusos.</li>
+
+    <li>Las acciones que parecen destruir datos realmente la mueven a un lugar
+    donde puede ser aún evaluada por los administradores.</li>
+
+    <li>Información delicada, como números de tarjetas de crédito es procesada 
+    pero no almacenda en ninguna base de datos o archivo</li>
+
+   </ul>
+  </dd>
+
+ </dl>
+
+
+
+ <a name="checklist"></a>
+ <h3>Lista de pendientes de Seguridad</h3>
+
+ <dl>
+  <dt>Protección de la Información: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Prenvención de intrusos: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Prevención de abusos: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+  <dt>Auditabilidad: ¿hasta qué punto se ha logrado esto?</dt>
+
+  <dd>2-4 ORACIONES</dd>
+
+
+ </dl>
+</div>
+
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>

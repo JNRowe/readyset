@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//Tigris//DTD XHTML 1.0 Transitional//EN"
+"http://style.tigris.org/tigris_transitional.dtd">
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */ 
+@import "css/readyset.css"; 
+@import "css/inst.css";
+/*  ]]> */
+ </style>
+
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+ <title>Plan del Proyecto</title>
+</head>
+
+<body>
+<div class="app">
+<div class="readyset">
+ <h2>Plan del Proyecto</h2>
+
+ <a name="projectinfo"></a>
+ <h3>Información del Proyecto</h3>
+ <div class="axial">
+ <table border="1" cellpadding="3" cellspacing="2">
+  <tr>
+   <th>Projecto:</th> 
+   <td>NOMBRE DEL PROYECTO</td>
+  </tr>
+  <tr>
+   <th>Ventana de tiempo para el Proyecto:</th> 
+   <td>FECHADEINICIO - FECHAFINAL</td>
+  </tr>
+  <tr>
+   <th>Formas Anexas:</th> 
+   <td>
+    <div>Plan &gt; <a href="resource-needs.html">Recursos necesarios para el proyecto</a></div>
+   </td>
+  </tr>
+  <tr>
+   <th>Documentos relacionados:</th> 
+   <td>
+    <div><a href="proposal.html">Propuesta del proyecto</a></div>
+    <div><a href="target-and-benefits.html">Público objetivo y beneficios</a></div>
+    <div><a href="sdm.html">Metodología de desarrollo de software</a></div>
+    <div><a href="glossary.html">Glosario de términos</a></div>
+   </td>
+  </tr>
+ </table>
+ </div>
+
+ <a name="processimpact"></a>
+ <p class="readonly"><strong>Impacto del proceso:</strong> Este plan será
+ usado para evaluar y administrar el proyecto.  Las suposiciones principales que
+ puedan afectar el plan denerán ser documentadas aquí.  El plan del proyecto deberá ser
+ actualizado durante el ciclo de vida del proyecto.</p>
+
+ <div class="sticky">
+  TAREAS: Complete la información necesaria arriba y abajo.  añada o quite renglones según necesite.
+  Use la matriz como apoyo para identificar y definir los recursos necesarios.
+ </div>
+
+
+ <a name="summary"></a>
+ <h3>Resumen del Proyecto</h3>
+
+ <div class="sample1">
+ <p>UNA O DOS ORACIONES AQUI. Para más información vea la <a
+ href="proposal.html">Propuesta del proyecto</a>.</p>
+
+ <p>SI TIENE PLANEADO ORGANIZAR SU TRABAJO UTILIZANDO UNA DESCRIPCIÓN BÁSICA DE COMPONENTES
+ DE SOFTWARE, DESCRIBA BREVEMENTE ESOS COMPONENTES AQUÍ.
+ USE DE CUATRO A DIEZ VIÑETAS.</p>
+ </div>
+
+
+ <a name="methodology"></a>
+ <h3>Resumen de la Metodología</h3>
+ <dl>
+  <dt>¿Que acercamiento (en general) se utilizará para el desarrollo?</dt> 
+
+  <dd class="sample1">USE DE TRES A CINCO ORACIONES O VIÑETAS AQUI. CUBRA ACERCAMIENTO GENERAL,
+  SUPUESTOS IMPORTANTES, PRÁCTICAS CLAVE Y COORDINACIÓN DE CONTROL DE PROYECTO.
+  Para más información vea la <a
+  href="sdm.html">Metodología de Desarrollo de Software</a>.</dd>
+
+
+  <dt>¿Cómo estará organizado el equipo del proyecto?</dt> 
+ 
+  <dd class="sample1">El equipo de desarrollo consistirá de ...</dd>
+
+  <dd class="sample2">El equipo de control de cambios consistirá de  ...</dd>
+
+  <dt>¿Qué herramientas de desarrollo y colaboración se utilizarán?</dt> 
+
+  <dd>Planeamos usar las siguientes herramientas de forma intensiva
+ durante el desarrollo del proyecto:
+   <ul>
+    <li>Sitio web del proyecto</li>
+    <li>Listas de correo del proyecto</li>
+    <li>Sistema de control de cambios</li>
+    <li>sistema de control de versiones</li>
+    <li>Sistema automatizado de compilación</li>
+    <li>Sistema automatizado para unidad de pruebas</li>
+   </ul>
+  </dd>
+
+
+  <dt>¿Cómo se controlarán los cambios?</dt> 
+
+  <dd class="sample1">
+   <ul>
+    <li>Se dará seguimiento a as solicitudes de cambio por requerimiento en el 
+    sistema de control de cambios</li>
+    
+    <li>El equipo de control de cambios (<a class="def"
+    href="glossary-std.html#ccb">CCB</a>) evaluará los cambios solicitados
+    y autorizará trabajar en ellos si lo considera apropiado</li>
+    
+    <li>Después de alcanzar la <a class="def"
+    href="glossary-std.html#featurecomplete">feature complete</a>
+    , no se añadirán características nuevas a esta entrega.</li>
+    
+    <li>Después de <a class="def"
+    href="glossary-std.html#codecomplete">code complete</a>,
+    no se añadirá más código fuente a esta entrega.</li>
+    
+    <li>Todos los mensajes de depuración del código fuente se deberán referir a un ID
+    específico, una vez alcanzada la meta proyectada.</li>
+    
+   </ul>
+  </dd>
+
+  
+  <dt>¿Cómo se actualizará este plan?</dt> 
+
+  <dd>Este plan de proyecto será actualizado según sea necesario mientras dure
+  el proyecto.  Será colocado bajo control de versiones y las instrucciones para accesarlo
+  estarán en el <a href="index.html">sitio del proyecto</a>.
+  Cualquier cambio al plan generará una notificación automática
+  que será enviada via la lista de correo del proyecto.</dd>
+ </dl>
+
+
+
+ <a name="wbs"></a>
+ <h3>Estructura de Trabajo y Estimados</h3>
+
+ <div class="sticky">
+  TAREAS: Enumere las tareas que serán necesarias para este proyecto. Divida
+  las tareas en subtareas hasta que sienta que tiene suficiente detalle
+  para mostrar los riesgos y hacer estimados razonables en un horario de trabajo
+  ideal.
+ </div>
+
+ <div class="sticky">
+  SUGERENCIA: Etiquete cada etapa para mostrar su posición en el WBS,
+  por ejemplo, Paso 1.1.4.A.  Utilice números para pasos que planee realizar en secuencia,
+  y utilice letras para pasos que planee realizar en paralelo.
+  Por ejemplo, el Paso 1.1 se encuentra antes de los Pasos 1.2.A y 1.2.B, pero
+  estos dos pasos pueden ser realizados en paralelo, y el Paso 1.3 será realizado
+  después de que todos los pasos 1.2.* hayan sido terminados.  No se preocupe por
+  la renumeración si borra un paso.
+ </div>
+
+ <div class="sample1">
+ <table border="1" cellpadding="3" cellspacing="2">
+ <tr><th>Step</th><th>Descripción</th><th>Estimado</th></tr>
+
+ <tr><th>1.</th><td>Preparación</td><td></td></tr>
+
+ <tr><th>1.1.</th><td class="level2">Capacitación a desarrolladores</td><td>30h</td></tr>
+
+
+ <tr><th>2.</th><td>Inicio</td><td></td></tr>
+
+ <tr><th>2.1.</th><td class="level2">Levantamiento de requerimientos</td><td>30h</td></tr>
+
+ <tr><th>2.2.</th><td class="level2">Especificación de requerimientos</td><td>20h</td></tr>
+
+ <tr><th>2.3.</th><td class="level2">Validación de requerimientos</td><td>10h</td></tr>
+
+
+ <tr><th>3.</th><td>Elaboración</td><td></td></tr>
+
+ <tr><th>3.1.</th><td class="level2">Diseño de alto nivel</td><td>5h</td></tr>
+
+ <tr><th>3.2.</th><td class="level3">Diseño de bajo nivel (desglosado por componentes)</td><td></td></tr>
+
+ <tr><th>3.2.A.</th><td class="level4">Diseño de objetos</td><td>10h</td></tr>
+
+ <tr><th>3.2.B.</th><td class="level4">Diseño de interfaz del usuario</td><td>10h</td></tr>
+
+ <tr><th><a name="3.2.C"></a>3.2.C.</th><td class="level4">Diseño de la base de datos</td><td>3h</td></tr>
+
+ <tr><th>3.3.</th><td class="level3">Revisión del diseño y evaluación</td><td>5h</td></tr>
+
+
+ <tr><th>4.</th><td>Construcción</td><td></td></tr>
+
+ <tr><th>4.1.A.</th><td class="level2">Implementación del sistema</td><td></td></tr>
+
+ <tr><th>4.1.A.1.</th><td class="level3">Implementación NOMBRE-DEL-COMPONENTE 1</td><td>25h</td></tr>
+
+ <tr><th>4.1.A.2.</th><td class="level3">Implementación NOMBRE-DEL-COMPONENTE 2</td><td>25h</td></tr>
+
+ <tr><th>4.1.A.3.</th><td class="level3">Implementación NOMBRE-DEL-COMPONENTE 3</td><td>25h</td></tr>
+
+ <tr><th>4.1.A.4.</th><td class="level3">Implementación NOMBRE-DEL-COMPONENTE 4</td><td>25h</td></tr>
+
+ <tr><th>4.1.A.5.</th><td class="level3">
+  <div>Integración de Componentes</div>
+  <div>(hecho principalmente durante la implementación de los componentes)</div>
+ </td><td>5h</td></tr>
+
+ <tr><th>4.1.B.</th><td class="level2">Documentación técnica (desglosada por componentes)</td><td>10h</td></tr>
+
+ <tr><th>4.1.C.</th><td class="level2">Documentación para el usuario (desglosada por componentes)</td><td>10h</td></tr>
+
+ <tr><th>4.1.D.</th><td class="level2">Pruebas</td><td></td></tr>
+
+ <tr><th>4.1.D.1.</th><td class="level3">Planeación de pruebas</td><td>10h</td></tr>
+
+ <tr><th>4.1.D.2.</th><td class="level3">Implementación de pruebas de código (desglosada por componentes)</td><td>30h</td></tr>
+
+ <tr><th>4.1.D.3.</th><td class="level3">Pruebas de ejecución</td><td>10h</td></tr>
+
+ <tr><th>4.2.</th><td class="level2">Resultados de las pruebas y evaluación</td><td>15h</td></tr>
+
+
+ <tr><th>5.</th><td>Transición</td><td></td></tr>
+
+ <tr><th>5.A.</th><td class="level2">Paquete para liberación de entrega</td><td>3h</td></tr>
+ 
+ <tr><th>5.B.</th><td class="level2">Documentación por otros grupos</td><td>3h</td></tr>
+
+
+ <tr><th>6.</th><td>Reflexiones</td><td></td></tr>
+
+ <tr><th>6.1. </th><td class="level2">Reporte Postmortem</td><td>10h</td></tr>
+
+
+ <tr><th></th><th>Total</th><th>329 horas</th></tr>
+ </table>
+ </div>
+
+
+ <a name="deliverables"></a>
+ <h3>Entregas en esta Versión</h3>
+ <div class="sticky">
+  TAREAS: Liste detalladamente las entregas del proyecto, con fechas de entrega.
+ </div>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+ <tr>
+  <th>Nombre de la Entrega</th>
+  <th>Descripción</th>
+  <th>Fecha de Entrega</th>
+ </tr>
+ <tr>
+  <td>Nombre de la Entrega</td>
+  <td>Descripción</td>
+  <td>Fecha de Entrega</td>
+ </tr>
+ <tr>
+  <td>Nombre de la Entrega</td>
+  <td>Descripción</td>
+  <td>Fecha de Entrega</td>
+ </tr>
+ <tr>
+  <td>Nombre de la Entrega</td>
+
+  <td>Descripción Descripción Descripción Descripción Descripción
+  Descripción Descripción Descripción</td>
+
+  <td>Fecha de Entrega</td>
+ </tr>
+ <tr>
+  <td>Nombre de la Entrega</td>
+  <td>Descripción</td>
+  <td>Fecha de Entrega</td>
+ </tr>
+
+ </table>
+
+
+ <a name="schedule"></a>
+ <h3>Calendario para esta Entrega</h3>
+ <div class="sticky">
+  TAREAS: Haga que las filas en esta tabla coincidan con los pasos en su WBS
+  arriba.  si tiene un número muy grande de pasos detallados, puede saltarse 
+  los más detallados.  Las columnas de la tabla representan semanas
+  del calendario.  Para cada celda en esta tabla, introduzca el número de
+  horas ideales que el equipo necesitará para terminar esa tarea en esa semana.
+  Sume las horas en forma horizontal y vertical.
+ </div>
+ <div class="sticky">
+  SUGERENCIA: Estas horas deberán sumar lo mismo que el total de horas
+  mostradas en su documento de <a href="resource-needs.html">requerimiento de necesidades</a>.
+  Y las horas de cada tipo de requerimiento por tarea 
+  deberán corresponder a la sumas de cada tipo de tarea
+ </div>
+
+ <table border="1" cellpadding="3" cellspacing="2" width="100%">
+  <tr>
+   <th>Tarea \ Semana</th>
+   <th>S-01</th>
+   <th>S-02</th>
+   <th>S-03</th>
+   <th>S-04</th>
+   <th rowspan="100"> </th>
+   <th>S-05</th>
+   <th>S-06</th>
+   <th>S-07</th>
+   <th>S-08</th>
+   <th rowspan="100"> </th>
+   <th>S-09</th>
+   <th>S-10</th>
+   <th>S-11</th>
+   <th>S-12</th>
+   <th>Tareas Totales </th>
+  </tr>
+
+  <tr>
+   <th>1.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+  <tr>
+   <th>2.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+  <tr>
+   <th>3.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+  <tr>
+   <th>4.1.A.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+  <tr>
+   <th>4.1.B.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+  <tr>
+   <th>4.1.C.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+  <tr>
+   <th>4.1.D.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+  <tr>
+   <th>4.2.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+  <tr>
+   <th>5.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+
+  <tr>
+   <th>6.</th>
+   <td>00</td>  <!-- Semana 01 -->
+   <td>00</td>  <!-- Semana 02 -->
+   <td>00</td>  <!-- Semana 03 -->
+   <td>00</td>  <!-- Semana 04 -->
+   <td>00</td>  <!-- Semana 05 -->
+   <td>00</td>  <!-- Semana 06 -->
+   <td>00</td>  <!-- Semana 07 -->
+   <td>00</td>  <!-- Semana 08 -->
+   <td>00</td>  <!-- Semana 09 -->
+   <td>00</td>  <!-- Semana 10 -->
+   <td>00</td>  <!-- Semana 11 -->
+   <td>00</td>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Tareas Totales -->
+  </tr>
+
+
+  <tr>
+   <th>Totales Semanales</th>
+   <th>00</th>  <!-- Semana 01 -->
+   <th>00</th>  <!-- Semana 02 -->
+   <th>00</th>  <!-- Semana 03 -->
+   <th>00</th>  <!-- Semana 04 -->
+   <th>00</th>  <!-- Semana 05 -->
+   <th>00</th>  <!-- Semana 06 -->
+   <th>00</th>  <!-- Semana 07 -->
+   <th>00</th>  <!-- Semana 08 -->
+   <th>00</th>  <!-- Semana 09 -->
+   <th>00</th>  <!-- Semana 10 -->
+   <th>00</th>  <!-- Semana 11 -->
+   <th>00</th>  <!-- Semana 12 -->
+   <th>00</th>  <!-- Total del Proyecto -->
+  </tr>
+
+ 
+ </table>
+
+
+ <a name="risks"></a>
+ <h3>Manejo de Riesgos</h3>
+ <div class="sticky">
+  TAREAS: Enumere y clasifique los mayores riesgos para este proyecto, y que planea hacer
+  para resolver o evitar cada riesgo.  Si no desea hacer nada para mitigar un riesgo,
+  menciónelo.
+ </div>
+
+ <p>Los principales riesgos de este proyectos:</p>
+ <ol class="sample1">
+  <li>Existe un conflicto potencial entre los objetivos de una apariencia 
+  de alta calidad y el de una que es completamente personalizable. 
+  Solo podemos tener éxito si los jugadores encuentran el sitio llamativo, 
+  y los distribuidores de juegos pueden personalizarlos sin más esfuerzo del
+  necesario para construir un sitio web est?tico. ya contamos con un un diseño
+  en mente que permitirá resolver este problema y lo revisaremos con un diseñador
+  de sitios web que tiene experiencia en sitios para juegos.</li>
+
+  <li>Existen importantes dificultades técnicas entre construir un
+  sitio web y una aplicación web.  Este es un riesgo debido a que una persona
+  nuestro equipo tiene mucha experiencia con herramientas y tecnolog?as relevantes,
+  mientras que aunque el resto aprenderá, seguramente cometerán
+  algunos errores.  Resolveremos esto
+  analizando el proyecto para tener una ventana de tiempo lo suficientemente grande
+  para revisar y corregir el diseño y la implementación.</li>
+
+  <li>La tiempo con el que se cuenta es poco. Manejaremos este problema
+  planeando una aplicación conservadoramente funcional y otras
+  funcionalidades serán añadidas después en futuras versiones si es necesario.</li>
+
+  <li>El desempeño del sistema será impactado significativamente por
+  las decisiones tomadas durante la <a href="#3.2.C">tarea de diseño de la 
+  base de datos</a>.  Ninguno de los miembros de nuestro equipo actuales tiene experiencia con
+  optimización de bases de datos.  Para resolver esto, programaremos una reunión para revisar
+  el diseño con un DBA con experiencia o contrataremos un consultor de la base de datos
+  de un distribuidor
+
+  <li>Podríamos estar subestimando algunas tareas conocidas. ¿CÓMO EVITARLAS/RESOLVERLAS?</li>
+
+  <li>Podríamos estar subestimando el impacto de algunas tareas desconocidas. ¿CÓMO EVITARLO/RESOLVERLO?</li>
+
+  <li>Podríamos estar subestimando las dependencias entre tareas. ¿CÓMO EVITARLAS/RESOLVERLAS?</li>
+
+  <li>Podríamos haber subestimado los requerimientos del cliente.  ¿CÓMO EVITARLO/RESOLVERLO?</li>
+
+  <li>El cliente podría cambiar los requerimientos. ¿CÓMO EVITARLO/RESOLVERLO?</li>
+
+  <li>Podríamos encontrarnos con dificultades importantes con la tecnología seleccionada para
+  este proyecto.  ¿CÓMO EVITARLO/RESOLVERLO?</li>
+
+  <li>Podríamos tener baja calidad que necesite revisiones considerables. ¿CÓMO EVITARLA/RESOLVERLA?</li>
+
+  <li>Podríamos definir nuestro progreso incorrectamente hasta que sea demasiado tarde para reaccionar
+  ¿CÓMO EVITARLO/RESOLVERLO?</li>
+
+  <li>Podríamos perder recursos, por ejemplo, miembros del equipo podrían enfermarse,
+  invertir tiempo en otros proyectos o renunciar. ¿CÓMO EVITARLO/RESOLVERLO?</li>
+
+ </ol>
+
+
+
+ <a name="dependencies"></a> 
+ <h3>Planeación de Dependencias del Proyecto</h3>
+
+ <dl>
+
+  <dt>¿Este proyecto entre en conflicto o compite por recursos con cualquier otro proyecto</dt>
+
+  <dd class="sample1">No, este es el único proyecto en el que estamos trabajando
+  </dd>
+
+  <dd class="sample2">Sí, hemos determinado cuantas horas cada persona puede dedicar a este proyecto.
+  </dd>
+
+
+  <dt>¿Este proyecto depende del éxito de cualquier otro proyecto(s)?</dt>
+
+  <dd class="sample1">No, este es un proyecto independiente.</dd>
+
+  <dd class="sample2">sí, el proyecto P1 debe proveer la librería L, y
+  el proyecto P2 debe proveer la usabilidad de la característica C, y...</dd>
+
+  
+  <dt>¿Algún otro proyecto depende de este?</dt>
+
+  <dd class="sample1">No, el proyecto no está produciendo componentes que 
+  pudieran ser utilizados por cualquier otro proyecto actual.</dd>
+
+  <dd class="sample2">Sí, debemos producir la librería L para nuestro proyecto
+  y material de apoyo para L en los proyectos P1 y P2.</dd>
+
+
+  <dt>¿Existe cualquier otra dependencia importante que pueda afectar este proyecto?</dt>
+
+  <dd class="sample1">No, todo está considerado arriba.</dd>
+
+  <dd class="sample2">Sí.  DETALLES....</dd>
+
+  
+ </dl>
+ 
+
+</div>
+
+ <div class="sticky">
+  TAREAS: Revisar las <a
+  href="http://readyset.tigris.org/words-of-wisdom/overview.html">notas de 
+  sabiduría</a> y discutir formas de mejorar esta plantilla.
+ </div>
+
+<div class="legal1">Compañía Propietaria</div>
+
+<div class="footnote">
+ Copyright &#169; 2003 Jason Robbins.  Todos los derechos reservados. <a href="readyset-license.html">Términos de la Licencia</a>.
+ Mantenga esta leyenda derechos donde utilice este archivo como 
+ plantilla - Traducción al español por <a href="http://www.interplanet.com.mx">Interplanet</a>, México, D.F.
+</div>
+
+</div>
+</body>
+</html>
