@@ -1,4 +1,4 @@
-/* $Id: inst.css,v 1.16 2004/07/08 22:46:36 jrobbins Exp $
+/* $Id: inst.css,v 1.17 2004/07/09 01:18:17 jrobbins Exp $
 
 This file contains rules that extend or override the more basic
 formatting defined in readyset.css. Edit it to customize the fonts and
@@ -68,7 +68,7 @@ code, pre, textarea {
  border-bottom-color: #aaa;
  padding-left: 36px;
  min-width: 30px; min-height: 30px;
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.readysetpro.com/css/tip.png',sizingMethod='scale');
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.readysetpro.com/css/tip.png',sizingMethod='scale');
 }
 
 .todo {
@@ -80,7 +80,7 @@ code, pre, textarea {
  border-bottom-color: #aaa;
  padding-left: 36px;
  min-width: 30px; min-height: 30px;
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.readysetpro.com/css/todo.png',sizingMethod='scale');
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.readysetpro.com/css/todo.png',sizingMethod='scale');
 }
 
 #processimpact {
@@ -91,7 +91,7 @@ code, pre, textarea {
  background-position: top left;
  padding-left: 36px;
  min-width: 30px; min-height: 30px;
- filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.readysetpro.com/css/gears.png',sizingMethod='scale');
+ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.readysetpro.com/css/gears.png',sizingMethod='scale');
 }
 
 .reusablefragment {
