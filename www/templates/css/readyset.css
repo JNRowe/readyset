@@ -1,4 +1,4 @@
-/* $Id: readyset.css,v 1.17 2004/03/02 18:05:35 jrobbins Exp $
+/* $Id: readyset.css,v 1.18 2004/03/02 18:50:27 jrobbins Exp $
 
 This file is based on tigris.css, which is available from 
 http://style.tigris.org/.
@@ -178,10 +178,11 @@ tr ul { margin-left: 0px; padding-left: 2em; }
 }
 
 
-.readonly {
+#processimpact {
  border: 1px solid;
  padding: 3px;
  margin-right: 2px;
+ margin-bottom: 2px;
 }
 
 .footnote {
