@@ -30,17 +30,149 @@
 
 
 
+ <div id="advice">
  <h3>Advice From Users</h3>
-
+ 
  <p>To add your own words of wisdom, please send an email to the <a
  href="mailto:dev&#064;readyset.tigris.org">dev mailing
  list</a>.</p>
 
+ <div class="tier2">
+ <h4>Feature specification guidelines</h4>
  <dl>
-  <dt>HEADLINE</dt>
-  <dd>BODY OF ADVICE</dd>
+
+  <dt>The feature set should provide all the benefits claimed in the
+  <a href="../templates/target-and-benefits.html">target and
+  benefits</a> document.</dt>
+
+  <dd>Features actually <strong>support</strong> users in achiving a
+  claimed benefit when the feature replaces some of the work that a
+  human would otherwise do manually.  E.g., a spreadsheet supports
+  users who need to calculate totals and produce simple charts.</dd>
+
+  <dd>Features <strong>allow</strong> users to achive a claimed
+  benefit when they make it easier for a human user to do a task, even
+  if that task is still largely up to the user.  E.g., a spreadsheet
+  allows users to make business decisions based on totals and charts,
+  but the decisions are completely the users' responsibility: the
+  spreadsheet itself does not implement logic for any one particular
+  business decision.</dd>
+
+
+
+  <dt>Features should be described precisely enough to guide
+  implementation.</dt>
+
+  <dd>Each feature should be written in enough detail that a new
+  developer could join the team and implement the feature without
+  needing too much explanation.</dd>
+
+  <dd>If only developers who already have extensive background
+  knowledge of the discussions leading up to this document would be
+  able to understand the feature, then it should be described more
+  clearly and precisely by taking some of these steps:
+ 
+    <ul>
+     <li>Precisely define valid inputs, and error handling</li>
+     <li>Specify data structures with UML or logical schema</li>
+     <li>Specify UI aspects of features with tiny mockups</li>
+     <li>Specify key decisions with decision trees or tables</li>
+     <li>Specify key algorithms with pseudo-code or flow charts</li>
+     <li>Specify state-based behavior with state machines or tables</li>
+     <li>Specify sequences of events with scenario diagrams</li>
+   </ul>
+  </dd>
+
+  
+  <dt>Textual Descriptions... </dt>
+
+  <dd></dd>
+
+ 
+  <dt>Constraints...</dt>
+
+  <dd></dd>
+
+ 
+  <dt>Schema... </dt>
+
+  <dd></dd>
+
+ 
+  <dt>Algebraic specifications... </dt>
+
+  <dd></dd>
+
+ 
+  <dt>Tiny mockups...</dt>
+
+  <dd></dd>
+
+
+  <dt>Pseudo code... </dt>
+
+  <dd></dd>
+
+
+  <dt>State-based specifications...</dt>
+
+  <dd></dd>
+
+ 
+  <dt>Decision trees and tables...</dt>
+
+  <dd></dd>
+
+ 
+  <dt>Flow charts and UML activity diagrams...</dt>
+
+  <dd></dd>
 
  </dl>
+ </div>
+
+ <div class="tier2" id="managingrisk">
+ <h4>Tips on Managing Feature Risk</h4>
+
+<ul>
+
+ <li>If you have features that are high priority, high effort, and
+ high risk, you should go back to the drawing board to change what you
+ are trying to do, break those features down into more manageable
+ parts, or add more time or resources.</li>
+
+ <li>High risk means more effort, because effort must be put into
+ assessment and mitigation of risk factors up front.  Some of the risk
+ factors will not turn out in your favor, so you will need to put in
+ additional effort for rework and re-planning.</li>
+
+ <li>Many risks arise from missing information.  The simplest way to
+ address these is to ask someone who knows or look it up.  E.g., does a
+ particular software component work with internationalized character
+ sets?</li>
+
+ <li>Many computer science issues of algorithms and data structure
+ capacity and performance can be worked out mathematically.  Although
+ these do not give precise performance measures, they can determine
+ the difference between a useful approach and a hopeless approach.
+ E.g., we are storing catalog item descriptions in a flat file, the
+ time it takes to update that file grows linearly with the number of
+ catalog items, which will be hopelessly slow in practice.  E.g., our
+ Java applet will be about 260KB in size, how long will that take to
+ download over a 56Kbps modem?</li>
+
+ <li>A feasibility study is often an exercise in building a small
+ prototype to demonstrate and test some risky aspect of the system.
+ For example, do the web browsers that we want to support properly
+ handle the CSS or JavaScript features that we plan to use?  E.g., can
+ the database work reliably when its files are stored on a different
+ file server?</li>
+
+</ul>
+ </div> <!-- /managingrisk-->
+
+ 
+ </div> <!-- /advice -->
 
 
 
